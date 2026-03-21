@@ -36,3 +36,25 @@ When asked to summarise or recap the channel (weekly summary, catch-up, etc.):
                - "Last week" = previous Monday through previous Sunday
                - "Today" = today only
                - Always calculate dates dynamically, never use hardcoded dates
+
+
+## How to Fetch Messages (CRITICAL)
+When reading #productpeople, you MUST use multiple approaches to capture all activity:
+
+### Step 1: Read channel messages directly
+Use `slack_read_channel` with channel_id `C086GFBU49W` and set `oldest` to the Monday timestamp and `latest` to now. Request up to 100 messages. If there is a `cursor` in the response, paginate to get ALL messages.
+
+### Step 2: Read ALL thread replies
+For EVERY message that has thread replies (indicated by reply_count > 0 or thread_ts), use `slack_read_thread` to fetch the full thread conversation. Threads contain the majority of discussions.
+
+### Step 3: Search for additional messages
+Use `slack_search_public_and_private` with query `in:#productpeople after:YYYY-MM-DD` (using Monday's date) to catch any messages that might have been missed, including messages in threads.
+
+### Step 4: Read any linked canvases
+If any messages reference Slack canvases or workflow posts (like standup trackers), use `slack_read_canvas` to read their content.
+
+### Important Notes
+- The channel uses Slack workflows for standups (Mon, Wed, Fri Stand-Up Trackers). These create threaded conversations that contain most of the team's daily updates.
+- - ALWAYS read thread replies — they contain the substantive discussions.
+  - - Paginate through ALL results. Do not stop after the first page.
+    - - If the channel appears quiet, it likely means activity is happening in threads or workflows — dig deeper.
