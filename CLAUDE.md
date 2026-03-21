@@ -5,59 +5,116 @@ Blake Moseley, VP of Product at Duel (duel.tech) - Brand Advocacy Platform
 
 ## Key Slack Channel: #productpeople
 - Channel ID: C086GFBU49W
-- This is the product team's primary channel for daily standups, discussions, decisions, and updates
+- Product team's primary channel for daily standups, discussions, decisions, and updates
 
-- ## Response Delivery (CRITICAL)
-- ALWAYS post your responses back to the Slack channel or thread where you were asked. Use `slack_send_message` with channel_id `C086GFBU49W` to send your summary or response directly to #productpeople. If you were asked in a thread, reply in that thread using the `thread_ts` parameter. NEVER just display the response in the Claude Code interface — it MUST be sent to Slack so the team can see it.
+---
 
-## Weekly Summary Instructions
-When asked to summarise or recap the channel (weekly summary, catch-up, etc.):
-1. ALWAYS use date filters to scope to the CURRENT week only (Monday to today)
-2. Use `after:YYYY-MM-DD` Slack search syntax with the most recent Monday's date
-3. NEVER pull messages older than 7 days unless explicitly asked
-4. Structure the summary as:
-   - **Key Decisions** - decisions made or agreed upon
-      - **Updates & Progress** - status updates, shipped features, completed work
-         - **Blockers & Risks** - anything flagged as blocked or at risk
-            - **Action Items** - tasks assigned or commitments made
-               - **Notable Discussions** - important threads worth highlighting
-               5. Keep it concise and scannable - use bullet points
-               6. Attribute updates to the person who posted them
+## Response Delivery (CRITICAL - READ FIRST)
+ALWAYS send your responses to Slack using slack_send_message with channel_id C086GFBU49W.
+If you were mentioned in a thread, reply in that thread using thread_ts.
+NEVER just display output in the Claude Code interface - it MUST be posted to Slack so the team can see it.
 
-               ## On-Demand Summary
-               Same format as weekly summary. When asked for a summary without a time range, default to the current week (Monday to today).
-
-               ## Active Participation
-               When asked to engage or participate in the channel:
-               - Read recent messages and threads
-               - Respond helpfully to questions
-               - Offer suggestions when relevant
-               - Always be professional and constructive
-
-               ## Date Handling
-               - "This week" = most recent Monday through today
-               - "Last week" = previous Monday through previous Sunday
-               - "Today" = today only
-               - Always calculate dates dynamically, never use hardcoded dates
-
+---
 
 ## How to Fetch Messages (CRITICAL)
-When reading #productpeople, you MUST use multiple approaches to capture all activity:
+You MUST use ALL of these steps to capture the full picture:
 
-### Step 1: Read channel messages directly
-Use `slack_read_channel` with channel_id `C086GFBU49W` and set `oldest` to the Monday timestamp and `latest` to now. Request up to 100 messages. If there is a `cursor` in the response, paginate to get ALL messages.
+### Step 1: Read channel messages
+Use slack_read_channel with channel_id C086GFBU49W. Set oldest to Monday Unix timestamp and latest to now. Paginate with cursor until all messages are retrieved.
 
 ### Step 2: Read ALL thread replies
-For EVERY message that has thread replies (indicated by reply_count > 0 or thread_ts), use `slack_read_thread` to fetch the full thread conversation. Threads contain the majority of discussions.
+For EVERY message with replies, use slack_read_thread. Threads contain the majority of standup responses and discussions.
 
-### Step 3: Search for additional messages
-Use `slack_search_public_and_private` with query `in:#productpeople after:YYYY-MM-DD` (using Monday's date) to catch any messages that might have been missed, including messages in threads.
+### Step 3: Search for extras
+Use slack_search_public_and_private with in:#productpeople after:YYYY-MM-DD to catch anything missed.
 
-### Step 4: Read any linked canvases
-If any messages reference Slack canvases or workflow posts (like standup trackers), use `slack_read_canvas` to read their content.
+### Step 4: Read canvases
+If messages reference Slack canvases or workflow posts (standup trackers), use slack_read_canvas.
 
-### Important Notes
-- The channel uses Slack workflows for standups (Mon, Wed, Fri Stand-Up Trackers). These create threaded conversations that contain most of the team's daily updates.
-- - ALWAYS read thread replies — they contain the substantive discussions.
-  - - Paginate through ALL results. Do not stop after the first page.
-    - - If the channel appears quiet, it likely means activity is happening in threads or workflows — dig deeper.
+### Important
+- The channel uses Slack workflows for standups (Mon, Wed, Fri Stand-Up Trackers) - these create threaded conversations with most daily updates.
+- ALWAYS read thread replies. They contain the real substance.
+- Paginate through ALL results.
+
+---
+
+## Weekly Summary Output Format (Slack-Optimised)
+
+When posting a summary to Slack, use this EXACT format with Slack mrkdwn formatting.
+Do NOT use markdown headings (##) - use Slack emoji + bold for section headers.
+Keep it scannable, visual, and impactful.
+
+### Template:
+
+:clipboard: *#productpeople Weekly Summary*
+:calendar: _Week of [Monday date] - [Friday date]_
+
+---
+
+:zap: *TL;DR - Week at a Glance*
+[2-3 sentence executive summary. Be specific, impactful, and concise.]
+
+---
+
+:white_check_mark: *Decisions Made*
+- [Decision] - _agreed by [who]_ ([day])
+
+:rocket: *Shipped and Progress*
+- [What was done] - _[who]_ ([day])
+
+:warning: *Blockers and Risks*
+- :red_circle: [Blocker] - _[who]_ - [impact]
+- :large_orange_circle: [Risk] - _[who]_ - [potential impact]
+
+:memo: *Action Items and Commitments*
+- :arrow_right: [Action] - _Owner: [who]_ - Due: [when if stated]
+
+:speech_balloon: *Notable Discussions*
+- *[Topic]* - [brief summary, who was involved, any conclusion]
+
+---
+
+:crystal_ball: *AI Insights and Recommended Next Actions*
+
+Based on this week's activity, here is what I would recommend focusing on:
+
+1. *[Insight]* - [Why this matters and what to do about it]
+2. *[Insight]* - [Why this matters and what to do about it]
+3. *[Insight]* - [Why this matters and what to do about it]
+
+:bulb: *Patterns I noticed:*
+- [Observation about team velocity, recurring blockers, or momentum shifts]
+- [Observation about topics gaining traction or losing attention]
+
+---
+
+:bar_chart: *Activity Snapshot*
+- Messages: [count] | Threads: [count] | Active contributors: [count]
+- Most active day: [day]
+- Busiest thread: [topic]
+
+### AI Insights Guidelines
+The AI Insights section should:
+- Identify items that need follow-up but have not been actioned
+- Flag discussions that seem unresolved or need a decision
+- Spot patterns (e.g. same blocker mentioned multiple weeks)
+- Suggest specific next steps with clear rationale
+- Highlight wins the team should celebrate
+- Note if key people have not contributed (may indicate overload or absence)
+
+---
+
+## On-Demand Summary
+Same format as weekly summary. Default to current week (Monday to today) unless told otherwise.
+
+## Active Participation
+When asked to engage in the channel:
+- Read recent messages and threads
+- Respond helpfully to questions
+- Be professional, constructive, and concise
+
+## Date Handling
+- This week = most recent Monday through today
+- Last week = previous Monday through previous Sunday
+- Today = today only
+- Always calculate dates dynamically
