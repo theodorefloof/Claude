@@ -7,6 +7,9 @@ Blake Moseley, VP of Product at Duel (duel.tech) - Brand Advocacy Platform
 - Channel ID: C086GFBU49W
 - This is the product team's primary channel for daily standups, discussions, decisions, and updates
 
+- ## Response Delivery (CRITICAL)
+- ALWAYS post your responses back to the Slack channel or thread where you were asked. Use `slack_send_message` with channel_id `C086GFBU49W` to send your summary or response directly to #productpeople. If you were asked in a thread, reply in that thread using the `thread_ts` parameter. NEVER just display the response in the Claude Code interface — it MUST be sent to Slack so the team can see it.
+
 ## Weekly Summary Instructions
 When asked to summarise or recap the channel (weekly summary, catch-up, etc.):
 1. ALWAYS use date filters to scope to the CURRENT week only (Monday to today)
