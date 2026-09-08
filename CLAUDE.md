@@ -127,8 +127,15 @@ When asked to engage in the channel:
 # Fireflies Integration
 
 Fireflies is connected as a remote MCP server at `https://api.fireflies.ai/mcp`.
-Authenticated as **blake@duel.tech** (workspace admin). No local API key or client
-code is needed — call the `fireflies_*` tools directly.
+No local API key or client code is needed — call the `fireflies_*` tools directly.
+
+**Account owner / admin: blake.m.moseley@gmail.com.**
+
+Note that the connection currently still resolves to the legacy `blake@duel.tech`
+identity (confirm any time with `fireflies_get_user`). The account email has to be
+changed in Fireflies itself — there is no MCP tool that can do it — and the MCP
+connector then needs reauthorising. Until both are done, expect `fireflies_get_user`
+to report the old address. This matters for anything that filters on identity.
 
 ## Privacy Guardrail (CRITICAL — overrides Response Delivery)
 
@@ -180,7 +187,12 @@ channel:69680125d1469377d4b619b3 limit:20
 
 - **`mine:true` is a hard filter on organiser, not attendance.** It returns only
   meetings Blake organised, so it silently hides team meetings he attended. For
-  "what happened this week", omit `mine` or filter by `participants:blake@duel.tech`.
+  "what happened this week", omit `mine` or filter by participant email.
+- **Historical meetings are recorded against `blake@duel.tech`.** Changing the account
+  email does not rewrite past attendee records. Any query filtering on identity should
+  pass both addresses, e.g.
+  `participants:blake.m.moseley@gmail.com,blake@duel.tech`, or it will lose the entire
+  Duel-era history.
 - **`format` defaults to `toon`** (token-efficient but awkward to read). Pass
   `format:"text"` when you intend to read or quote the output, `json` when parsing.
 - **`fireflies_get_transcripts` does not accept a transcript ID.** To go deep on a
@@ -201,7 +213,8 @@ linking over pasting transcript text; it keeps access control with Fireflies.
 ## Recipes
 
 **Catch up on a week of product meetings**
-1. `fireflies_search` with `participants:blake@duel.tech from:<Monday> to:<today> limit:50 format:"text"`
+1. `fireflies_search` with `participants:blake.m.moseley@gmail.com,blake@duel.tech from:<Monday> to:<today> limit:50 format:"text"`
+   (both addresses — see Gotchas)
 2. For anything relevant, `fireflies_get_summary` by ID — it is far cheaper than the full transcript
 3. Present in the interface; only push to Slack on explicit instruction
 
