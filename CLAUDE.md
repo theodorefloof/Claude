@@ -127,17 +127,17 @@ When asked to engage in the channel:
 # Fireflies Integration
 
 Fireflies is connected as a remote MCP server at `https://api.fireflies.ai/mcp`.
-No local API key or client code is needed — call the `fireflies_*` tools directly.
+No local API key or client code is needed. Call the `fireflies_*` tools directly.
 
 **Account owner / admin: blake.m.moseley@gmail.com.**
 
 Note that the connection currently still resolves to the legacy `blake@duel.tech`
 identity (confirm any time with `fireflies_get_user`). The account email has to be
-changed in Fireflies itself — there is no MCP tool that can do it — and the MCP
+changed in Fireflies itself, as no MCP tool exposes it, and the MCP
 connector then needs reauthorising. Until both are done, expect `fireflies_get_user`
 to report the old address. This matters for anything that filters on identity.
 
-## Privacy Guardrail (CRITICAL — overrides Response Delivery)
+## Privacy Guardrail (CRITICAL: overrides Response Delivery)
 
 The "always post to Slack" rule at the top of this file **does not apply to Fireflies
 content**. Blake's Fireflies workspace contains 1:1s, HR conversations, exit and
@@ -161,13 +161,13 @@ Therefore:
 | --- | --- |
 | `fireflies_get_user` | Confirm auth, get the current user ID and most recent transcript ID |
 | `fireflies_get_transcripts` | List meetings by date range, keyword, organiser, participant, channel |
-| `fireflies_search` | Same data, richer query grammar (see below) — prefer this for anything non-trivial |
+| `fireflies_search` | Same data, richer query grammar (see below). Prefer this for anything non-trivial |
 | `fireflies_get_transcript` | Full sentence-level transcript with speakers and timestamps for one meeting |
 | `fireflies_get_summary` | Overview, keywords, action items, chapters for one meeting (no transcript body) |
 | `fireflies_get_soundbites` | Shareable clips; needs one of `mine`, `transcript_id`, `my_team` |
 | `fireflies_list_channels` | Channel/folder IDs for scoping queries |
 | `fireflies_get_analytics`, `fireflies_get_user_contacts`, `fireflies_get_usergroups` | Workspace-level metadata |
-| `fireflies_share_meeting`, `fireflies_revoke_meeting_access`, `fireflies_update_meeting_privacy`, `fireflies_move_meeting`, `fireflies_update_meeting_title`, `fireflies_create_soundbite` | **Write operations — always confirm with Blake first** |
+| `fireflies_share_meeting`, `fireflies_revoke_meeting_access`, `fireflies_update_meeting_privacy`, `fireflies_move_meeting`, `fireflies_update_meeting_title`, `fireflies_create_soundbite` | **Write operations: always confirm with Blake first** |
 
 ## Search Grammar (`fireflies_search`)
 
@@ -197,7 +197,7 @@ channel:69680125d1469377d4b619b3 limit:20
   `format:"text"` when you intend to read or quote the output, `json` when parsing.
 - **`fireflies_get_transcripts` does not accept a transcript ID.** To go deep on a
   specific meeting, call `fireflies_get_transcript` or `fireflies_get_summary` by ID.
-- **Summaries can be missing.** Check `Summary Status` — `skipped` or `processing`
+- **Summaries can be missing.** Check `Summary Status`. A value of `skipped` or `processing`
   means there is no summary yet; fall back to the raw transcript.
 - **`Duration: No duration`** appears on plenty of processed meetings. Do not treat a
   missing duration as a failed recording.
@@ -207,15 +207,15 @@ channel:69680125d1469377d4b619b3 limit:20
 ## Deep Links
 
 Every meeting ID maps to `https://app.fireflies.ai/view/{id}`. Append `?t={seconds}`
-to jump to a moment — convert a sentence timestamp like `07:21` to `441`. Prefer
+to jump to a moment, converting a sentence timestamp like `07:21` to `441`. Prefer
 linking over pasting transcript text; it keeps access control with Fireflies.
 
 ## Recipes
 
 **Catch up on a week of product meetings**
 1. `fireflies_search` with `participants:blake.m.moseley@gmail.com,blake@duel.tech from:<Monday> to:<today> limit:50 format:"text"`
-   (both addresses — see Gotchas)
-2. For anything relevant, `fireflies_get_summary` by ID — it is far cheaper than the full transcript
+   (both addresses, see Gotchas)
+2. For anything relevant, `fireflies_get_summary` by ID, which is far cheaper than the full transcript
 3. Present in the interface; only push to Slack on explicit instruction
 
 **Cross-check a Slack standup claim against what was actually said**
@@ -223,4 +223,4 @@ linking over pasting transcript text; it keeps access control with Fireflies.
 2. `fireflies_get_transcript` on the hit, then deep-link the moment
 
 **Pull action items for one meeting**
-`fireflies_get_summary` — action items come back grouped by owner with timestamps.
+`fireflies_get_summary`. Action items come back grouped by owner with timestamps.
