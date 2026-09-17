@@ -1,0 +1,1135 @@
+{
+  "day": {
+    "id": "sat",
+    "label": "Saturday 10 October",
+    "date": "2026-10-10",
+    "start": "09:00",
+    "end": "18:30",
+    "summary": "Saturday takes the five answers in the order that removes the most uncertainty first, locks the prototype scope by 12:10 and protects 4 hours 05 minutes of build so a fix list exists before dinner.",
+    "hardStops": [
+      "Scope locks at 12:10 when Tori signs; no additions after 12:10",
+      "Build block 1 starts at 12:55 regardless of whether the lock is signed",
+      "If CP1 has not passed by 13:30, switch at once to the build tool's own built-in backend",
+      "Fix list v1 in demo-impact order by 17:15, before dinner",
+      "No strategic decision is made after 18:00",
+      "The day ends at 18:30 at the latest, 18:00 if the reserve is unused",
+      "Breaks, lunch and dinner are never shortened",
+      "Dinner at 20:30 is protected; no laptops, no decisions"
+    ]
+  },
+  "sessions": [
+    {
+      "id": "D1-01",
+      "start": "09:00",
+      "end": "09:10",
+      "minutes": 10,
+      "kind": "admin",
+      "title": "Open",
+      "oneLine": "Sign the rules card, open the log, confirm the sealed notes are still sealed and read the Sunday cutoff.",
+      "lead": "Blake",
+      "recorder": "Tori",
+      "owner": "Tori (rules card, decision log)",
+      "purpose": "Fix how the two days run so no later minute goes on process: sign the rules, open the record, confirm the seals and the Sunday cutoff. Can both state the decision rule and the Sunday end time?",
+      "inputs": [
+        "Printed rules card, checkpoint card and log template",
+        "The Duel fact sheet as cut-out slips",
+        "`06_decision_log/divergence_list_v1.md` (Thu 8 Oct 22:00 UK)",
+        "The sealed \"Before we talk\" notes: founder answers v1 written alone on Mon 5 Oct 22:00 UK, a file on each device plus the printed copy in an envelope signed across the flap on Thu 8 Oct",
+        "Boarding passes"
+      ],
+      "steps": [
+        {
+          "min": 3,
+          "text": "Blake reads the rules card aloud; both sign and date it."
+        },
+        {
+          "min": 3,
+          "text": "Tori opens the live tables spreadsheet `06_decision_log/live_tables.xlsx` (decision log and parking lot sheets); checkpoint card and fact sheet on the wall; divergence list on the table."
+        },
+        {
+          "min": 2,
+          "text": "Each says aloud \"I have not opened the other's notes\"; envelopes face down; read the Sunday cutoff against the boarding passes."
+        },
+        {
+          "min": 2,
+          "text": "Phones on mobile data and silent; published URL open on both; timer set; log entry D1-01-01."
+        }
+      ],
+      "prompts": [
+        "State the decision rule for a joint item tied at the timebox.",
+        "When does work end on Sunday, and when do we leave?",
+        "Which six labels exist, and which needs a count, a date and a name?",
+        "Who strikes items from the cut list, and who cannot add?",
+        "What happens to a new feature idea after 12:10?",
+        "Who abstains on non-public Duel statements, and how is that logged?"
+      ],
+      "output": "The decision log sheet of `06_decision_log/live_tables.xlsx` with entry D1-01-01, the parking lot sheet open, and the signed rules card photographed.",
+      "outputFile": "`06_decision_log/live_tables.xlsx`",
+      "completion": [
+        "Six prompts answered without looking",
+        "Log open",
+        "Envelopes unopened",
+        "Published URL open on both phones"
+      ],
+      "fallback": "A founder is late: D1-02 starts at 09:15 and the reserve absorbs five minutes. A rule is disputed: it stands as read on the Thu 8 Oct 21:00 UK checklist call and the objection goes to the parking lot.",
+      "capture": [
+        {
+          "id": "d1-01-rules",
+          "label": "Rules card signed and dated",
+          "hint": "who signed, at what time, and that both said aloud \"I have not opened the other's notes\"",
+          "lines": 1
+        },
+        {
+          "id": "d1-01-log",
+          "label": "Log entry D1-01-01",
+          "hint": "the first entry in the decision log sheet",
+          "lines": 3
+        },
+        {
+          "id": "d1-01-parking-lot",
+          "label": "Parking lot opened",
+          "hint": "headings: Idea; Raised by; Time; Session; Triaged at; Outcome",
+          "lines": 1
+        },
+        {
+          "id": "d1-01-cutoff",
+          "label": "Sunday cutoff confirmed",
+          "hint": "when work ends on Sunday and when we leave, read against the boarding passes",
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "D1-02",
+      "start": "09:10",
+      "end": "10:00",
+      "minutes": 50,
+      "kind": "decide",
+      "title": "Q1 What is Sway: the four hardest calls",
+      "oneLine": "Open each other's sealed notes, settle the four calls every later session inherits, then write the Q1 answer.",
+      "lead": "Tori",
+      "recorder": "Blake",
+      "owner": "Tori (one-page company thesis)",
+      "purpose": "Settle, from sealed positions, the four calls every later session inherits: (a) the hero mechanic (Sway Pass, Sway Link, or a card into the chat, Pass second); (b) the single-player value sentence; (c) who pays first and when brands enter; (d) money shown or hidden in the first cohort; then answer Q1. All four are HYPOTHESES; the outputs are FOUNDER DECISIONS.",
+      "inputs": [
+        "Each founder's sealed v1, written alone on Mon 5 Oct 22:00 UK",
+        "A blank A5 Q1 card each",
+        "Divergence rows tagged D1-02 (`06_decision_log/divergence_list_v1.md`, Thu 8 Oct 22:00 UK)",
+        "The current one thing, \"Sway turns trusted product recommendations into measurable commerce\", confirmed or rewritten here"
+      ],
+      "steps": [
+        {
+          "min": 6,
+          "text": "Alone: re-read your own v1 and write the Q1 card (description; customer problem; calls (a) to (d) with reasoning and \"what would change my mind\")."
+        },
+        {
+          "min": 6,
+          "text": "The reveal: on Tori's call both open the other's envelope at the same moment, swap the Q1 card and v1, read silently and mark each line A (agree), D (differ) or U (unsure). Nothing is edited after opening."
+        },
+        {
+          "min": 28,
+          "text": "Seven minutes per call in the order (a), (c), (b), (d): two minutes per founder to state the position, two minutes on the D marks, one minute to decide or apply rule 4 and write the trigger. Call (a) carries the worked trigger (Pass offered in fewer than one in five moments, or median scan-to-page over 15 seconds; check Sun 18 Oct 21:00 UK and Fri 20 Nov 22:00 UK; owner Blake). Calls (a), (c) and (d) are joint; (b) is Blake's for the product sentence, Tori's for the buyer's."
+        },
+        {
+          "min": 6,
+          "text": "Write the Q1 block together and test it: \"could ShopMy, LTK or Duel truthfully say this? If yes, rewrite\"."
+        },
+        {
+          "min": 4,
+          "text": "Blake logs the four calls with labels, triggers and dissent verbatim, and Tori's originator view verbatim where they differ."
+        }
+      ],
+      "prompts": [
+        "The last three times someone asked what you use: where, and when would a QR appear?",
+        "If nobody else joined Sway, what would you use your Locker for?",
+        "Pass or card as hero? If the scan takes over fifteen seconds, what changes?",
+        "Duel has the brand in the room from day one; we do not. What replaces it?",
+        "Is a paid word-of-mouth study for one brand a betrayal of consumer-first?",
+        "Your run-club friend learns you earned a small commission from her shoes. What does she say?"
+      ],
+      "output": "`01_answers/thesis_one_pager.md` with the Q1 answer block (Category; Target customer; Founding insight; Positioning line; Reason to exist; Label; Evidence basis), plus log entries D1-02-a to d and D1-02-Q1.",
+      "outputFile": "`01_answers/thesis_one_pager.md`",
+      "completion": [
+        "Q1 under 120 words, sayable to a stranger, naming a customer and a behaviour",
+        "Free of the context_audit.md section 8 avoid list",
+        "Every call labelled",
+        "Every Provisional call carries a trigger"
+      ],
+      "fallback": "A call unresolved at seven minutes goes to rule 4 (Provisional, dissent verbatim). Two calls still open at 09:45 become Open questions. No sentence by 09:58: the current one thing stands as Provisional, trigger the Fri 16 Oct 20:00 UK review call, owner Tori.",
+      "capture": [
+        {
+          "id": "d1-02-call-a",
+          "label": "Call (a) the hero mechanic",
+          "hint": "Sway Pass, Sway Link, or a card into the chat, with its label and its review trigger",
+          "lines": 3
+        },
+        {
+          "id": "d1-02-call-c",
+          "label": "Call (c) who pays first and when brands enter",
+          "hint": "the decision, its label and its trigger",
+          "lines": 3
+        },
+        {
+          "id": "d1-02-call-b",
+          "label": "Call (b) the single-player value sentence",
+          "hint": "Blake's product sentence and Tori's buyer sentence",
+          "lines": 3
+        },
+        {
+          "id": "d1-02-call-d",
+          "label": "Call (d) money shown or hidden in the first cohort",
+          "hint": "the decision, its label and its trigger",
+          "lines": 3
+        },
+        {
+          "id": "d1-02-q1",
+          "label": "Q1 answer block",
+          "hint": "under 120 words, naming a customer and a behaviour, not sayable by ShopMy, LTK or Duel",
+          "lines": 8
+        }
+      ]
+    },
+    {
+      "id": "D1-03",
+      "start": "10:00",
+      "end": "10:15",
+      "minutes": 15,
+      "kind": "decide",
+      "title": "Founder commitment and decision rights",
+      "oneLine": "Write down hours, the full-time trigger and one owner for each of the five areas. Names and dates only.",
+      "lead": "Blake",
+      "recorder": "Tori",
+      "owner": "Tori (log entry, feeding D2-02 and D2-05)",
+      "purpose": "Settle call (e), which feeds the why-us slide and the execution plan: hours per week now and for the next 90 days; the full-time trigger and date; owners for product, pilot recruitment, commercial outreach, operations and fundraising; and the date Blake's written disclosure will exist.",
+      "inputs": [
+        "Each founder's v1 heading 7(e), now open",
+        "Investor-skeptic objection 7",
+        "context_audit.md 6.2 items 1 to 8",
+        "A blank ownership sheet"
+      ],
+      "steps": [
+        {
+          "min": 3,
+          "text": "Alone: write hours now and for the next 90 days; the full-time trigger and date; a name per area; the disclosure date; the technical partner or the plan to find one."
+        },
+        {
+          "min": 3,
+          "text": "Swap and read."
+        },
+        {
+          "min": 6,
+          "text": "Decide names and dates only. Anything awaiting legal advice is Provisional with the advice date as its trigger; no contract's substance is discussed."
+        },
+        {
+          "min": 3,
+          "text": "Tori logs D1-03-01. The founder agreement (equity, vesting) is drafted on the Sat 17 Oct 10:00 UK call."
+        }
+      ],
+      "prompts": [
+        "Who is full time on Sway, from what date, funded how, and when will the disclosure exist?",
+        "Who builds the production product: who, hours, cost, start date?",
+        "Who is at the launch node weekly for twelve weeks, and what if they cannot be?",
+        "What does Tori sell in November, December and January? If nothing, what instead?",
+        "If an investor funded the attribution layer but not the network, who takes the money?",
+        "Write the day-90 member number we believe; divide it by our evenings per week."
+      ],
+      "output": "Log entry D1-03-01 plus `06_decision_log/ownership_v1.md` (the five areas; Hours now and next 90 days; Full-time trigger and date; Disclosure date; Technical partner; Label; Trigger).",
+      "outputFile": "`06_decision_log/ownership_v1.md`",
+      "completion": [
+        "One name per area",
+        "The full-time trigger is a date or a dated event",
+        "The disclosure date is written",
+        "Hours are numbers"
+      ],
+      "fallback": "Not settled at 10:15: logged Provisional with today's split (Blake product; Tori commercial outreach; the rest as first written), trigger the Sat 17 Oct 10:00 UK call. No extension.",
+      "capture": [
+        {
+          "id": "d1-03-owners",
+          "label": "One owner per area",
+          "hint": "product, pilot recruitment, commercial outreach, operations, fundraising",
+          "lines": 3
+        },
+        {
+          "id": "d1-03-hours",
+          "label": "Hours now and for the next 90 days",
+          "hint": "numbers, per founder",
+          "lines": 1
+        },
+        {
+          "id": "d1-03-fulltime",
+          "label": "Full-time trigger and date",
+          "hint": "a date or a dated event, not an intention",
+          "lines": 1
+        },
+        {
+          "id": "d1-03-disclosure",
+          "label": "Date the written disclosure will exist",
+          "hint": "Blake's disclosure",
+          "lines": 1
+        },
+        {
+          "id": "d1-03-partner",
+          "label": "Technical partner, or the plan to find one",
+          "hint": "who, hours, cost, start date",
+          "lines": 3
+        }
+      ]
+    },
+    {
+      "id": "D1-BR1",
+      "start": "10:15",
+      "end": "10:30",
+      "minutes": 15,
+      "kind": "break",
+      "title": "Morning break",
+      "oneLine": "Away from the table. Not shortened for any reason.",
+      "lead": "",
+      "recorder": "",
+      "owner": "",
+      "purpose": "Rest away from the table. This block is never traded for time.",
+      "inputs": [],
+      "steps": [],
+      "prompts": [],
+      "output": "",
+      "outputFile": "",
+      "completion": [],
+      "fallback": "Not shortened for any reason.",
+      "capture": []
+    },
+    {
+      "id": "D1-04",
+      "start": "10:30",
+      "end": "11:10",
+      "minutes": 40,
+      "kind": "decide",
+      "title": "Q5 A different job, not better features",
+      "oneLine": "Build the wall of sheets A to E from public facts only, then write the one job, the comparison set and the claims table.",
+      "lead": "Tori",
+      "recorder": "Blake",
+      "owner": "Tori (differentiation thesis)",
+      "purpose": "Turn \"a million times better\" into one job for one customer, using only what is public about Duel: what Duel demonstrably offers; what its customers value or struggle with, with evidence; where Sway could be meaningfully different; why someone would switch, use Sway alongside, or adopt it first; and what might be hard to copy. The question: what job does Sway do that a brand-owned programme cannot, for whom? Blake abstains on non-public Duel content and the abstention is logged.",
+      "inputs": [
+        "`03_commercial/duel_evidence.md` (Tue 6 Oct 22:00 UK)",
+        "`07_evidence/side_by_side_screenshots/`",
+        "`03_commercial/commercial_pack.md` (Wed 7 Oct 22:00 UK)",
+        "The Duel fact sheet, eight public rows printed as cut-out slips on Thu 8 Oct, each with its source URL and evidence label",
+        "D1-02 calls (a) and (c)",
+        "Divergence rows tagged D1-04",
+        "Sticky notes"
+      ],
+      "steps": [
+        {
+          "min": 5,
+          "text": "Swap and read the memos and replies; cross out any reply line that relies on a feature outside the MVP boundary. Blake writes nothing about Duel and Tori logs the abstention (D1-04-abstain)."
+        },
+        {
+          "min": 3,
+          "text": "Sheet A, what Duel demonstrably offers: Tori sticks the pre-printed fact-sheet slips that match her own screenshots. Nothing else enters A; a row she cannot match to a screenshot is struck; Blake reads only."
+        },
+        {
+          "min": 3,
+          "text": "Sheet B, what customers value or struggle with: one note per item from the Duel evidence sheet and the commercial prep pack, each with a URL and a label. No brand conversation happened before the workshop, so founder-held items are [FOUNDER ASSERTION]."
+        },
+        {
+          "min": 4,
+          "text": "Sheet C, where Sway could be meaningfully different: two minutes alone, then merge. Every note names the customer and the advantage type (outcomes, experience, speed, economics or capability). Candidates: who can be an advocate; where recommendation is observed; who pays first; who owns the record. Anything Duel could truthfully claim is struck."
+        },
+        {
+          "min": 2,
+          "text": "Sheet D, why switch, use alongside, or adopt first: switch defaults to \"no brand replaces a supported programme in 2027\"; alongside is a feed of people outside the brand's programme and CRM; first is a brand with no programme or a member with no brand. Write \"doing nothing\" (say the name; send the link) honestly."
+        },
+        {
+          "min": 2,
+          "text": "Sheet E, what might be hard to copy: each note ends \"because\" and names a test. Density in one node is a HYPOTHESIS."
+        },
+        {
+          "min": 1,
+          "text": "Tori closes by reading aloud the one job, for whom, the comparison set (consumer side ShopMy, LTK, Linktree or Beacons, WhatsApp; brand side Duel, Mention Me, impact.com, Extole, Talkable, doing nothing) and the claims the prototype can show."
+        },
+        {
+          "min": 8,
+          "text": "Write the \"who owns the advocate\" paragraph: identity, consent, export, and what a brand keeps when a contract ends. Blake writes the product half, Tori the commercial half."
+        },
+        {
+          "min": 8,
+          "text": "Claims table v1 from sheets C, D and E: claim; versus whom; demonstrable Sunday?; evidence label; hard to copy because. Claims about alternatives cite a URL or a founder's test note and say \"not found publicly\". \"Better\" is struck."
+        },
+        {
+          "min": 4,
+          "text": "Write the Q5 answer block under 150 words; Blake logs D1-04-Q5 with Tori's originator view verbatim."
+        }
+      ],
+      "prompts": [
+        "What does a Sway page give a recipient that an LTK List over WhatsApp does not?",
+        "Duel already says the lever is \"the people who already love you\". What do we believe that it does not?",
+        "Public information only: why is our Trust Map different from an incumbent's intelligence graph?",
+        "Who owns the advocate when a brand's contract ends? Write the contract paragraph.",
+        "List the data we hold on day ninety; cross out what an incumbent could get. Moat, feature, or report?",
+        "If a brand says \"send me the list and I will invite them\", do we say yes, at what price?"
+      ],
+      "output": "`03_commercial/differentiation_thesis.md` v0 (The one job and for whom; Comparison set; Who owns the advocate; Claims table; Q5 answer block; What we do not know), plus log entries D1-04-abstain and D1-04-Q5. It becomes v1 at 17:15 once the commercial block completes the claims table.",
+      "outputFile": "`03_commercial/differentiation_thesis.md`",
+      "completion": [
+        "At least three claims labelled demonstrable, each tied to a prototype beat or a prep artefact",
+        "Nothing non-public about Duel",
+        "The answer names the customer, the advantage type and the alternative it beats",
+        "\"Better\" appears only inside the question"
+      ],
+      "fallback": "Step 2 overruns: record the one job and the comparison set and move the claims table to commercial block 2. No agreement on the one job: adopt duel_customer_evidence.md section 7's three-part difference as Provisional, trigger \"reopen if the first three marketers name a different difference, by Fri 23 Oct 22:00 UK, owner Tori\". A tie goes to rule 4. If the memos were not written in preparation they are written in the room in 8 minutes, so every later clock time shifts back 8 minutes and the reserve absorbs it.",
+      "capture": [
+        {
+          "id": "d1-04-one-job",
+          "label": "The one job, and for whom",
+          "hint": "the customer and the advantage type, in one or two sentences",
+          "lines": 3
+        },
+        {
+          "id": "d1-04-comparison-set",
+          "label": "Comparison set",
+          "hint": "consumer side and brand side, including doing nothing",
+          "lines": 3
+        },
+        {
+          "id": "d1-04-ownership",
+          "label": "Who owns the advocate",
+          "hint": "identity, consent, export, what a brand keeps when a contract ends",
+          "lines": 8
+        },
+        {
+          "id": "d1-04-claims",
+          "label": "Claims table v1",
+          "hint": "claim; versus whom; demonstrable Sunday?; evidence label; hard to copy because",
+          "lines": 8
+        },
+        {
+          "id": "d1-04-q5",
+          "label": "Q5 answer block",
+          "hint": "under 150 words, naming the customer, the advantage type and the alternative it beats",
+          "lines": 8
+        }
+      ]
+    },
+    {
+      "id": "D1-05",
+      "start": "11:10",
+      "end": "11:50",
+      "minutes": 40,
+      "kind": "decide",
+      "title": "Q2 What does it do",
+      "oneLine": "Fix the journey, resolve every cell of the attribution event table, and settle the screen decisions so the scope lock is a signature.",
+      "lead": "Blake",
+      "recorder": "Tori",
+      "owner": "Blake (product definition)",
+      "purpose": "Answer Q2 (core experience, primary journey, outcome, exclusions); define the attribution events, which move Trust and which move Sway Points, and how each can be faked; decide the recipient's second screen, the sign-up moment, the earnings label and the disclosure line, and confirm the persona names, so the scope lock at 11:50 is a signature rather than a debate.",
+      "inputs": [
+        "D1-02 calls (a), (b) and (d)",
+        "`02_product/product_pack.md` (Thu 8 Oct 22:00 UK): the journey strip and the pre-drafted attribution event table, carrying Tori's A, D and U marks and her pre-filled brand column from her Thu 8 Oct read",
+        "prototype_feasibility.md sections 7 and 9",
+        "Divergence rows tagged D1-05"
+      ],
+      "steps": [
+        {
+          "min": 5,
+          "text": "Alone: mark the journey strip (keep, move, strike); list exclusions; tick the events that should count as Trust."
+        },
+        {
+          "min": 6,
+          "text": "Compare strips step by step. The hero mechanic is already decided, so only the ordering and the second screen are open."
+        },
+        {
+          "min": 4,
+          "text": "Event table: read Tori's A, D and U marks aloud."
+        },
+        {
+          "min": 8,
+          "text": "Event table: resolve every D and U cell across the seven rows (scan; view; save; click; purchase where visible; repeat; downstream recommendation) and the seven columns (what is known; what is inferred; how it can be faked; moves Trust?; moves Sway Points?; shown to the advocate as; claimable to a brand as, auditable by a finance team without an integration)."
+        },
+        {
+          "min": 2,
+          "text": "Event table: confirm a counts-once rule on every row."
+        },
+        {
+          "min": 9,
+          "text": "Decide, Blake's domain after hearing Tori: the second screen (product page, or the rest of the Locker); the sign-up moment; Sway Points in the Alpha or not; the earnings label (\"N pending, eligibility not yet confirmed\", no currency) or off, per call (d); the disclosure line \"[persona] may earn if you buy\"; and the persona names, fixed as Maya (advocate) and Sam (recipient) and only confirmed here, so no founder's name appears on a screen or in a script line."
+        },
+        {
+          "min": 6,
+          "text": "Write the Q2 answer block (core experience; how it works, the event chain in one sentence; outcome; what is in the first product and what is excluded). Tori logs D1-05-Q2 and one row per decision."
+        }
+      ],
+      "prompts": [
+        "Second screen: the product page, or the rest of the advocate's Sway? Which grows Sway, which earns?",
+        "Which action first moves Sway Points, and how would two housemates fake it?",
+        "Which events need the recipient to identify themselves, and what do we hold if nobody does?",
+        "Which of scan, view, save, click or purchase could a finance team audit without an integration?",
+        "Ship only Locker, card, Pass and recipient page, no Sway Points or Earn: what do we lose?",
+        "A recipient buys via a coupon site three days after scanning: what does Sway show?"
+      ],
+      "output": "`02_product/product_definition.md` v1 (Core experience; Primary journey; Outcome; Explicit exclusions; Attribution event table; Decisions from D1-05; Q2 answer block; Open questions).",
+      "outputFile": "`02_product/product_definition.md`",
+      "completion": [
+        "One journey",
+        "At least eight exclusions",
+        "Every event row complete, including the fakeable column and a counts-once rule",
+        "Q2 under 150 words"
+      ],
+      "fallback": "The table overruns: keep the scan, view and click rows only and move the rest to D2-05. The second screen is not agreed: the product page stands as Provisional, trigger the six cold tests checked Sun 18 Oct 21:00 UK with Wed 14 Oct as an interim read, owner Blake. Sway Points not agreed: out of the Alpha as Provisional, trigger \"week-two return below the go-or-no-go number set at D2-05; check Fri 20 Nov 22:00 UK; owner Blake\".",
+      "capture": [
+        {
+          "id": "d1-05-journey",
+          "label": "Primary journey and explicit exclusions",
+          "hint": "one journey, at least eight exclusions",
+          "lines": 8
+        },
+        {
+          "id": "d1-05-events",
+          "label": "Attribution event table decisions",
+          "hint": "every D and U cell resolved, a counts-once rule on every row",
+          "lines": 8
+        },
+        {
+          "id": "d1-05-second-screen",
+          "label": "Second screen, sign-up moment and Sway Points in or out",
+          "hint": "Blake decides after hearing Tori; label anything unagreed Provisional with its trigger",
+          "lines": 3
+        },
+        {
+          "id": "d1-05-copy",
+          "label": "Earnings label and disclosure line as they will read on screen",
+          "hint": "\"N pending, eligibility not yet confirmed\" or label off; \"[Maya] may earn if you buy\"",
+          "lines": 1
+        },
+        {
+          "id": "d1-05-q2",
+          "label": "Q2 answer block",
+          "hint": "under 150 words: core experience, the event chain in one sentence, outcome, what is in and what is excluded",
+          "lines": 8
+        }
+      ]
+    },
+    {
+      "id": "D1-06",
+      "start": "11:50",
+      "end": "12:10",
+      "minutes": 20,
+      "kind": "decide",
+      "title": "Scope lock",
+      "oneLine": "Fill the T9 lock sheet, confirm the cut list and the checkpoint times, paste brief v2 into the tool, and Tori signs at 12:10.",
+      "lead": "Tori (signs; cut-list owner)",
+      "recorder": "Blake",
+      "owner": "Blake (build brief v2) and Tori (cut list, checkpoint card)",
+      "purpose": "Lock the journey, six screens, six acceptance tests, cut list, never-cut four and checkpoints before any building, and make the lock a signature rather than a debate. Does Tori sign at 12:10?",
+      "inputs": [
+        "`04_prototype/scope_proposal.md` (Thu 8 Oct 22:00 UK)",
+        "Tori's three written challenges (Thu 8 Oct 22:00 UK)",
+        "Product definition v1 from D1-05",
+        "`04_prototype/build_brief_v1.md` (Wed 7 Oct 22:00 UK)",
+        "The D1-04 demonstrable claims",
+        "The checkpoint card",
+        "The T9 scope lock form, printed with the cards"
+      ],
+      "steps": [
+        {
+          "min": 4,
+          "text": "Blake reads the scope proposal aloud; Tori's three challenges are answered in one line each on the form (T9.7)."
+        },
+        {
+          "min": 5,
+          "text": "Fill the must work, mocked and deferred rows (T9.3); map each demo beat to a D1-04 claim (T9.2); apply the confirmed persona names, disclosure line and D1-05 copy changes to the brief (T9.6); put test 6 in its no-map form (T9.4)."
+        },
+        {
+          "min": 5,
+          "text": "Confirm cut list 1 to 7 and the never-cut four; write the checkpoint times on the wall card (T9.5): CP1 13:20, CP2 14:20, CP3 15:50, CP4 16:55, AR1 17:00, CP5 09:55, CP6 10:40, CP7 11:15."
+        },
+        {
+          "min": 4,
+          "text": "Blake pastes brief v2 into the tool's project instructions; Tori signs; both say aloud \"no new features after 12:10\" (T9.8)."
+        },
+        {
+          "min": 2,
+          "text": "Blake logs \"scope locked 12:10\" (D1-06-01) and photographs the signed form."
+        }
+      ],
+      "prompts": [
+        "Does the demo show what we say differentiates us?",
+        "Which claims in my pack does the prototype not support?",
+        "Which acceptance test, failing at 17:00, would make us cancel the live demo?",
+        "Read the never-cut four aloud. Is there a secret fifth? Say it now.",
+        "If CP3 slips to 16:30, which cut-list items go first?",
+        "Personal Pass first or product-specific QR first: which can we demonstrate?"
+      ],
+      "output": "`04_prototype/build_brief_v2.md` under 600 words (Goal; Users; Data; Screens 1 to 6; Must work; Mocked; Out of scope; Style; Acceptance tests), `04_prototype/scope_lock.md` (the signed T9 form), `04_prototype/cut_list.md` and log entry D1-06-01.",
+      "outputFile": "`04_prototype/scope_lock.md`",
+      "completion": [
+        "Tori's signature at 12:10",
+        "Every screen names a route",
+        "Every test is observable on a phone",
+        "The never-cut four are written",
+        "The brief is in the tool"
+      ],
+      "fallback": "Not signed by 12:10: the proposal as written is the scope, the build starts at 12:55 regardless, and disagreements are logged Provisional with Tori's cut-list authority intact. Morning more than 15 minutes behind: lock the proposal unchanged, lunch stays 45 minutes, every later clock time shifts back by the overrun and the reserve absorbs it. Proposal missing: Blake presents it verbally, D1-06 takes 30 minutes and every later clock time shifts back 10 minutes. If neither technical window was completed, apply the cut list from item 3 onward before Tori signs.",
+      "capture": [
+        {
+          "id": "d1-06-challenges",
+          "label": "Tori's three challenges, answered",
+          "hint": "one line each on the form (T9.7)",
+          "lines": 3
+        },
+        {
+          "id": "d1-06-scope-rows",
+          "label": "Must work, may be mocked, deferred",
+          "hint": "each demo beat mapped to a D1-04 claim (T9.2 and T9.3)",
+          "lines": 8
+        },
+        {
+          "id": "d1-06-cut-list",
+          "label": "Cut list 1 to 7 and the never-cut four",
+          "hint": "the order cuts are taken in, and the four that are protected to the end",
+          "lines": 3
+        },
+        {
+          "id": "d1-06-checkpoints",
+          "label": "Checkpoint times on the wall card",
+          "hint": "CP1 13:20, CP2 14:20, CP3 15:50, CP4 16:55, AR1 17:00, CP5 09:55, CP6 10:40, CP7 11:15",
+          "lines": 1
+        },
+        {
+          "id": "d1-06-signed",
+          "label": "Signed at 12:10",
+          "hint": "Tori's signature, the form photographed, and both saying aloud \"no new features after 12:10\"",
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "D1-LU",
+      "start": "12:10",
+      "end": "12:55",
+      "minutes": 45,
+      "kind": "meal",
+      "title": "Lunch",
+      "oneLine": "Real lunch, no laptops. Sunday's food is bought on the way back.",
+      "lead": "",
+      "recorder": "",
+      "owner": "",
+      "purpose": "Real lunch away from the work, with Sunday's food bought on the way back because the shops shut on Sunday. The first build prompt waits until 12:55.",
+      "inputs": [],
+      "steps": [],
+      "prompts": [],
+      "output": "",
+      "outputFile": "",
+      "completion": [],
+      "fallback": "Lunch stays 45 minutes even when the morning runs late.",
+      "capture": []
+    },
+    {
+      "id": "D1-07",
+      "start": "12:55",
+      "end": "14:55",
+      "minutes": 120,
+      "kind": "build",
+      "title": "Build block 1 and commercial block 1",
+      "oneLine": "Blake builds screens 1 to 3 through CP1 and CP2 while Tori drafts the sales strategy fields T4.1 to T4.6 and T4.9.",
+      "lead": "Blake (build), Tori (checkpoints)",
+      "recorder": "Tori (checkpoint log)",
+      "owner": "Blake (prototype) and Tori (sales strategy T4.1 to T4.6 and T4.9, thesis scaffold)",
+      "purpose": "Reach CP1 (data connection) and CP2 (scan loop) while Tori drafts sales strategy fields T4.1 to T4.6 and T4.9 and the thesis scaffold. Tori writes alone against her prompts; nothing is discussed with Blake until D1-09.",
+      "inputs": [
+        "Build brief v2 in the tool",
+        "The Supabase project `sway-proto`, seeded in technical window B on Wed 7 Oct",
+        "`03_commercial/commercial_pack.md` (Wed 7 Oct 22:00 UK)",
+        "D1-02 call (c)",
+        "The claims table",
+        "The Q1, Q5 and Q2 blocks",
+        "Brand-buyer objection 7 and section 3"
+      ],
+      "steps": [
+        {
+          "min": 25,
+          "text": "Open the project; prompt screen 1 (`/me` Locker from the seeded tables); publish."
+        },
+        {
+          "min": 5,
+          "text": "CP1 at 13:20: Tori opens the published URL over mobile data; five products with images and reasons. Standing rule: only one attempt is made at the anonymous read, and if CP1 has not passed by 13:30 switch at once to the build tool's own built-in backend rather than debugging the external database connection, and record the switch in known limitations."
+        },
+        {
+          "min": 55,
+          "text": "Screen 2 (`/me/pass`: card and QR encoding `/p/<code>`; \"Feature a product\" only while cut-list item 4 holds) and screen 3 (`/p/<code>` with the scan insert); publish."
+        },
+        {
+          "min": 5,
+          "text": "CP2 at 14:20: Tori scans Blake's screen; `/p/<code>` opens; a scan row appears in the table editor."
+        },
+        {
+          "min": 30,
+          "text": "Start screen 4 (`/r/<slug>`); publish; sync GitHub."
+        },
+        {
+          "min": 25,
+          "text": "Tori: T4.1 buyer map for two archetypes (footwear or apparel brand with retail distribution; DTC supplement brand): role, KPI, budget line, trigger. Rows are HYPOTHESIS (inferred) unless a dated brand call said it."
+        },
+        {
+          "min": 5,
+          "text": "Tori: CP1 on the published URL from a cleared tab; Pass, Fix or Cut logged."
+        },
+        {
+          "min": 25,
+          "text": "Tori: T4.2 ICP in five lines; T4.3 user, buyer, budget holder; T4.4 purchase trigger; T4.5 positioning line for the buyer."
+        },
+        {
+          "min": 30,
+          "text": "Tori: T4.6 first-offer options against call (c) (paid discovery study; recruitment feed; two unpaid design-partner brands), each with what it changes for product, sales and the deck. No prices."
+        },
+        {
+          "min": 5,
+          "text": "Tori: CP2, scan, check, log."
+        },
+        {
+          "min": 20,
+          "text": "Tori: T4.9 objections with the best honest answer."
+        },
+        {
+          "min": 10,
+          "text": "Tori: thesis one-pager scaffold from the Q1, Q5 and Q2 blocks."
+        }
+      ],
+      "prompts": [
+        "Who, by job title, signs Sway's first invoice, from which budget line, and what opens it?",
+        "How many members holding one brand's products in one city gets a meeting, and how many a purchase?",
+        "What can a community manager at a mid-sized brand (illustrative) spend without procurement? Does our offer fit?",
+        "Which KPI a community manager already reports does Connector activation move?",
+        "Which brand conversations have happened, with whom, when, and what would they pay for?",
+        "Published URL or preview?",
+        "Is the row in the table?",
+        "Pass, fix or cut?"
+      ],
+      "output": "The prototype at CP2; the checkpoint log sheet of `06_decision_log/live_tables.xlsx` (Checkpoint; Time; Test; Result; Fix; Cut; Credits); `03_commercial/sales_strategy.md` fields T4.1 to T4.6 and T4.9; the `01_answers/thesis_one_pager.md` scaffold.",
+      "outputFile": "`03_commercial/sales_strategy.md`",
+      "completion": [
+        "Five products with images on Tori's phone at CP1",
+        "Tori's scan creates a row with today's timestamp at CP2",
+        "Fields T4.1 to T4.6 and T4.9 each have a line and no unlabelled number"
+      ],
+      "fallback": "CP1 failed: one attempt at the anonymous read; if CP1 has not passed by 13:30 the standing rule applies, the build moves to the tool's own built-in backend, the switch goes into known limitations, cut items 1 and 2, and CP2 moves to 15:10. CP2 failed: prompt \"allow anonymous inserts on events\", 10 minutes; still failing at 14:55, cut items 1, 3 and 4 so the QR points only to the Pass landing, and retry at 15:10. Lovable unusable for 20 minutes: the Bolt.new fallback on the same database, 45 minutes to return to the last checkpoint. Credits under 60: top up, else cut items 1 to 3.",
+      "capture": [
+        {
+          "id": "d1-07-cp1",
+          "label": "CP1 13:20 result",
+          "hint": "Pass, Fix or Cut: five products with images on Tori's phone over mobile data",
+          "lines": 3
+        },
+        {
+          "id": "d1-07-cp2",
+          "label": "CP2 14:20 result",
+          "hint": "Pass, Fix or Cut: her scan opens `/p/<code>` and a scan row with today's timestamp appears",
+          "lines": 3
+        },
+        {
+          "id": "d1-07-fixes",
+          "label": "Fixes and cuts taken in this block",
+          "hint": "what failed, what was cut from the cut list and in what order, and whether the backend was switched",
+          "lines": 3
+        },
+        {
+          "id": "d1-07-credits",
+          "label": "Credit balance at each checkpoint",
+          "hint": "top up at once if under 60",
+          "lines": 1
+        },
+        {
+          "id": "d1-07-commercial",
+          "label": "Tori: T4.1 to T4.6 and T4.9",
+          "hint": "a line per field, no unlabelled number",
+          "lines": 3
+        }
+      ]
+    },
+    {
+      "id": "D1-BR2",
+      "start": "14:55",
+      "end": "15:10",
+      "minutes": 15,
+      "kind": "break",
+      "title": "Afternoon break",
+      "oneLine": "Away from the table. Not shortened for any reason.",
+      "lead": "",
+      "recorder": "",
+      "owner": "",
+      "purpose": "Rest away from the table. This block is never traded for time.",
+      "inputs": [],
+      "steps": [],
+      "prompts": [],
+      "output": "",
+      "outputFile": "",
+      "completion": [],
+      "fallback": "Not shortened for any reason.",
+      "capture": []
+    },
+    {
+      "id": "D1-08",
+      "start": "15:10",
+      "end": "17:15",
+      "minutes": 125,
+      "kind": "build",
+      "title": "Build block 2 and commercial block 2",
+      "oneLine": "Blake builds screens 4 to 6 through CP3 and CP4 and runs AR1, so a fix list exists before dinner.",
+      "lead": "Blake (build), Tori (CP3, CP4, AR1)",
+      "recorder": "Tori",
+      "owner": "Blake (prototype, recording 1, reset note, fix list v1) and Tori (T4.7, T4.8, T4.10, claims table, narrative and headlines, demo script v1)",
+      "purpose": "Reach CP3 (minimum demo) and CP4 (outcome counters); run AR1 so a fix list exists before dinner; finish the sales strategy, complete the claims table and draft the narrative and headlines.",
+      "inputs": [
+        "The CP2 state",
+        "The claims table",
+        "The event table",
+        "Tori's commercial block 1 draft",
+        "`03_commercial/affiliate_coverage.md` (Wed 7 Oct 22:00 UK)",
+        "`03_commercial/pricing_hypotheses.md` (Thu 8 Oct 22:00 UK)",
+        "investor_lens.md section 2"
+      ],
+      "steps": [
+        {
+          "min": 40,
+          "text": "Finish screen 4 (`/r/<slug>`: image, brand, name, \"Recommended by [persona]\", reason, one dominant button, save field, disclosure line) and screen 5 (`/go/<slug>`: click_out then redirect); publish."
+        },
+        {
+          "min": 10,
+          "text": "CP3 at 15:50: Tori as recipient from a cold tab runs scan to recommendation page to retailer; check four event rows; save recording 1 to `04_prototype/recordings/recording_1_<HHMM>.mp4`; sync GitHub."
+        },
+        {
+          "min": 55,
+          "text": "Screen 6 (`/me/trust`: three counters; event list with time, type, city and product; earnings label; default city). The first 5 minutes are one batched prompt for Tori's CP3 copy suggestions, at most three. The last 2 minutes write `04_prototype/reset_note.md` (delete `events` where `is_demo_seed` is false; keep the seeds) and run it once, so AR1 starts from the seeded baseline. Publish."
+        },
+        {
+          "min": 5,
+          "text": "CP4 at 16:55: counters change after Tori scans again."
+        },
+        {
+          "min": 15,
+          "text": "AR1 17:00 to 17:15: Tori runs the six tests from a cleared tab; Blake writes `04_prototype/fix_list_v1.md` in demo-impact order; sync."
+        },
+        {
+          "min": 40,
+          "text": "Tori: T4.7 pricing and packaging hypotheses, each HYPOTHESIS or sourced to a dated conversation, every rate keeping the coverage sheet's label; T4.8 acquisition through community nodes; T4.10 first-customer plan as three brand types with triggers."
+        },
+        {
+          "min": 10,
+          "text": "Tori: CP3 test plus the five-second clarity test (product, who, why, one action); at most three copy suggestions, logged for the batched prompt."
+        },
+        {
+          "min": 20,
+          "text": "Tori: complete the D1-04 claims table, so differentiation thesis v1 exists at 17:15."
+        },
+        {
+          "min": 35,
+          "text": "Tori: fundraising narrative in ten lines (pre-seed framing; three beliefs; proof points M0 to M3, no amounts; why us with the disclosure line and the D1-03 full-time date; five risks) and 14 slide headlines, each with an evidence label and a gap. No amount, valuation, traction or market size."
+        },
+        {
+          "min": 5,
+          "text": "Tori: CP4, scan again, watch the counters, log."
+        },
+        {
+          "min": 15,
+          "text": "Tori: AR1, run the six tests calling each result, and write one demo-script beat per test into `04_prototype/demo_script_v1.md`."
+        }
+      ],
+      "prompts": [
+        "For your own My 5: programme, rate, cookie window, approved today? What is Sway's twenty per cent on GBP 100?",
+        "Would we accept 3 to 5 per cent, flagged friends-and-family, for all of 2027? What is EARN then?",
+        "Do we sell intelligence, or give it away to sell activation?",
+        "What is the earliest month a brand invoice could be paid, and can we last until then?",
+        "Which brand appears most often in the first fifty Lockers, and who do we call if under five?",
+        "What is the product, who recommends it, why, and what is the one thing to do?"
+      ],
+      "output": "The prototype at CP4 with recording 1; `04_prototype/reset_note.md` written and run once; `04_prototype/fix_list_v1.md` in demo-impact order (Rank; Test; What failed; Screen; Fix; Cut instead?; Status); `03_commercial/sales_strategy.md` fields T4.7, T4.8 and T4.10; the claims table in `03_commercial/differentiation_thesis.md` v1; `03_commercial/fundraising_narrative.md`; `04_prototype/demo_script_v1.md`.",
+      "outputFile": "`04_prototype/fix_list_v1.md`",
+      "completion": [
+        "Scan to retailer works on Tori's phone with four event rows",
+        "The scan count changes on refresh",
+        "The reset has run once and AR1 started from the seeded baseline",
+        "The fix list is in demo-impact order by 17:15",
+        "The narrative has no amount, valuation, traction or market size",
+        "Every rate is labelled"
+      ],
+      "fallback": "CP3 missed at 16:00: cut items 1 to 5, put everything to 17:00 on the recipient page, the scan and the click, and run AR1 anyway. CP4 missed at 17:00: AR1 runs tests 1 to 5, Sunday build 3 spends its first 25 minutes on counters and list, items 2, 5 and 6 are struck and the reserve is not drawn. CP3 still missing at 17:15: the reserve goes to the build, D1-09 runs 17:20 to 17:40 on the first offer shape only, D1-10 runs 17:40 to 17:50 and Blake builds 17:50 to 18:30; still missing at 18:30, stop and Sunday runs in never-cut-four mode with the Supabase table as the outcome view.",
+      "capture": [
+        {
+          "id": "d1-08-cp3",
+          "label": "CP3 15:50 result",
+          "hint": "Pass, Fix or Cut: scan to retailer from a cold tab, four event rows, recording 1 saved, GitHub current",
+          "lines": 3
+        },
+        {
+          "id": "d1-08-cp4",
+          "label": "CP4 16:55 result",
+          "hint": "Pass, Fix or Cut: counters change on refresh after Tori scans again",
+          "lines": 3
+        },
+        {
+          "id": "d1-08-ar1",
+          "label": "AR1 fix list v1",
+          "hint": "the six tests each called Pass, Fix or Cut, ranked in demo-impact order before dinner",
+          "lines": 8
+        },
+        {
+          "id": "d1-08-copy",
+          "label": "Tori's CP3 copy suggestions",
+          "hint": "at most three, batched into one prompt in the first 5 minutes of the screen-6 slot",
+          "lines": 3
+        },
+        {
+          "id": "d1-08-commercial",
+          "label": "Tori: T4.7, T4.8, T4.10, claims table, narrative and headlines",
+          "hint": "every rate labelled; no amount, valuation, traction or market size",
+          "lines": 3
+        }
+      ]
+    },
+    {
+      "id": "D1-TR",
+      "start": "17:15",
+      "end": "17:20",
+      "minutes": 5,
+      "kind": "admin",
+      "title": "Transition",
+      "oneLine": "Blake saves and syncs; Tori lays out `sales_strategy.md` v1 ready for Q3.",
+      "lead": "",
+      "recorder": "",
+      "owner": "",
+      "purpose": "Close the build cleanly and put the sales strategy in front of both founders before Q3.",
+      "inputs": [],
+      "steps": [
+        {
+          "min": 5,
+          "text": "Blake saves and syncs; Tori lays out `sales_strategy.md` v1."
+        }
+      ],
+      "prompts": [],
+      "output": "",
+      "outputFile": "`03_commercial/sales_strategy.md`",
+      "completion": [],
+      "fallback": "",
+      "capture": []
+    },
+    {
+      "id": "D1-09",
+      "start": "17:20",
+      "end": "17:50",
+      "minutes": 30,
+      "kind": "decide",
+      "title": "Q3 How do we sell it: compare and decide",
+      "oneLine": "Blake objects, Tori decides: the first offer shape, the first buyer, the pricing hypotheses and the launch city.",
+      "lead": "Blake",
+      "recorder": "Tori",
+      "owner": "Tori (initial sales strategy; thesis v1)",
+      "purpose": "Turn Tori's draft into the shared Q3 answer: agree user, buyer, budget holder, purchase trigger, value demonstration, pricing hypotheses and first customers; close the two calls D1-02 call (c) left open, the first offer's exact shape and the first buyer role and trigger; and name the launch city (or \"not yet chosen\"), the first three node types and the currency on every number. Q3 is Tori's domain; Blake brings objections.",
+      "inputs": [
+        "`03_commercial/sales_strategy.md` v1, fields T4.1 to T4.10, read in file order; there is no separate summary",
+        "`03_commercial/pricing_hypotheses.md` (Thu 8 Oct 22:00 UK)",
+        "The affiliate coverage sheet (Wed 7 Oct 22:00 UK)",
+        "D1-02 call (c)",
+        "The claims table",
+        "The prototype at CP4",
+        "Divergence rows tagged D1-09",
+        "There are no brand notes, so \"no brand evidence\" heads the sales strategy file"
+      ],
+      "steps": [
+        {
+          "min": 6,
+          "text": "Blake reads the file in field order silently and writes three objections and one thing missing."
+        },
+        {
+          "min": 6,
+          "text": "Tori answers; both mark each element FACT (with call date), HYPOTHESIS or OPEN QUESTION, and Demonstrable or Hypothetical against the prototype at CP4."
+        },
+        {
+          "min": 12,
+          "text": "Decide, Tori provisionally after restating Blake's objection: the first offer shape (T4.6); the first buyer role and trigger (T4.3, T4.4); the pricing hypotheses to test in 30 days, with no number unless it came from a conversation; the first-customer plan as brand types (T4.10); the next five conversations by role; the launch city, or \"not yet chosen\" logged as an Open question with the Fri 23 Oct 22:00 UK leader replies as trigger and a candidate city named at D2-05; the first three node types; and the currency used on every number (GBP unless the city is outside the UK)."
+        },
+        {
+          "min": 6,
+          "text": "Write the Q3 answer block under 150 words (T4.11); Tori logs D1-09-Q3 and lists what changes in the deck tomorrow, and updates the thesis one-pager fields T1.9 (what we know) and T1.11 (Q5 and Q2 in one line each) so thesis v1 exists at 17:50."
+        }
+      ],
+      "prompts": [
+        "Who, by job title, signs Sway's first invoice, from which line, and what opens it?",
+        "If a brand says \"send me the list and I will invite them\", do we say yes, at what price?",
+        "Do we sell intelligence, or give it away to sell activation?",
+        "Has any marketer told us what they would pay for and from which line? If not, why write packages?",
+        "A Sway-attributed sale is an existing customer via a friend's link: what do we tell the brand?",
+        "Which of the fields T4.1 to T4.10 could the demo show tomorrow, and which are taken on trust?"
+      ],
+      "output": "`03_commercial/sales_strategy.md` v1 (fields T4.1 to T4.11, with T4.3, T4.4, T4.6 and T4.10 decided, a Demonstrable or Hypothetical column, the launch city or \"not yet chosen\", the first three node types, a currency on every number, and the Q3 answer block as T4.11) and `01_answers/thesis_one_pager.md` v1 with T1.9 and T1.11 updated.",
+      "outputFile": "`03_commercial/sales_strategy.md`",
+      "completion": [
+        "User, buyer, budget holder, trigger and first offer each have one line",
+        "No unlabelled price or rate",
+        "The first-customer plan names roles and brand types",
+        "The first offer fits one role's signing limit as a stated HYPOTHESIS",
+        "The launch city is named or written \"not yet chosen\" with its trigger",
+        "A currency is stated",
+        "Thesis v1 has T1.9 and T1.11"
+      ],
+      "fallback": "Decide only the first offer shape and move the rest to D2-05. No brand conversation held: Q3 is Provisional by default, trigger \"reopen if the first three brand marketers name a different buyer or budget line; check Fri 23 Oct 22:00 UK; owner Tori\". Still differing at 17:44: Tori decides provisionally with Blake's objection verbatim, trigger \"the first marketer to hear the offer names a different budget line, by Fri 23 Oct 22:00 UK, owner Tori\". Launch city not agreed: \"not yet chosen\" is logged as an Open question and a candidate city is named at D2-05.",
+      "capture": [
+        {
+          "id": "d1-09-first-offer",
+          "label": "First offer shape",
+          "hint": "paid discovery study, recruitment feed, or unpaid design-partner observers (T4.6)",
+          "lines": 3
+        },
+        {
+          "id": "d1-09-buyer",
+          "label": "First buyer role and purchase trigger",
+          "hint": "T4.3 and T4.4, one line each, with the signing limit as a stated HYPOTHESIS",
+          "lines": 3
+        },
+        {
+          "id": "d1-09-pricing",
+          "label": "Pricing hypotheses to test in 30 days",
+          "hint": "no number unless it came from a conversation; a currency on every number",
+          "lines": 3
+        },
+        {
+          "id": "d1-09-city",
+          "label": "Launch city and the first three node types",
+          "hint": "name the city, or write \"not yet chosen\" with its trigger",
+          "lines": 1
+        },
+        {
+          "id": "d1-09-q3",
+          "label": "Q3 answer block",
+          "hint": "under 150 words (T4.11), labelled Provisional with its trigger",
+          "lines": 8
+        }
+      ]
+    },
+    {
+      "id": "D1-10",
+      "start": "17:50",
+      "end": "18:00",
+      "minutes": 10,
+      "kind": "admin",
+      "title": "Close",
+      "oneLine": "Label every log entry, triage the parking lot, fix Sunday's first prompt and book the taxi.",
+      "lead": "Tori",
+      "recorder": "Blake",
+      "owner": "Tori (decision log)",
+      "purpose": "Verify that Saturday's outputs exist and are labelled, confirm the build state, fix Sunday's first prompt and book the taxi. Is any log entry unlabelled?",
+      "inputs": [
+        "The decision log",
+        "The checkpoint log",
+        "Fix list v1",
+        "The cut list as applied",
+        "The parking lot",
+        "The taxi app",
+        "`05_logistics/flights.md`, the cutoff row",
+        "The checkout and bag confirmation"
+      ],
+      "steps": [
+        {
+          "min": 4,
+          "text": "Tori reads the log aloud; every entry gets one of the six labels; each parking-lot item is triaged to Sunday, the follow-through week, or dropped."
+        },
+        {
+          "min": 3,
+          "text": "Confirm CP3, CP4 and AR1 status; read fix list v1 in demo-impact order; note the cuts taken; confirm Sunday's order (fixes first, CP5 at 09:55, map only if the fix list is empty) and write Sunday's first prompt on the checkpoint card."
+        },
+        {
+          "min": 3,
+          "text": "Blake books the taxi for the leave time of the cutoff row in `05_logistics/flights.md` (14:45 on the 18:30 default) on Sun 11 Oct; confirm checkout and bags; confirm Sunday's food is bought; each names one thing to think about at dinner, not decide."
+        }
+      ],
+      "prompts": [
+        "Which entry would you be uncomfortable reading to an investor, and why?",
+        "Which decision today was made by exhaustion rather than by the rule? Relabel it Provisional.",
+        "Which cohort number would make us change the mechanic: scans per member, Pass moments used, unprompted joins, or month-two return?",
+        "If CP5 fails tomorrow on a never-cut item, what do we demo at 12:50?",
+        "What does each of us think about at dinner, and what do we promise not to decide?",
+        "Is anything on the parking lot a blocker for one of the eight outputs?"
+      ],
+      "output": "The Day 1 log closed; `04_prototype/fix_list_v1.md` on the wall; the checkpoint card carrying Sunday's first prompt; the taxi confirmation in `05_logistics/`.",
+      "outputFile": "`04_prototype/fix_list_v1.md`",
+      "completion": [
+        "No unlabelled entry",
+        "Sunday's first prompt is on the card",
+        "Taxi confirmed for the leave time of the cutoff row in `05_logistics/flights.md` (14:45 on the 18:30 default) on Sun 11 Oct",
+        "Checkout and bags confirmed"
+      ],
+      "fallback": "None; this session is protected. A second overrun earlier shortens it to the log read-aloud and the Sunday order, with the taxi booked at dinner. Dinner booking lost: any restaurant nearby at 21:00, because dinner is never skipped. Taxi not at the pick-up point at 14:50 on Sunday: book Cabify or Free Now at once; the Aerobus from Placa de Catalunya is the last resort.",
+      "capture": [
+        {
+          "id": "d1-10-labels",
+          "label": "Every log entry labelled",
+          "hint": "one of the six labels on every entry, nothing left unlabelled",
+          "lines": 3
+        },
+        {
+          "id": "d1-10-parking",
+          "label": "Parking lot triaged",
+          "hint": "each item to Sunday, the follow-through week, or dropped",
+          "lines": 3
+        },
+        {
+          "id": "d1-10-sunday",
+          "label": "Sunday's order and first prompt",
+          "hint": "fixes first, CP5 at 09:55, map only if the fix list is empty",
+          "lines": 3
+        },
+        {
+          "id": "d1-10-taxi",
+          "label": "Taxi, checkout and bags confirmed",
+          "hint": "booked for the leave time of the cutoff row, 14:45 on the 18:30 default",
+          "lines": 1
+        },
+        {
+          "id": "d1-10-dinner-thought",
+          "label": "One thing each to think about at dinner",
+          "hint": "to think about, not to decide",
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "D1-CT",
+      "start": "18:00",
+      "end": "18:30",
+      "minutes": 30,
+      "kind": "reserve",
+      "title": "Contingency reserve",
+      "oneLine": "Unused means the day ends at 18:00. Never spent on features, and no strategic decision is made after 18:00.",
+      "lead": "",
+      "recorder": "",
+      "owner": "",
+      "purpose": "The reserve is drawn first by the build, and only if CP3 is still missing at 17:15 (a CP4 miss goes to Sunday build 3), then by overruns in order of occurrence. Tori spends it only as lead of an overrunning session. Nothing new is started and no strategic decision is made.",
+      "inputs": [],
+      "steps": [],
+      "prompts": [],
+      "output": "",
+      "outputFile": "",
+      "completion": [],
+      "fallback": "Unused means the day ends at 18:00. Never spent on features.",
+      "capture": []
+    },
+    {
+      "id": "D1-DN",
+      "start": "20:30",
+      "end": "20:30",
+      "minutes": 0,
+      "kind": "meal",
+      "title": "Dinner",
+      "oneLine": "Booked Fri 25 Sep 20:00 UK. Protected, no laptops, no decisions.",
+      "lead": "",
+      "recorder": "",
+      "owner": "",
+      "purpose": "Dinner is booked in advance, protected and never skipped. No laptops and no workshop decisions.",
+      "inputs": [],
+      "steps": [],
+      "prompts": [],
+      "output": "",
+      "outputFile": "",
+      "completion": [],
+      "fallback": "Dinner booking lost: any restaurant near the accommodation at 21:00. Dinner is never skipped.",
+      "capture": []
+    }
+  ]
+}
