@@ -1,0 +1,932 @@
+{
+ "day": {
+  "id": "sun",
+  "label": "Sunday 11 October",
+  "date": "2026-10-11",
+  "start": "09:00",
+  "end": "14:30",
+  "summary": "Sunday settles Q4 with fresh heads before a single prompt is typed, spends its 90 minutes of build on fixes and cold runs rather than features, reconciles the commercial drafts with what was actually built, and finishes the final review by 14:00 so that all work ends at 14:30, four hours before the assumed 18:30 departure.",
+  "hardStops": [
+   "Hard deadline for the final review: 14:00",
+   "D2-CT hard stop 14:00, whatever is unfinished",
+   "Travel cutoff: all work ends 14:30, departure minus 4 hours by taxi",
+   "Out of the door by 15:00",
+   "CP6 at 10:40 freezes scope; after it, only fixes to what breaks a cold run"
+  ]
+ },
+ "sessions": [
+  {
+   "id": "D2-01",
+   "start": "09:00",
+   "end": "09:05",
+   "minutes": 5,
+   "kind": "admin",
+   "title": "Stand-up: cutoff, fix list v2, reopen list",
+   "oneLine": "Confirm the cutoff against the boarding passes, order fix list v2 by demo impact, and park anything from Saturday we would reopen.",
+   "lead": "Blake",
+   "recorder": "Tori",
+   "owner": "Tori (decision log)",
+   "purpose": "Confirm the cutoff against the boarding passes, confirm the state of the build, and decide whether anything from Saturday is reopened. Question: can both founders state the end-of-work time and the leave time, and is fix list v2 in demo-impact order?",
+   "inputs": [
+    "Boarding passes on both phones",
+    "The taxi booking",
+    "The Day 1 decision log",
+    "`04_prototype/fix_list_v1.md` on the wall",
+    "The checkpoint card with Sunday's first prompt, written at D1-10",
+    "The Lovable credit balance",
+    "The Supabase dashboard",
+    "Tori's 08:30 weather and transport check"
+   ],
+   "steps": [
+    {
+     "min": 2,
+     "text": "Confirm the cutoff against the boarding passes: airline, departure time, terminal, bag or no bag, Ryanair document check if applicable. Read the variant off the rule: 20:00 or later, extension; between 18:30 and 20:00, primary; between 18:00 and 18:30, primary with the reserve shortened (18:20 departure: D2-CT 13:30 to 13:50, D2-07 13:50 to 14:20, leave 14:50); between 17:00 and 18:00, the early-flight variant with the checkpoint card re-marked CP5 09:50, CP6 10:30, CP7 10:55. The earlier of two departures sets the cutoff."
+    },
+    {
+     "min": 2,
+     "text": "Agree the fix list v2 order: Tori reads v1 aloud and any item that stops a never-cut item working goes to the top. Read out the credit balance and buy a top-up now if under 60. Check that Supabase shows Active and that the published URL opens on both phones over mobile data with Wi-Fi off."
+    },
+    {
+     "min": 1,
+     "text": "Each writes one line: a Saturday decision I would reopen, if any. Reopen only if both agree it blocks an output today, a new fact and not a new argument, rule 2 on the card; otherwise park it with a time and initials."
+    }
+   ],
+   "prompts": [
+    "What time do we stop work, what time do we leave, and what does the boarding pass say? Say all three without looking at the card.",
+    "Is Supabase Active, does the published URL open on both phones over mobile data, and how many credits remain?",
+    "Read fix list v1 aloud: which item breaks the demo first, and is it a never-cut item?",
+    "A Saturday decision I would reopen, if any: write it in one line. Does it block an output today? If not, it is parked.",
+    "Which of the four never-cut items is least solid this morning, and does it get the first 25 minutes of build 3?",
+    "Is anything in the weather forecast or the Rodalies and metro notices a reason to leave by 14:45 instead of 15:00?"
+   ],
+   "output": "Log entry D2-01-01 with the cutoff, the variant in force and the leave time; fix list v2 with the same columns as v1 (Rank by demo impact; Test number; What failed; Screen; Proposed fix; Cut instead?; Status); the parking lot updated with any reopen request; the credit balance written on the checkpoint card.",
+   "outputFile": "`04_prototype/fix_list_v2.md`",
+   "completion": [
+    "Both can state the end-of-work time and the leave time",
+    "Fix list v2 is ordered and on the wall",
+    "The variant in force, primary, extension or early-flight, is written on the checkpoint card"
+   ],
+   "fallback": "If Lovable is down, Blake opens the Bolt fallback and the 45-minute rebuild comes from build 3 and the fix allowance in build 4; `/me/trust` is struck and the Supabase table becomes the outcome view. If both tools are down, no rebuild is attempted, the demo uses recording 1 and the exported CSVs, and D2-02 starts at 09:05 regardless. A reopen request the founders cannot agree on is parked, not argued, and the stand-up does not extend.",
+   "capture": [
+    {
+     "id": "d2-01-cutoff",
+     "label": "Cutoff and variant in force",
+     "hint": "End-of-work time, leave time and which variant the boarding passes put us on",
+     "lines": 3
+    },
+    {
+     "id": "d2-01-fixlist",
+     "label": "Fix list v2 order",
+     "hint": "The fix items in demo-impact order, anything that blocks a never-cut item at the top",
+     "lines": 8
+    },
+    {
+     "id": "d2-01-credits",
+     "label": "Credit balance",
+     "hint": "Lovable credits remaining, and whether a top-up was bought",
+     "lines": 1
+    },
+    {
+     "id": "d2-01-reopen",
+     "label": "Reopen line, if any",
+     "hint": "The Saturday decision either founder would reopen, and whether it is parked or taken",
+     "lines": 3
+    }
+   ]
+  },
+  {
+   "id": "D2-02",
+   "start": "09:05",
+   "end": "09:30",
+   "minutes": 25,
+   "kind": "decide",
+   "title": "Q4 How do we raise capital: compare and decide",
+   "oneLine": "Settle the stage word, the three beliefs, the milestone proof points, why us and the do-not-claim list, then write the Q4 answer block.",
+   "lead": "Tori",
+   "recorder": "Blake",
+   "owner": "Tori (fundraising narrative and deck draft)",
+   "purpose": "Make the fundraising narrative shared and defensible before the build: the stage framing, the three beliefs an investor must hold and what closes each, the proof points the cheque buys with thresholds set by the founders and no amounts, why us with the disclosure plan and the full-time date from D1-03, and an evidence gap and closure date on every headline. Q4 is a joint item under rule 3, so both founders must agree and a tie goes to rule 4, never to a domain owner. Question: which sentence in the narrative would each founder not say to an investor, and what replaces it?",
+   "inputs": [
+    "`03_commercial/fundraising_narrative.md` from C2, the ten lines and the 14 headlines with evidence label and gap",
+    "`03_commercial/duel_evidence.md` (Tue 6 Oct 22:00 UK)",
+    "`03_commercial/alternative_test.md` (Tue 6 Oct 22:00 UK)",
+    "`06_decision_log/ownership_v1.md` from D1-03",
+    "The D1-02 calls",
+    "The D1-09 first offer and buyer",
+    "investor_lens.md sections 1, 3, 4 and 5",
+    "challenge_investor-skeptic.md sections 3 and 6",
+    "Divergence rows tagged D2-02",
+    "The 14-slide table, printed or on the laptop",
+    "Every statistic outside duel_evidence.md and alternative_test.md stays [SNIPPET] until it is re-checked on its primary page, a Fri 16 Oct 22:00 UK row owned by Tori"
+   ],
+   "steps": [
+    {
+     "min": 4,
+     "text": "Written alone: Blake reads the narrative and headlines silently and writes three objections and the one headline he would not stand behind; Tori writes the one headline she expects him to reject and why."
+    },
+    {
+     "min": 4,
+     "text": "Tori answers each objection in one sentence. Both mark each headline's evidence [FOUNDER ASSERTION], [SNIPPET], [FETCHED], [NEEDS SOURCE] or a workshop output, FOUNDER DECISION or Demonstration."
+    },
+    {
+     "min": 11,
+     "text": "Decide in this order, one minute each unless marked. The stage word: pre-seed, because seed invites a comparison with companies that have a cohort and a retention curve, a HYPOTHESIS. The three beliefs (3 min, one per belief): people will build and use a recommendation identity unpaid; the event can be captured honestly and is worth money to brands; these two founders can reach a dense pilot on a small cheque with one full time, and the observation that closes each. The M1 and M2 proof points written as numbers the founders believe (3 min): My 5 completion, week-four return on the core action, recipient-to-member conversion, node penetration, brands with five or more recommenders in one node. The why-us bullets (3 min), each founder writing the other's including the weakness, with the full-time date from D1-03 and the disclosure as a process item with a date. The do-not-claim list read aloud and signed: amount, valuation, round size, traction, waitlist, market size, better than Duel, a present-tense moat, wallet passes as existing, purchases attributed, a partnership with any club or brand."
+    },
+    {
+     "min": 6,
+     "text": "Write the Q4 answer block under 150 words: investment case; scale; why now; why us; evidence investors need; milestones the capital funds. Blake logs entries D2-02-Q4, D2-02-beliefs, D2-02-milestones and D2-02-donotclaim with labels."
+    }
+   ],
+   "prompts": [
+    "Which one of you is full time on Sway, from what date, funded how? What does the other one's employment contract say about outside work, IP and confidentiality, and have we read it with a lawyer? Say the date the written disclosure will exist.",
+    "Who builds the production product after the workshop prototype? Name the person or the type of person, the hours, the cost and the date they start. If we do not know, what do we tell an investor who asks in the first meeting?",
+    "Write the one sentence we say to an investor about why Sway exists that does not mention Duel, ShopMy, LTK, trust graphs, or the word 'platform'. Then say whether it describes a company or a feature.",
+    "Duel's public material already says the biggest lever is 'the people who already love you' and asks how to 'activate the influence we already own'. Say what Sway believes that Duel does not. If the answer is about who owns the record and who pays first rather than about the insight, say that in the deck and nowhere else use the word 'better'.",
+    "If an investor said 'I will fund the attribution layer, or the run-store version, but not the consumer network', which of us would take the money and which would walk away, and why? Say it before we look at each other.",
+    "List every piece of data we will hold on day ninety of the pilot. Cross out anything ShopMy, LTK, impact.com or Duel could get from their own systems or a 'how did you hear about us' survey. Read out what is left. Is that a moat, a feature, or a report?",
+    "For each of the three beliefs, name the observation that would close it, the count that would be enough, and the earliest date it could exist.",
+    "Which of the 14 headlines rests entirely on a [FOUNDER ASSERTION], and does the slide say so?"
+   ],
+   "output": "Fundraising narrative v2 under the headings Stage; The three beliefs and what closes each; Proof points M0 to M3 with thresholds, no amounts; Why us, two bullets each written by the other founder; The five risks; The do-not-claim list; Q4 answer block; The 14 headlines with evidence label, gap and closure date. Log entries D2-02-Q4, D2-02-beliefs, D2-02-milestones and D2-02-donotclaim, each labelled.",
+   "outputFile": "`03_commercial/fundraising_narrative.md`",
+   "completion": [
+    "No amount, valuation, traction figure or market size appears",
+    "Every headline has an evidence label and a gap with a closure date",
+    "Every gap that needs a customer conversation carries Fri 16 Oct 22:00 UK and Tori as owner",
+    "Slide 11 is dated facts only",
+    "The disclosure item is an action with an owner and a date, and its substance is not discussed",
+    "The Q4 answer is under 150 words and both founders would say it to an investor"
+   ],
+   "fallback": "At 09:26 with items open, decide only the stage word, the three beliefs and the milestone proof points; the 14 headlines from investor_lens.md section 2 stand as Provisional and slide detail is finished on Fri 16 Oct 22:00 UK as deck draft v2, owner Tori. Build 3 starts at 09:30 regardless, so nothing is charged to D2-CT, and the undecided items are logged Provisional. A joint disagreement on a belief or a milestone threshold goes to rule 4, cheaper to reverse and observable sooner, and if tied, closer to the source-of-truth documents, recorded Provisional with dissent verbatim and the Fri 16 Oct 20:00 UK review call as the trigger. A headline neither founder would stand behind is deleted, not softened.",
+   "capture": [
+    {
+     "id": "d2-02-stage",
+     "label": "The stage word",
+     "hint": "The word we use and the one-line reason, with its label",
+     "lines": 1
+    },
+    {
+     "id": "d2-02-beliefs",
+     "label": "The three beliefs and what closes each",
+     "hint": "One belief per line with the observation that would close it, the count that would be enough and the earliest date",
+     "lines": 8
+    },
+    {
+     "id": "d2-02-milestones",
+     "label": "M1 and M2 proof points",
+     "hint": "The thresholds the founders believe, as numbers, with no amounts",
+     "lines": 8
+    },
+    {
+     "id": "d2-02-donotclaim",
+     "label": "The do-not-claim list, signed",
+     "hint": "Everything we do not say, read aloud and agreed",
+     "lines": 3
+    },
+    {
+     "id": "d2-02-answer",
+     "label": "Q4 answer block, under 150 words",
+     "hint": "Investment case, scale, why now, why us, evidence investors need, milestones the capital funds",
+     "lines": 8
+    }
+   ]
+  },
+  {
+   "id": "D2-03",
+   "start": "09:30",
+   "end": "10:25",
+   "minutes": 55,
+   "kind": "build",
+   "title": "Build block 3 and commercial block 3",
+   "oneLine": "Blake clears fix list v2 and passes the six acceptance tests at CP5 while Tori turns the Q4 decisions into deck draft v1 and the demo script v2 skeleton.",
+   "lead": "Blake (build); Tori leads CP5",
+   "recorder": "Tori (fix list and checkpoint log)",
+   "owner": "Blake (prototype); Tori (deck draft v1)",
+   "purpose": "Clear the fix list and pass the six acceptance tests at CP5 while Tori turns the Q4 decisions into the slide table and the demo script v2 skeleton. Question: do all six tests pass on two phones from a cleared tab, and if not, are the failures on never-cut items at the top of the list?",
+   "inputs": [
+    "`04_prototype/fix_list_v2.md`",
+    "The prototype at CP4 state, or CP3 with the Sunday order from D1-10",
+    "The D2-02 decisions and the 14-slide table",
+    "investor_lens.md section 2",
+    "`03_commercial/duel_evidence.md` (Tue 6 Oct 22:00 UK)",
+    "The D1-04 claims table",
+    "`04_prototype/demo_script_v1.md`",
+    "`04_prototype/checkpoint_log.md`",
+    "A cleared browser tab on Tori's phone"
+   ],
+   "steps": [
+    {
+     "min": 25,
+     "text": "Blake: work fix list v2 in demo-impact order, one prompt per fix, publish after each, build nothing new, and sync GitHub after the last fix. If CP4 was missed on Saturday, the first 25 minutes go to the counters and the event list on `/me/trust` and items 2, 5 and 6 stay struck. Tori: deck draft v1, slides 1 to 7, copying the slide table into `deck_draft_v1.md` in the first two minutes and then editing only what D2-02 changed, never writing from blank; each slide carries the confirmed headline, three to five key points, evidence with its label, the evidence gap with a closure date and a do-not-claim line. Tori writes against this session's prompts alone while drafting: the answers become slide content, not conversation."
+    },
+    {
+     "min": 10,
+     "text": "CP5 at 09:55: Tori re-runs the six acceptance tests on the published URL from a cleared tab over mobile data; each result is called Pass, Fix or Cut; failures are logged with screenshots in demo-impact order; credits are checked and the checkpoint log is updated."
+    },
+    {
+     "min": 20,
+     "text": "Blake: remaining fixes. Only if the fix list is empty at CP5, build the Leaflet map with OpenStreetMap tiles from seeded and live events and the caption 'Demo data plus live scans', reverted to the list within 10 minutes if it breaks the page. Only if the list is still empty at 10:15, build the wallet mock sheet ('Wallet passes are coming. For now, show this screen.', own button styling, no Apple or Google badge artwork) and the 'What is Sway?' page. Otherwise copy tidy on the recipient page only. Publish and sync at 10:23. Tori: slides 8 to 14, with slide 11 as a dated ledger only and slide 13 the milestone table with the D2-02 thresholds and no amounts; then the demo script v2 skeleton against the real screens, six beats, one per acceptance test, plus the 'what this proves and does not' line, leading with whichever mechanic D1-02 chose as hero."
+    }
+   ],
+   "prompts": [
+    "Take the five products in your own My 5. For each one, name the affiliate programme, the rate, the cookie window and whether the programme is open to apply. What is Sway's twenty per cent on GBP 100 of purchases across those five, and would you put that number on a slide?",
+    "Out of the first fifty Lockers, name the brand you expect to appear most often and how many times. If that brand appears fewer than five times, who do we call in Phase 4, and what do we say?",
+    "If a recipient buys through a coupon site three days after scanning your Pass, what does Sway show you, what does the network show the brand, and which of those two numbers do we put in the brand deck?",
+    "Using public information only, what is our two-sentence answer to 'the incumbents already describe an advocate intelligence graph, so why is your Trust Map different'?",
+    "Which slide describes a screen that is not built at CP5, and what does the slide say instead: a gap with a date, or a picture of something that does not exist?",
+    "Which statistic on slides 2 and 3 has a dated screenshot, and which does not? Mark the second kind [SNIPPET] and add the Fri 16 Oct closure.",
+    "Read slide 11 aloud. Is every line an event with a date? Delete the rest."
+   ],
+   "output": "The prototype at CP5 state, published and synced; fix list v2 updated with CP5 results and screenshots; deck draft v1 with one section per slide under the headings Headline, Key points, Evidence and label, Gap and closure date, Do not claim; the demo script v2 skeleton with six beats plus the proves-and-does-not line; the checkpoint log with CP5 and the credit balance.",
+   "outputFile": "`03_commercial/deck_draft_v1.md`",
+   "completion": [
+    "All six acceptance tests pass on two phones, or the failures on never-cut items are at the top of the fix list",
+    "14 slides each with a headline and an evidence label",
+    "Slide 11 is dated facts only",
+    "The demo script skeleton names the hero mechanic in beat 2"
+   ],
+   "fallback": "A never-cut item failing at CP5 at 10:05: all remaining build time in build 3 and the fix allowance in build 4 go to that item, items 2, 6 and 7 are cut now, and Tori's deck work continues unchanged. If the map breaks the page, revert to the list within 10 minutes and log the map as not built. Lovable unusable for more than 20 minutes after 09:30: no Bolt rebuild on Sunday, the prototype is frozen at its last published state, the demo uses that state plus recording 1, and known limitations say so. If Tori disagrees with a fix choice it goes into the checkpoint log and is decided by the cut list, Tori strikes and Blake decides whether a fix is attempted or moved to known limitations, never in conversation mid-build.",
+   "capture": [
+    {
+     "id": "d2-03-cp5",
+     "label": "CP5 results at 09:55",
+     "hint": "Pass, Fix or Cut for each of the six acceptance tests on two phones from a cleared tab",
+     "lines": 8
+    },
+    {
+     "id": "d2-03-fixlist",
+     "label": "Fix list after CP5",
+     "hint": "What is left, in demo-impact order, and whether any never-cut item is failing",
+     "lines": 3
+    },
+    {
+     "id": "d2-03-stretch",
+     "label": "Stretch work taken, if any",
+     "hint": "Map, wallet mock sheet, 'What is Sway?' page, or copy tidy on the recipient page only",
+     "lines": 1
+    },
+    {
+     "id": "d2-03-deck",
+     "label": "Deck draft v1 status",
+     "hint": "Which of the 14 slides have a headline, an evidence label and a gap with a closure date",
+     "lines": 3
+    },
+    {
+     "id": "d2-03-hero",
+     "label": "Hero mechanic in beat 2",
+     "hint": "The mechanic the demo script skeleton leads with",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "id": "D2-BR1",
+   "start": "10:25",
+   "end": "10:40",
+   "minutes": 15,
+   "kind": "break",
+   "title": "Morning break",
+   "oneLine": "Away from the table, and it is never traded for time.",
+   "lead": "",
+   "recorder": "",
+   "owner": "",
+   "purpose": "Away from the table; Blake syncs GitHub before leaving it.",
+   "inputs": [],
+   "steps": [],
+   "prompts": [],
+   "output": "",
+   "outputFile": "",
+   "completion": [],
+   "fallback": "",
+   "capture": []
+  },
+  {
+   "id": "D2-04",
+   "start": "10:40",
+   "end": "11:15",
+   "minutes": 35,
+   "kind": "build",
+   "title": "Build block 4 and commercial block 4: freeze, cold runs, cheat test",
+   "oneLine": "Freeze scope at CP6, prove three cold runs, try to cheat the prototype, and leave with a recording, the reset procedure and an honest limitations list.",
+   "lead": "Blake (build); Tori leads the runs, the cheat test and CP7",
+   "recorder": "Tori",
+   "owner": "Blake (prototype, reset note, recording 2); Tori (demo script v2, known limitations v1)",
+   "purpose": "Freeze scope at CP6, prove the demo runs cold three times at CP7, try to cheat it, and leave with the reset procedure re-run, a recording and an honest limitations list. Question: do three consecutive cold runs complete with no intervention, each under four minutes, and what did the cheat test find?",
+   "inputs": [
+    "The prototype at CP5 state",
+    "`04_prototype/reset_note.md`, written and run once at D1-08 before AR1",
+    "`04_prototype/demo_script_v2.md` skeleton",
+    "The D1-05 attribution event table with the fakeable and counts-once columns",
+    "prototype_feasibility.md section 12, what the prototype proves and does not",
+    "challenge_investor-skeptic.md prompt 8",
+    "A stopwatch",
+    "A screen recorder on Tori's phone",
+    "Both phones on mobile data",
+    "The Supabase table editor open on the laptop"
+   ],
+   "steps": [
+    {
+     "min": 2,
+     "text": "CP6 freeze declared aloud by Tori and logged as D2-04-CP6: no new features, and the only permitted change is a fix to something that breaks a run."
+    },
+    {
+     "min": 13,
+     "text": "Three cold run-throughs, each started after the reset, Tori as the recipient from a cleared tab, stopwatch from 'can I see that?' to the product page, Blake as the advocate on his phone. A run that fails is fixed, published and restarted once at most; a second failure ends the runs and the fallback applies. Run 3 is screen-recorded on Tori's phone as recording 2 and is the timed run for demo script v2. If the fix list was not empty at CP5, plan two runs, not three, and say so in known limitations. Times are recorded per run."
+    },
+    {
+     "min": 10,
+     "text": "Cheat test, both founders, two phones: self-scan of the advocate's own Pass from the second phone; the same pair scanning repeatedly; refresh loops on `/r/<slug>` and `/p/<code>`; back-button re-insert; a `/go/<slug>` reload. Write down every method that inflates a counter; the event table gets a counts-once rule for each, for example one scan per pass code per device per hour, a HYPOTHESIS until built, and the unfixed ones go to known limitations."
+    },
+    {
+     "min": 10,
+     "text": "Blake: re-run the reset so counters go back to the seeded baseline, export the seed CSVs, sync GitHub and log CP7. Tori: write known limitations v1 under five headings, what is mocked, what is seeded, what is not built, what the events do not prove, what the cheat test found, and finalise demo script v2 with the recorded run-3 time, leading with the hero mechanic."
+    }
+   ],
+   "prompts": [
+    "Take the prototype and spend fifteen minutes faking Trust. Two phones, one person, whatever it takes. Write down every way it worked. Which of those do we close before the pilot and which do we accept?",
+    "Of the events we can capture in the pilot, scan, view, save, outbound click, join, purchase where visible, which ones require the recipient to tell us who they are? What do we truthfully hold if nobody does?",
+    "Which of our events, scan, view, save, click, or purchase where visible, could a brand's finance team check against their own order data, and how would they do it in a pilot with no integration?",
+    "Does the same recipient scanning twice count twice? Say the counts-once rule in one sentence and check it is in the event table.",
+    "What is mocked, what is seeded, what is not built, what do the events not prove, and what did the cheat test find? One line under each heading, no adjectives.",
+    "Which mechanic does the demo lead with, and does the script say in one line what this proves and what it does not?",
+    "Was each run under four minutes from 'can I see that?' to the product page with the stopwatch visible, and what was the slowest step?"
+   ],
+   "output": "The frozen prototype, published and synced; the reset note re-run; recording 2 of run 3 in `04_prototype/recordings/`; the seed CSVs re-exported; known limitations v1 with five headings plus the run times; demo script v2 timed; the event table in `02_product/product_definition.md` updated with the counts-once rules; log entries D2-04-CP6 and D2-04-CP7, labelled Demonstration.",
+   "outputFile": "`04_prototype/known_limitations_v1.md`",
+   "completion": [
+    "Three consecutive runs with no intervention, each under four minutes",
+    "The limitations list has all five headings",
+    "The counts-once rule is in the event table",
+    "The reset procedure has been re-run and works",
+    "Recording 2 plays"
+   ],
+   "fallback": "If two of three runs fail, the final review demo uses recording 2 plus the Supabase table as the outcome view and the live scan is shown to CP2 level only; CP6 is never un-frozen and a failing run becomes a spoken caveat in the script. If CP7 is not clean at 11:15, freeze anyway, send every unfixed item to known limitations, and start D2-TR at 11:15 regardless. A cheat method the founders cannot agree to close is accepted for the demo, written into known limitations verbatim and logged as an Open question with the trigger close before the first cohort's first scan, owner Blake, by Fri 20 Nov 22:00 UK. A median run time over 15 seconds from 'can I see that?' to the page is written into known limitations, and the demo at D2-06 leads with the Sway Link.",
+   "capture": [
+    {
+     "id": "d2-04-runs",
+     "label": "Cold run times",
+     "hint": "The stopwatch time for each run from 'can I see that?' to the product page, and the slowest step",
+     "lines": 3
+    },
+    {
+     "id": "d2-04-cheat",
+     "label": "What the cheat test found",
+     "hint": "Every method that inflated a counter, and whether we close it before the pilot or accept it",
+     "lines": 8
+    },
+    {
+     "id": "d2-04-countsonce",
+     "label": "The counts-once rule",
+     "hint": "The rule in one sentence, as it goes into the event table",
+     "lines": 1
+    },
+    {
+     "id": "d2-04-limitations",
+     "label": "Known limitations v1",
+     "hint": "One line under each of what is mocked, what is seeded, what is not built, what the events do not prove, what the cheat test found",
+     "lines": 8
+    },
+    {
+     "id": "d2-04-cp7",
+     "label": "CP7 at 11:15",
+     "hint": "Clean or not clean, and what was frozen with it unfixed",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "id": "D2-TR",
+   "start": "11:15",
+   "end": "11:20",
+   "minutes": 5,
+   "kind": "admin",
+   "title": "Transition: close the build, lay out the drafts",
+   "oneLine": "Blake closes the build and syncs GitHub; Tori lays out deck v1, demo script v2, known limitations and the log's action rows.",
+   "lead": "Blake closes the build",
+   "recorder": "Tori lays out the drafts",
+   "owner": "",
+   "purpose": "Close the build cleanly and put the Sunday drafts in front of both founders before D2-05.",
+   "inputs": [],
+   "steps": [
+    {
+     "min": 5,
+     "text": "Blake closes the build and syncs GitHub. Tori lays out deck v1, demo script v2, known limitations and the log's action rows."
+    }
+   ],
+   "prompts": [],
+   "output": "",
+   "outputFile": "",
+   "completion": [],
+   "fallback": "",
+   "capture": []
+  },
+  {
+   "id": "D2-05",
+   "start": "11:20",
+   "end": "11:50",
+   "minutes": 30,
+   "kind": "decide",
+   "title": "Product priorities, scope reconciliation and execution plan",
+   "oneLine": "Build the priorities table, reconcile every sales and deck claim with the frozen prototype, finalise the sales strategy and agree the next seven days with owners.",
+   "lead": "Blake",
+   "recorder": "Tori",
+   "owner": "Blake (product priorities); Tori (execution plan, sales strategy final)",
+   "purpose": "Produce the product priorities, long-term vision versus initial MVP versus workshop prototype as built with the do-not-build list; reconcile the sales strategy and the deck with the product definition and the frozen prototype; finalise the sales strategy; and agree the next seven days with owners. Product priorities are Blake's domain under rule 3 and the sales strategy is Tori's, and a conflict between a claim and the prototype is decided by rule 7, the claim is downgraded and the scope is never reopened. Question: does any sales or deck claim need something the prototype does not show or the product definition excludes?",
+   "inputs": [
+    "Blake's product prep pack `02_product/product_pack.md` (Thu 8 Oct 22:00 UK): the product hypothesis and core journey, the journey strip, the candidate first experiences and scope boundaries, the assumptions list",
+    "`02_product/product_definition.md` v1",
+    "`04_prototype/build_brief_v2.md`, `04_prototype/scope_lock.md` and `04_prototype/cut_list.md` as applied",
+    "`03_commercial/sales_strategy.md` v1",
+    "`03_commercial/deck_draft_v1.md`",
+    "The D1-04 claims table",
+    "`04_prototype/known_limitations_v1.md`",
+    "The follow-through skeleton",
+    "The decision log's action rows",
+    "The 00_SOURCE_OF_TRUTH.md MVP boundary",
+    "The nine-prompt sales strategy table"
+   ],
+   "steps": [
+    {
+     "min": 4,
+     "text": "Silent: each reads the other's Sunday drafts and marks conflicts with the product definition or the frozen prototype, a sales claim the demo cannot show, a slide describing an unbuilt screen, a rate or price without a label."
+    },
+    {
+     "min": 12,
+     "text": "Build the product priorities table in the room from `02_product/product_pack.md`, taking the vision and MVP columns from the pack's candidate first experiences and scope boundaries. The workshop-prototype column is copied from `scope_lock.md` as applied, not from memory. Tori challenges each MVP cell with 'does it test the wedge?'. Write the do-not-build list."
+    },
+    {
+     "min": 7,
+     "text": "Conflicts and labels: decide each conflict or log it as an Open question with a trigger; mark every claim Demonstrable in the sales strategy and give every product or prototype claim on slides 5, 6 and 10 one of Demonstration, Draft, HYPOTHESIS or Validated finding; reword or remove anything the prototype contradicts; finalise the sales strategy, Tori deciding provisionally after restating Blake's objection. The nine-prompt table is not read aloud here."
+    },
+    {
+     "min": 7,
+     "text": "Execution plan: give every decision-log action an owner and a date within Mon 12 to Sun 18 Oct; confirm or edit the seven follow-through rows; add nothing without an owner; place the external tests from the reconciliation on the day that can run them; and write the go-or-no-go metric for the first cohort, which observation, which number, checked when, as an execution-plan row."
+    }
+   ],
+   "prompts": [
+    "Does this MVP item test the wedge? If it does not, which column does it belong in?",
+    "What does Tori sell in November, December and January? Name the buyer, the price and the thing they get. If the answer is 'nothing yet', say what Tori does instead for those ninety days and whether that is the best use of a commercial founder.",
+    "Write the day-90 member number we actually believe, not the PDF's. Divide it by the number of evenings each of us can give per week. What is the number of members per evening, and have either of us ever recruited that many people to anything by hand?",
+    "Which sales claim needs an event the prototype does not record, and which slide describes a screen that is not built? Reword or downgrade each; the scope lock is not reopened.",
+    "Which KPI that a community manager already reports, referred revenue, new customers, content pieces or members, does Connector activation move? If we cannot name one, what is the activation package for?",
+    "Which action in the log has no owner or no date? Give it one now or delete it."
+   ],
+   "output": "Product priorities v1 under the headings Long-term vision, MVP or Alpha, Workshop prototype as built, Do-not-build list, Label per row; the sales strategy final with the nine elements and a Demonstrable or Hypothetical column, every number labelled; deck draft v1 with a label on every product or prototype claim; execution plan v1 with the columns Date, Owner, Task, Time estimate, Output, Completion criterion, Decision or Open question it tests; log entries for every conflict decided or opened.",
+   "outputFile": "`02_product/product_priorities_v1.md`",
+   "completion": [
+    "Three columns filled with at least five items each",
+    "The do-not-build list is present",
+    "The prototype column matches the frozen build",
+    "No unlabelled commercial claim",
+    "Every action has an owner and a date within Mon 12 to Sun 18 Oct",
+    "No unresolved conflict without a trigger",
+    "The sales strategy's nine elements each have at least one line",
+    "The go-or-no-go metric is a row in the execution plan"
+   ],
+   "fallback": "Priorities default to the source-of-truth MVP boundary plus the prototype as built, labelled Provisional; unlabelled claims default to HYPOTHESIS and are listed in the execution plan; the execution plan defaults to the seven follow-through rows with owners confirmed; lunch starts at 11:50 regardless. A conflict between a sales claim and the product definition that the founders cannot settle makes the claim a HYPOTHESIS under rule 7, with the first external test that could show it as the trigger, a cold test on Wed 14 Oct or a brand conversation by Fri 16 Oct 22:00 UK, and Tori's view as originator recorded verbatim.",
+   "capture": [
+    {
+     "id": "d2-05-priorities",
+     "label": "Product priorities table",
+     "hint": "Long-term vision, MVP or Alpha and workshop prototype as built, at least five items each, one label per row",
+     "lines": 8
+    },
+    {
+     "id": "d2-05-donotbuild",
+     "label": "Do-not-build list",
+     "hint": "What we are deliberately not building, in the founders' words",
+     "lines": 3
+    },
+    {
+     "id": "d2-05-conflicts",
+     "label": "Conflicts decided or logged",
+     "hint": "Each sales or deck claim the prototype cannot show, decided or opened with a trigger",
+     "lines": 8
+    },
+    {
+     "id": "d2-05-plan",
+     "label": "Execution plan Mon 12 to Sun 18 Oct",
+     "hint": "Every action with a date, an owner, an output and a completion criterion",
+     "lines": 8
+    },
+    {
+     "id": "d2-05-gonogo",
+     "label": "Go-or-no-go metric for the first cohort",
+     "hint": "Which observation, which number, checked when",
+     "lines": 3
+    }
+   ]
+  },
+  {
+   "id": "D2-LU",
+   "start": "11:50",
+   "end": "12:35",
+   "minutes": 45,
+   "kind": "meal",
+   "title": "Lunch",
+   "oneLine": "A real lunch at the venue with the food bought on Saturday, no laptops, starting at 11:50 whatever D2-05 has left open.",
+   "lead": "",
+   "recorder": "",
+   "owner": "",
+   "purpose": "Lunch is 45 minutes and is never shortened.",
+   "inputs": [],
+   "steps": [],
+   "prompts": [],
+   "output": "",
+   "outputFile": "",
+   "completion": [],
+   "fallback": "",
+   "capture": []
+  },
+  {
+   "id": "D2-BR2",
+   "start": "12:35",
+   "end": "12:50",
+   "minutes": 15,
+   "kind": "break",
+   "title": "Afternoon break",
+   "oneLine": "A walk outside with no screens, back to back with lunch so 60 minutes pass away from screens before the final review.",
+   "lead": "",
+   "recorder": "",
+   "owner": "",
+   "purpose": "The 60 minutes away from screens before the final review are part of the review's design, so the break is never shortened.",
+   "inputs": [],
+   "steps": [],
+   "prompts": [],
+   "output": "",
+   "outputFile": "",
+   "completion": [],
+   "fallback": "",
+   "capture": []
+  },
+  {
+   "id": "D2-06",
+   "start": "12:50",
+   "end": "13:30",
+   "minutes": 40,
+   "kind": "review",
+   "title": "Final review",
+   "oneLine": "Reset and run the demo cold one last time, read the five answers aloud and challenge them, status the eight outputs, and audit the log.",
+   "lead": "Tori",
+   "recorder": "Blake",
+   "owner": "Tori (decision log, answers document); Blake (prototype pack: URL, recordings, reset note, known limitations, demo script)",
+   "purpose": "Confirm that the eight outputs exist to their completion criteria, that the five answers are shared, specific and defensible in plain language, that the prototype demonstrates the decided journey from a cold start, that product, sales and investor materials agree with each other, and that the record distinguishes decisions, drafts, demonstrations and validated findings with owners, deadlines and external tests. Question: would each founder say each answer to a stranger, and does every output carry a status?",
+   "inputs": [
+    "Everything produced on both days",
+    "The deadline register",
+    "`06_decision_log/decision_log.md`",
+    "`06_decision_log/parking_lot.md`",
+    "The five answer blocks in `01_answers/thesis_one_pager.md`, `02_product/product_definition.md`, `03_commercial/differentiation_thesis.md`, `03_commercial/sales_strategy.md` and `03_commercial/fundraising_narrative.md`",
+    "`04_prototype/demo_script_v2.md`",
+    "`04_prototype/known_limitations_v1.md`",
+    "`04_prototype/reset_note.md`",
+    "Recording 2",
+    "A stopwatch",
+    "The five-answers sheet, the consistency checklist and the register, printed on Thu 8 Oct with the Day 1 cards or on the laptop"
+   ],
+   "steps": [
+    {
+     "min": 6,
+     "text": "Demonstration: Blake runs the reset procedure, then the final cold run with a stopwatch, Blake as the advocate on his phone and Tori as the recipient from a cleared tab, following the demo script beat by beat. Record the time from 'can I see that?' to the product page; over 15 seconds goes into known limitations and the demo leads with the Sway Link. The proves-and-does-not line is read aloud last."
+    },
+    {
+     "min": 14,
+     "text": "The five answers read aloud in the order Q1, Q2, Q5, Q3, Q4 by their owners, Tori for Q1, Q5, Q3 and Q4 and Blake for Q2. After each, the non-owner has 60 seconds to challenge as a sceptical investor or brand marketer; the answer is then labelled Decision, Provisional or Draft and the agreed paragraph is written into the five-answers sheet, about 2 minutes 45 seconds per question. Q3 is Provisional by default, because no brand-marketer conversation happened before the workshop, and its review trigger is written in full: reopen if the first three brand marketers name a different buyer or budget line; check Fri 23 Oct 22:00 UK; owner Tori."
+    },
+    {
+     "min": 12,
+     "text": "Check each of the eight outputs against its completion criterion in the deadline register and mark it complete, draft or missing with an owner and a date. Run the 18-check consistency checklist at the same time, one founder reading each check and the other finding the two documents; every failed check becomes a register row."
+    },
+    {
+     "min": 8,
+     "text": "Decision log audit: every entry has one of the six labels; every Provisional decision and Open question has an observation, a date and an owner; the parking lot is triaged into the execution plan or dropped; the register's rows get owners, deadlines and external tests, and each is copied to the execution plan."
+    }
+   ],
+   "prompts": [
+    "Write the one sentence we say to an investor about why Sway exists that does not mention Duel, ShopMy, LTK, trust graphs, or the word 'platform'. Then say whether it describes a company or a feature.",
+    "Could ShopMy, LTK or Duel truthfully say this sentence? If yes, rewrite.",
+    "Which one of you is full time on Sway by 1 January 2027, and what does the other one's employment contract say about it?",
+    "Show me one recommendation from last week, from one real person to one named recipient, that Sway would have recorded and that none of ShopMy, LTK, Linktree, WhatsApp or a brand's referral tool would have seen. Then tell me what a brand would have paid to see it.",
+    "Has any brand marketer told you, in their own words, what they would pay for and from which budget line, and if not, why are we writing packages before we have heard one?",
+    "Which sentence in this answer would a sceptical investor or brand marketer stop us on, and does that make the answer Provisional or Draft?",
+    "Which output is being called complete because we are tired? Read its completion criterion aloud and check it."
+   ],
+   "output": "The five answers as one document with seven columns, each answer labelled; the output status sheet with the columns Output 1 to 8, Owner, Completion criterion, Status complete draft or missing, What is missing, Owner of the gap, Date and time; the review register of unsupported claims and unresolved disagreements; the consistency checklist marked and filed in `00_programme/`; the decision log audited with every entry labelled; the parking lot triaged; the run time from step 1 in known limitations.",
+   "outputFile": "`01_answers/five_answers.md`",
+   "completion": [
+    "No unlabelled log entry",
+    "No output without a status",
+    "The five answers exist as one document with a label each and both founders would say each to a stranger",
+    "Every consistency Fail has a register row",
+    "Every register row has an owner, a due date and time, and an external test",
+    "Every Provisional decision has a three-part trigger"
+   ],
+   "fallback": "At 13:30 anything unreviewed continues into D2-CT; at 14:00 it is labelled Draft and the review stops regardless; final labels not done move to Mon 12 Oct 22:00 UK and unsigned answers to a Tue 13 Oct 19:00 UK video call. If the live demo fails, recording 2 plus the Supabase table are shown and the failure is written into known limitations. A challenge that neither founder can answer in 60 seconds makes the answer Provisional, with the challenge verbatim as the review trigger's observation and the earliest external test as its date. A joint answer, Q1, Q5 or Q4, still disputed goes to rule 4, never to a domain owner, with Tori's originator view recorded verbatim. Heavy rain or a transport notice at 12:50: the review keeps 12:50 to 13:30, the reserve is cut to 15 minutes, D2-07 runs 13:45 to 14:15 and the founders leave by 14:45.",
+   "capture": [
+    {
+     "id": "d2-06-answers",
+     "label": "The five answers confirmed",
+     "hint": "Q1, Q2, Q5, Q3 and Q4, each as an agreed paragraph under 150 words, Q1 under 120, with its label Decision, Provisional or Draft and whether both would say it to a stranger",
+     "lines": 8
+    },
+    {
+     "id": "d2-06-outputs",
+     "label": "The eight outputs status",
+     "hint": "Each output marked complete, draft or missing, with what is missing, the owner of the gap and a date and time",
+     "lines": 8
+    },
+    {
+     "id": "d2-06-register",
+     "label": "Unsupported claims and unresolved disagreements",
+     "hint": "Each register row with the claim verbatim, its type, current label, action, the external test that would settle it, and an owner and due date",
+     "lines": 8
+    },
+    {
+     "id": "d2-06-checklist",
+     "label": "Consistency checklist result",
+     "hint": "Which of the 18 checks failed and who owns each fix",
+     "lines": 3
+    },
+    {
+     "id": "d2-06-run",
+     "label": "Final cold run time",
+     "hint": "Seconds from 'can I see that?' to the product page; over 15 goes into known limitations",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "id": "D2-CT",
+   "start": "13:30",
+   "end": "14:00",
+   "minutes": 30,
+   "kind": "reserve",
+   "title": "Contingency reserve",
+   "oneLine": "The reserve that protects the final review: anything unreviewed continues here and stops at 14:00, whatever is unfinished.",
+   "lead": "",
+   "recorder": "",
+   "owner": "",
+   "purpose": "Reserve protecting the final review, drawn only by D2-06 and spent only by the session lead. No morning block draws it, it is never drawn for features or new decisions, no strategic decision is made inside it, and unused reserve means D2-07 starts early.",
+   "inputs": [],
+   "steps": [],
+   "prompts": [],
+   "output": "Anything unreviewed at 14:00 is labelled Draft or Open question with an owner and a date in the follow-through week.",
+   "outputFile": "",
+   "completion": [],
+   "fallback": "",
+   "capture": []
+  },
+  {
+   "id": "D2-07",
+   "start": "14:00",
+   "end": "14:30",
+   "minutes": 30,
+   "kind": "admin",
+   "title": "Decision log final, pack, bags",
+   "oneLine": "Send the single source document, archive the prototype pack, photograph the wall, pack the room and collect the bags.",
+   "lead": "Blake",
+   "recorder": "Tori",
+   "owner": "Tori (log and answers document); Blake (prototype pack)",
+   "purpose": "Leave with the record complete and the room clear. Question: do both founders have the single source document on their phones before leaving?",
+   "inputs": [
+    "The audited decision log",
+    "`01_answers/five_answers.md`",
+    "`00_programme/output_status.md`",
+    "The GitHub repo",
+    "The seed CSVs",
+    "Recordings 1 and 2, and 3 in the extension",
+    "The wall paper",
+    "The taxi app",
+    "The accommodation's bag-collection arrangement"
+   ],
+   "steps": [
+    {
+     "min": 10,
+     "text": "Tori saves the decision log final, exported from the live tables spreadsheet, and exports the five answers, the eight output statuses and execution plan v1 as one document to both founders by message and shared folder. Blake confirms the GitHub sync and saves the seed CSVs, the reset note and both recordings to `04_prototype/recordings/`."
+    },
+    {
+     "min": 10,
+     "text": "Pack the room. Photograph the wall paper, the decision log, checkpoint card, cut list, fix lists and the D1-04 sheets, and file it in `07_evidence/wall_D2/`. Leave the venue as found. Laptops closed at 14:20 at the latest."
+    },
+    {
+     "min": 10,
+     "text": "Collect the bags. Confirm the taxi in the app for the cutoff row's leave time, 14:45 on the 18:30 default, walk to the pick-up point, and leave by 15:00."
+    }
+   ],
+   "prompts": [
+    "Do both of us have the single source document open on our phones right now?",
+    "Is the GitHub last commit timestamped today, and does the repo contain the CP7 state?",
+    "Do recording 1 and recording 2 play from `04_prototype/recordings/` on a phone?",
+    "Is every sheet on the wall photographed and legible before it comes down?",
+    "Is the taxi confirmed for the cutoff row's leave time, 14:45 on the 18:30 default, with a pick-up point a taxi can reach?",
+    "Which terminal is each of us flying from, and is anyone checking a bag or flying Ryanair, which adds 15 minutes?"
+   ],
+   "output": "The single source document, the decision log final, five answers, output statuses and execution plan v1, sent to both founders; the prototype pack archived in `04_prototype/`; the wall photographs filed.",
+   "outputFile": "`00_programme/sway_workshop_record_2026-10-11.md`",
+   "completion": [
+    "Both founders have the document on their phones before leaving",
+    "The archive is complete",
+    "All work has ended by 14:30"
+   ],
+   "fallback": "None; nothing after 14:30 is work. If the export is not finished at 14:30 it is sent from the taxi or the terminal and the fact is noted on Mon 12 Oct, and nothing is written or decided after 14:30. If the taxi is not at the pick-up point at 14:50, take Cabify or Free Now at once; the Aerobus is the last resort, reaching the terminal about 16:30, hand luggage only.",
+   "capture": [
+    {
+     "id": "d2-07-doc",
+     "label": "Single source document sent",
+     "hint": "Where it was sent and that both founders have it open on their phones",
+     "lines": 1
+    },
+    {
+     "id": "d2-07-archive",
+     "label": "Prototype pack archived",
+     "hint": "GitHub sync confirmed, seed CSVs, reset note and both recordings saved",
+     "lines": 1
+    },
+    {
+     "id": "d2-07-wall",
+     "label": "Wall photographs filed",
+     "hint": "Every sheet photographed and legible, filed in `07_evidence/wall_D2/`",
+     "lines": 1
+    },
+    {
+     "id": "d2-07-taxi",
+     "label": "Taxi and leave time",
+     "hint": "Taxi confirmed, pick-up point walked to, and the time we are out of the door",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "id": "D2-TRV1",
+   "start": "14:30",
+   "end": "15:00",
+   "minutes": 30,
+   "kind": "travel",
+   "title": "Departure logistics",
+   "oneLine": "Leave the accommodation by 15:00, with the taxi booked for 14:45.",
+   "lead": "",
+   "recorder": "",
+   "owner": "",
+   "purpose": "Blake takes the taxi and turns the hotspot off; Tori takes the bags and returns the keys. With a checked bag or a Ryanair flight, 14:45 is the leave time, not 15:00.",
+   "inputs": [],
+   "steps": [],
+   "prompts": [],
+   "output": "Out of the door by 15:00.",
+   "outputFile": "",
+   "completion": [],
+   "fallback": "Taxi not there at 14:50: Cabify or Free Now at once. The Aerobus from Plaça de Catalunya is the last resort: leaving at 15:00 it reaches the terminal about 16:30 under the 90-minute public-transport rule, 2 hours before departure, acceptable only with hand luggage, online check-in and no Ryanair document check.",
+   "capture": []
+  },
+  {
+   "id": "D2-TRV2",
+   "start": "15:00",
+   "end": "16:00",
+   "minutes": 60,
+   "kind": "travel",
+   "title": "Taxi to BCN",
+   "oneLine": "45 minutes driving plus 15 minutes contingency.",
+   "lead": "",
+   "recorder": "",
+   "owner": "",
+   "purpose": "Both terminals if the airlines differ; add 15 minutes if flying Ryanair or checking a bag. The transfer times are an assumption from logistics.md section 3 and are unverified.",
+   "inputs": [],
+   "steps": [],
+   "prompts": [],
+   "output": "",
+   "outputFile": "",
+   "completion": [],
+   "fallback": "",
+   "capture": []
+  },
+  {
+   "id": "D2-TRV3",
+   "start": "16:00",
+   "end": "16:00",
+   "minutes": 0,
+   "kind": "travel",
+   "title": "At the terminal",
+   "oneLine": "At the terminal, 2 hours 30 minutes before an 18:30 departure.",
+   "lead": "",
+   "recorder": "",
+   "owner": "",
+   "purpose": "An assumption based on EES exit checks on a long-weekend Sunday, logistics.md section 5, unverified.",
+   "inputs": [],
+   "steps": [],
+   "prompts": [],
+   "output": "",
+   "outputFile": "",
+   "completion": [],
+   "fallback": "",
+   "capture": []
+  },
+  {
+   "id": "D2-TRV4",
+   "start": "18:30",
+   "end": "18:30",
+   "minutes": 0,
+   "kind": "travel",
+   "title": "Assumed departure",
+   "oneLine": "The assumed 18:30 departure, replaced by the booked time once `05_logistics/flights.md` is complete on Fri 25 Sep 20:00 UK.",
+   "lead": "",
+   "recorder": "",
+   "owner": "",
+   "purpose": "A booking at 20:00 or later applies the extension variant.",
+   "inputs": [],
+   "steps": [],
+   "prompts": [],
+   "output": "",
+   "outputFile": "",
+   "completion": [],
+   "fallback": "",
+   "capture": []
+  }
+ ],
+ "variants": [
+  {
+   "id": "extension",
+   "when": "Departure booked 20:00 or later",
+   "endsAt": "16:00",
+   "changes": [
+    "Everything up to and including the afternoon break is unchanged, 09:00 to 12:50, so nothing is lost if the later flight is confirmed late.",
+    "The extra 90 minutes go, in this order, to prototype fixing (+65), the final review (+15) and contingency (+10).",
+    "D2-04X build block 5, extension only, 12:50 to 13:55, 65 minutes: harden the demo, never widen it. Question: is the fix list empty and are two more cold runs clean?",
+    "D2-04X step 1 (30 min): remaining fix-list items in demo-impact order, publish after each; anything that breaks a run is reverted with Lovable's own version history within 10 minutes, then GitHub synced.",
+    "D2-04X step 2 (20 min): one cut-list item only if the fix list is empty, in this order, the map if not built, else the wallet mock sheet, else the 'What is Sway?' page, else the 'Add a product' sheet; a stretch item that is not working at 13:40 is reverted, not finished.",
+    "D2-04X step 3 (15 min): two more cold runs with Tori as the recipient from a cleared tab, and recording 3; known limitations updated; reset procedure re-run; GitHub sync.",
+    "Tori during D2-04X steps 1 and 2, 50 minutes: deck draft v1 tidy against the frozen screens, then the nine-prompt sales-strategy self-check, which then does not need the Thu 15 Oct slot; she joins at minute 50 for the runs.",
+    "D2-06 final review moves to 13:55 to 14:50, 55 minutes, and its hard deadline moves to 15:30: the demo is run twice, Pass first then Link first, with a longer challenge round on Q3 and Q4.",
+    "D2-CT reserve moves to 14:50 to 15:30, 40 minutes, absorbing build 5 or review overruns; unused means the day ends early.",
+    "D2-07 log, pack and bags moves to 15:30 to 16:00; all work ends 16:00.",
+    "Leave the accommodation by 16:30, be at the terminal 17:30, departure 20:00 or later as booked.",
+    "Extension arithmetic: 420 minutes, 09:00 to 16:00.",
+    "If only one founder has the later flight, the earlier departure sets the shared cutoff and the primary schedule applies, unless both agree in advance that one leaves first and the other closes the record alone."
+   ]
+  },
+  {
+   "id": "early",
+   "when": "Departure between 17:00 and 18:00",
+   "endsAt": "13:00",
+   "changes": [
+    "Applied at D2-01 only if a boarding pass says so.",
+    "D2-01 09:00 to 09:05, unchanged.",
+    "D2-02 09:05 to 09:25, 20 minutes.",
+    "D2-03 09:25 to 10:15, 50 minutes, with CP5 09:50 to 10:00.",
+    "D2-BR1 10:15 to 10:30.",
+    "D2-04 10:30 to 10:55, 25 minutes: freeze, one cold run, reset, recording; the cheat test moves to Wed 14 Oct.",
+    "D2-TR is dropped; Blake closes the build inside D2-04.",
+    "The checkpoint card is re-marked CP5 09:50, CP6 10:30, CP7 10:55.",
+    "D2-05 10:55 to 11:15, 20 minutes.",
+    "D2-LU 11:15 to 12:00.",
+    "D2-06 12:00 to 12:30, 30 minutes, hard deadline 12:30: demo, five answers, eight-output check; labels move to Mon 12 Oct.",
+    "D2-07 12:30 to 13:00.",
+    "The afternoon break and the reserve are lost and the build falls below the 5 hours 30 minutes floor in prototype_feasibility.md; the founders avoid this variant by booking 18:30 or later.",
+    "Early-flight arithmetic: 240 minutes, 09:00 to 13:00."
+   ]
+  },
+  {
+   "id": "transport",
+   "when": "Leaving by Aerobus, metro or train",
+   "endsAt": "14:00",
+   "changes": [
+    "The cutoff is 14:00 rather than 14:30.",
+    "D2-CT is dropped.",
+    "The review stops at 13:30.",
+    "D2-07 runs 13:30 to 14:00.",
+    "The founders leave by 14:30.",
+    "End of work is departure minus 4 hours 30 minutes by Aerobus, metro or train, plus 15 minutes if flying Ryanair or checking a bag: 90 minutes from leaving the accommodation to the terminal, 2 hours 30 minutes at the terminal and 30 minutes to pack and collect bags."
+   ]
+  }
+ ],
+ "beforeStart": {
+  "id": "D2-00",
+  "title": "Before 09:00: pack, check out, bags held",
+  "when": "Before 09:00",
+  "oneLine": "The room is cleared before the first session so no working minute goes on luggage.",
+  "purpose": "Both founders pack and check out before 09:00 and bags go to the accommodation's storage, so the 14:00 to 14:30 block packs the room, not the suitcases.",
+  "steps": [
+   {
+    "who": "Both",
+    "text": "Pack and check out before 09:00; bags to the accommodation's storage."
+   },
+   {
+    "who": "Blake",
+    "text": "Confirm the taxi in the app for the cutoff row's leave time (14:45 on the 18:30 default), and that the pick-up point is a street a taxi can reach."
+   },
+   {
+    "who": "Tori",
+    "text": "Check the weather forecast and the Rodalies or metro notices at 08:30."
+   },
+   {
+    "who": "Both",
+    "text": "Laptop and both phones charged to full; the power bank in the day bag, not the held luggage."
+   }
+  ],
+  "completion": [
+   "Bags held",
+   "Taxi confirmed",
+   "Both phones and the laptop at full charge"
+  ],
+  "fallback": "Bags not held: use the locker near Placa de Catalunya booked by Wed 30 Sep 22:00 UK, and add 30 minutes to the transfer, which removes the reserve. Booked through Sunday night or a written late checkout: pack before 09:00 anyway, so the 14:00 to 14:30 block is packing the room.",
+  "assumption": "Bags held free on checkout day, confirmed in writing by the accommodation by Fri 25 Sep 20:00 UK and re-checked at the Fri 9 Oct venue check."
+ }
+}

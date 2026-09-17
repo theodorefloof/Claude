@@ -1,0 +1,338 @@
+{
+ "hero": {
+  "title": "Two days to decide what Sway is",
+  "standfirst": "These two days are a working session for two founders with no facilitator, where five questions get one shared, specific, defensible answer each, written down and labelled. They produce eight outputs, from the company thesis to the execution plan, and a prototype that shows one journey on two phones.",
+  "dates": "Sat 10 and Sun 11 October 2026, Barcelona"
+ },
+ "whatIsSwayToday": {
+  "oneThing": "Sway turns trusted product recommendations into measurable commerce.",
+  "spine": [
+   "MY 5",
+   "LOCKER",
+   "SWAY PASS/LINK",
+   "RECOMMEND",
+   "EARN",
+   "TRUST",
+   "SWAY FOUNDING MEMBER COLLECTIVE",
+   "TRUST MAP",
+   "BRAND RECOGNITION",
+   "BRAND COLLECTIVE",
+   "ACTIVATION",
+   "SCALE"
+  ],
+  "note": "This is the starting position, not the answer: D1-02 confirms the one thing or rewrites it, and the spine is a narrative order, not an MVP scope."
+ },
+ "whyThisWorkshop": [
+  "The two days produce shared, specific, defensible answers to five questions, and eight outputs: company thesis, product definition, differentiation thesis, sales strategy, fundraising narrative and deck draft, product priorities, prototype with demo script and known limitations, and execution plan.",
+  "The order is deliberate. Saturday morning spends the sealed positions written in preparation on the hardest decisions first, before the first build prompt at 12:55, and Sunday brings product, sales and the investor story back into one audited record.",
+  "The prototype shows one journey: the advocate (Maya) builds a Locker from My 5 and shows a Sway Pass, the recipient (Sam) scans it and acts on a recommendation page, and the advocate sees the outcome as Trust. It is a Demonstration, never evidence of demand.",
+  "No customer or community conversation happens before the workshop, because preparation is four evenings in the week of the trip. So the Saturday answer on how Sway is sold rests on founder hypotheses and leaves the room Provisional, and nothing leaves Barcelona above Decision.",
+  "Every decision leaves the room with one of six labels, and every Provisional decision leaves with a review trigger: an observation in numbers, a check date and a reporting founder. Nothing strategic is decided after 18:00 on Saturday, and the Sunday hard stop at 14:00 is fixed."
+ ],
+ "questions": [
+  {
+   "n": 1,
+   "short": "What is Sway?",
+   "full": "What is Sway: category, target customer, founding insight, positioning, reason to exist?",
+   "decidedAt": "D1-02",
+   "when": "Saturday 09:10",
+   "defensible": "Both founders would say it to a stranger; it names a customer and a behaviour; ShopMy, LTK or Duel could not truthfully say it.",
+   "captureId": "answer-1"
+  },
+  {
+   "n": 5,
+   "short": "Dramatically better than Duel?",
+   "full": "How do we make it dramatically better than a platform like Duel: translate a million times better into a meaningful advantage for a specific customer, across outcomes, experience, speed, economics and capabilities, covering direct competition and different ways of solving the underlying problem?",
+   "decidedAt": "D1-04",
+   "when": "Saturday 10:30",
+   "defensible": "Three or more demonstrable claims tied to demo beats; Duel from public pages only; not found publicly where nothing was found; better used only inside the wording of the question.",
+   "captureId": "answer-5"
+  },
+  {
+   "n": 2,
+   "short": "What does it do?",
+   "full": "What does it do: core UX, outcome, how it works, what belongs in the first product?",
+   "decidedAt": "D1-05",
+   "when": "Saturday 11:10",
+   "defensible": "One journey; eight or more exclusions; every event row fakeable and counts-once; matches the frozen prototype.",
+   "captureId": "answer-2"
+  },
+  {
+   "n": 3,
+   "short": "How do we sell it?",
+   "full": "How do we sell it: user, buyer, budget holder, purchase trigger, value demo, pricing and packaging hypotheses, first customers?",
+   "decidedAt": "D1-09",
+   "when": "Saturday 17:20",
+   "defensible": "One line each for user, buyer, budget holder, trigger and first offer; no unlabelled price; a currency on every number; the launch city named or not yet chosen; Provisional, because no customer conversation happens before the workshop.",
+   "captureId": "answer-3"
+  },
+  {
+   "n": 4,
+   "short": "How do we raise capital?",
+   "full": "How do we raise capital: investment case, scale, why now, why us, the evidence investors need, the milestones capital funds?",
+   "decidedAt": "D2-02",
+   "when": "Sunday 09:05",
+   "defensible": "No amount, valuation, traction or market size; every headline labelled with a dated gap; slide 11 dated facts only.",
+   "captureId": "answer-4"
+  }
+ ],
+ "openQuestions": [
+  {
+   "id": "q1",
+   "label": "Return flight, bags and checkout",
+   "question": "What is the return flight time, airline, flight number, terminal and checked bag, and what are the accommodation checkout time and the Sunday bag hold?",
+   "why": "Day 2 works back from the boarding pass, and a locker across town costs 30 to 45 minutes of Sunday.",
+   "assumption": "Departure 18:30 from BCN by taxi: work ends 14:30, D2-06 runs 12:50 to 13:30 with a hard deadline of 14:00, leave 15:00, terminal 16:00. The venue is the accommodation, checkout before 09:00, bags held.",
+   "ifDifferent": "20:00 or later moves nothing before 12:50 and gives back build, review and reserve time. 17:00 to 18:00 forces the early-flight variant and work ends 13:00. Public transport means leaving by 14:30; a checked bag or Ryanair means leaving 14:45. If bags are not held, a locker is booked by Wed 30 Sep 22:00 UK and 30 minutes are added to the transfer.",
+   "lines": 3
+  },
+  {
+   "id": "q2",
+   "label": "Which evenings you can protect",
+   "question": "Which of the four evenings, Mon 5, Tue 6, Wed 7 and Thu 8 Oct, can each of you protect to 22:00 UK; can the three admin anchors be done by Fri 25 Sep 20:00 UK; and what travel or commitments fall in the week of 5 Oct?",
+   "why": "All the preparation sits in those four evenings: 7h15 for Blake and 6h35 for Tori. Tuesday gates Wednesday, because the My 5 catalogue must reach Blake by Tue 6 Oct 21:00 UK for the seeding.",
+   "assumption": "All four evenings protected to 22:00 UK, 90 to 125 minutes each; the three admin anchors done by Fri 25 Sep 20:00 UK; Tori on the same terms as Blake; no required work from Thu 17 Sep to Sun 4 Oct.",
+   "ifDifferent": "If an evening is lost, cut in this order: Tori's affiliate coverage spot check, her pricing hypotheses (moved into C1 on Saturday), her alternative desk test, Blake's product pack trimmed to the journey strip and the assumptions list, then both divergence columns. Never cut: founder answers v1, technical windows A and B, the My 5 catalogue reaching Blake by Tue 6 Oct 21:00 UK, the flight and accommodation confirmations, and the scope proposal.",
+   "lines": 3
+  },
+  {
+   "id": "q3",
+   "label": "Which Duel, and what you can gather",
+   "question": "Confirm that Duel means duel.tech, and say which public materials you can gather yourselves.",
+   "why": "Q5 at D1-04 uses public pages only, the research holds search snippets rather than primary pages, and Blake abstains on anything non-public, logged each time.",
+   "assumption": "Duel Holdings Limited, trading as Duel at duel.tech, company 08318527; not duel.com, a crypto casino.",
+   "ifDifferent": "A different company means Tori rebuilds the Duel public evidence sheet by Tue 6 Oct 22:00 UK and the D1-04 comparison set, and no time moves. On Tue 6 Oct gather the ten public items: your own dated screenshots of duel.tech pages, the 2026 report microsite, the Monica Vinader PDF, the 23 Sep 2025 press release, a consumer-side walkthrough of a public Duel-powered sign-up, the Shopify, G2 and Capterra listings, and Companies House filings. Never a pricing sheet, sales deck, roadmap, internal metric or customer list.",
+   "lines": 3
+  },
+  {
+   "id": "q4",
+   "label": "Tools, accounts and phones",
+   "question": "Which AI coding tool and accounts exist; can you open and export `sway-alpha-0-prototype.vjbrillaud.chatgpt.site` and who is vjbrillaud; does a Supabase or similar account exist; and what are your phone models?",
+   "why": "Technical window A on Tue 6 Oct and window B on Wed 7 Oct are sized for starting from nothing, the clickable prototype is the last-resort demo and its screenshots feed the product prep pack, and scanning is tested phone to phone.",
+   "assumption": "No accounts: Blake creates Lovable Pro, Supabase, GitHub and Bolt.new on a personal email in technical window A on Tue 6 Oct; the prototype's host and exportability are unverified; one iPhone and one Android between you; EU roaming on both.",
+   "ifDifferent": "If accounts exist, window A shortens by about 30 minutes. Another tool is named in build brief v1 by Wed 7 Oct 22:00 UK, with dates unchanged. If the prototype cannot be exported, screenshot every screen by Thu 8 Oct 22:00 UK, write no export in the product prep pack, and the last resort becomes a static recipient page plus the printed QR. One phone platform means borrowing one for the Tue 6 Oct scan test; no roaming means a laptop hotspot, checked by both on the Thu 8 Oct 21:00 UK call.",
+   "lines": 3
+  },
+  {
+   "id": "q5",
+   "label": "Your constraints, in your own words",
+   "question": "What are your constraints in your own words: employment obligations, intellectual property in the existing materials, non-compete or outside-activity considerations, hours per week, and budget for the follow-through week?",
+   "why": "D1-03 logs hours, the full-time trigger, five ownership areas and a disclosure date, and D2-02, the Sat 17 Oct 10:00 UK call and the founder agreement build on it. These are diligence items to confirm with your own legal advice; this programme does not assess them.",
+   "assumption": "Day jobs kept through Sun 18 Oct; weekday tasks at most 90 minutes; Blake books independent advice by Tue 13 Oct 22:00 UK at his own cost; no contract content discussed in any session; personal emails for every account; nothing non-public about Duel in any document; spend limited to tools and a credit top-up; no pilot or reward budget.",
+   "ifDifferent": "A known obligation is written under heading 7(e) of answers v1 by Mon 5 Oct 22:00 UK and logged at D1-03 as Provisional with the advice date as its trigger, and no time moves. An earlier full-time date is recorded at D1-03 and absorbed by D2-05 and the Sat 17 Oct call. A budget enters the execution plan at D2-05 and the 30-day plan; with none, Founding Member Collective rewards stay a HYPOTHESIS, unpriced.",
+   "lines": 4
+  }
+ ],
+ "successMinimum": [
+  "Five answers in one document, each labelled; Q1, Q2 and Q5 at least Provisional; Q3 and Q4 at least Draft with an owner and a date.",
+  "A decision log with no unlabelled entry, a three-part trigger on every Provisional decision and Open question, the signed scope lock (`scope_lock.md`), and the cut list as struck.",
+  "The never-cut four on a phone: the QR to the recipient (Sam) page, one dominant action, the scan and click_out events, and the scan count for the advocate (Maya); or recording 2 plus the Supabase table. Also known limitations v1 and demo script v2.",
+  "Product definition v1; the differentiation paragraph and comparison set; the sales strategy first offer, buyer and trigger; the narrative and 14 headlines; product priorities covering at least the MVP boundary plus the prototype as built.",
+  "Execution plan v1 for Mon 12 Oct to Sun 18 Oct with an owner and a date per action, and a status against all eight outputs."
+ ],
+ "decisionRule": [
+  "Positions are written before they are spoken, and nothing is edited after the swap.",
+  "The timebox is the arbiter: a logged decision is not reopened the same day unless a new fact appears.",
+  "The domain owner decides provisionally after restating the other's objection, Blake on product definition, UX, journey, prototype scope, priorities and the do-not-build list, Tori on positioning, ICP, buyer, offer, pricing hypotheses, first customers and the deck's argument, while Q1, Q4, Q5, the launch city, founder commitment and decision rights are joint, with Tori's originator view recorded verbatim and Blake abstaining on non-public Duel content.",
+  "A joint item unresolved at the timebox takes the option cheaper to reverse with evidence sooner, or if tied the option closer to the source-of-truth documents, labelled Provisional with the dissent verbatim.",
+  "One of six labels per entry: Decision, Provisional, Draft, Demonstration, Validated finding or Open question; a working demo or a founder agreement validates nothing.",
+  "Every Provisional decision or Open question carries a three-part trigger: the observation in numbers, the check date and the reporting founder.",
+  "The prototype wins in the room and the evidence wins afterwards: claims downgrade to Hypothesis, and the scope lock is never reopened to rescue one.",
+  "No decisions by exhaustion: nothing strategic after 18:00 on Sat 10 Oct or inside a reserve, and the Sunday hard stop is fixed.",
+  "Build tie-breakers: Tori strikes from the cut list and Blake cannot add; Blake decides whether a fix is attempted or moved to known limitations."
+ ],
+ "labels": [
+  {
+   "name": "Decision",
+   "meaning": "Settled in the room; it is not reopened the same day unless a new fact appears."
+  },
+  {
+   "name": "Provisional",
+   "meaning": "Decided for now, with the dissent written verbatim and a three-part trigger: observation in numbers, check date, reporting founder."
+  },
+  {
+   "name": "Draft",
+   "meaning": "Written, with an owner and a date against it; the maturity most deliverables leave Barcelona at."
+  },
+  {
+   "name": "Demonstration",
+   "meaning": "Something shown working, such as the prototype; never evidence of demand."
+  },
+  {
+   "name": "Validated finding",
+   "meaning": "Needs a count, a date and the reporting founder's name; under five observations it stays a Hypothesis."
+  },
+  {
+   "name": "Open question",
+   "meaning": "Not answered here, and carries the same three-part trigger as a Provisional decision."
+  }
+ ],
+ "tensions": [
+  {
+   "title": "Sway Pass versus Sway Link as the hero",
+   "implication": "The Pass carries the emotion and the Link works in WhatsApp today; the choice sets the D1-05 journey strip, the demo's first beat and the D1-04 comparison set.",
+   "decidedAt": "D1-02 call (a)"
+  },
+  {
+   "title": "Consumer-first versus brand-first revenue",
+   "implication": "The current lean is consumer-first, which means no brand dashboard and nothing for Tori to sell for months unless a study or design-partner offer comes first.",
+   "decidedAt": "D1-02 call (c)"
+  },
+  {
+   "title": "Money shown versus hidden in the first cohort",
+   "implication": "Earnings first with approvals and payouts, or Progress and Trust first with eligibility not yet confirmed; it decides the Locker's first screen, the earnings label and the disclosure line.",
+   "decidedAt": "D1-02 call (d), then D1-05 and D1-09"
+  },
+  {
+   "title": "Network versus tool",
+   "implication": "Either the recipient page must recruit, or one member gets value alone; it prices the cold-start risk and sets the go or no-go metric after the first cohort.",
+   "decidedAt": "D1-02 call (b), then D2-05"
+  },
+  {
+   "title": "Wellness versus any category",
+   "implication": "The current lean is wellness while My 5 may contain anything; it sets the copy, the catalogue and the size of the first brand set.",
+   "decidedAt": "D1-02, inside the Q1 answer"
+  },
+  {
+   "title": "Two currencies versus one",
+   "implication": "Sway Points and Trust kept apart may read as over-designed, but a single number is what the language discipline forbids.",
+   "decidedAt": "D1-05"
+  },
+  {
+   "title": "Better than Duel versus a different job",
+   "implication": "The current lean is a different job with identity staying with Sway: alongside Duel rather than instead of it, and who owns my advocates when the contract ends.",
+   "decidedAt": "D1-04"
+  },
+  {
+   "title": "Trust Map as moat versus useful tool",
+   "implication": "Either consent and a graph-ready schema now, or the best Locker and page with minimal data; the deck line is that the tool is the wedge and the map is the ambition.",
+   "decidedAt": "D1-04, then D2-02"
+  },
+  {
+   "title": "Launch city and currency",
+   "implication": "The city sets coverage and disclosure rules, the first brand list and a currency on every number; not yet chosen is logged as an Open question with the Fri 23 Oct 22:00 UK leader replies as its trigger.",
+   "decidedAt": "D1-09"
+  }
+ ],
+ "limitations": [
+  "Flights, accommodation and daily availability are unconfirmed: the 18:30 departure, the venue and the 90 to 125 minute evenings are assumptions until the Fri 25 Sep 20:00 UK logistics lock.",
+  "The Duel and alternatives evidence is search-snippet grade because the primary pages were blocked, so both founders re-verify with dated screenshots by Tue 6 Oct 22:00 UK before any external use.",
+  "Neither founder is an engineer, no prior brand or community conversation is recorded, and hours, a full-time date, budget and company are stated nowhere until D1-03.",
+  "The independent strategic thinking block runs once only, 60 minutes for Blake and 90 for Tori on Mon 5 Oct, with no second pass on the founder answers.",
+  "Preparation is four evenings with no customer or community conversation, so the Saturday answer on how Sway is sold rests on founder hypotheses and leaves the room Provisional, checked on Fri 23 Oct 22:00 UK, owner Tori.",
+  "The primary schedule gives 335 minutes of hands-on build against the research file's 7-hour sequence, and it survives only because the never-cut four and the ordered cut list are written into the scope lock.",
+  "The prototype demonstrates one journey on two phones and never validates demand, retention, affiliate economics, purchase attribution, wallet distribution or brand interest."
+ ],
+ "glossary": [
+  {
+   "term": "advocate",
+   "meaning": "The member who keeps and recommends products."
+  },
+  {
+   "term": "recipient",
+   "meaning": "The person who receives a recommendation and may act on it."
+  },
+  {
+   "term": "My 5",
+   "meaning": "The first five products with a reason each: what are the 5 things actually worth the money?"
+  },
+  {
+   "term": "Locker",
+   "meaning": "The product home: products the member stands behind, with genuine reasons."
+  },
+  {
+   "term": "Sway Link",
+   "meaning": "The digital surface: a trackable link, with affiliate parameters where eligible."
+  },
+  {
+   "term": "Sway Pass",
+   "meaning": "The real-world surface: a QR that resolves through Sway before the recipient acts."
+  },
+  {
+   "term": "Trust",
+   "meaning": "Evidence that people act because of a recommendation, in Real World and Affiliate views."
+  },
+  {
+   "term": "Sway Points",
+   "meaning": "Reward eligible participation and status progression across Sway; Progress is the member view of them, and they are not Trust."
+  },
+  {
+   "term": "Trust Map",
+   "meaning": "The accumulating graph of people, products, recommendations, recipients, actions, geography and time; in the MVP, stored events plus the Real World view."
+  },
+  {
+   "term": "Founding Member Collective",
+   "meaning": "The founder-run programme that rewards early pilot members with access, not couponing, before any Brand Collective."
+  },
+  {
+   "term": "Brand Collective",
+   "meaning": "A branded community inside Sway; Collective tiers are progression levels within one brand programme."
+  },
+  {
+   "term": "brand service package",
+   "meaning": "What a brand buys: intelligence, activation, scale; every price is a HYPOTHESIS."
+  },
+  {
+   "term": "Journey personas",
+   "meaning": "The advocate (Maya) and the recipient (Sam); the names are fixed, D1-05 only confirms them and founder names never appear on a screen."
+  }
+ ],
+ "outputs": [
+  {
+   "n": 1,
+   "name": "One-page company thesis",
+   "maturity": "Decision on the Q1 block; \"what we know\" lines Draft",
+   "raisedBy": "Six cold tests (Wed 14 Oct 22:00 UK; Sun 18 Oct 21:00 UK); hero-mechanic review (Sun 18 Oct 21:00 UK)",
+   "owner": "Tori"
+  },
+  {
+   "n": 2,
+   "name": "Product definition",
+   "maturity": "Decision on journey, exclusions and second screen; deferred event rows Draft",
+   "raisedBy": "Recipient-page cold tests Wed 14 Oct 22:00 UK; Alpha outline Thu 15 Oct 22:00 UK",
+   "owner": "Blake"
+  },
+  {
+   "n": 3,
+   "name": "Differentiation thesis",
+   "maturity": "Draft; demonstrable claims are Demonstrations, the rest Hypothesis",
+   "raisedBy": "Five community members asked \"what does Sway let you do that these do not?\" by Fri 20 Nov 22:00 UK (challenge_investor-skeptic.md section 3)",
+   "owner": "Tori"
+  },
+  {
+   "n": 4,
+   "name": "Initial sales strategy",
+   "maturity": "Provisional on the buyer and on the ICP, because no customer conversation happens before the workshop; the rest Draft",
+   "raisedBy": "Three brand conversations by Fri 16 Oct 22:00 UK, notes in the conversation template, then the trigger checked Fri 23 Oct 22:00 UK; first-offer one-pager Wed 14 Oct 22:00 UK",
+   "owner": "Tori"
+  },
+  {
+   "n": 5,
+   "name": "Fundraising narrative and deck draft",
+   "maturity": "Decision on stage word, three beliefs, proof points, do-not-claim list; slides Draft",
+   "raisedBy": "Deck v2 with screenshot-backed statistics Fri 16 Oct 22:00 UK",
+   "owner": "Tori"
+  },
+  {
+   "n": 6,
+   "name": "Product priorities",
+   "maturity": "Decision on three columns and the do-not-build list",
+   "raisedBy": "Alpha outline Thu 15 Oct 22:00 UK; a contract engineer conversation",
+   "owner": "Blake"
+  },
+  {
+   "n": 7,
+   "name": "Working prototype, demo script, known limitations",
+   "maturity": "Demonstration; never evidence of demand",
+   "raisedBy": "Six cold tests with strangers (Wed 14 Oct 22:00 UK; Sun 18 Oct 21:00 UK)",
+   "owner": "Blake (prototype); Tori (script); both (limitations)"
+  },
+  {
+   "n": 8,
+   "name": "Execution plan",
+   "maturity": "Decision on owners and dates; Open questions carry triggers",
+   "raisedBy": "Fri 16 Oct review call (20:00 UK) checking each trigger; weekly cadence set Sun 18 Oct 21:00 UK",
+   "owner": "Tori"
+  }
+ ]
+}
