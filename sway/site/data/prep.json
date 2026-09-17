@@ -1,0 +1,986 @@
+{
+  "totals": {
+    "blake": {
+      "minutes": 435,
+      "label": "7h15"
+    },
+    "tori": {
+      "minutes": 395,
+      "label": "6h35"
+    },
+    "note": "Essential preparation is four evenings, Mon 5 to Thu 8 Oct, with a 22:00 UK deadline each evening, and no evening asks Blake for more than 125 minutes or Tori for more than 105."
+  },
+  "anchors": [
+    {
+      "id": "an1",
+      "who": "Both",
+      "title": "Book both flights and tell the other founder",
+      "detail": "Each founder books their own flight and tells the other the airline, flight number, departure time, terminal, the airport code BCN, and bag or no bag. Written into `05_logistics/flights.md`. This sets the Sunday cutoff row in the travel cutoff table and gates nothing else. About 15 minutes.",
+      "deadline": "Fri 25 Sep, 20:00 UK",
+      "fallback": "Sunday stays on the 18:30 default, which is an ASSUMPTION until both flights are booked. Anchors not done by Fri 25 Sep are confirmed on the Thu 8 Oct call."
+    },
+    {
+      "id": "an2",
+      "who": "Both",
+      "title": "Book the accommodation, with a written answer on Sunday bag hold",
+      "detail": "Whoever books: book the accommodation, get a written answer on holding bags on Sunday, and confirm the work surface (table, power, Wi-Fi). The venue is the accommodation. About 15 minutes.",
+      "deadline": "Fri 25 Sep, 20:00 UK",
+      "fallback": "If bags cannot be held, book a locker near Plaça de Catalunya by Wed 30 Sep 22:00 UK, which adds 30 minutes to the Sunday transfer."
+    },
+    {
+      "id": "an3",
+      "who": "Both",
+      "title": "Passport validity and EES or ETIAS status check",
+      "detail": "Each founder checks their own passport validity and their EES or ETIAS status, then confirms it by message. 10 minutes.",
+      "deadline": "Fri 25 Sep, 20:00 UK",
+      "fallback": "Anchors not done by Fri 25 Sep are confirmed on the Thu 8 Oct call."
+    }
+  ],
+  "evenings": [
+    {
+      "id": "mon",
+      "label": "Monday 5 October",
+      "date": "2026-10-05",
+      "blakeMinutes": 90,
+      "toriMinutes": 90,
+      "focus": "The independent strategic thinking block: each founder writes their own answers alone and seals them, and the shared folder goes live. It happens once, and there is no second pass.",
+      "tasks": [
+        {
+          "id": "m1",
+          "who": "Blake",
+          "title": "Founder answers v1, written alone and sealed",
+          "minutes": 60,
+          "why": "D1-02 opens this envelope, and there is no second pass, so v1 is the only version the workshop has.",
+          "instructions": [
+            "Write one page on your own device under seven headings: (1) Sway in one sentence, as you would say it to a stranger; (2) the customer problem that matters most, naming the customer and the moment; (3) why a customer would choose Sway over doing nothing; (4) ambitions, constraints and biggest doubts, three short lists; (5) what the other founder may see differently, in your words; (6) what evidence would change my mind, as observations with numbers where you can; (7) the five hardest calls, one line each with reasoning and what would change my mind. (45 min)",
+            "The five hardest calls are: (a) hero mechanic: Sway Pass, Sway Link, or a card sent into the chat with the Pass second; (b) the single-player value sentence: what one person gets on day one with nobody else on it; (c) who pays first and when brands enter: consumer-first alone, consumer-first with two named design-partner brands as unpaid observers, or a paid discovery study as the first offer; (d) money shown or hidden in the first cohort: earnings label on or off by default, the disclosure line present either way; (e) founder commitment: hours per week now, the trigger and date for one founder going full time, and who owns product, pilot recruitment, commercial outreach, operations and fundraising.",
+            "Label every claim FOUNDER DECISION, HYPOTHESIS or OPEN QUESTION; do not edit after saving; do not read the other's. (10 min)",
+            "Keep the file off the shared drive; add `01_answers/blake_v1_receipt.md` reading: written Mon 5 Oct, one page, seven headings, sealed. (5 min)",
+            "Work alone, with no messages about the content. This is the independent strategic thinking block and it happens once."
+          ],
+          "output": "One page on Blake's own device, sealed until D1-02, with the receipt in `01_answers/`.",
+          "outputFile": "`01_answers/blake_v1.md`",
+          "deadline": "Mon 5 Oct, 22:00 UK",
+          "usedAt": "D1-02 (envelopes opened there); D1-03",
+          "fallback": "Written on Tue 6 Oct at the cost of the alternative desk test. Still missing on Fri 9 Oct: six minutes of in-room writing at D1-02, which is the only recovery left.",
+          "reviewer": "None (sealed)",
+          "capture": [
+            {
+              "id": "prep-m1-1",
+              "label": "1 Sway in one sentence",
+              "hint": "As you would say it to a stranger.",
+              "lines": 2
+            },
+            {
+              "id": "prep-m1-2",
+              "label": "2 The customer problem that matters most",
+              "hint": "Name the customer and the moment.",
+              "lines": 4
+            },
+            {
+              "id": "prep-m1-3",
+              "label": "3 Why a customer would choose Sway over doing nothing",
+              "lines": 4
+            },
+            {
+              "id": "prep-m1-4",
+              "label": "4 Ambitions, constraints and biggest doubts",
+              "hint": "Three short lists.",
+              "lines": 8
+            },
+            {
+              "id": "prep-m1-5",
+              "label": "5 What the other founder may see differently",
+              "hint": "In your words.",
+              "lines": 4
+            },
+            {
+              "id": "prep-m1-6",
+              "label": "6 What evidence would change my mind",
+              "hint": "Observations, with numbers where you can.",
+              "lines": 5
+            },
+            {
+              "id": "prep-m1-7",
+              "label": "7 The five hardest calls",
+              "hint": "One line each with reasoning and what would change my mind: (a) hero mechanic, Sway Pass, Sway Link, or a card sent into the chat with the Pass second; (b) the single-player value sentence, what one person gets on day one with nobody else on it; (c) who pays first and when brands enter, consumer-first alone, consumer-first with two named design-partner brands as unpaid observers, or a paid discovery study as the first offer; (d) money shown or hidden in the first cohort, earnings label on or off by default, the disclosure line present either way; (e) founder commitment, hours per week now, the trigger and date for one founder going full time, and who owns product, pilot recruitment, commercial outreach, operations and fundraising.",
+              "lines": 12
+            }
+          ]
+        },
+        {
+          "id": "m2",
+          "who": "Tori",
+          "title": "Founder answers v1, written alone and sealed",
+          "minutes": 90,
+          "why": "D1-02 opens this envelope, and there is no second pass, so v1 is the only version the workshop has.",
+          "instructions": [
+            "Write one page on your own device under seven headings: (1) Sway in one sentence, as you would say it to a stranger; (2) the customer problem that matters most, naming the customer and the moment; (3) why a customer would choose Sway over doing nothing; (4) ambitions, constraints and biggest doubts, three short lists; (5) what the other founder may see differently, in your words; (6) what evidence would change my mind, as observations with numbers where you can; (7) the five hardest calls, one line each with reasoning and what would change my mind. (75 min)",
+            "The five hardest calls are: (a) hero mechanic: Sway Pass, Sway Link, or a card sent into the chat with the Pass second; (b) the single-player value sentence: what one person gets on day one with nobody else on it; (c) who pays first and when brands enter: consumer-first alone, consumer-first with two named design-partner brands as unpaid observers, or a paid discovery study as the first offer; (d) money shown or hidden in the first cohort: earnings label on or off by default, the disclosure line present either way; (e) founder commitment: hours per week now, the trigger and date for one founder going full time, and who owns product, pilot recruitment, commercial outreach, operations and fundraising.",
+            "Label every claim FOUNDER DECISION, HYPOTHESIS or OPEN QUESTION; do not edit after saving; do not read the other's. (10 min)",
+            "Keep the file off the shared drive; add `01_answers/tori_v1_receipt.md` reading: written Mon 5 Oct, one page, seven headings, sealed. (5 min)",
+            "Work alone, with no messages about the content. This is the independent strategic thinking block and it happens once."
+          ],
+          "output": "One page on Tori's own device, sealed until D1-02, with the receipt in `01_answers/`.",
+          "outputFile": "`01_answers/tori_v1.md`",
+          "deadline": "Mon 5 Oct, 22:00 UK",
+          "usedAt": "D1-02 (envelopes opened there); D1-03",
+          "fallback": "Written on Tue 6 Oct at the cost of the alternative desk test. Still missing on Fri 9 Oct: six minutes of in-room writing at D1-02, which is the only recovery left.",
+          "reviewer": "None (sealed)",
+          "capture": [
+            {
+              "id": "prep-m2-1",
+              "label": "1 Sway in one sentence",
+              "hint": "As you would say it to a stranger.",
+              "lines": 2
+            },
+            {
+              "id": "prep-m2-2",
+              "label": "2 The customer problem that matters most",
+              "hint": "Name the customer and the moment.",
+              "lines": 4
+            },
+            {
+              "id": "prep-m2-3",
+              "label": "3 Why a customer would choose Sway over doing nothing",
+              "lines": 4
+            },
+            {
+              "id": "prep-m2-4",
+              "label": "4 Ambitions, constraints and biggest doubts",
+              "hint": "Three short lists.",
+              "lines": 8
+            },
+            {
+              "id": "prep-m2-5",
+              "label": "5 What the other founder may see differently",
+              "hint": "In your words.",
+              "lines": 4
+            },
+            {
+              "id": "prep-m2-6",
+              "label": "6 What evidence would change my mind",
+              "hint": "Observations, with numbers where you can.",
+              "lines": 5
+            },
+            {
+              "id": "prep-m2-7",
+              "label": "7 The five hardest calls",
+              "hint": "One line each with reasoning and what would change my mind: (a) hero mechanic, Sway Pass, Sway Link, or a card sent into the chat with the Pass second; (b) the single-player value sentence, what one person gets on day one with nobody else on it; (c) who pays first and when brands enter, consumer-first alone, consumer-first with two named design-partner brands as unpaid observers, or a paid discovery study as the first offer; (d) money shown or hidden in the first cohort, earnings label on or off by default, the disclosure line present either way; (e) founder commitment, hours per week now, the trigger and date for one founder going full time, and who owns product, pilot recruitment, commercial outreach, operations and fundraising.",
+              "lines": 12
+            }
+          ]
+        },
+        {
+          "id": "m3",
+          "who": "Blake",
+          "title": "Create the shared folder and read the programme",
+          "minutes": 30,
+          "why": "Every later file needs somewhere to go, and D1-01 opens the workshop pack.",
+          "instructions": [
+            "Create the folder tree and `WORKSHOP_PACK.md` with its five headings (1 Status board; 2 Links; 3 Read order; 4 Contacts; 5 Kit list) and a status board row per file, including the room-created and follow-through files; paste the glossary from `context_audit.md` section 8, and the rules card and the checkpoint card from the programme, into their files. (5 min, inside the 30)",
+            "One shared cloud-drive folder of plain files, so everything can be downloaded and opened offline on a phone. Both have edit rights; nobody else is invited.",
+            "Read the programme's Read this first and section 1, then skim your own column of the daily agendas so you know what Tuesday to Thursday ask of you; write one line under Read order in `WORKSHOP_PACK.md`: the assumption most likely wrong. (25 min)",
+            "Finishing any task means changing its Status cell on the board to Not started, Draft, Done or Sealed. That is the only progress report either founder sends."
+          ],
+          "output": "Folder live, and `WORKSHOP_PACK.md` with the status board and one line under Read order.",
+          "outputFile": "`00_programme/WORKSHOP_PACK.md`",
+          "deadline": "Mon 5 Oct, 22:00 UK",
+          "usedAt": "Every later file; D1-01",
+          "fallback": "Folder before window A on Tue 6 Oct at the latest, because the Tuesday outputs need somewhere to go; reading trimmed to section 1 only, which saves 15 minutes.",
+          "reviewer": "Tori (opens the folder)",
+          "capture": [
+            {
+              "id": "prep-m3-1",
+              "label": "The assumption most likely wrong",
+              "hint": "One line, written under Read order in `WORKSHOP_PACK.md`.",
+              "lines": 3
+            }
+          ]
+        },
+        {
+          "id": "m4",
+          "who": "Both",
+          "title": "Confirm which Duel, by message",
+          "minutes": 0,
+          "why": "The identity line at the top of Tuesday's evidence sheet is the written record; until both have confirmed it stays an ASSUMPTION. It is not counted in the evening totals.",
+          "instructions": [
+            "Both reply confirmed by message: Duel Holdings Limited, trading as Duel at duel.tech, company number 08318527. Source: `duel_public_offering.md` section 1."
+          ],
+          "output": "Both have replied confirmed.",
+          "deadline": "Mon 5 Oct, 22:00 UK",
+          "fallback": "Until confirmed it is an ASSUMPTION, and nothing is decided on the Thu 8 Oct call.",
+          "reviewer": "Each other",
+          "capture": [
+            {
+              "id": "prep-m4-1",
+              "label": "Which Duel, confirmed",
+              "hint": "Duel Holdings Limited, trading as Duel at duel.tech, company number 08318527. Note that both have replied confirmed.",
+              "lines": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tue",
+      "label": "Tuesday 6 October",
+      "date": "2026-10-06",
+      "blakeMinutes": 100,
+      "toriMinutes": 105,
+      "focus": "Prove the tool chain and the scan, and gather the outside evidence: window A for Blake, the Duel sheet, the catalogue and one alternative desk test for Tori, with the catalogue reaching Blake by 21:00 UK.",
+      "tasks": [
+        {
+          "id": "t1",
+          "who": "Blake",
+          "title": "Technical window A: accounts, project, hello-world and the scan",
+          "minutes": 90,
+          "why": "Window A proves the tool chain and the scan, and it gates window B on Wednesday.",
+          "instructions": [
+            "Run checks A1 to A5 in order; A4 does not start until A3 passes. If the Supabase connection fails twice, switch to the tool's own built-in backend and note it in `access_note.md` rather than spending the evening on it.",
+            "A1 Accounts (10 min): create or log in to Lovable (Pro), Supabase and GitHub, all on a personal email; confirm the plan and credit figures on the checkout page. Pass: logged in to all three, plan and credits written down.",
+            "A2 Database (10 min): Supabase project `sway-proto`; copy the project URL and the anon key's location (Settings, API) into `04_prototype/access_note.md`. Pass: the project shows Active.",
+            "A3 Build project (15 min): Lovable project `sway-proto` connected to the Supabase project, with GitHub sync to a private repo. Pass: Supabase shows connected and the repo exists. This check gates everything after it.",
+            "A4 Hello-world with QR (35 min): prompt: Create a mobile-first page at /hello that says Sway hello with the current time, and a page at /qr that shows a QR code (qrcode.react, SVG, 240px) encoding the public URL of /hello. Insert one row into a table called hello_events each time /hello loads and show the count on the page. Then publish. Pass: the published /qr scanned by an iPhone camera and an Android camera opens /hello over mobile data with Wi-Fi off, and the count rises on refresh.",
+            "A5 Two-way scan and paper QR (20 min): /qr on the laptop and on one phone, each scanned from the other phone, both directions; note distance and brightness; print one A4 paper QR for the travel folder; send Tori the published URL and a photo of /qr and ask her to open it over mobile data. Pass: both scans inside 5 seconds, the paper QR scans, and Tori reports opened.",
+            "The published URL and the line that the scan worked are the two things that must be in `readiness.md` part 1."
+          ],
+          "output": "`05_logistics/readiness.md` part 1 with the published URL and the scan result, plus `04_prototype/access_note.md`.",
+          "outputFile": "`05_logistics/readiness.md`",
+          "deadline": "Tue 6 Oct, 22:00 UK",
+          "usedAt": "D1-07 (data connection already proven)",
+          "fallback": "A1: if Pro checkout fails, stay free for hello-world and upgrade on Wed 7 Oct before window B. A3: if it fails twice, switch to the tool's own built-in backend (Lovable Cloud) and note it in `access_note.md`. A4: if the count stays static, prompt allow anonymous inserts on hello_events; if the QR is blank, use the api.qrserver.com image fallback. A5: take the QR to 300 px and brightness to maximum, and get Tori's check by message before 22:00 UK. Never cut. If the evening slips to Wed 7 Oct it pushes window B into Thu 8 Oct, which costs Blake the product pack.",
+          "reviewer": "Tori (scans the QR and confirms by message)",
+          "capture": [
+            {
+              "id": "prep-t1-1",
+              "label": "1 Accounts and plan",
+              "hint": "Which accounts are live and the plan and credit figures from the checkout page.",
+              "lines": 3
+            },
+            {
+              "id": "prep-t1-2",
+              "label": "2 Project and repo",
+              "hint": "Supabase project `sway-proto`, the Lovable project, and the private GitHub repo.",
+              "lines": 3
+            },
+            {
+              "id": "prep-t1-3",
+              "label": "3 Published URL",
+              "hint": "The real published URL.",
+              "lines": 1
+            },
+            {
+              "id": "prep-t1-4",
+              "label": "4 Two-way scan",
+              "hint": "Device, distance, seconds, worked or not, in both directions.",
+              "lines": 4
+            },
+            {
+              "id": "prep-t1-5",
+              "label": "5 Paper QR",
+              "hint": "One A4 paper QR printed for the travel folder, and whether it scans.",
+              "lines": 2
+            },
+            {
+              "id": "prep-t1-6",
+              "label": "6 Tori's phone",
+              "hint": "Tori opened the URL over mobile data and reported it.",
+              "lines": 2
+            },
+            {
+              "id": "prep-t1-7",
+              "label": "7 Open items",
+              "hint": "Anything still unproven, and any fallback taken.",
+              "lines": 4
+            }
+          ]
+        },
+        {
+          "id": "t2",
+          "who": "Blake",
+          "title": "Flight and venue details into the plan",
+          "minutes": 10,
+          "why": "The cutoff row sets Sunday's leave time and the whole Day 2 schedule.",
+          "instructions": [
+            "Write both booked flights into `05_logistics/flights.md` under Outbound; Return; Cutoff row (18:30 default; 20:00 or later the extension variant; 18:00 to 18:30 the shortened reserve; 17:00 to 18:00 the early-flight variant); Taxi owner and leave time (15:00 on the 18:30 default; 14:45 with a checked bag or a Ryanair flight).",
+            "Copy the accommodation bag-hold line and the work-surface answer into `05_logistics/checklist.md`."
+          ],
+          "output": "`05_logistics/flights.md` with the cutoff row, and the bag-hold and work-surface lines in `05_logistics/checklist.md`.",
+          "outputFile": "`05_logistics/flights.md`",
+          "deadline": "Tue 6 Oct, 22:00 UK",
+          "usedAt": "D2-01 and the Day 2 schedule (the cutoff row)",
+          "fallback": "Confirmed on the Thu 8 Oct call against the two booked flights. Until both flights are booked, the 18:30 departure stays an ASSUMPTION and Sunday runs the default schedule.",
+          "reviewer": "Both, on the Thu 8 Oct call",
+          "capture": [
+            {
+              "id": "prep-t2-1",
+              "label": "Outbound",
+              "hint": "Airline, flight number, time, terminal, BCN, bag or no bag.",
+              "lines": 3
+            },
+            {
+              "id": "prep-t2-2",
+              "label": "Return",
+              "hint": "Airline, flight number, time, terminal, BCN, bag or no bag.",
+              "lines": 3
+            },
+            {
+              "id": "prep-t2-3",
+              "label": "Cutoff row",
+              "hint": "18:30 default; 20:00 or later the extension variant; 18:00 to 18:30 the shortened reserve; 17:00 to 18:00 the early-flight variant.",
+              "lines": 2
+            },
+            {
+              "id": "prep-t2-4",
+              "label": "Taxi owner and leave time",
+              "hint": "15:00 on the 18:30 default; 14:45 with a checked bag or a Ryanair flight.",
+              "lines": 2
+            },
+            {
+              "id": "prep-t2-5",
+              "label": "Bag hold and work surface",
+              "hint": "The accommodation's written answer on Sunday bag hold, and the table, power and Wi-Fi answer, copied into `05_logistics/checklist.md`.",
+              "lines": 3
+            }
+          ]
+        },
+        {
+          "id": "t3",
+          "who": "Tori",
+          "title": "Duel public evidence sheet, public pages only",
+          "minutes": 45,
+          "why": "D1-04 works from this sheet, and it is the only Duel evidence either founder may use.",
+          "instructions": [
+            "Put the identity line at the top of the sheet: Duel Holdings Limited, trading as Duel at duel.tech, company number 08318527.",
+            "(a) Open every duel.tech page with the date visible (home, /how-it-works/social-affiliates, /ambassadors, /advocate-portal, /brand-dashboard, /automations, /solutions/ugc-management-platform, /solutions/brand-advocacy-software, /about-us, /customer-stories) and screenshot each to `07_evidence/duel_screenshots/` as `2026-10-06_duel_<page>.png`. (20 min)",
+            "(b) From G2, Capterra, TrustRadius, GetApp and the Shopify app listing copy verbatim, with date, role and company size where shown, the five most recent reviews per site plus every review under four stars, and the total count per site from the listing header; stop at 12 minutes and write capped. (12 min)",
+            "(c) Copy the 23 Sep 2025 Series A release and record the named customers and investors. (4 min)",
+            "(d) Write the case-study figures (ELEMIS 11x ROI, Monica Vinader 19x ROAS, Beekman 1802 4x ROAS, Charlotte Tilbury 10x ROI) labelled [VENDOR-PUBLISHED] with their duel.tech URLs, and pricing not published (third-party, https://www.affililist.com/software/duel). (5 min)",
+            "(e) Add the State of Brand Advocacy 2026 microsite with its methodology page and the Monica Vinader PDF. (4 min)",
+            "Duel evidence rules: Blake reads the sheet and adds nothing; anything he knows that is not on a public page is written nowhere, and each time it comes up he adds one line under Abstentions naming the topic only. Nothing from either founder's employer goes in any file."
+          ],
+          "output": "`03_commercial/duel_evidence.md` with dated screenshots in `07_evidence/duel_screenshots/`.",
+          "outputFile": "`03_commercial/duel_evidence.md`",
+          "deadline": "Tue 6 Oct, 22:00 UK",
+          "usedAt": "D1-04",
+          "fallback": "Capped at the pages and the case-study figures, which saves 20 minutes, and the rest stays [SNIPPET], re-verified after the workshop.",
+          "reviewer": "Blake (reads the sheet and adds nothing)",
+          "capture": [
+            {
+              "id": "prep-t3-1",
+              "label": "1 Pages captured",
+              "hint": "Page; URL; date; file.",
+              "lines": 10
+            },
+            {
+              "id": "prep-t3-2",
+              "label": "2 Reviews verbatim",
+              "hint": "Site; date; role; size; quote; URL. Give the count per site and write capped where the 12-minute cap was reached.",
+              "lines": 12
+            },
+            {
+              "id": "prep-t3-3",
+              "label": "3 Press release",
+              "hint": "The 23 Sep 2025 Series A release, with the named customers and investors.",
+              "lines": 4
+            },
+            {
+              "id": "prep-t3-4",
+              "label": "4 Case-study figures [VENDOR-PUBLISHED]",
+              "hint": "ELEMIS 11x ROI, Monica Vinader 19x ROAS, Beekman 1802 4x ROAS, Charlotte Tilbury 10x ROI, each with its duel.tech URL, plus pricing not published.",
+              "lines": 6
+            },
+            {
+              "id": "prep-t3-5",
+              "label": "4a Microsite, methodology and PDF",
+              "hint": "State of Brand Advocacy 2026 microsite, its methodology page and the Monica Vinader PDF.",
+              "lines": 3
+            },
+            {
+              "id": "prep-t3-6",
+              "label": "5 Not public",
+              "hint": "Pricing, the full integrations list, releases after Oct 2025.",
+              "lines": 3
+            },
+            {
+              "id": "prep-t3-7",
+              "label": "6 Abstentions",
+              "hint": "One line per topic where something non-public came up, naming the topic only.",
+              "lines": 4
+            }
+          ]
+        },
+        {
+          "id": "t4",
+          "who": "Tori",
+          "title": "My 5 list and twelve-product catalogue, sent to Blake",
+          "minutes": 35,
+          "why": "It seeds check B2 on Wednesday, so this hour is never moved.",
+          "instructions": [
+            "Five products you would genuinely put in a Locker, each with a one-sentence personal reason that sounds like a person, for example: only sunscreen I will actually wear on a long run.",
+            "Then twelve catalogue products, each with an image URL that opens.",
+            "Send the file to Blake by 21:00 UK so his Wednesday seeding can use it."
+          ],
+          "output": "`04_prototype/my5_and_catalogue.md` in Blake's hands by 21:00 UK: five products with one-sentence personal reasons and twelve catalogue rows with product URLs and image URLs.",
+          "outputFile": "`04_prototype/my5_and_catalogue.md`",
+          "deadline": "Tue 6 Oct, 21:00 UK",
+          "usedAt": "Check B2 on Wed 7 Oct; D1-06",
+          "fallback": "Never cut. If it is late, Blake seeds the illustrative catalogue from `prototype_feasibility.md` section 5 and Tori replaces the reasons at D1-06.",
+          "reviewer": "Blake (seeds it and counts the catalogue rows)",
+          "capture": [
+            {
+              "id": "prep-t4-1",
+              "label": "1 My 5",
+              "hint": "Product; brand; product URL; image URL; my reason in one sentence. Five rows.",
+              "lines": 10
+            },
+            {
+              "id": "prep-t4-2",
+              "label": "2 Catalogue",
+              "hint": "Twelve rows, same columns.",
+              "lines": 14
+            },
+            {
+              "id": "prep-t4-3",
+              "label": "3 Products I could not find an image for",
+              "lines": 4
+            }
+          ]
+        },
+        {
+          "id": "t5",
+          "who": "Tori",
+          "title": "One desk test of an alternative",
+          "minutes": 25,
+          "why": "It is the only hands-on competitive evidence either founder has before the workshop.",
+          "instructions": [
+            "Sign up to ShopMy or LTK as a consumer, make the profile public and copy the URL. (5 min)",
+            "Build a list of the same My 5, timing each product and noting any that cannot be added. (8 min)",
+            "Send the URL to Blake cold and ask him by message whether it says who you are and why you chose each item, and whether tapping reaches the retailer with any credit to you. (5 min)",
+            "Look for earning, rewards or recognition for a consumer profile, and for any QR or in-person share option, writing none found if there is none. (4 min)",
+            "Screenshot each step with the date visible into `07_evidence/side_by_side_screenshots/`. (3 min)"
+          ],
+          "output": "`03_commercial/alternative_test.md` with dated screenshots, findings labelled desk-based.",
+          "outputFile": "`03_commercial/alternative_test.md`",
+          "deadline": "Tue 6 Oct, 22:00 UK",
+          "usedAt": "D1-02 call (a)",
+          "fallback": "Item 3 on the cut list. Skipped, `alternatives_landscape.md` sections 1 to 4 stand as desk evidence at search-snippet grade, labelled and re-verified after the workshop.",
+          "reviewer": "Blake",
+          "capture": [
+            {
+              "id": "prep-t5-1",
+              "label": "Date and device",
+              "lines": 2
+            },
+            {
+              "id": "prep-t5-2",
+              "label": "Steps with time per step",
+              "hint": "Time each product, and note any that cannot be added.",
+              "lines": 8
+            },
+            {
+              "id": "prep-t5-3",
+              "label": "Where I hesitated",
+              "lines": 4
+            },
+            {
+              "id": "prep-t5-4",
+              "label": "Screenshots",
+              "hint": "File names in `07_evidence/side_by_side_screenshots/`, with the date visible.",
+              "lines": 3
+            },
+            {
+              "id": "prep-t5-5",
+              "label": "One line: what would Sway have to do better here",
+              "lines": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wed",
+      "label": "Wednesday 7 October",
+      "date": "2026-10-07",
+      "blakeMinutes": 120,
+      "toriMinutes": 105,
+      "focus": "Prove the data and the brief: window B seeds twelve products from Tori's catalogue and writes build brief v1, while Tori writes the commercial pack and the coverage check.",
+      "tasks": [
+        {
+          "id": "w1",
+          "who": "Blake",
+          "title": "Technical window B: six tables, twelve seeded products, build brief v1",
+          "minutes": 120,
+          "why": "It proves the data and the brief; D1-06 turns brief v1 into brief v2 and D1-07 builds on the connection.",
+          "instructions": [
+            "Run checks B1 to B4 in order, using Tori's catalogue from Tuesday. B1 is the one to get right: row-level security silently blocking reads or inserts is the usual reason a screen looks empty and a scan count stays at zero, so re-run the anonymous-access prompt before debugging anything else.",
+            "B1 Six tables (30 min): prompt Create these tables exactly as follows with the schema from `prototype_feasibility.md` section 7 (required path); pasting the schema into the SQL editor is an alternative [ASSUMPTION: Blake is comfortable with it]; then prompt allow anonymous reads on all six tables and anonymous inserts on events, locker_items and recommendations. Pass: the table editor shows all six tables and an anonymous read returns rows.",
+            "B2 Twelve products seeded with images (35 min): from Tori's catalogue, seed products (twelve rows, each with an image URL that opens, JPG or PNG under 500 KB, uploaded to a public Supabase Storage bucket `product-images` where the brand has no usable URL), users (one advocate, placeholder display name), locker_items (the My 5, is_my5 true), passes (one code), and 6 to 10 events with is_demo_seed true across cities; export each table to `04_prototype/seed_csv/`. Pass: twelve product rows whose image URLs open on a phone, and six CSVs saved.",
+            "B3 Build brief v1 (35 min): write section 9 of `prototype_feasibility.md` with the real published URL, the pass code, the twelve product names and the recipient-page disclosure line [Maya] may earn if you buy; save as `04_prototype/build_brief_v1.md` and as `.txt` on the laptop. Pass: under 600 words and every screen names a route.",
+            "B4 Seeded Locker on a phone (20 min): publish; open /me on your phone over mobile data with Wi-Fi off; check the five My 5 products render with images and reasons; screenshot into `04_prototype/hello_world_qr/`. Pass: five products with images and reasons on a phone over mobile data."
+          ],
+          "output": "`04_prototype/build_brief_v1.md` under 600 words, the six seed CSVs in `04_prototype/seed_csv/`, a table-editor screenshot and the seeded Locker screenshot from a phone.",
+          "outputFile": "`04_prototype/build_brief_v1.md`",
+          "deadline": "Wed 7 Oct, 22:00 UK",
+          "usedAt": "D1-06 (brief v2); D1-07",
+          "fallback": "Never cut. B2: placeholder image where none is good; catalogue missing: seed the illustrative catalogue from `prototype_feasibility.md` section 5 and Tori replaces the reasons at D1-06. B3: section 9 verbatim with the URL and pass code pasted in. B4: if images do not load, check the bucket is public, then fall back to placeholder images and note it in `access_note.md`. Seeding unfinished: the Saturday build starts from empty tables and CP1 carries the seeding as well. Project shows Paused: restore it from the Supabase dashboard first, one click and a few minutes.",
+          "reviewer": "Tori (reads the brief)",
+          "capture": [
+            {
+              "id": "prep-w1-1",
+              "label": "Build brief v1",
+              "hint": "Under 600 words, every screen naming a route, with the twelve product names and the disclosure line [Maya] may earn if you buy.",
+              "lines": 20
+            },
+            {
+              "id": "prep-w1-2",
+              "label": "Published URL",
+              "hint": "The real published URL, as it goes into the brief.",
+              "lines": 1
+            },
+            {
+              "id": "prep-w1-3",
+              "label": "Pass code",
+              "hint": "The one pass code seeded into passes.",
+              "lines": 1
+            }
+          ]
+        },
+        {
+          "id": "w2",
+          "who": "Tori",
+          "title": "Commercial prep pack",
+          "minutes": 75,
+          "why": "C1, C2 and D1-09 all open from it, and Blake reads it on Thursday.",
+          "instructions": [
+            "Founding insight and what must stay true, one page: what prompted the idea (the moment, the person, the product); what a million times better meant when you first said it, chosen from outcomes, experience, speed, economics and capability, and for whom; three sentences on what must remain true for Sway to be worth doing; what would make you stop; every line FOUNDER DECISION or HYPOTHESIS. (15 min)",
+            "Buyer map and ICP: a table (Segment; User; Buyer role; Budget holder; Budget line; Purchase trigger; Signing limit without procurement) with rows for a footwear or apparel brand with retail distribution, a DTC supplement brand, and the consumer advocate; then the ICP in five lines. (20 min)",
+            "First-offer options: three (paid discovery study; recruitment feed into an existing programme; two unpaid design-partner brands), each with what it needs from the product and the trigger that makes a buyer act. (15 min)",
+            "Objections and alternatives: at least eight rows (Alternative; What it does well; Where Sway differs, HYPOTHESIS; Objection you expect; Best honest answer) covering ShopMy, LTK, Beacons or Linktree, WhatsApp and doing nothing, Mention Me Name Share, impact.com/advocate, direct run-club sponsorship, and Duel from the public sheet only, writing not found publicly rather than does not have. (20 min)",
+            "Evidence of demand log: every conversation to date, one row each (Date; Who and role; Context; What they said, verbatim; Label: Validated finding only with a count, a date and your name, otherwise HYPOTHESIS); write none yet if it is empty, which it will be until the follow-through week. (5 min)",
+            "Founder hypotheses only, because no customer conversation has happened. Every number carries a label."
+          ],
+          "output": "`03_commercial/commercial_pack.md` with its five headings.",
+          "outputFile": "`03_commercial/commercial_pack.md`",
+          "deadline": "Wed 7 Oct, 22:00 UK",
+          "usedAt": "C1, C2, D1-09",
+          "fallback": "Trimmed to headings 2 and 4, which are what C1 opens with, saving 35 minutes; or completed by Thu 8 Oct 22:00 UK at the cost of the divergence column.",
+          "reviewer": "Blake (reads it Thu 8 Oct)",
+          "capture": [
+            {
+              "id": "prep-w2-1",
+              "label": "1 Founding insight",
+              "hint": "What prompted the idea, what a million times better meant and for whom, three sentences on what must remain true, and what would make you stop. Every line FOUNDER DECISION or HYPOTHESIS.",
+              "lines": 12
+            },
+            {
+              "id": "prep-w2-2",
+              "label": "2 Buyer map and ICP",
+              "hint": "Segment; User; Buyer role; Budget holder; Budget line; Purchase trigger; Signing limit without procurement. Then the ICP in five lines.",
+              "lines": 14
+            },
+            {
+              "id": "prep-w2-3",
+              "label": "3 First-offer options",
+              "hint": "Three options, each with what it needs from the product and the trigger that makes a buyer act.",
+              "lines": 10
+            },
+            {
+              "id": "prep-w2-4",
+              "label": "4 Objections and alternatives",
+              "hint": "At least eight rows: Alternative; What it does well; Where Sway differs, HYPOTHESIS; Objection you expect; Best honest answer.",
+              "lines": 14
+            },
+            {
+              "id": "prep-w2-5",
+              "label": "5 Evidence of demand log",
+              "hint": "Date; Who and role; Context; What they said, verbatim; Label. Write none yet if it is empty.",
+              "lines": 6
+            }
+          ]
+        },
+        {
+          "id": "w3",
+          "who": "Tori",
+          "title": "Affiliate coverage spot check, five wellness brands",
+          "minutes": 30,
+          "why": "Without it the D1-09 answer says not checked and the claim is not made.",
+          "instructions": [
+            "One row per five wellness brands from the catalogue (Brand; Programme, brand-direct or network; Network; Rate; Cookie window; Approval requirement; Sub-ID support) or none found, searching Awin, impact.com, Rakuten, Amazon Associates and the brand's own site for a UK programme. (20 min)",
+            "Then one line of arithmetic: Sway's 20 per cent on GBP 100 of purchases at the real rates found, with the network fee written as an ASSUMPTION (Awin describes a network fee but publishes no rate, search snippet, https://www.awin.com/us/faqs) and HOKA's reported 5 per cent full price and 3 per cent sale kept [UNVERIFIED] until this sheet records the rate from the page itself. (10 min)"
+          ],
+          "output": "`03_commercial/affiliate_coverage.md` with its three headings: five brands each with programme, rate, cookie and approval, or none found.",
+          "outputFile": "`03_commercial/affiliate_coverage.md`",
+          "deadline": "Wed 7 Oct, 22:00 UK",
+          "usedAt": "D1-09",
+          "fallback": "Item 1 on the cut list. Dropped, the D1-09 answer says not checked, the claim is not made, and its rows become a follow-through row.",
+          "reviewer": "Blake",
+          "capture": [
+            {
+              "id": "prep-w3-1",
+              "label": "1 Coverage rows",
+              "hint": "Brand; Programme, brand-direct or network; Network; Rate; Cookie window; Approval requirement; Sub-ID support. Five rows, or none found.",
+              "lines": 10
+            },
+            {
+              "id": "prep-w3-2",
+              "label": "2 The arithmetic",
+              "hint": "Sway's 20 per cent on GBP 100 of purchases at the real rates found, with the network fee labelled ASSUMPTION.",
+              "lines": 5
+            },
+            {
+              "id": "prep-w3-3",
+              "label": "3 What I could not find",
+              "lines": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thu",
+      "label": "Thursday 8 October",
+      "date": "2026-10-08",
+      "blakeMinutes": 125,
+      "toriMinutes": 95,
+      "focus": "Swap the two packs, fill both divergence columns, write the pricing hypotheses, seal the paper, then a 30 minute readiness call at 21:00 UK where no content is discussed.",
+      "tasks": [
+        {
+          "id": "th1",
+          "who": "Blake",
+          "title": "Product prep pack",
+          "minutes": 60,
+          "why": "D1-05, D1-06 and D2-05 work from it; the attribution event table and the fifteen-row priorities draft are not written now, they are filled live at D1-05 and D2-05.",
+          "instructions": [
+            "Product hypothesis and core journey, one page: the one thing as it stands (Sway turns trusted product recommendations into measurable commerce, FOUNDER DECISION, `01_CURRENT_STRATEGY.md`), the customer, the outcome for the advocate (Maya) and the outcome for the recipient (Sam). (12 min)",
+            "The journey strip as a table (Step; Who; What the recipient sees; Event logged as scan, view, click_out or save_email; Label): five advocate steps (My 5, Locker, Sway Pass or Sway Link, recommend, see the outcome as Trust) and three recipient steps (scan or open, recommendation page with one dominant action, continue to the product or save). (10 min)",
+            "Candidate first experiences and scope boundaries: the three-option table, then the durable core verbatim from `00_SOURCE_OF_TRUTH.md` and at least eight exclusions (Sway Points, Collectives, sign-up, affiliate rails, discovery, brand screens, notifications, payments). (15 min)",
+            "The three options, every cell a HYPOTHESIS until D1-02 call (a) decides. A Personal Sway Pass first: the recipient sees the Pass landing with the My 5 then picks a product; the advocate shows the Pass QR; all six screens needed; friction is phone out, one scan, two taps; item 4 (Feature a product) is the default cut. B Product-specific QR or Sway Link first: the recipient sees the recommendation page directly; the advocate features a product and shows or sends its QR or link; screens 1, 2, 4, 5, 6 with the Pass landing optional; friction is one scan or tap, one tap; item 4 is the hero and cannot be cut. C Card sent into the chat, Pass second: the recipient sees a card in WhatsApp then the recommendation page; the advocate sends the Sway Link later; screens 1, 4, 5, 6 plus a share sheet; no friction in the moment because the moment is deferred; items 1 and 4 cut early and in-person attribution becomes a claim, not a demo.",
+            "Major product assumptions: at least ten, each labelled FOUNDER DECISION, HYPOTHESIS, ASSUMPTION or OPEN QUESTION (an external fact keeps its evidence grade), starting from `context_audit.md` section 4 items 1, 2, 3, 7 and 8; one line of cheapest test per HYPOTHESIS. (13 min)",
+            "Screenshots of the existing clickable prototype: open https://sway-alpha-0-prototype.vjbrillaud.chatgpt.site/ and screenshot every screen to `04_prototype/clickable_prototype_screenshots/` as `2026-10-08_screen_01.png` onwards; record who holds the hosting account (vjbrillaud is [UNVERIFIED], `context_audit.md` 6.2 item 9), whether the source can be exported, and whether anything confidential sits on that domain; if the site will not open, screenshot the error and write not reachable on Thu 8 Oct. (10 min)"
+          ],
+          "output": "`02_product/product_pack.md` with the prototype screenshots attached.",
+          "outputFile": "`02_product/product_pack.md`",
+          "deadline": "Thu 8 Oct, 22:00 UK",
+          "usedAt": "D1-05, D1-06, D2-05",
+          "fallback": "Item 4 on the cut list: trimmed to the journey strip and the assumptions list, which saves 37 minutes.",
+          "reviewer": "Tori (reads it the same evening)",
+          "capture": [
+            {
+              "id": "prep-th1-1",
+              "label": "1 Product hypothesis and core journey",
+              "hint": "The one thing as it stands, the customer, the outcome for the advocate (Maya) and the outcome for the recipient (Sam). One page.",
+              "lines": 10
+            },
+            {
+              "id": "prep-th1-2",
+              "label": "2 The journey strip",
+              "hint": "Step; Who; What the recipient sees; Event logged as scan, view, click_out or save_email; Label. Five advocate steps and three recipient steps.",
+              "lines": 12
+            },
+            {
+              "id": "prep-th1-3",
+              "label": "3 Candidate first experiences and scope boundaries",
+              "hint": "The three-option comparison, the durable core verbatim, and at least eight exclusions.",
+              "lines": 14
+            },
+            {
+              "id": "prep-th1-4",
+              "label": "4 Major product assumptions",
+              "hint": "At least ten, each labelled, with one line of cheapest test per HYPOTHESIS.",
+              "lines": 14
+            },
+            {
+              "id": "prep-th1-5",
+              "label": "5 Prototype screenshots",
+              "hint": "Who holds the hosting account, whether the source can be exported, and whether anything confidential sits on that domain.",
+              "lines": 5
+            }
+          ]
+        },
+        {
+          "id": "th2",
+          "who": "Blake",
+          "title": "Prototype scope proposal",
+          "minutes": 25,
+          "why": "D1-06 runs off it, and it is never cut.",
+          "instructions": [
+            "Write one page, `04_prototype/scope_proposal.md`, with seven headings. (25 min)",
+            "1 The journey in one sentence.",
+            "2 Six screens with routes: `/me`, `/me/pass`, `/p/<code>`, `/r/<slug>`, `/go/<slug>`, `/me/trust`.",
+            "3 Six acceptance tests, test 6 without the map: at least one scan, the event list with a city, 1 pending.",
+            "4 Must work, may be mocked, deferred.",
+            "5 Cut list 1 to 7 and the never-cut four.",
+            "6 Persona names, fixed as Maya (advocate) and Sam (recipient), which D1-05 only confirms so that founder names never appear on a screen.",
+            "7 The open choice for D1-05: personal Pass or product-specific QR first. The hero mechanic itself is D1-02 call (a)."
+          ],
+          "output": "`04_prototype/scope_proposal.md`, one page with seven headings.",
+          "outputFile": "`04_prototype/scope_proposal.md`",
+          "deadline": "Thu 8 Oct, 22:00 UK",
+          "usedAt": "D1-06",
+          "fallback": "Never cut. Given verbally, which makes D1-06 30 minutes and shifts every later Saturday block 10 minutes, absorbed by D1-CT.",
+          "reviewer": "Tori (three written challenges the same evening)",
+          "capture": [
+            {
+              "id": "prep-th2-1",
+              "label": "1 The journey in one sentence",
+              "lines": 2
+            },
+            {
+              "id": "prep-th2-2",
+              "label": "2 Six screens with routes",
+              "hint": "`/me`, `/me/pass`, `/p/<code>`, `/r/<slug>`, `/go/<slug>`, `/me/trust`.",
+              "lines": 8
+            },
+            {
+              "id": "prep-th2-3",
+              "label": "3 Six acceptance tests",
+              "hint": "Test 6 without the map: at least one scan, the event list with a city, 1 pending.",
+              "lines": 8
+            },
+            {
+              "id": "prep-th2-4",
+              "label": "4 Must work, may be mocked, deferred",
+              "lines": 9
+            },
+            {
+              "id": "prep-th2-5",
+              "label": "5 Cut list 1 to 7 and the never-cut four",
+              "lines": 11
+            },
+            {
+              "id": "prep-th2-6",
+              "label": "6 Persona names",
+              "hint": "Maya (advocate) and Sam (recipient), fixed, so that founder names never appear on a screen.",
+              "lines": 2
+            },
+            {
+              "id": "prep-th2-7",
+              "label": "7 The open choice for D1-05",
+              "hint": "Personal Pass or product-specific QR first.",
+              "lines": 3
+            }
+          ]
+        },
+        {
+          "id": "th3",
+          "who": "Blake",
+          "title": "Read Tori's commercial pack, evidence sheet and coverage check",
+          "minutes": 20,
+          "why": "The divergence column is filled from the two packs and the scope proposal, not the sealed answers.",
+          "instructions": [
+            "Read `03_commercial/commercial_pack.md`, `03_commercial/duel_evidence.md` and `03_commercial/affiliate_coverage.md`; write nothing in them, and add nothing to the Duel sheet. (20 min)"
+          ],
+          "output": "All three read, with nothing written in them.",
+          "deadline": "Thu 8 Oct, 22:00 UK"
+        },
+        {
+          "id": "th4",
+          "who": "Blake",
+          "title": "Divergence list, Blake's column",
+          "minutes": 20,
+          "why": "Every shared session opens from it; without it the differences surface live in D1-02, which is slower.",
+          "instructions": [
+            "From the two packs and the scope proposal, not the sealed answers, fill your column of `06_decision_log/divergence_list.md`: up to eight rows (Topic; Blake's position; Tori's position; Evidence that would settle it; What would change my mind, each founder; Deciding session: D1-02, D1-03, D1-04, D1-05, D1-06, D1-09 or D2-02). (20 min)",
+            "The five sealed calls are not on it."
+          ],
+          "output": "`06_decision_log/divergence_list.md` with Blake's column filled, up to eight rows, each with what would change my mind and a deciding session.",
+          "outputFile": "`06_decision_log/divergence_list.md`",
+          "deadline": "Thu 8 Oct, 22:00 UK",
+          "usedAt": "Every shared session",
+          "fallback": "Item 5 on the cut list: the columns are cut and the differences surface live in D1-02, which is slower, plus a three-minute find-the-disagreement step per session.",
+          "reviewer": "Both",
+          "capture": [
+            {
+              "id": "prep-th4-1",
+              "label": "Divergence rows, Blake's column",
+              "hint": "Up to eight rows: Topic; Blake's position; Tori's position; Evidence that would settle it; What would change my mind, each founder; Deciding session.",
+              "lines": 16
+            }
+          ]
+        },
+        {
+          "id": "th5",
+          "who": "Tori",
+          "title": "Read Blake's product pack",
+          "minutes": 20,
+          "why": "The divergence column and the three challenges come from the packs and the scope proposal.",
+          "instructions": [
+            "Read `02_product/product_pack.md` and its screenshots; mark nothing in the file itself. (20 min)"
+          ],
+          "output": "Pack and screenshots read, with nothing marked in the file.",
+          "deadline": "Thu 8 Oct, 22:00 UK"
+        },
+        {
+          "id": "th6",
+          "who": "Tori",
+          "title": "Divergence list, Tori's column, plus three challenges",
+          "minutes": 30,
+          "why": "D1-06 opens with the challenges, and every shared session opens from the divergence list.",
+          "instructions": [
+            "Fill your column of `06_decision_log/divergence_list.md` from the two packs and the scope proposal, not the sealed answers, using the same eight-row format as Blake.",
+            "Then add up to three written challenges to the scope proposal under their own heading, for example: does the demo show what we say differentiates us? Which claims in my pack does the prototype not support?"
+          ],
+          "output": "`06_decision_log/divergence_list.md` with Tori's column and three written challenges.",
+          "outputFile": "`06_decision_log/divergence_list.md`",
+          "deadline": "Thu 8 Oct, 22:00 UK",
+          "usedAt": "D1-06 (challenges); every shared session",
+          "fallback": "Item 5 on the cut list: the columns are cut and the differences surface live in D1-02, which is slower, plus a three-minute find-the-disagreement step per session.",
+          "reviewer": "Blake (reads the challenges)",
+          "capture": [
+            {
+              "id": "prep-th6-1",
+              "label": "Divergence rows, Tori's column",
+              "hint": "Up to eight rows: Topic; Blake's position; Tori's position; Evidence that would settle it; What would change my mind, each founder; Deciding session.",
+              "lines": 16
+            },
+            {
+              "id": "prep-th6-2",
+              "label": "Three challenges to the scope proposal",
+              "hint": "Up to three, written, under their own heading.",
+              "lines": 6
+            }
+          ]
+        },
+        {
+          "id": "th7",
+          "who": "Tori",
+          "title": "Pricing and packaging hypotheses, labelled",
+          "minutes": 30,
+          "why": "D1-09 and C2 use them; cut, they move into C1 on Saturday and cost 15 minutes in the room.",
+          "instructions": [
+            "Write `03_commercial/pricing_hypotheses.md`: the buyer-facing line as it stands (Sway helps wellness brands turn real customers and community members into measurable advocates, FOUNDER DECISION); three packages with what each includes; every number labelled HYPOTHESIS with the benchmark it rests on, for example Social Snowball USD 249 per month plus 3 per cent (search snippet, https://www.socialsnowball.io/pricing) and Duel custom and unpublished (third-party, https://www.affililist.com/software/duel). No number without a label. (30 min)",
+            "The 80/20 split and the USD 30K, 75K and 150K packages are HYPOTHESES wherever they appear. State the currency on every number."
+          ],
+          "output": "`03_commercial/pricing_hypotheses.md`, each option labelled HYPOTHESIS with one line of reasoning and the currency stated.",
+          "outputFile": "`03_commercial/pricing_hypotheses.md`",
+          "deadline": "Thu 8 Oct, 22:00 UK",
+          "usedAt": "D1-09 and C2",
+          "fallback": "Item 2 on the cut list: moved into C1 on Saturday, which costs 15 minutes of the buyer map.",
+          "reviewer": "Blake",
+          "capture": [
+            {
+              "id": "prep-th7-1",
+              "label": "Buyer-facing line as it stands",
+              "hint": "Sway helps wellness brands turn real customers and community members into measurable advocates. FOUNDER DECISION.",
+              "lines": 3
+            },
+            {
+              "id": "prep-th7-2",
+              "label": "Three packages with what each includes",
+              "hint": "Every number labelled HYPOTHESIS, with the currency stated.",
+              "lines": 12
+            },
+            {
+              "id": "prep-th7-3",
+              "label": "Benchmarks behind every number",
+              "hint": "The benchmark each number rests on, with its source and evidence grade.",
+              "lines": 8
+            }
+          ]
+        },
+        {
+          "id": "th8",
+          "who": "Tori",
+          "title": "Print and seal both answer sets, pack the paper",
+          "minutes": 15,
+          "why": "The sealed files never cross before D1-02, and D1-01 opens with the printed cards.",
+          "instructions": [
+            "Print your own v1 and seal it in an envelope signed across the flap, and confirm on the call that Blake has done the same with his, so the files never cross before D1-02. (5 min)",
+            "Print two copies each of the rules card, the checkpoint card, the decision-log template, the T9 scope lock form, the five-answers sheet and the T12 Part 1 consistency checklist. (7 min)",
+            "Pack the paper QR, blank A5 cards, A3 sheets, tape, pens and envelopes. (3 min)"
+          ],
+          "output": "Two sealed envelopes signed across the flap, the printed cards and sheets, and the paper packed.",
+          "deadline": "Thu 8 Oct, 22:00 UK",
+          "usedAt": "D1-01 (cards); D1-02 (envelopes)",
+          "fallback": "Cards and sheets read off laptops. Envelopes unsealed: the files stay closed on each device until D1-02.",
+          "reviewer": "Each other"
+        },
+        {
+          "id": "th9",
+          "who": "Both",
+          "title": "Readiness call, 30 minutes at 21:00 UK, Tori runs it",
+          "minutes": 0,
+          "why": "It confirms the cutoff row, the venue and both technical windows; the 30 minutes are counted inside both Thursday budgets and add no minutes to either total.",
+          "instructions": [
+            "Blake loads /hello from his phone so the database records activity. (1 min)",
+            "Confirm the Sunday cutoff row in `flights.md` against the two booked flights. (5 min)",
+            "Confirm the venue: bag hold in writing, work surface, power, Wi-Fi. (5 min)",
+            "Confirm technical windows A and B both passed, naming the published URL and reading the four window B pass criteria aloud. (10 min)",
+            "Read the cut list aloud, then: Day 1 starts 09:00. (9 min)",
+            "The call reads the status board line by line. No content is discussed."
+          ],
+          "output": "`05_logistics/checklist.md` ticked, the status board read, both windows confirmed, and Saturday dinner booked for 20:30.",
+          "outputFile": "`05_logistics/checklist.md`",
+          "deadline": "Thu 8 Oct, 21:30 UK",
+          "usedAt": "D1-01 (cutoff, rules card); D2-01",
+          "fallback": "If a founder cannot make the call, the same five-point checklist is exchanged by message by 22:00 UK, with no content discussed.",
+          "reviewer": "Each other",
+          "capture": [
+            {
+              "id": "prep-th9-1",
+              "label": "1 Keep-alive load",
+              "hint": "Blake loaded /hello from his phone and the database recorded activity.",
+              "lines": 2
+            },
+            {
+              "id": "prep-th9-2",
+              "label": "2 Cutoff row confirmed",
+              "hint": "The Sunday cutoff row in `flights.md`, checked against the two booked flights.",
+              "lines": 3
+            },
+            {
+              "id": "prep-th9-3",
+              "label": "3 Venue confirmed",
+              "hint": "Bag hold in writing, work surface, power, Wi-Fi.",
+              "lines": 3
+            },
+            {
+              "id": "prep-th9-4",
+              "label": "4 Both windows confirmed",
+              "hint": "The published URL, and the four window B pass criteria read aloud.",
+              "lines": 5
+            },
+            {
+              "id": "prep-th9-5",
+              "label": "5 Cut list read aloud",
+              "hint": "Read it in order, then say: Day 1 starts 09:00.",
+              "lines": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fri",
+      "label": "Friday 9 October",
+      "date": "2026-10-09",
+      "blakeMinutes": 0,
+      "toriMinutes": 0,
+      "focus": "Travel only, with no preparation for either founder and nothing due beyond Blake confirming the GitHub sync and the exported seed CSVs by 09:00 UK or from the airport; the arrival evening is optional, 25 minutes at most, and the sealed answers stay sealed.",
+      "tasks": []
+    }
+  ],
+  "cutOrder": [
+    "Tori's affiliate coverage spot check (30 minutes). Dropped, the D1-09 answer says not checked and the claim is not made.",
+    "Tori's pricing and packaging hypotheses (30 minutes), which move into C1 on Sat 10 Oct and cost 15 minutes in the room.",
+    "Tori's alternative desk test (25 minutes). Alternatives then stay at search-snippet grade, re-verified after the workshop.",
+    "Blake's product prep pack trimmed to the journey strip and the assumptions list (saves about 35 minutes).",
+    "Both divergence columns (50 minutes in total), after which the differences surface live in D1-02, which is slower."
+  ],
+  "neverCut": [
+    "Founder answers v1.",
+    "Technical windows A and B.",
+    "The My 5 catalogue reaching Blake by Tue 6 Oct 21:00 UK.",
+    "The flight and accommodation confirmations.",
+    "The prototype scope proposal."
+  ],
+  "costs": [
+    "No customer or community conversations happen before the workshop. The three to five brand-marketer conversations and any community intercepts move into the follow-through week, Mon 12 to Fri 16 Oct, so the Saturday answer to how we sell it rests on founder hypotheses only. It is recorded as Provisional, with this review trigger: reopen if the first three brand marketers name a different buyer or budget line; check Fri 23 Oct 22:00 UK; owner Tori.",
+    "There is no second pass on the founder answers. Only v1 exists, written Mon 5 Oct, and D1-02 opens the v1 envelopes.",
+    "The dress rehearsal of the build tool is gone. Tuesday's hello-world and Wednesday's seeded check are the only proving steps, so the Saturday build carries more risk. Standing rule: if checkpoint CP1 has not passed by 13:30 on Saturday, switch immediately to the tool's own built-in backend rather than debugging the external database connection, and note it in known limitations.",
+    "Competitive evidence is thinner: one desk test of one alternative, plus the Duel public evidence sheet. Everything else in the competitive section stays labelled as research-file evidence at search-snippet grade, to be re-verified after the workshop.",
+    "Preparation totals fall from about 15h30 and 17h10 to 7h15 for Blake and 6h35 for Tori."
+  ]
+}

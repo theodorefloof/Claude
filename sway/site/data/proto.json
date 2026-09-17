@@ -1,0 +1,451 @@
+{
+  "journey": {
+    "title": "The advocate builds My 5 into a Locker, opens the Sway Pass, the recipient scans, lands on the Pass landing then the recommendation page, acts, and the advocate sees the outcome on Trust.",
+    "steps": [
+      "Locker /me",
+      "Sway Pass /me/pass: QR",
+      "Recipient scans: Pass landing /p/code: scan",
+      "Taps a product: Recommendation page /r/slug: view",
+      "Go to product: Redirect /go/slug: click_out",
+      "Retailer page",
+      "Save: save_email",
+      "Trust /me/trust: counters and list"
+    ]
+  },
+  "scopeLock": {
+    "when": "Saturday 11:50 to 12:10",
+    "rule": "Scope locks when Tori signs the lock sheet at 12:10; from then Blake may not add and Tori may only strike.",
+    "form": [
+      "Journey in one sentence; hero mechanic from D1-02 call (a); personal Pass or product QR first, from D1-05.",
+      "Persona names for the screens, fixed: Maya recommends, Sam scans; D1-05 confirms them and no founder's name goes on a screen.",
+      "Disclosure line wording; earnings label wording, or \"label off\".",
+      "Six screens with routes: /me, /me/pass, /p/<code>, /r/<slug>, /go/<slug>, /me/trust.",
+      "Six acceptance tests, test 6 without the map: at least one scan, the event list with a city, \"1 pending\".",
+      "Must work / may be mocked / deferred, amended in the room, each demo beat mapped to a D1-04 claim.",
+      "Cut list 1 to 7 and the never-cut four.",
+      "Checkpoint times for the wall card: CP1 13:20, CP2 14:20, CP3 15:50, CP4 16:55, AR1 17:00, CP5 09:55, CP6 10:40, CP7 11:15.",
+      "Tori's three challenges answered in one line each; brief v2 (build brief v1 of Wed 7 Oct 22:00 UK, amended by this sheet) pasted into the tool's project instructions, under 600 words; both signatures and the sentence said aloud: \"No new features after 12:10; new ideas go to the parking lot.\""
+    ]
+  },
+  "mustWork": [
+    {
+      "item": "/me Locker: five seeded products with image, brand, name, reason",
+      "why": "The Locker is the product home (non-negotiable 4)",
+      "test": "Test 1"
+    },
+    {
+      "item": "/me/pass QR encoding /p/<code> (never cut)",
+      "why": "\"The real-world counterpart of an affiliate link\" (non-negotiable 5)",
+      "test": "Test 2: a second phone's camera opens /p/<code> within 3 seconds"
+    },
+    {
+      "item": "/p/<code> inserting a scan event (never cut)",
+      "why": "The first attribution event",
+      "test": "Test 2 plus a scan row with today's timestamp"
+    },
+    {
+      "item": "/r/<slug>: product, who, why, one dominant button, disclosure line (never cut)",
+      "why": "Product, who, why, one action in five seconds; the honesty guardrail on screen",
+      "test": "Test 3 plus Tori's five-second test at CP3"
+    },
+    {
+      "item": "/go/<slug> inserts click_out then redirects (never cut)",
+      "why": "Logged before the retailer loads, so a slow retailer cannot break the beat",
+      "test": "Test 4"
+    },
+    {
+      "item": "/me/trust: scan count (never cut), clicks, saves, the label \"N pending, eligibility not yet confirmed\", event list with time, type, city, product",
+      "why": "The advocate must see it happened; counters derived from events, never stored",
+      "test": "Test 6; counters change after Tori scans again at CP4"
+    }
+  ],
+  "mocked": [
+    {
+      "item": "Advocate identity: one seeded users row, no login",
+      "why": "Authentication is the commonest weekend time sink. Acceptance test: no page asks for a login."
+    },
+    {
+      "item": "Wallet: the plain heading \"Sway Pass\" and one line \"Wallet pass coming soon\"",
+      "why": "A real pass needs a pass type identifier, a signing certificate and a PKCS #7 signature; Apple's badge artwork may not be recreated; the mock sheet is cut-list item 1, built on Sunday only if the fix list is still empty at 10:15. Acceptance test: the line is visible; no Apple or Google artwork."
+    },
+    {
+      "item": "Affiliate link: /go/<slug> redirects to product_url unchanged",
+      "why": "Approvals take weeks; a pending earning on a non-commissionable product fabricates the mechanism. Acceptance test: redirect target equals the seeded URL."
+    },
+    {
+      "item": "City: every live event gets \"Barcelona\", 41.3874, 2.1686",
+      "why": "Both phones in one city; carrier IP lookups are often wrong. Acceptance test: the list shows \"Barcelona\" on a live scan."
+    },
+    {
+      "item": "Earnings label \"N pending, eligibility not yet confirmed\", no currency",
+      "why": "Honest placeholder for pending, confirmed, reversed states that cannot exist yet; D1-05 may turn it off. Acceptance test: test 6 shows \"1 pending\" after one click."
+    },
+    {
+      "item": "Seeded history: 6 to 10 events rows, is_demo_seed true, captioned \"Demo data plus live scans\"",
+      "why": "The outcome screen must not be empty before the first live scan. Acceptance test: seeded rows survive the reset."
+    },
+    {
+      "item": "Product images in the founders' own Storage bucket; save by email with a founder-controlled test address only (programme choice)",
+      "why": "Hotlinked images fail; a real recipient email is personal data. Acceptance test: images load in under 3 seconds; test 5 with the test address."
+    }
+  ],
+  "deferred": [
+    {
+      "item": "Sign-up, login, recipient-to-member join flow",
+      "why": "Outside the loop; the sign-up moment is a D1-05 design point. Acceptance test: no route offers it."
+    },
+    {
+      "item": "Sway Points, Progress",
+      "why": "Two currencies to explain; the Alpha \"may test\" them. Acceptance test: \"Sway Points\" on no screen."
+    },
+    {
+      "item": "Founding Member Collective, Brand Collective, brand screens",
+      "why": "Later layers. Acceptance test: not present."
+    },
+    {
+      "item": "Real affiliate parameters, purchase attribution, commission amounts, real wallet passes",
+      "why": "Approvals, reversal states and issuer accounts are weeks away; a currency figure would be invented. Acceptance test: no currency symbol; wallet mocked only."
+    },
+    {
+      "item": "IP geolocation; the Leaflet map",
+      "why": "Stretch only; the map is cut-list item 2, built only if the fix list is empty at CP5. Acceptance test: if built, a dot; if not, the list."
+    },
+    {
+      "item": "Image scraping, search, discovery, notifications, payments, native apps, dark mode; a separate Sway Link screen",
+      "why": "Not needed to prove the loop; discovery is outside the MVP boundary; the same routes serve the Link as a URL sent by message. Acceptance test: not present; the URL sent as text opens the same page."
+    }
+  ],
+  "acceptanceTests": [
+    {
+      "n": 1,
+      "text": "/me on a phone shows five products with images and reasons."
+    },
+    {
+      "n": 2,
+      "text": "Scanning the QR on /me/pass with a second phone opens /p/<code> within 3 seconds."
+    },
+    {
+      "n": 3,
+      "text": "Tapping a product opens /r/<slug> with product, \"Recommended by <display_name>\", the reason, one dominant button and the \"may earn\" line."
+    },
+    {
+      "n": 4,
+      "text": "\"Go to product\" reaches the retailer page and a click_out row exists."
+    },
+    {
+      "n": 5,
+      "text": "Saving with the test email creates a save_email row."
+    },
+    {
+      "n": 6,
+      "text": "/me/trust shows at least one scan, the event list with a city, and \"1 pending\"."
+    }
+  ],
+  "buildBrief": "Sway build brief v2\n\nGoal. Build \"Sway\", a mobile-first web app demonstrating one journey. An advocate has a Locker of five products, each with an image and a reason. She opens her Sway Pass, a QR code. A recipient scans it with a phone camera and lands on a recommendation page. The advocate then sees the outcome: a scan count, an event list and a pending label. Every step must work on a phone over mobile data. Build the screens in order; nothing else.\n\nUsers. One seeded advocate: the single row in users. Show her display_name wherever a name is needed; never hard-code a name. No login anywhere; her pages live under /me. Recipients are anonymous phone visitors.\n\nScreens.\n\n1. /me Locker. Title \"<display_name>'s Locker\". Her five locker_items (is_my5 true, ordered by position): large image, brand, name, reason. Buttons \"View my Sway Pass\" and \"Add a product\" (sheet: pick from products or enter details).\n2. /me/pass Sway Pass. Heading \"Sway Pass\", her name, and a QR (qrcode.react, SVG, 260 px, level M) encoding https://<app-url>/p/<pass code>. Below, \"Feature a product\": tapping one of her five creates a recommendations row (8-character slug, reason_snapshot, pass_id) and switches the QR to /r/<slug>. Under the QR, one line: \"Wallet pass coming soon\".\n3. /p/<code> Pass landing (recipient). On load insert an events row: type scan, user_id, pass_id, city \"Barcelona\", lat 41.3874, lng 2.1686. Show \"<display_name> recommends\" and her five products; tapping one opens /r/<slug>, creating the recommendation if none exists.\n4. /r/<slug> Recommendation page (recipient). Insert a view event. Show product image, brand, name, \"Recommended by <display_name>\", her reason, one dominant button \"Go to product\" linking to /go/<slug>, a secondary \"Save to my email\" field that inserts a save_email event, the line \"<display_name> may earn if you buy\", and one line of text: \"Sway: recommendations from people you know\". Fits one phone screen above the fold.\n5. /go/<slug> Redirect. Insert a click_out event, then redirect to the product's product_url unchanged.\n6. /me/trust Trust. Three counters from events for the advocate: scans, product clicks, saves. Under them a list (time, type, city, product). The line \"Earnings: N pending, eligibility not yet confirmed\", N being the click_out count. Caption \"Demo data plus live scans\". No map (a map is added on Sunday only if the fix list is empty at CP5; that prompt overrides this line).\n\nData. Use the connected Supabase project. The tables users, products, locker_items, passes, recommendations and events exist and are seeded. Do not rename or recreate them. Allow anonymous reads on all six and anonymous inserts on events, locker_items and recommendations. Add no authentication.\n\nMust work. The QR scans from a phone camera and opens over mobile data. Events are inserted for scan, view, click_out and save_email. Trust counters change after a refresh.\n\nMocked. Wallet (one line, no sheet). Affiliate link (plain redirect with our logging). City (fixed default). Earnings (label only, no amounts).\n\nOut of scope. Sign-up, login, Sway Points, Collectives, brand screens, notifications, payments, native apps, dark mode, maps (see screen 6), geolocation, image scraping.\n\nStyle. Clean and product-forward: white background, one accent colour, large product images, system font, big touch targets, short human copy.\n\nAcceptance tests.\n\n1. /me on a phone shows five products with images and reasons.\n2. Scanning the QR on /me/pass with a second phone opens /p/<code> within 3 seconds.\n3. Tapping a product opens /r/<slug> with product, \"Recommended by <display_name>\", the reason, one dominant button and the \"may earn\" line.\n4. \"Go to product\" reaches the retailer page and a click_out row exists.\n5. Saving with the test email creates a save_email row.\n6. /me/trust shows at least one scan, the event list with a city, and \"1 pending\".",
+  "blocks": [
+    {
+      "id": "D1-07",
+      "label": "Build block 1",
+      "when": "Sat 12:55 to 14:55",
+      "minutes": 120,
+      "blake": [
+        "(25) screen 1 /me from the seeded tables, publish",
+        "(5) CP1 13:20",
+        "(55) screen 2 /me/pass (\"Feature a product\" only while item 4 holds) and screen 3 /p/<code> with the scan insert, publish",
+        "(5) CP2 14:20",
+        "(30) start screen 4 /r/<slug>"
+      ],
+      "tori": [
+        "C1: buyer map for two archetypes (footwear or apparel with retail distribution; DTC supplement)",
+        "ICP in five lines; user, buyer, budget holder, trigger",
+        "First-offer options against D1-02 call (c)",
+        "Objections with the best honest answer",
+        "Thesis scaffold from the Q1, Q5 and Q2 blocks",
+        "CP1 and CP2 (5 min each)",
+        "Output: sales strategy fields T4.1 to T4.6 and T4.9 in `03_commercial`; thesis scaffold; checkpoint log rows"
+      ]
+    },
+    {
+      "id": "D1-08",
+      "label": "Build block 2",
+      "when": "Sat 15:10 to 17:15",
+      "minutes": 125,
+      "blake": [
+        "(40) screen 4 with the disclosure line and screen 5 /go/<slug>, publish",
+        "(10) CP3 15:50 to 16:00, recording 1, GitHub sync",
+        "(55) screen 6 /me/trust (counters, list, earnings label, default city): the first 5 minutes one batched prompt for Tori's CP3 copy suggestions; the last 2 minutes `reset_note.md` written and run once; publish",
+        "(5) CP4 16:55",
+        "(15) AR1 17:00 to 17:15: fix list v1 in demo-impact order from Tori's calls, sync, save"
+      ],
+      "tori": [
+        "C2: pricing and packaging hypotheses labelled",
+        "Acquisition through community nodes",
+        "First-customer plan as three brand types",
+        "The D1-04 claims table completed",
+        "Fundraising narrative in ten lines and 14 headlines with evidence label and gap, no amounts",
+        "CP3 with the five-second test (10 min)",
+        "CP4 (5 min)",
+        "AR1 (15 min) running the six tests and writing one demo beat per test",
+        "Output: sales strategy fields T4.7, T4.8, T4.10; claims table; narrative and headlines; demo script v1"
+      ]
+    },
+    {
+      "id": "D2-03",
+      "label": "Build block 3",
+      "when": "Sun 09:30 to 10:25",
+      "minutes": 55,
+      "blake": [
+        "(25) fix list v2 top down, publish after each, nothing new",
+        "(10) CP5 09:55 to 10:05",
+        "(20) remaining fixes",
+        "The Leaflet map only if the list is empty at CP5 (revert to the list within 10 minutes if it breaks the page)",
+        "Wallet sheet and \"What is Sway?\" page only if still empty at 10:15; else copy tidy on the recipient page"
+      ],
+      "tori": [
+        "C3: deck draft v1, the 14-slide table from the D2-02 decisions (slide 11 dated facts only; slide 13 milestone thresholds, no amounts)",
+        "Demo script v2 skeleton against the real screens",
+        "CP5 (10 min) with screenshots of failures",
+        "Output: deck draft v1; demo script v2 skeleton; fix list v2 status"
+      ]
+    },
+    {
+      "id": "D2-04",
+      "label": "Build block 4",
+      "when": "Sun 10:40 to 11:15",
+      "minutes": 35,
+      "blake": [
+        "(2) CP6 freeze logged",
+        "(13) three cold runs, each after the reset, fixing and restarting once at most, run 3 recorded as recording 2",
+        "(10) cheat test",
+        "(10) reset re-run, seed CSVs, GitHub sync, CP7"
+      ],
+      "tori": [
+        "C4: recipient in the runs with the stopwatch from \"can I see that?\"",
+        "Cheat test",
+        "Known limitations v1 under five headings",
+        "Demo script v2 timed under four minutes, leading with the D1-02 hero",
+        "Output: known limitations v1; demo script v2 timed"
+      ]
+    },
+    {
+      "id": "D2-04X",
+      "label": "Build block 5, extension only",
+      "when": "Sun 12:50 to 13:55",
+      "minutes": 65,
+      "blake": [
+        "(0 to 30) remaining fixes, publish after each",
+        "(30 to 50) one cut-list item only if the list is empty (the map, else the wallet sheet, else the \"What is Sway?\" page, else the \"Add a product\" sheet)",
+        "(50 to 65) two more cold runs, recording 3",
+        "Anything that breaks a run reverted with Lovable's version history within 10 minutes"
+      ],
+      "tori": [
+        "Deck v1 tidy and the nine-prompt self-check during minutes 0 to 50",
+        "Recipient in the runs from minute 50",
+        "Limitations updated",
+        "Script re-timed if the hero order changes",
+        "Output: recording 3; known limitations v1 updated"
+      ]
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "CP1",
+      "at": "Sat 13:20 to 13:25",
+      "shows": "/me on the published URL",
+      "checks": "Tori brings the buyer map draft. Product: five products with images and reasons on Tori's phone over mobile data; sales and script: nothing yet",
+      "pass": "Five products with images on Tori's phone",
+      "fail": "Data connection first (anonymous read prompt), up to 10 minutes; standing rule: CP1 not passed by 13:30, switch at once to the build tool's own built-in backend rather than debugging the external database connection, re-import the seed CSVs and write the switch into known limitations; the Bolt fallback (45 minutes) is kept for a Lovable outage only and moves CP2 to 15:10"
+    },
+    {
+      "id": "CP2",
+      "at": "Sat 14:20 to 14:25",
+      "shows": "The QR on /me/pass; /p/<code>",
+      "checks": "Tori brings the ICP and first-offer options. Product: Tori's camera opens /p/<code> and a scan row with today's timestamp appears; sales: no first-offer option assumes something the Pass does not do; script: the beat 2 line (\"Scan my Sway\") matches the screen",
+      "pass": "Scan opens the landing and a row exists",
+      "fail": "\"Allow anonymous inserts on events\", 10 minutes maximum; still failing at 14:55: the QR points only to /p/<code> and CP2 is retried at 15:10 first"
+    },
+    {
+      "id": "CP3",
+      "at": "Sat 15:50 to 16:00",
+      "shows": "Minimum demo: scan to /r/<slug> to /go/<slug> to the retailer from a cold tab",
+      "checks": "Tori brings the pricing and packaging draft and the five-second test sheet. Product: rows for scan, view, click_out, save_email; recording 1; GitHub current; sales: every price labelled [HYPOTHESIS] or sourced, no claim needs a visible purchase; script: product, who, why, one action in five seconds; at most three copy suggestions, batched into one prompt at the start of the screen-6 slot",
+      "pass": "Whole recipient side works with four rows; recording exists",
+      "fail": "Everything to 17:00 on the recipient page, the scan and the click; AR1 still runs at 17:00; still missing at 17:15: the reserve 18:00 to 18:30 goes to the build"
+    },
+    {
+      "id": "CP4",
+      "at": "Sat 16:55 to 17:00",
+      "shows": "/me/trust counters and list",
+      "checks": "Tori brings the completed claims table and the narrative in ten lines. Product: counters change after Tori scans again; list shows city and product; sales: each demonstrable claim points at a beat that has passed; script: the beat 6 line names a count, not an earning",
+      "pass": "Counters change on refresh",
+      "fail": "AR1 runs tests 1 to 5 only; Sunday build 3 spends its first 25 minutes on counters and list. If the never-cut four are not working by CP4, stop adding and make exactly the four solid; the Supabase table on the laptop becomes the outcome view, still a true demonstration of event logging, not of purchase attribution"
+    },
+    {
+      "id": "AR1",
+      "at": "Sat 17:00 to 17:15",
+      "shows": "All six routes",
+      "checks": "Tori brings demo script v1, one beat per test as she goes. Product: the six tests from a cleared tab, each called Pass, Fix or Cut; sales: any claim a failed test undermines is marked Hypothetical for D1-09; script: beats ordered to lead with the D1-02 hero",
+      "pass": "Fix list v1 in demo-impact order before dinner",
+      "fail": "Whatever exists is tested; never-cut failures go to the top of the list"
+    },
+    {
+      "id": "CP5",
+      "at": "Sun 09:55 to 10:05",
+      "shows": "The fixed build",
+      "checks": "Tori brings deck draft v1 slides 1 to 7. Product: six tests re-run on two phones, failures with screenshots; deck: no slide describes an unbuilt screen (checked again at D2-05); script: v2 skeleton matches the real screens",
+      "pass": "Six pass, or never-cut failures sit at the top of the list",
+      "fail": "A never-cut item failing: all remaining time in build 3 and the fix allowance in build 4 go to it; Tori's deck work continues"
+    },
+    {
+      "id": "CP6",
+      "at": "Sun 10:40",
+      "shows": "Freeze: the build as it stands",
+      "checks": "Tori brings the demo script v2 skeleton. Product: nothing new after this minute; script: written against the frozen screens only",
+      "pass": "Freeze declared aloud and logged",
+      "fail": "Cannot fail; unfixed items go to known limitations; never un-frozen"
+    },
+    {
+      "id": "CP7",
+      "at": "Sun 11:15",
+      "shows": "Three clean cold runs (run 3 recorded as recording 2); reset re-run",
+      "checks": "Tori brings known limitations v1 and demo script v2 timed. Product: three consecutive runs with no intervention, each under four minutes; cheat findings recorded; reset works; sales: the limitations list names every mocked item a claim leans on; script: timed, leads with the hero, ends with the \"proves and does not\" line",
+      "pass": "Three clean runs; five-heading limitations list; counts-once rule in the event table",
+      "fail": "Two of three runs fail (or the once-only restart fails again): D2-06 uses recording 2 plus the Supabase table as the outcome view, live scan shown to CP2 level only"
+    }
+  ],
+  "cutList": [
+    {
+      "n": 1,
+      "item": "Wallet-styled card polish and the wallet sheets. What remains: a plain \"Sway Pass\" heading over the QR and one line \"Wallet pass coming soon\"",
+      "trigger": "CP1 not fixed by 13:45 (Bolt switch); CP2 still failing at 14:55; CP3 missed at 16:00; Tori at any checkpoint; never built as a sheet unless the fix list is still empty at 10:15 Sunday"
+    },
+    {
+      "n": 2,
+      "item": "The map. What remains: counters and the event list with city names (\"Scanned in Barcelona, 14:32\")",
+      "trigger": "Never built unless the fix list is empty at CP5; struck at the CP1 Bolt switch, CP4 missed at 17:00, a never-cut failure at CP5"
+    },
+    {
+      "n": 3,
+      "item": "The \"Add a product\" sheet. What remains: seeded products only, said in the demo",
+      "trigger": "CP2 still failing at 14:55; CP3 missed at 16:00"
+    },
+    {
+      "n": 4,
+      "item": "\"Feature a product\" on the Pass (product-specific QR). What remains: the QR always points to /p/<code>; the recipient picks the product on the landing",
+      "trigger": "CP2 still failing at 14:55; CP3 missed at 16:00; optional from the start if D1-05 chooses the personal Pass first"
+    },
+    {
+      "n": 5,
+      "item": "The \"What is Sway?\" page. What remains: one text line on the recipient page",
+      "trigger": "CP3 missed at 16:00; CP4 missed at 17:00; never built unless the fix list is still empty at 10:15 Sunday"
+    },
+    {
+      "n": 6,
+      "item": "Save by email. What remains: a \"Save\" button that shows a toast and logs the event without an email field",
+      "trigger": "CP4 missed at 17:00; a never-cut failure at CP5"
+    },
+    {
+      "n": 7,
+      "item": "The pending earnings label. What remains: the click count only",
+      "trigger": "A never-cut failure at CP5; D1-05 deciding \"label off\""
+    }
+  ],
+  "neverCut": [
+    "The QR that opens the recipient page on a phone",
+    "The recommendation page with one dominant action",
+    "The scan and click_out events",
+    "The scan count on the advocate side"
+  ],
+  "risks": [
+    {
+      "risk": "The tool adds sign-up and protected routes; the recipient page ends up behind a login. Likelihood: high if not prevented",
+      "mitigation": "The brief says no login; on first sight prompt \"remove all authentication; all pages are public\". Owner and when: Blake, any prompt"
+    },
+    {
+      "risk": "Row-level security silently blocks inserts; counts stay at zero. Likelihood: high",
+      "mitigation": "Window B proved anonymous reads only, so the first anonymous insert is at CP2: check the table editor, not the app, and prompt \"allow anonymous inserts on events, locker_items and recommendations\"; if CP1 has not passed by 13:30 the build switches to the tool's own built-in backend rather than debugging the connection, and the switch goes into known limitations. Owner and when: Blake, CP1 and CP2"
+    },
+    {
+      "risk": "The published URL is a stale snapshot while the preview looks right. Likelihood: high",
+      "mitigation": "Publish after every change; Tori tests only the published URL; close and reopen the tab. Owner and when: both, every checkpoint"
+    },
+    {
+      "risk": "Lovable outage. Likelihood: medium",
+      "mitigation": "FACT: incidents on 4 and 5 Sep 2026 including Supabase project creation failures. Own Supabase project; GitHub sync at CP3, AR1, CP7; Bolt fallback untested before the workshop, 45 minutes to return to the last checkpoint; recordings at CP3 and CP7. Owner and when: Blake; the 20-minute rule"
+    },
+    {
+      "risk": "Credits run out in a debugging loop. Likelihood: medium",
+      "mitigation": "ASSUMPTION: about one credit per screen-changing message; top-up if under 120 on Wed 7 Oct and under 60 at any checkpoint; one screen per prompt. Owner and when: Blake"
+    },
+    {
+      "risk": "Supabase free project paused. Likelihood: medium",
+      "mitigation": "FACT: pause after about seven idle days; the project is created Tue 6 Oct and written to Wed 7 Oct, then one /hello load from a phone on Thu 8 Oct; longest idle gap two days to the Sat 10 Oct build. Owner and when: Blake"
+    },
+    {
+      "risk": "QR will not scan: too dense, low brightness, glare, inverted colours, an in-app browser. Likelihood: medium",
+      "mitigation": "260 px, level M, white margin, brightness at maximum, 20 to 30 cm, tested screen to screen in both directions in window A on Tue 6 Oct; paper QR printed in window A as backup; FACT: iPhone Camera reads QR codes natively and offers a tappable link. Owner and when: both"
+    },
+    {
+      "risk": "Retailer page blocks the redirect or loads slowly; product images fail. Likelihood: medium",
+      "mitigation": "The click is logged before the redirect; fast-loading URLs and own-bucket images under 500 KB chosen in window B on Wed 7 Oct; show the row and move on. Owner and when: Blake, CP3"
+    },
+    {
+      "risk": "No mobile data in the venue, roaming caps, venue Wi-Fi blocking a domain. Likelihood: low to medium",
+      "mitigation": "Both phones on mobile data; laptop hotspot; roaming confirmed Thu 8 Oct [ASSUMPTION]; venue Wi-Fi tested Fri 9 Oct. Owner and when: both"
+    },
+    {
+      "risk": "Test scans pollute the counts; Trust inflated by self-scan or repeat scans. Likelihood: certain in this build",
+      "mitigation": "The reset procedure written and run once at D1-08 before AR1 and re-run before every scripted run; the cheat test at D2-04 with every working method in known limitations and the counts-once rule in the event table; not fixed in the prototype. Owner and when: Blake; both at D2-04"
+    },
+    {
+      "risk": "No dress rehearsal: the Saturday build is the first time the tool is driven screen by screen. Likelihood: high",
+      "mitigation": "Windows A and B on Tue 6 Oct and Wed 7 Oct are the only proving steps; one screen per prompt from build brief v2; the credit top-up bought Wed 7 Oct; the CP1 13:30 rule (switch to the built-in backend); if both windows were lost the cut list is applied from item 3 onward at the scope lock and D1-06 says so. Owner and when: Blake; D1-06 and CP1"
+    },
+    {
+      "risk": "Scope creep from the morning decisions; a good demo treated as validation. Likelihood: high",
+      "mitigation": "The lock at 12:10 and the parking lot (rules card rule 9); Demonstration label in the log and the \"proves and does not\" line in every script (rule 5). Owner and when: Tori; both at D2-06"
+    }
+  ],
+  "demoScript": [
+    {
+      "beat": 1,
+      "text": "Locker. Blake as the advocate. Line said: \"Five things actually worth the money, with the reason for each\". Limitation said aloud: \"Products are seeded\" (if item 3 is cut).",
+      "test": "Test 1; claim: a consumer-owned Locker across brands"
+    },
+    {
+      "beat": 2,
+      "text": "Sway Pass. Blake shows /me/pass; Tori says \"can I see that?\" and scans. Line said: \"Scan my Sway\". Limitation said aloud: \"The Pass will live in the phone's wallet; today it lives on this screen\".",
+      "test": "Test 2; claim: an in-person recommendation that is observed"
+    },
+    {
+      "beat": 3,
+      "text": "Recommendation page. Tori taps a product. Line said: \"Product, who, why, one action, and the line that says Maya may earn if you buy\". Limitation said aloud: \"The city is fixed to Barcelona\".",
+      "test": "Test 3; claim: the recipient sees a person, not a brand"
+    },
+    {
+      "beat": 4,
+      "text": "Action. Tori taps \"Go to product\". Line said: \"The click is logged before the retailer loads\". Limitation said aloud: \"A plain redirect; no affiliate parameter; no purchase is visible\".",
+      "test": "Test 4; claim: an observable event, not a composite metric"
+    },
+    {
+      "beat": 5,
+      "text": "Save. Tori saves with the test address. Line said: \"Saved for later\". Limitation said aloud: \"Test address only; the join flow is not built\".",
+      "test": "Test 5; claim: a second observable action"
+    },
+    {
+      "beat": 6,
+      "text": "Outcome. Blake refreshes /me/trust. Line said: \"She sees it happened: one scan, one click, one pending\". Limitation said aloud: \"Pending means eligibility not yet confirmed; nothing has been earned; no purchase is claimed\".",
+      "test": "Test 6; claim: the advocate sees the outcome"
+    }
+  ],
+  "limitations": [
+    "It does not validate demand.",
+    "It does not validate retention.",
+    "It does not validate affiliate economics.",
+    "It does not validate purchase attribution.",
+    "It does not validate wallet distribution.",
+    "It does not validate brand interest.",
+    "No log entry, sales claim or slide may cite it as evidence of any of those.",
+    "HYPOTHESIS: that a recipient will scan a personal QR in a real social moment and act on the page; it stays a hypothesis until the cold tests on Wed 14 Oct and Sun 18 Oct and the first cohort produce counts, dates and a founder's name."
+  ]
+}
