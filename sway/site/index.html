@@ -151,6 +151,9 @@ code{font-family:var(--mono);font-size:.86em;background:var(--surface-2);border:
 .tl-item.k-build .tl-body::before{border-color:var(--build)}
 .tl-item.k-review .tl-body::before{border-color:var(--stop)}
 .tl-item.k-rest .tl-body::before{border-style:dashed;background:transparent}
+.tl-item.pre .tl-body{border:1px dashed var(--line-2);background:var(--surface-2)}
+.tl-item.pre .tl-t{font-weight:600;color:var(--ink)}
+.tl-item.pre .tl-time{font-size:9.5px}
 .tl-t{font-family:var(--sans);font-size:13.5px;font-weight:600;line-height:1.3}
 .tl-item.k-rest .tl-t{font-weight:400;color:var(--muted)}
 .tl-m{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:2px;line-height:1.35}
@@ -248,6 +251,11 @@ details.fall .in{padding:0 14px 14px;font-family:var(--sans);font-size:13px;colo
 .task.w-tori{border-left-color:var(--stop)}
 .task.w-both{border-left-color:var(--line-2)}
 
+.tracks{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:6px}
+.track-col{min-width:0}
+.track-h{display:flex;align-items:baseline;gap:8px;padding:0 0 7px;border-bottom:1px solid var(--line);margin-bottom:6px}
+.track-h .tmin{font-size:10.5px;color:var(--muted);margin-left:auto}
+
 /* prototype extras */
 .blocks{display:grid;gap:8px}
 .brow{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--surface);
@@ -262,6 +270,13 @@ details.risk{border:1px solid var(--line);border-radius:8px;background:var(--sur
 details.risk summary{cursor:pointer;padding:10px 13px;font-family:var(--sans);font-size:12.5px;line-height:1.45;color:var(--ink-2)}
 details.risk[open] summary{font-weight:600;color:var(--stop)}
 details.risk .in{padding:0 13px 12px;font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--ink-2)}
+
+.field.sealed textarea{border-color:var(--stop);background:var(--stop-soft)}
+.field .seal{font-family:var(--mono);font-size:10.5px;color:var(--stop);margin-bottom:6px;letter-spacing:.02em;line-height:1.5}
+.sealbanner{background:var(--stop-soft);border:1px solid color-mix(in srgb,var(--stop) 30%,transparent);
+  border-radius:9px;padding:12px 14px;font-family:var(--sans);font-size:12.5px;line-height:1.5;
+  color:var(--stop);margin-bottom:16px}
+.task.sealed-task{border-left-color:var(--stop);border-left-width:3px}
 
 /* sheet */
 .scrim{position:fixed;inset:0;background:rgba(15,17,21,.4);z-index:50;opacity:0;transition:opacity .18s}
@@ -491,7 +506,9 @@ function hydrate(){
 function subscribe(){
   try{
     db.collection("workbook").onSnapshot(function(s){
-      var n={}; s.docs.forEach(function(d){n[d.id]=d.data()||{};}); store.workbook=n; refreshFields();
+      var n={}; s.docs.forEach(function(d){n[d.id]=d.data()||{};});
+      Object.keys(sealedIds).forEach(function(k){ if(store.workbook[k]) n[k]=store.workbook[k]; });
+      store.workbook=n; refreshFields();
     },function(){});
     db.collection("ticks").onSnapshot(function(s){
       var n={}; s.docs.forEach(function(d){n[d.id]=d.data()||{};}); store.ticks=n; refreshTicks();
@@ -514,12 +531,14 @@ function resolveProfiles(ids){
   userCap.profiles(ids).then(function(p){ profiles=p; });
 }
 var pend={};
+var sealedIds = {};
 function saveField(id,val,dot){
   store.workbook[id]={value:val,by:me.id,at:new Date().toISOString()};
   lset("workbook",store.workbook);
   if(dot) dot.className="sd p";
   clearTimeout(pend[id]);
   pend[id]=setTimeout(function(){
+    if(sealedIds[id]){ if(dot) dot.className="sd ok"; return; }
     if(!db||!canWrite){ if(dot) dot.className="sd ok"; return; }
     db.doc("workbook/"+id).set({value:val,by:me.id||"",at:new Date().toISOString()})
       .then(function(){ if(dot) dot.className="sd ok"; })
@@ -579,9 +598,17 @@ function paintTimer(){
   if(pb) pb.textContent = (active&&r.running)?"Pause":(active?"Resume":"Start session");
   var steps=document.querySelectorAll(".step[data-min]");
   if(steps.length && active){
-    var acc=0, mark=ms/60000, found=-1;
-    for(var i=0;i<steps.length;i++){ acc+=+steps[i].dataset.min; if(mark<acc){found=i;break;} }
-    for(var j=0;j<steps.length;j++) steps[j].classList.toggle("cur", j===found);
+    var mark=ms/60000, acc={}, found={};
+    for(var i=0;i<steps.length;i++){
+      var tr=steps[i].dataset.track||"solo";
+      if(!(tr in acc)) acc[tr]=0;
+      acc[tr]+=+steps[i].dataset.min;
+      if(!(tr in found) && mark<acc[tr]) found[tr]=i;
+    }
+    for(var j=0;j<steps.length;j++){
+      var t2=steps[j].dataset.track||"solo";
+      steps[j].classList.toggle("cur", found[t2]===j);
+    }
   }
 }
 function startTicking(){ if(tickHandle) return; tickHandle=setInterval(paintTimer,1000); }
@@ -642,15 +669,19 @@ function go(hash){ location.hash=hash; }
 /* ---------------- fields ---------------- */
 function fieldEl(f, idPrefix){
   var id=(idPrefix||"")+f.id;
-  var wrap=el("div","field");
+  if(f.private) sealedIds[id]=true;
+  var wrap=el("div","field"+(f.private?" sealed":""));
   var lab=el("label",null,f.label); lab.htmlFor="i-"+id; wrap.appendChild(lab);
+  if(f.private) wrap.appendChild(el("div","seal","Sealed. Stays on this device, never sent to your co-founder. You read it aloud at D1-02."));
   if(f.hint) wrap.appendChild(el("div","hint",f.hint));
   var ta=el("textarea"); ta.id="i-"+id; ta.dataset.f=id;
   ta.rows=f.lines||3;
-  ta.placeholder=f.placeholder||"Type here. It saves as you go and your co-founder sees it.";
+  ta.placeholder=f.placeholder||(f.private
+    ? "Type here. It saves on this device only, sealed until D1-02."
+    : "Type here. It saves as you go and your co-founder sees it.");
   var rec=store.workbook[id]; ta.value=(rec&&rec.value)||"";
   var meta=el("div","meta"); var sd=el("span","sd"); meta.appendChild(sd);
-  var w=el("span",null, rec&&rec.at ? whoName(rec.by)+", "+whenStr(rec.at) : "empty");
+  var w=el("span",null, rec&&rec.at ? (f.private?"sealed, ":"")+whoName(rec.by)+", "+whenStr(rec.at) : "empty");
   w.dataset.m=id; meta.appendChild(w);
   ta.addEventListener("input",function(){ saveField(id,ta.value,sd); w.textContent="saving"; });
   wrap.appendChild(ta); wrap.appendChild(meta);
@@ -929,7 +960,7 @@ function whoClass(who){
   return "w-both";
 }
 function taskRow(t,kind){
-  var b=el("button","task "+whoClass(t.who)); b.type="button"; b.dataset.taskdone="task-"+t.id;
+  var b=el("button","task "+whoClass(t.who)+(t.sealed?" sealed-task":"")); b.type="button"; b.dataset.taskdone="task-"+t.id;
   b.dataset.who=whoClass(t.who);
   if(isTicked("task-"+t.id)) b.classList.add("done");
   var tick=el("span","tick","✓");
@@ -973,6 +1004,12 @@ function openTask(t){
   head.appendChild(el("div","kicker",[t.who,t.minutes?t.minutes+" min":""].filter(Boolean).join("  ·  ")));
   head.appendChild(el("h3","h-l",t.title));
   var body=el("div");
+  if(t.sealed){
+    var sb=el("div","sealbanner");
+    sb.appendChild(el("strong",null,"Sealed until D1-02. "));
+    sb.appendChild(document.createTextNode("Nothing you type here leaves this device and your co-founder never sees it here. Print it, seal the envelope across the flap on Thursday, and open both together on Saturday at 09:10."));
+    body.appendChild(sb);
+  }
   if(t.why) body.appendChild(el("p","lede",t.why));
   if(t.detail) body.appendChild(el("p",null,t.detail));
   if(t.instructions&&t.instructions.length){
@@ -1047,6 +1084,45 @@ function viewDay(p){
     left.appendChild(vb);
   }
   var tl=el("div","tl"); tl.id="timeline";
+  if(d.beforeStart){
+    var bsN=d.beforeStart;
+    var pre=el("button","tl-item k-rest pre"); pre.type="button";
+    pre.appendChild(el("div","tl-time",bsN.when));
+    var pb2=el("div","tl-body");
+    pb2.appendChild(el("div","tl-t",bsN.title));
+    pb2.appendChild(el("div","tl-m",bsN.oneLine));
+    var pf=el("div","tl-flags"); pf.appendChild(el("span","mini stop","before the clock starts")); pb2.appendChild(pf);
+    pre.appendChild(pb2);
+    pre.addEventListener("click",function(){
+      var h=el("div");
+      h.appendChild(el("div","kicker",bsN.when));
+      h.appendChild(el("h3","h-l",bsN.title));
+      var bd=el("div");
+      bd.appendChild(el("p","lede",bsN.purpose));
+      bd.appendChild(el("div","kicker","Do this"));
+      bsN.steps.forEach(function(st,i){
+        var r=el("div","step");
+        var cb=el("input"); cb.type="checkbox"; cb.dataset.tick="pre-"+i; cb.checked=isTicked("pre-"+i);
+        cb.addEventListener("change",function(){ setTick("pre-"+i,cb.checked); });
+        r.appendChild(cb);
+        r.appendChild(el("span","min",st.who));
+        r.appendChild(el("span","txt",st.text));
+        bd.appendChild(r);
+      });
+      bd.appendChild(el("div","kicker","Done when"));
+      var cu=el("ul","plain"); bsN.completion.forEach(function(x){cu.appendChild(el("li",null,x));}); bd.appendChild(cu);
+      if(bsN.assumption){
+        bd.appendChild(el("div","kicker","This assumes"));
+        var am=el("div","assume"); setText(am,bsN.assumption); bd.appendChild(am);
+      }
+      var fd=el("details","fall");
+      fd.appendChild(el("summary",null,"If the bags cannot be held"));
+      fd.appendChild(el("div","in",bsN.fallback));
+      bd.appendChild(fd);
+      openSheet(h,bd);
+    });
+    tl.appendChild(pre);
+  }
   d.sessions.forEach(function(s){ tl.appendChild(tlItem(s)); });
   left.appendChild(tl);
   wrap.appendChild(left);
@@ -1154,17 +1230,37 @@ function paintDetail(){
     card.appendChild(bi);
   }
   if(s.steps&&s.steps.length){
-    var bs=el("div","blk"); bs.appendChild(el("div","kicker","Run it like this"));
-    s.steps.forEach(function(st,i){
-      var d=el("div","step"); d.dataset.min=st.min||0;
+    var bs=el("div","blk");
+    function stepEl(st,i,track){
+      var d=el("div","step"); d.dataset.min=st.min||0; d.dataset.track=track;
       var cb=el("input"); cb.type="checkbox"; cb.dataset.tick="step-"+s.id+"-"+i; cb.checked=isTicked("step-"+s.id+"-"+i);
       cb.addEventListener("change",function(){ setTick("step-"+s.id+"-"+i,cb.checked); });
       d.appendChild(cb);
       d.appendChild(el("span","min",(st.min||0)+"m"));
-      d.appendChild(el("span","txt",st.text));
+      d.appendChild(el("span","txt",st.text.replace(/^Tori:\s*/,"")));
       if(cb.checked) d.classList.add("ticked");
-      bs.appendChild(d);
-    });
+      return d;
+    }
+    var split=[], blake=[], tori=[];
+    s.steps.forEach(function(st,i){ (/^Tori:\s/.test(st.text)?tori:blake).push({st:st,i:i}); });
+    if(tori.length){
+      bs.appendChild(el("div","kicker","Two tracks, running at the same time"));
+      bs.appendChild(el("p","sub","You each follow your own column. The clock above runs the whole block, and the highlighted row is where each of you should be."));
+      var tw=el("div","tracks");
+      [["Blake builds",blake,"blake","go"],["Tori, in parallel",tori,"tori","stop"]].forEach(function(col){
+        var c=el("div","track-col");
+        var hd=el("div","track-h");
+        hd.appendChild(el("span","chip "+col[3],col[0]));
+        hd.appendChild(el("span","mono tmin",col[1].reduce(function(a,x){return a+(x.st.min||0);},0)+" min"));
+        c.appendChild(hd);
+        col[1].forEach(function(x){ c.appendChild(stepEl(x.st,x.i,col[2])); });
+        tw.appendChild(c);
+      });
+      bs.appendChild(tw);
+    } else {
+      bs.appendChild(el("div","kicker","Run it like this"));
+      blake.forEach(function(x){ bs.appendChild(stepEl(x.st,x.i,"solo")); });
+    }
     card.appendChild(bs);
   }
   if(s.prompts&&s.prompts.length){
@@ -1628,6 +1724,13 @@ function boot(){
     if(!DATA.brief&&!DATA.sat){
       $("#page").innerHTML='<p class="loading">The programme data could not be loaded. Reload the page.</p>';
       return;
+    }
+    if(DATA.prep){
+      (DATA.prep.evenings||[]).forEach(function(ev){
+        (ev.tasks||[]).forEach(function(t){
+          (t.capture||[]).forEach(function(c){ if(c.private) sealedIds["prep-"+c.id]=true; });
+        });
+      });
     }
     var ni=nowInfo();
     if(!location.hash && ni.dayId && DATA[ni.dayId]) location.hash="#/day/"+ni.dayId;
