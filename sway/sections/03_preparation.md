@@ -267,7 +267,13 @@ No content is discussed. If a founder cannot make the call, the same five-point 
 
 ### Fri 9 Oct
 
-Travel only. No preparation for either founder, and nothing is due.
+Travel day. One 10-minute job for Blake, nothing for Tori.
+
+| Task | Who | Minutes | Deadline | Used at | Fallback |
+|---|---|---|---|---|---|
+| Confirm the GitHub sync is current and export the seed CSVs | Blake | 10 | Fri 9 Oct 09:00 UK, or from the airport | D1-07, the first build block | Not done by boarding: it is the first five minutes of D1-07 on Saturday, and the reserve absorbs it |
+
+Done when the repository's last commit is dated Fri 9 Oct and the seed CSVs are on the laptop and in the shared folder. Without them, Saturday's first build block has no product data to build from.
 
 The arrival evening is section 4 of this programme: light, optional, 25 minutes at most, and the sealed answers stay sealed. Optional on arrival: whoever lands first does the 15-minute venue check (moved to Sat 10 Oct 08:45 if either lands after 21:00), and the 10-minute stopwatch scan.
 

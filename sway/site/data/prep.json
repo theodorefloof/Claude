@@ -976,8 +976,35 @@
    "date": "2026-10-09",
    "blakeMinutes": 0,
    "toriMinutes": 0,
-   "focus": "Travel only, with no preparation for either founder and nothing due beyond Blake confirming the GitHub sync and the exported seed CSVs by 09:00 UK or from the airport; the arrival evening is optional, 25 minutes at most, and the sealed answers stay sealed.",
-   "tasks": []
+   "focus": "Travel day. One 10-minute job for Blake, nothing for Tori: confirm the GitHub sync and export the seed CSVs, by 09:00 UK or from the airport. The arrival evening is optional, 25 minutes at most, and the sealed answers stay sealed.",
+   "tasks": [
+    {
+     "id": "fr1",
+     "who": "Blake",
+     "title": "Confirm the GitHub sync and export the seed CSVs",
+     "minutes": 10,
+     "deadline": "Fri 9 Oct, 09:00 UK or from the airport",
+     "usedAt": "D1-07, the first build block",
+     "reviewer": "",
+     "why": "Saturday's first build block has no product data to build from without the seeded twelve-product catalogue. This is the only thing due on the travel day.",
+     "instructions": [
+      "Open the window B project and confirm the repository's last commit is dated Fri 9 Oct.",
+      "Export the seed CSVs and put them on the laptop and in the shared folder.",
+      "Message Tori that both are done. It can be done from the airport."
+     ],
+     "output": "Repository last commit dated Fri 9 Oct; seed CSVs on the laptop and in the shared folder.",
+     "outputFile": "",
+     "fallback": "Not done by boarding: it becomes the first five minutes of D1-07 on Saturday and the reserve absorbs it.",
+     "capture": [
+      {
+       "id": "prep-fr1-1",
+       "label": "Sync and export confirmed",
+       "hint": "commit date, and where the CSVs are saved",
+       "lines": 2
+      }
+     ]
+    }
+   ]
   }
  ],
  "cutOrder": [

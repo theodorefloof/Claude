@@ -74,7 +74,7 @@ Each question is decided in one named session; the last column is the test D2-06
 | Question | Sessions that produce the answer | Preparation inputs (deadline) | Artefact that holds the answer | What "defensible" means |
 |---|---|---|---|---|
 | Q1 What is Sway? | D1-02; D1-03 | Sealed founder answers v1 (Mon 5 Oct 22:00 UK); divergence list (Thu 8 Oct 22:00 UK) | One-page company thesis (Q1 block under 120 words); four logged calls | Both would say it to a stranger; names a customer and a behaviour; ShopMy, LTK or Duel could not truthfully say it |
-| Q2 What does it do? | D1-05; D1-06; D2-05 | Product prep pack (Thu 8 Oct 22:00 UK); scope proposal (Thu 8 Oct 22:00 UK); the full attribution event table pre-drafted in the product prep pack | Product definition v1 with the event table; Q2 block under 150 words | One journey; eight or more exclusions; every event row fakeable and counts-once; matches the frozen prototype |
+| Q2 What does it do? | D1-05; D1-06; D2-05 | Product prep pack (Thu 8 Oct 22:00 UK), including the journey strip with its event column and Tori's A, D and U marks; scope proposal (Thu 8 Oct 22:00 UK). The full attribution event table is not pre-drafted; it is built live at D1-05, which sets aside 14 of its 40 minutes for it | Product definition v1 with the event table; Q2 block under 150 words | One journey; eight or more exclusions; every event row fakeable and counts-once; matches the frozen prototype |
 | Q3 How do we sell it? | C1 and C2; D1-09 | Commercial prep pack (Wed 7 Oct 22:00 UK); pricing and packaging hypotheses (Thu 8 Oct 22:00 UK) | Initial sales strategy v1 (Demonstrable / Hypothetical column); Q3 block under 150 words | One line each for user, buyer, budget holder, trigger, first offer; no unlabelled price; Provisional, because no customer conversation happens before the workshop, with the first three brand conversations due Fri 16 Oct 22:00 UK and the trigger checked Fri 23 Oct 22:00 UK, owner Tori; the launch city named or "not yet chosen"; a currency on every number |
 | Q4 How do we raise capital? | C2; D2-02; C3 | Duel public evidence sheet (Tue 6 Oct 22:00 UK); commercial prep pack (Wed 7 Oct 22:00 UK) | Ten-line narrative and 14-slide deck draft; Q4 block under 150 words | No amount, valuation, traction or market size; every headline labelled with a dated gap; slide 11 dated facts only |
 | Q5 Dramatically better than Duel? | D1-04; C2; D2-05 | Duel public evidence sheet (Tue 6 Oct 22:00 UK); one alternative desk test (Tue 6 Oct 22:00 UK) | Differentiation thesis (comparison set, ownership paragraph, claims table); Q5 block under 150 words | Three or more demonstrable claims tied to demo beats; Duel from public pages only; "not found publicly"; "better" only inside the question |
@@ -638,7 +638,13 @@ No content is discussed. If a founder cannot make the call, the same five-point 
 
 ### Fri 9 Oct
 
-Travel only. No preparation for either founder, and nothing is due.
+Travel day. One 10-minute job for Blake, nothing for Tori.
+
+| Task | Who | Minutes | Deadline | Used at | Fallback |
+|---|---|---|---|---|---|
+| Confirm the GitHub sync is current and export the seed CSVs | Blake | 10 | Fri 9 Oct 09:00 UK, or from the airport | D1-07, the first build block | Not done by boarding: it is the first five minutes of D1-07 on Saturday, and the reserve absorbs it |
+
+Done when the repository's last commit is dated Fri 9 Oct and the seed CSVs are on the laptop and in the shared folder. Without them, Saturday's first build block has no product data to build from.
 
 The arrival evening is section 4 of this programme: light, optional, 25 minutes at most, and the sealed answers stay sealed. Optional on arrival: whoever lands first does the 15-minute venue check (moved to Sat 10 Oct 08:45 if either lands after 21:00), and the 10-minute stopwatch scan.
 
@@ -842,7 +848,7 @@ Beside it, one customer struggle from duel_customer_evidence.md: "the difficulty
 
 **Purpose and question to resolve.** Answer Q2 (core experience, primary journey, outcome, exclusions); define the attribution events, which move Trust and which move Sway Points, how each can be faked; decide the recipient's second screen, sign-up moment, earnings label and disclosure line, and confirm the persona names, so the scope lock at 11:50 is a signature.
 
-**Required inputs.** D1-02 calls (a), (b), (d); `02_product/product_pack.md` (Thu 8 Oct 22:00 UK: the journey strip and the pre-drafted attribution event table, carrying Tori's A, D and U marks and her pre-filled brand column from her Thu 8 Oct read); prototype_feasibility.md sections 7 and 9; divergence rows tagged D1-05.
+**Required inputs.** D1-02 calls (a), (b), (d); `02_product/product_pack.md` (Thu 8 Oct 22:00 UK: the journey strip as a table with its event column, carrying Tori's A, D and U marks and her pre-filled brand column from her Thu 8 Oct read; the full attribution event table is built here, not brought in pre-drafted); prototype_feasibility.md sections 7 and 9; divergence rows tagged D1-05.
 
 **Steps.**
 1. (5 min) Alone: mark the journey strip (keep, move, strike); list exclusions; tick the events that should count as Trust.
