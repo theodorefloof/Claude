@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="900" viewBox="0 0 1600 900">
+<rect x="0" y="0" width="1600" height="900" fill="#ffffff"/>
+<g id="geometry"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"></path></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"></path></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"></path></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"></path></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"></path></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"></path></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"></circle></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"></line></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"></line></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"></line></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"></circle><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"></path></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"></circle><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"></path></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- axes, deliberately unnumbered -->
+  <line x1="320" y1="276" x2="320" y2="614" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="320" y1="614" x2="1316" y2="614" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="568" y1="286" x2="568" y2="614" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="816" y1="286" x2="816" y2="614" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1064" y1="286" x2="1064" y2="614" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- your effort : front-loaded, then falls away -->
+  <path d="M320,312 C 430,312 480,458 600,512 C 760,578 1000,586 1300,590" stroke-width="1.7" fill="none" stroke="rgb(36, 95, 166)" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <circle cx="320" cy="312" r="5" fill="rgb(36, 95, 166)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></circle>
+  <!-- ours : rises as more AI tasks come online -->
+  <path d="M320,580 C 520,574 630,524 800,472 C 990,414 1150,372 1300,338" fill="none" stroke="rgb(17, 17, 17)" stroke-width="2.6" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <circle cx="320" cy="580" r="5" fill="rgb(17, 17, 17)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></circle>
+
+  <!-- the bounded ask -->
+  <rect x="56" y="292" width="238" height="156" fill="rgb(233, 240, 249)" stroke="rgb(36, 95, 166)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <line x1="296" y1="312" x2="314" y2="312" marker-end="url(#ahb)" fill="none" stroke="rgb(36, 95, 166)" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <line x1="56" y1="676" x2="1544" y2="676" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+</g>
+<g id="boxes-and-text">
+<rect x="1282.88" y="239" width="261.13" height="19" rx="2" fill="none" stroke="rgb(154, 154, 154)" stroke-width="1"/>
+<rect x="56" y="696" width="730" height="79.64" rx="2" fill="rgb(255, 255, 255)" stroke="rgb(212, 212, 212)" stroke-width="1"/>
+<rect x="68" y="706" width="206.34" height="17.98" rx="2" fill="rgb(17, 17, 17)" stroke="none"/>
+<rect x="814" y="696" width="730" height="76.64" rx="2" fill="rgb(251, 240, 223)" stroke="rgb(184, 105, 15)" stroke-width="1"/>
+<rect x="826" y="706" width="43.88" height="17.98" rx="2" fill="rgb(184, 105, 15)" stroke="none"/>
+<text x="56" y="55.16" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.92" xml:space="preserve">07</text>
+<text x="73.2" y="55.16" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.92" xml:space="preserve">  ·  TODAY AND NEXT</text>
+<text x="56" y="100.24" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" letter-spacing="-0.37" xml:space="preserve">Your effort is front-loaded and then falls away.</text>
+<text x="56" y="137.12" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" letter-spacing="-0.37" xml:space="preserve">Ours rises as more AI tasks come online.</text>
+<text x="56" y="177.7" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="15" xml:space="preserve">Directional only. Both axes are deliberately unnumbered. Nothing on this slide is quantified, and nothing will be until the efficiency target is defined.</text>
+<text x="1536" y="251.79" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.14" text-anchor="end" xml:space="preserve">SHAPE OF THE RELATIONSHIP  ·  NO UNITS</text>
+<text x="56" y="277.64" fill="rgb(36, 95, 166)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">WHAT WE NEED FROM YOU</text>
+<text x="74" y="316.98" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">All of it, in one list</text>
+<text x="74" y="343.04" fill="rgb(74, 109, 153)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">DAM access and your metadata schema</text>
+<text x="74" y="362.47" fill="rgb(74, 109, 153)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">Named approvers and approval rules</text>
+<text x="74" y="381.89" fill="rgb(74, 109, 153)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">Brand, claims and legal rules</text>
+<text x="74" y="401.31" fill="rgb(74, 109, 153)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">A decision on historic assets (slide 11)
+  </text>
+<text x="56" y="471.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">This is the effort you were worried about.</text>
+<text x="261.38" y="471.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve"> It is </text>
+<text x="56" y="485.5" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">named, it is bounded, and it happens once.</text>
+<text x="1330" y="332.98" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">Share of the sequence carried by AI </text>
+<text x="1330" y="348.39" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">tasks</text>
+<text x="1330" y="371.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">rises as the task library fills and roadmap </text>
+<text x="1330" y="385.5" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">themes land. Slide 12 lists them.</text>
+<text x="1330" y="570.98" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">Your effort</text>
+<text x="1330" y="591.64" fill="rgb(74, 109, 153)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">settles below where it sits today, because </text>
+<text x="1330" y="605.5" fill="rgb(74, 109, 153)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">second markets order rather than re-brief.</text>
+<text x="443.99" y="635.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" text-anchor="middle" xml:space="preserve">INTEGRATE</text>
+<text x="692" y="635.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" text-anchor="middle" xml:space="preserve">FIRST BRIEFS</text>
+<text x="939.99" y="635.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" text-anchor="middle" xml:space="preserve">STEADY STATE</text>
+<text x="1190" y="635.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" text-anchor="middle" xml:space="preserve">SCALE</text>
+<text x="444" y="655.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">the one-off ask, above</text>
+<text x="691.99" y="655.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">first deliverables through MAKE</text>
+<text x="940" y="655.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">second markets start ordering</text>
+<text x="1189.99" y="655.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">more formats, more markets, same team</text>
+<text x="74" y="717.79" fill="rgb(255, 255, 255)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.24" xml:space="preserve">WHY THIS SLIDE IS UNNUMBERED</text>
+<text x="68" y="743.97" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">A number on either axis would be the most quotable thing in the whole section, and the most damaging one if we cannot stand behind it. </text>
+<text x="68" y="760.3" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">The shape is defensible today. The numbers are not.</text>
+<text x="832" y="717.79" fill="rgb(255, 255, 255)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.24" xml:space="preserve">OPEN</text>
+<text x="876.88" y="718.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">The 80% target belongs on this chart,</text>
+<text x="1081.36" y="718.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve"> and it is the thing that would turn a shape into a commitment. It cannot go on until it is </text>
+<text x="826" y="735.97" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">defined: 80% of what, by when, measured how, against which baseline.
+  </text>
+<text x="826" y="757.3" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">Same open item as slide 02. </text>
+<text x="974.31" y="757.3" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">One answer unlocks both slides.</text>
+<text x="56" y="863.64" fill="rgb(154, 154, 154)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" letter-spacing="1.16" xml:space="preserve">TECHNOLOGY SECTION  ·  STORYBOARD FOR NARRATIVE AGREEMENT</text>
+<text x="1503.8" y="863.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" letter-spacing="1.16" xml:space="preserve">13 / 15</text>
+</g>
+</svg>

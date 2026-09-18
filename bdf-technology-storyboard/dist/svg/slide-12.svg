@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="900" viewBox="0 0 1600 900">
+<rect x="0" y="0" width="1600" height="900" fill="#ffffff"/>
+<g id="geometry"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"></path></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"></path></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"></path></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"></path></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"></path></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"></path></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"></circle></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"></line></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"></line></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"></line></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"></circle><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"></path></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"></circle><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"></path></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- three bands -->
+  <rect x="56" y="290" width="472" height="330" stroke-width="1.6" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="564" y="290" width="472" height="330" stroke-width="1.6" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-dasharray="7, 5" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1072" y="290" width="472" height="330" stroke-width="1.5" fill="rgb(255, 255, 255)" stroke="rgb(154, 154, 154)" stroke-dasharray="1.5, 4" stroke-linecap="round" stroke-linejoin="miter"></rect>
+  <line x1="540" y1="440" x2="558" y2="440" marker-end="url(#ah2)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1048" y1="440" x2="1066" y2="440" marker-end="url(#ahg)" fill="none" stroke="rgb(154, 154, 154)" stroke-width="1.3" stroke-dasharray="1.5, 4" stroke-linecap="round" stroke-linejoin="miter"></line>
+
+  <!-- band 1 items -->
+  <g fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"><rect x="76" y="348" width="16" height="16" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="76" y="388" width="16" height="16" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="76" y="428" width="16" height="16" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="76" y="468" width="16" height="16" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="76" y="508" width="16" height="16" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="76" y="548" width="16" height="16" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect></g>
+  <g stroke="rgb(17, 17, 17)" stroke-width="2" fill="none" stroke-linecap="butt" stroke-linejoin="miter">
+    <path d="M79,356 l3,4 l7,-9" fill="none" stroke="rgb(17, 17, 17)" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter"></path><path d="M79,396 l3,4 l7,-9" fill="none" stroke="rgb(17, 17, 17)" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter"></path><path d="M79,436 l3,4 l7,-9" fill="none" stroke="rgb(17, 17, 17)" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter"></path>
+    <path d="M79,476 l3,4 l7,-9" fill="none" stroke="rgb(17, 17, 17)" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter"></path><path d="M79,516 l3,4 l7,-9" fill="none" stroke="rgb(17, 17, 17)" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter"></path><path d="M79,556 l3,4 l7,-9" fill="none" stroke="rgb(17, 17, 17)" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  </g>
+  <!-- band 2 items -->
+  <g fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-dasharray="7, 5" stroke-linecap="butt" stroke-linejoin="miter"><rect x="584" y="348" width="16" height="16" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-dasharray="7, 5" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="584" y="396" width="16" height="16" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-dasharray="7, 5" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="584" y="444" width="16" height="16" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-dasharray="7, 5" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="584" y="492" width="16" height="16" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-dasharray="7, 5" stroke-linecap="butt" stroke-linejoin="miter"></rect></g>
+  <rect x="584" y="548" width="16" height="16" fill="rgb(251, 240, 223)" stroke="rgb(184, 105, 15)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <!-- band 3 items -->
+  <g fill="rgb(255, 255, 255)" stroke="rgb(154, 154, 154)" stroke-width="1.5" stroke-dasharray="1.5, 4" stroke-linecap="round" stroke-linejoin="miter"><rect x="1092" y="344" width="16" height="16" fill="rgb(255, 255, 255)" stroke="rgb(154, 154, 154)" stroke-width="1.5" stroke-dasharray="1.5, 4" stroke-linecap="round" stroke-linejoin="miter"></rect><rect x="1092" y="396" width="16" height="16" fill="rgb(255, 255, 255)" stroke="rgb(154, 154, 154)" stroke-width="1.5" stroke-dasharray="1.5, 4" stroke-linecap="round" stroke-linejoin="miter"></rect>
+  <rect x="1092" y="448" width="16" height="16" fill="rgb(255, 255, 255)" stroke="rgb(154, 154, 154)" stroke-width="1.5" stroke-dasharray="1.5, 4" stroke-linecap="round" stroke-linejoin="miter"></rect><rect x="1092" y="500" width="16" height="16" fill="rgb(255, 255, 255)" stroke="rgb(154, 154, 154)" stroke-width="1.5" stroke-dasharray="1.5, 4" stroke-linecap="round" stroke-linejoin="miter"></rect></g>
+
+  <!-- efficiency direction strip -->
+  <rect x="56" y="664" width="1488" height="76" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <path d="M300,728 C 620,728 800,696 1180,674" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="2.6" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <line x1="300" y1="692" x2="300" y2="726" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1180" y1="670" x2="1180" y2="726" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+</g>
+<g id="boxes-and-text">
+<rect x="1222.48" y="187" width="321.52" height="19" rx="2" fill="none" stroke="rgb(154, 154, 154)" stroke-width="1"/>
+<rect x="76" y="313" width="167.14" height="19" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="584" y="313" width="148.17" height="19" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1092" y="313" width="163.44" height="19" rx="2" fill="none" stroke="rgb(154, 154, 154)" stroke-width="1"/>
+<rect x="1120" y="416.5" width="36.38" height="16.5" rx="2" fill="none" stroke="rgb(184, 105, 15)" stroke-width="1" stroke-dasharray="4.0 3.0"/>
+<rect x="1120" y="468.5" width="36.38" height="16.5" rx="2" fill="none" stroke="rgb(184, 105, 15)" stroke-width="1" stroke-dasharray="4.0 3.0"/>
+<rect x="1120" y="520.5" width="36.38" height="16.5" rx="2" fill="none" stroke="rgb(184, 105, 15)" stroke-width="1" stroke-dasharray="4.0 3.0"/>
+<rect x="1092" y="540" width="432" height="51.31" rx="2" fill="rgb(251, 240, 223)" stroke="rgb(184, 105, 15)" stroke-width="1"/>
+<rect x="1102" y="548" width="43.88" height="17.98" rx="2" fill="rgb(184, 105, 15)" stroke="none"/>
+<text x="56" y="55.16" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.92" xml:space="preserve">07</text>
+<text x="73.2" y="55.16" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.92" xml:space="preserve">  ·  TODAY AND NEXT</text>
+<text x="56" y="100.24" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" letter-spacing="-0.37" xml:space="preserve">What is running, what we connect, and where it is heading.</text>
+<text x="56" y="145.7" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="15" xml:space="preserve">Same legend as every other slide in this section. The roadmap is at theme level, not feature level: no dates, no percentages, and no list of things that do not exist yet.</text>
+<text x="1536" y="199.79" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.14" text-anchor="end" xml:space="preserve">THEMES, NOT FEATURES  ·  NO DATES ON THIS SLIDE</text>
+<text x="56" y="271.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">LIVE TODAY  ·  RUNNING ON OUR WORK NOW</text>
+<text x="564" y="271.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">INTEGRATION  ·  THE NEW WORK IN THIS PROPOSAL</text>
+<text x="1072" y="271.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">ROADMAP THEMES  ·  DIRECTION ONLY</text>
+<text x="84" y="325.79" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.14" xml:space="preserve">NOTHING HERE IS A BUILD</text>
+<text x="592" y="325.79" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.14" xml:space="preserve">SCOPED IN DISCOVERY</text>
+<text x="1100" y="325.79" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.14" xml:space="preserve">NO COMMITMENT IMPLIED</text>
+<text x="104" y="359" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">MAKE, the orchestration layer</text>
+<text x="104" y="399" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">One connected space, with versioning and approval</text>
+<text x="104" y="439" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">AI tasks, in use on our work</text>
+<text x="104" y="479" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Open middleware and third-party connectors</text>
+<text x="104" y="519" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Modular component production</text>
+<text x="104" y="559" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Assisted, augmented and automated as routes</text>
+<text x="76" y="595.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">Every item here is on a slide earlier in this section, drawn solid.</text>
+<text x="612" y="359" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Connect your DAM, in and out</text>
+<text x="612" y="407" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Map your metadata to the component registry</text>
+<text x="612" y="455" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Connect your review and approval process</text>
+<text x="612" y="503" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Connect your channel and e-commerce feeds</text>
+<text x="612" y="559" fill="rgb(184, 105, 15)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">An answer on historic assets  </text>
+<text x="799.13" y="558.64" fill="rgb(184, 105, 15)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">(slide 11)</text>
+<text x="584" y="595.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">This column is the whole of the new work. It is connection, not construction.</text>
+<text x="1120" y="355" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Post-production compositing</text>
+<text x="1120" y="371.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">the one theme named in the discussion</text>
+<text x="1120" y="407" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Theme 2</text>
+<text x="1127" y="427.79" fill="rgb(184, 105, 15)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.95" xml:space="preserve">TBC</text>
+<text x="1120" y="459" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Theme 3</text>
+<text x="1127" y="479.79" fill="rgb(184, 105, 15)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.95" xml:space="preserve">TBC</text>
+<text x="1120" y="511" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Theme 4</text>
+<text x="1127" y="531.79" fill="rgb(184, 105, 15)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.95" xml:space="preserve">TBC</text>
+<text x="1108" y="559.79" fill="rgb(255, 255, 255)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.24" xml:space="preserve">OPEN</text>
+<text x="1152.88" y="560.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">Only one theme came out of the discussion. </text>
+<text x="1379.81" y="560.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">Needed from: the </text>
+<text x="1102" y="577.97" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">product roadmap owner.</text>
+<text x="56" y="651.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">AND THE DIRECTION THE WHOLE THING MOVES IN</text>
+<text x="76" y="694.98" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">More AI tasks in use</text>
+<text x="76" y="713.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">as the library fills and the roadmap lands</text>
+<text x="1528" y="694.98" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" text-anchor="end" xml:space="preserve">Efficiency curve rises</text>
+<text x="1528" y="713.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="end" xml:space="preserve">directional only, and deliberately unnumbered. Slide 13 shows the </text>
+<text x="1528" y="727.5" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="end" xml:space="preserve">shape.</text>
+<text x="56" y="863.64" fill="rgb(154, 154, 154)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" letter-spacing="1.16" xml:space="preserve">TECHNOLOGY SECTION  ·  STORYBOARD FOR NARRATIVE AGREEMENT</text>
+<text x="1503.8" y="863.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" letter-spacing="1.16" xml:space="preserve">12 / 15</text>
+</g>
+</svg>

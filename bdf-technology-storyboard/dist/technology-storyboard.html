@@ -1,0 +1,2090 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>Technology Section Storyboard</title>
+<style>
+:root{
+  --ink:#111111;
+  --ink2:#3d3d3d;
+  --grey:#6f6f6f;
+  --grey2:#9a9a9a;
+  --hair:#d4d4d4;
+  --fill:#f4f4f4;
+  --fill2:#ebebeb;
+  --amber:#B8690F;
+  --amberL:#FBF0DF;
+  --amberT:#5a3406;
+  --blue:#245FA6;
+  --blueL:#E9F0F9;
+  --blueT:#173f70;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#8c8c8c;}
+body{font-family:Arial,"Liberation Sans",Helvetica,sans-serif;-webkit-font-smoothing:antialiased;}
+
+/* ---------- page ---------- */
+.slide{
+  position:relative;
+  width:1600px;height:900px;
+  background:#fff;color:var(--ink);
+  overflow:hidden;
+  margin:0 auto 28px;
+  page-break-after:always;break-after:page;
+}
+.slide:last-child{margin-bottom:0;page-break-after:auto;break-after:auto}
+
+@media print{
+  @page{size:1600px 900px;margin:0}
+  html,body{background:#fff}
+  .slide{margin:0;box-shadow:none}
+}
+
+/* ---------- absolute layer helpers ---------- */
+.ab{position:absolute}
+svg.canvas{position:absolute;left:0;top:0;width:1600px;height:900px;overflow:visible}
+
+/* ---------- slide furniture ---------- */
+.kick{position:absolute;left:56px;top:44px;font-size:12px;letter-spacing:.16em;
+      text-transform:uppercase;color:var(--grey);font-weight:700}
+.kick em{font-style:normal;color:var(--ink)}
+.h1{position:absolute;left:56px;top:72px;width:1300px;font-size:31px;line-height:1.19;
+    font-weight:700;letter-spacing:-.012em;color:var(--ink)}
+.h1.two{width:1180px}
+.sub{position:absolute;left:56px;width:1230px;font-size:15px;line-height:1.45;color:var(--ink2)}
+.foot{position:absolute;left:56px;right:56px;bottom:30px;height:16px;
+      font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--grey2)}
+.foot .r{float:right;color:var(--grey)}
+.rule{position:absolute;left:56px;right:56px;height:1px;background:var(--hair)}
+
+/* ---------- text atoms (absolutely positioned) ---------- */
+.lbl{font-size:13px;line-height:1.28;color:var(--ink)}
+.lbl.b{font-weight:700}
+.sm{font-size:11.5px;line-height:1.34;color:var(--ink2)}
+.sm.b{font-weight:700;color:var(--ink)}
+.xs{font-size:10.5px;line-height:1.32;color:var(--grey)}
+.eyebrow{font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;font-weight:700;color:var(--grey)}
+.eyebrow.ink{color:var(--ink)}
+.eyebrow.amb{color:var(--amber)}
+.eyebrow.blu{color:var(--blue)}
+.ctr{text-align:center}
+.rt{text-align:right}
+.amb{color:var(--amber)}
+.blu{color:var(--blue)}
+.mut{color:var(--grey)}
+.tnum{font-size:11px;font-weight:700;letter-spacing:.06em}
+
+/* ---------- flags / callouts ---------- */
+.flag{border:1.4px solid var(--amber);background:var(--amberL);border-radius:2px;
+      padding:9px 11px 10px;font-size:11.5px;line-height:1.42;color:var(--amberT)}
+.flag .tag{display:inline-block;background:var(--amber);color:#fff;font-size:9.5px;
+      letter-spacing:.13em;font-weight:700;padding:2px 6px 2.5px;border-radius:2px;
+      margin-right:7px;vertical-align:1px}
+.flag b{color:var(--amberT)}
+.note{border:1.2px solid var(--hair);background:#fff;border-radius:2px;padding:9px 11px 10px;
+      font-size:11.5px;line-height:1.42;color:var(--ink2)}
+.note .tag{display:inline-block;background:var(--ink);color:#fff;font-size:9.5px;
+      letter-spacing:.13em;font-weight:700;padding:2px 6px 2.5px;border-radius:2px;
+      margin-right:7px;vertical-align:1px}
+.note.cli{border-color:var(--blue);background:var(--blueL);color:var(--blueT)}
+.note.cli .tag{background:var(--blue)}
+.note.pl{border-style:dashed}
+
+/* ---------- legend ---------- */
+.legend{display:flex;gap:20px;align-items:center}
+.legend .li{display:flex;gap:7px;align-items:center;font-size:10px;letter-spacing:.09em;
+            text-transform:uppercase;font-weight:700;color:var(--grey)}
+.legend .sw{width:24px;height:13px;border-radius:1.5px;flex:none}
+.sw-live{border:1.6px solid var(--ink);background:#fff}
+.sw-int{border:1.6px dashed var(--ink);background:#fff}
+.sw-road{border:1.5px dotted var(--grey2);background:#fff}
+.sw-open{border:1.6px solid var(--amber);background:var(--amberL)}
+.sw-cli{border:1.6px solid var(--blue);background:var(--blueL)}
+
+/* ---------- boxed HTML nodes (used where text must wrap inside a shape) ---------- */
+.bx{border:1.6px solid var(--ink);background:#fff;border-radius:2px;padding:9px 11px}
+.bx.int{border-style:dashed}
+.bx.road{border:1.5px dotted var(--grey2);color:var(--grey)}
+.bx.open{border-color:var(--amber);background:var(--amberL);color:var(--amberT)}
+.bx.cli{border-color:var(--blue);background:var(--blueL);color:var(--blueT)}
+.bx.fil{background:var(--fill)}
+.bx.gh{border:1.4px dashed var(--hair);color:var(--grey2)}
+.bx .t{font-size:12.5px;font-weight:700;line-height:1.25}
+.bx .d{font-size:10.8px;line-height:1.35;color:var(--grey);margin-top:4px;font-weight:400}
+.bx.cli .d{color:#4a6d99}
+.bx.open .d{color:#7a5520}
+
+/* ---------- component chip (the carried visual language) ---------- */
+.chip{border:1.5px solid var(--ink);background:#fff;border-radius:2px;
+      display:flex;align-items:center;justify-content:center;
+      font-size:11px;font-weight:700;letter-spacing:.02em}
+.chip.gh{border:1.4px dashed var(--hair);color:var(--grey2);background:#fff}
+.chip.hi{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip.cli{border-color:var(--blue);background:var(--blueL);color:var(--blueT)}
+
+/* ---------- misc ---------- */
+.hr{height:1px;background:var(--hair)}
+.vr{width:1px;background:var(--hair)}
+.tick{font-size:12px;font-weight:700}
+.stamp{border:1.3px solid var(--grey2);color:var(--grey);border-radius:2px;
+       font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;
+       padding:3px 7px;display:inline-block}
+.stamp.amb{border-color:var(--amber);color:var(--amber)}
+.stamp.ink{border-color:var(--ink);color:var(--ink)}
+.stamp.blu{border-color:var(--blue);color:var(--blue)}
+
+/* ---------- SVG classes ---------- */
+svg text{font-family:Arial,"Liberation Sans",Helvetica,sans-serif}
+.n{fill:#fff;stroke:#111;stroke-width:1.6}
+.n-f{fill:#f4f4f4;stroke:#111;stroke-width:1.6}
+.n-i{fill:#fff;stroke:#111;stroke-width:1.6;stroke-dasharray:7 5}
+.n-r{fill:#fff;stroke:#9a9a9a;stroke-width:1.5;stroke-dasharray:1.5 4;stroke-linecap:round}
+.n-o{fill:#FBF0DF;stroke:#B8690F;stroke-width:1.6}
+.n-c{fill:#E9F0F9;stroke:#245FA6;stroke-width:1.6}
+.n-gh{fill:#fff;stroke:#d4d4d4;stroke-width:1.4;stroke-dasharray:5 4}
+.n-k{fill:#111;stroke:#111;stroke-width:1.6}
+.ln{stroke:#111;stroke-width:1.5;fill:none}
+.ln-2{stroke:#111;stroke-width:2.6;fill:none}
+.ln-d{stroke:#111;stroke-width:1.5;fill:none;stroke-dasharray:7 5}
+.ln-g{stroke:#9a9a9a;stroke-width:1.3;fill:none;stroke-dasharray:1.5 4;stroke-linecap:round}
+.ln-h{stroke:#d4d4d4;stroke-width:1.2;fill:none}
+.ln-hd{stroke:#d4d4d4;stroke-width:1.2;fill:none;stroke-dasharray:5 4}
+.ln-a{stroke:#B8690F;stroke-width:1.7;fill:none}
+.ln-ad{stroke:#B8690F;stroke-width:1.6;fill:none;stroke-dasharray:6 4}
+.ln-b{stroke:#245FA6;stroke-width:1.7;fill:none}
+.ln-bd{stroke:#245FA6;stroke-width:1.6;fill:none;stroke-dasharray:6 4}
+.fx{fill:none}
+
+/* ---------- small numerals / pills ---------- */
+.numchip{display:inline-block;border:1.3px solid var(--ink);border-radius:2px;font-size:10.5px;
+         font-weight:700;padding:2.5px 5px;margin-right:4px;line-height:1;color:var(--ink)}
+.pill{display:inline-block;border-radius:9px;font-size:9.5px;font-weight:700;letter-spacing:.11em;
+      text-transform:uppercase;padding:3px 9px 3.5px;line-height:1}
+.pill.k{background:var(--ink);color:#fff}
+.pill.a{background:var(--amber);color:#fff}
+.pill.b{background:var(--blue);color:#fff}
+.pill.o{border:1.3px solid var(--grey2);color:var(--grey)}
+.tbc{display:inline-block;border:1.3px dashed var(--amber);color:var(--amber);border-radius:2px;
+     font-size:9.5px;font-weight:700;letter-spacing:.1em;padding:2.5px 6px;line-height:1}
+
+/* component code chips: the carried visual language for content components */
+.code{display:inline-block;width:18px;height:18px;line-height:16px;text-align:center;
+      border:1.3px solid var(--ink);font-size:10.5px;font-weight:700;margin-right:4px;
+      border-radius:2px;color:var(--ink);vertical-align:middle}
+.code.hi{background:var(--ink);color:#fff}
+.code.gh{border-style:dashed;border-color:var(--hair);color:var(--grey2)}
+.codebox{display:inline-block;width:24px;height:24px;line-height:22px;text-align:center;
+      border:1.5px solid var(--ink);font-size:13px;font-weight:700;border-radius:2px}
+.codebox.hi{background:var(--ink);color:#fff}
+ul.tight{margin:0;padding-left:15px}
+ul.tight li{margin:0 0 5px 0}
+</style>
+</head>
+<body>
+<!-- ============================ SLIDE 01 ============================ -->
+<section class="slide" id="s01">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"/></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"/></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"/><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"/></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"/><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"/></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"/></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"/></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"/></g>
+</defs>
+
+  <!-- header rule -->
+  <line x1="56" y1="228" x2="1544" y2="228" class="ln-h"/>
+
+  <!-- engagement anchor -->
+  <line x1="310" y1="256" x2="310" y2="528" stroke="#111" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <circle cx="310" cy="256" r="3.5" fill="#111"/>
+
+  <!-- ===== BAND A : what the last round landed ===== -->
+  <rect x="310"  y="288" width="160" height="46" class="n-gh"/>
+  <rect x="470"  y="288" width="460" height="46" fill="url(#hg)" stroke="#a8a8a8" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <rect x="930"  y="288" width="200" height="46" class="n-gh"/>
+  <rect x="1130" y="288" width="200" height="46" class="n-gh"/>
+  <!-- benefit marker A -->
+  <line x1="1370" y1="278" x2="1370" y2="344" stroke="#9a9a9a" stroke-width="1.6"/>
+  <rect x="1363" y="278" width="14" height="10" fill="#9a9a9a"/>
+  <line x1="1338" y1="311" x2="1362" y2="311" class="ln-g" marker-end="url(#ahg)"/>
+
+  <!-- ===== BAND B : what is actually true ===== -->
+  <!-- engagement tier -->
+  <rect x="310" y="422" width="310" height="58" class="n-i"/>
+  <rect x="620" y="422" width="850" height="58" class="n"/>
+  <!-- benefit marker B -->
+  <line x1="620" y1="410" x2="620" y2="492" stroke="#111" stroke-width="2"/>
+  <rect x="613" y="410" width="14" height="10" fill="#111"/>
+  <!-- supporting ticks: the engagement tier rests on MAKE -->
+  <line x1="420" y1="480" x2="420" y2="490" class="ln-h"/>
+  <line x1="820" y1="480" x2="820" y2="490" class="ln-h"/>
+  <line x1="1120" y1="480" x2="1120" y2="490" class="ln-h"/>
+  <line x1="1400" y1="480" x2="1400" y2="490" class="ln-h"/>
+  <!-- MAKE foundation bar with torn left edge = it pre-dates the engagement -->
+  <path d="M1470,490 L128,490 L120,496 L128,502 L120,508 L128,514 L120,520 L128,524 L1470,524 Z"
+        fill="#f4f4f4" stroke="#111" stroke-width="1.8"/>
+  <path d="M310,490 L128,490 L120,496 L128,502 L120,508 L128,514 L120,520 L128,524 L310,524 Z"
+        fill="url(#hg)" stroke="none"/>
+  <line x1="310" y1="490" x2="310" y2="524" class="ln-h"/>
+
+  <!-- ===== objection cards ===== -->
+  <rect x="56"   y="620" width="357" height="112" class="n" />
+  <rect x="433"  y="620" width="357" height="112" class="n" />
+  <rect x="810"  y="620" width="357" height="112" class="n" />
+  <rect x="1187" y="620" width="357" height="112" class="n" />
+  <line x1="72"   y1="692" x2="397"  y2="692" class="ln-h"/>
+  <line x1="449"  y1="692" x2="774"  y2="692" class="ln-h"/>
+  <line x1="826"  y1="692" x2="1151" y2="692" class="ln-h"/>
+  <line x1="1203" y1="692" x2="1528" y2="692" class="ln-h"/>
+
+  <!-- legend rule -->
+  <line x1="56" y1="758" x2="1544" y2="758" class="ln-h"/>
+</svg>
+
+<div class="kick">Technology section &nbsp;·&nbsp; <em>Storyboard v1</em> &nbsp;·&nbsp; Rough visual, not designed</div>
+<div class="h1">MAKE is not a platform we build for you. It is running now.<br>The only new work is connecting it to your stack.</div>
+<div class="sub" style="top:162px;width:1240px">Last round the technology read as complex, unbuilt, slow to pay back, and heavy on your team. This section answers those four concerns in order, and it flags openly what we have not yet resolved.</div>
+
+<!-- anchor + scale note -->
+<div class="ab eyebrow ink ctr" style="left:210px;top:238px;width:200px">Engagement starts</div>
+<div class="ab" style="left:1180px;top:234px;width:364px;text-align:right"><span class="stamp">Not to scale &nbsp;·&nbsp; sequence only &nbsp;·&nbsp; no dates</span></div>
+
+<!-- band A labels -->
+<div class="ab eyebrow" style="left:56px;top:266px;width:250px">What the last round landed</div>
+<div class="ab eyebrow" style="left:1386px;top:305px;width:158px;color:#9a9a9a">Benefit<br>starts</div>
+<div class="ab sm ctr mut" style="left:316px;top:303px;width:148px">Scope &amp; design</div>
+<div class="ab ctr" style="left:476px;top:296px;width:448px">
+  <div class="sm b mut" style="font-size:13px;letter-spacing:.06em">BUILD THE PLATFORM</div>
+  <div class="xs" style="margin-top:3px">the part they heard, and the part that is not real</div>
+</div>
+<div class="ab sm ctr mut" style="left:936px;top:303px;width:188px">Integrate</div>
+<div class="ab sm ctr mut" style="left:1136px;top:303px;width:188px">Train your team</div>
+<div class="ab sm" style="left:310px;top:350px;width:1000px"><b>What they heard:</b> a long build sits between signing and any benefit, and most of the effort inside it looks like theirs. That is the version of the story we are replacing.</div>
+
+<!-- band B labels -->
+<div class="ab eyebrow ink" style="left:56px;top:396px;width:250px">What is actually true</div>
+<div class="ab eyebrow ink" style="left:634px;top:392px;width:260px">Benefit starts</div>
+<div class="ab" style="left:322px;top:432px;width:288px">
+  <div class="sm b">Connect to your stack</div>
+  <div class="xs" style="margin-top:3px">Your DAM, your review and approval,<br>your channel feeds. Scoped in discovery.</div>
+</div>
+<div class="ab" style="left:634px;top:432px;width:820px">
+  <div class="sm b">Your briefs run through MAKE</div>
+  <div class="xs" style="margin-top:3px">Modular production from day one. Second markets order from what already exists rather than re&#8209;briefing.</div>
+</div>
+<div class="ab sm b" style="left:340px;top:499px;width:700px">MAKE: already built, already running on our work</div>
+<div class="ab xs mut ctr" style="left:120px;top:534px;width:190px">in use before this engagement</div>
+<div class="ab sm" style="left:340px;top:544px;width:1130px"><b>The only new work is the dashed segment.</b> Everything drawn solid is running today. Nothing in this section asks you to wait for a platform to be finished.</div>
+
+<!-- objection cards -->
+<div class="ab eyebrow" style="left:56px;top:592px;width:900px">The four concerns from the last round, and where each one is answered</div>
+
+<div class="ab" style="left:74px;top:634px;width:321px">
+  <div class="eyebrow" style="font-size:9.5px">They said</div>
+  <div class="lbl b" style="font-size:15px;margin-top:7px;line-height:1.24">&ldquo;It feels too complex.&rdquo;</div>
+  <div class="xs" style="margin-top:6px">Too many parts to understand or adopt.</div>
+</div>
+<div class="ab" style="left:74px;top:700px;width:321px">
+  <span class="xs" style="letter-spacing:.1em">ANSWERED ON</span><br>
+  <span style="display:inline-block;margin-top:5px">
+  <span class="numchip">06</span><span class="numchip">07</span><span class="numchip">08</span></span>
+</div>
+
+<div class="ab" style="left:451px;top:634px;width:321px">
+  <div class="eyebrow" style="font-size:9.5px">They said</div>
+  <div class="lbl b" style="font-size:15px;margin-top:7px;line-height:1.24">&ldquo;It still needs building.&rdquo;</div>
+  <div class="xs" style="margin-top:6px">It reads as a platform project, not a service.</div>
+</div>
+<div class="ab" style="left:451px;top:700px;width:321px">
+  <span class="xs" style="letter-spacing:.1em">ANSWERED ON</span><br>
+  <span style="display:inline-block;margin-top:5px">
+  <span class="numchip">04</span><span class="numchip">05</span><span class="numchip">12</span></span>
+</div>
+
+<div class="ab" style="left:828px;top:634px;width:321px">
+  <div class="eyebrow" style="font-size:9.5px">They said</div>
+  <div class="lbl b" style="font-size:15px;margin-top:7px;line-height:1.24">&ldquo;Benefit is too far away.&rdquo;</div>
+  <div class="xs" style="margin-top:6px">Payback sits beyond the horizon they care about.</div>
+</div>
+<div class="ab" style="left:828px;top:700px;width:321px">
+  <span class="xs" style="letter-spacing:.1em">ANSWERED ON</span><br>
+  <span style="display:inline-block;margin-top:5px">
+  <span class="numchip">02</span><span class="numchip">10</span><span class="numchip">13</span></span>
+</div>
+
+<div class="ab" style="left:1205px;top:634px;width:321px">
+  <div class="eyebrow" style="font-size:9.5px">They said</div>
+  <div class="lbl b" style="font-size:15px;margin-top:7px;line-height:1.24">&ldquo;That is a lot of effort for us.&rdquo;</div>
+  <div class="xs" style="margin-top:6px">Named directly: reverse engineering the DAM.</div>
+</div>
+<div class="ab" style="left:1205px;top:700px;width:321px">
+  <span class="xs" style="letter-spacing:.1em">ANSWERED ON</span><br>
+  <span style="display:inline-block;margin-top:5px">
+  <span class="numchip">09</span><span class="numchip">11</span><span class="numchip">13</span></span>
+</div>
+
+<!-- legend -->
+<div class="ab eyebrow ink" style="left:56px;top:772px;width:900px">How to read every diagram in this section</div>
+<div class="ab legend" style="left:56px;top:800px;width:1488px;align-items:flex-start">
+  <div style="width:280px"><div class="li"><span class="sw sw-live"></span>Exists today</div><div class="xs" style="margin-top:5px">Built and in use on our work now</div></div>
+  <div style="width:300px"><div class="li"><span class="sw sw-int"></span>Integration work</div><div class="xs" style="margin-top:5px">Connecting MAKE to your stack</div></div>
+  <div style="width:280px"><div class="li"><span class="sw sw-road"></span>Roadmap theme</div><div class="xs" style="margin-top:5px">Direction only. No dates in this deck.</div></div>
+  <div style="width:300px"><div class="li"><span class="sw sw-open"></span>Open, we owe an answer</div><div class="xs" style="margin-top:5px">Unresolved. Flagged, never hidden.</div></div>
+  <div style="width:260px"><div class="li"><span class="sw sw-cli"></span>Yours</div><div class="xs" style="margin-top:5px">Your DAM, your tools, your team</div></div>
+</div>
+
+<div class="foot">Technology section &nbsp;·&nbsp; storyboard for narrative agreement<span class="r">01 / 15</span></div>
+</section>
+<!-- ============================ SLIDE 02 ============================ -->
+<section class="slide" id="s02">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"/></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"/></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"/><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"/></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"/><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"/></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"/></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"/></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"/></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" class="ln-h"/>
+
+  <!-- A : the brief -->
+  <rect x="56" y="412" width="228" height="112" class="n-f"/>
+  <line x1="296" y1="468" x2="386" y2="468" class="ln" marker-end="url(#ah)"/>
+
+  <!-- B : components, produced once (single column so every routing stays clean) -->
+  <rect x="392" y="268" width="332" height="40" class="n" stroke-width="2.8"/>
+  <rect x="392" y="313" width="332" height="40" class="n"/>
+  <rect x="392" y="358" width="332" height="40" class="n"/>
+  <rect x="392" y="403" width="332" height="40" class="n"/>
+  <rect x="392" y="448" width="332" height="40" class="n"/>
+  <rect x="392" y="493" width="332" height="40" class="n"/>
+  <rect x="392" y="538" width="332" height="40" class="n"/>
+  <rect x="392" y="583" width="332" height="40" class="n"/>
+  <rect x="392" y="628" width="332" height="40" class="n"/>
+  <rect x="404" y="277" width="22" height="22" fill="#111"/>
+  <rect x="404" y="322" width="22" height="22" class="n"/>
+  <rect x="404" y="367" width="22" height="22" class="n"/>
+  <rect x="404" y="412" width="22" height="22" class="n"/>
+  <rect x="404" y="457" width="22" height="22" class="n"/>
+  <rect x="404" y="502" width="22" height="22" class="n"/>
+  <rect x="404" y="547" width="22" height="22" class="n"/>
+  <rect x="404" y="592" width="22" height="22" class="n"/>
+  <rect x="404" y="637" width="22" height="22" class="n"/>
+
+  <!-- one component's routing drawn in full : A appears in three outputs -->
+  <path d="M728,288 C 840,288 860,298 966,298" class="ln-2" marker-end="url(#ah)"/>
+  <path d="M728,288 C 840,288 860,366 966,366" class="ln-2" marker-end="url(#ah)"/>
+  <path d="M728,288 C 840,288 860,434 966,434" class="ln-2" marker-end="url(#ah)"/>
+  <!-- every other component routes the same way : shown as a faint bundle -->
+  <path d="M728,333 C 800,333 820,502 900,502" class="ln-h"/>
+  <path d="M728,378 C 800,378 820,570 900,570" class="ln-h"/>
+  <path d="M728,423 C 800,423 820,638 900,638" class="ln-h"/>
+  <path d="M728,468 C 800,468 820,502 900,502" class="ln-h"/>
+  <path d="M728,513 C 800,513 820,570 900,570" class="ln-h"/>
+  <path d="M728,558 C 800,558 820,638 900,638" class="ln-h"/>
+  <line x1="900" y1="502" x2="966" y2="502" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="900" y1="570" x2="966" y2="570" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="900" y1="638" x2="966" y2="638" class="ln-h" marker-end="url(#ahh)"/>
+
+  <!-- C : outputs -->
+  <rect x="980" y="268" width="564" height="60" class="n"/>
+  <rect x="980" y="336" width="564" height="60" class="n"/>
+  <rect x="980" y="404" width="564" height="60" class="n"/>
+  <rect x="980" y="472" width="564" height="60" class="n"/>
+  <rect x="980" y="540" width="564" height="60" class="n"/>
+  <rect x="980" y="608" width="564" height="60" class="n"/>
+  <rect x="1008" y="282" width="18" height="32" class="n-f"/>
+  <rect x="995"  y="353" width="44" height="25" class="n-f"/>
+  <rect x="995"  y="421" width="44" height="25" class="n-f"/>
+  <rect x="990"  y="494" width="54" height="16" class="n-f"/>
+  <rect x="1004" y="554" width="26" height="32" class="n-f"/>
+  <rect x="1002" y="623" width="30" height="30" class="n-f"/>
+
+  <line x1="56" y1="696" x2="1544" y2="696" class="ln-h"/>
+</svg>
+
+<div class="kick"><em>01</em> &nbsp;·&nbsp; The model</div>
+<div class="h1">Efficiency does not come from making each asset faster.<br>It comes from making components once and recombining them.</div>
+<div class="sub" style="top:162px;width:1300px">One illustrative example runs through this deck: a seasonal skincare launch film, briefed once. It is an example chosen to explain the mechanism, not a description of your brief.</div>
+
+<div class="ab eyebrow ink" style="left:56px;top:244px;width:300px">A &nbsp;·&nbsp; one brief</div>
+<div class="ab eyebrow ink" style="left:392px;top:244px;width:420px">B &nbsp;·&nbsp; components, produced once</div>
+<div class="ab eyebrow ink" style="left:980px;top:244px;width:564px">C &nbsp;·&nbsp; outputs, assembled from those components</div>
+
+<!-- brief -->
+<div class="ab" style="left:74px;top:426px;width:196px">
+  <div class="eyebrow" style="font-size:9.5px">Illustrative brief</div>
+  <div class="lbl b" style="font-size:16px;margin-top:6px;line-height:1.2">Seasonal launch film</div>
+  <div class="xs" style="margin-top:7px">One shoot. One edit. One set of approvals.</div>
+</div>
+<div class="ab xs ctr" style="left:292px;top:436px;width:98px">broken<br>into parts</div>
+
+<!-- components -->
+<div class="ab lbl b" style="left:409px;top:281px;width:20px;font-size:13px;color:#fff">A</div>
+<div class="ab lbl b" style="left:438px;top:281px;width:280px">Hero film master</div>
+<div class="ab lbl b" style="left:409px;top:326px;width:20px;font-size:13px">B</div>
+<div class="ab lbl"   style="left:438px;top:326px;width:280px">Product macro</div>
+<div class="ab lbl b" style="left:409px;top:371px;width:20px;font-size:13px">C</div>
+<div class="ab lbl"   style="left:438px;top:371px;width:280px">Voice over</div>
+<div class="ab lbl b" style="left:409px;top:416px;width:20px;font-size:13px">D</div>
+<div class="ab lbl"   style="left:438px;top:416px;width:280px">Music bed</div>
+<div class="ab lbl b" style="left:409px;top:461px;width:20px;font-size:13px">E</div>
+<div class="ab lbl"   style="left:438px;top:461px;width:280px">Subtitle track</div>
+<div class="ab lbl b" style="left:409px;top:506px;width:20px;font-size:13px">F</div>
+<div class="ab lbl"   style="left:438px;top:506px;width:280px">Copy block</div>
+<div class="ab lbl b" style="left:409px;top:551px;width:20px;font-size:13px">G</div>
+<div class="ab lbl"   style="left:438px;top:551px;width:280px">Logo lockup</div>
+<div class="ab lbl b" style="left:409px;top:596px;width:20px;font-size:13px">H</div>
+<div class="ab lbl"   style="left:438px;top:596px;width:280px">Legal and claims line</div>
+<div class="ab lbl b" style="left:409px;top:641px;width:20px;font-size:13px">I</div>
+<div class="ab lbl"   style="left:438px;top:641px;width:280px">Price and promo layer</div>
+
+<div class="ab xs" style="left:56px;top:572px;width:300px">Only component <b>A</b>&rsquo;s routing is drawn in full, so the diagram stays readable. Every other component fans out the same way, shown faintly. The letters inside each output are the full recipe.</div>
+
+<!-- outputs -->
+<div class="ab lbl b" style="left:1064px;top:280px;width:400px">Social cut-down &nbsp;<span class="xs">9:16</span></div>
+<div class="ab" style="left:1064px;top:302px;width:460px"><span class="code hi">A</span><span class="code">C</span><span class="code">E</span><span class="code">G</span></div>
+<div class="ab lbl b" style="left:1064px;top:348px;width:400px">Hero film &nbsp;<span class="xs">16:9</span></div>
+<div class="ab" style="left:1064px;top:370px;width:460px"><span class="code hi">A</span><span class="code">B</span><span class="code">C</span><span class="code">D</span><span class="code">E</span><span class="code">F</span><span class="code">G</span><span class="code">H</span></div>
+<div class="ab lbl b" style="left:1064px;top:416px;width:400px">Six-second bumper &nbsp;<span class="xs">16:9</span></div>
+<div class="ab" style="left:1064px;top:438px;width:460px"><span class="code hi">A</span><span class="code">D</span><span class="code">G</span></div>
+<div class="ab lbl b" style="left:1064px;top:484px;width:400px">Retail display banner</div>
+<div class="ab" style="left:1064px;top:506px;width:460px"><span class="code">B</span><span class="code">F</span><span class="code">G</span><span class="code">H</span><span class="code">I</span></div>
+<div class="ab lbl b" style="left:1064px;top:552px;width:400px">CRM header &nbsp;<span class="xs">4:5</span></div>
+<div class="ab" style="left:1064px;top:574px;width:460px"><span class="code">B</span><span class="code">F</span><span class="code">G</span></div>
+<div class="ab lbl b" style="left:1064px;top:620px;width:400px">E-commerce PDP still &nbsp;<span class="xs">1:1</span></div>
+<div class="ab" style="left:1064px;top:642px;width:460px"><span class="code">B</span><span class="code">F</span><span class="code">H</span></div>
+
+<!-- bottom band -->
+<div class="ab note" style="left:56px;top:714px;width:640px">
+  <span class="tag">THE ARITHMETIC</span><br>
+  <span style="display:block;margin-top:8px"><b style="font-size:13px">26 component slots filled across 6 outputs. 9 components actually produced.</b><br>
+  The distance between those two numbers is where the efficiency lives, and it widens every time an output, a market or a format is added.</span>
+</div>
+<div class="ab flag" style="left:724px;top:714px;width:820px">
+  <span class="tag">OPEN</span><b>The 80% figure.</b> It was referenced as the goal but never defined. 80% of what, measured how, against which baseline: share of assets produced modularly, hours saved, or cost saved?
+  <span style="display:block;margin-top:5px">Until that is agreed we show the mechanism here and put no number on it. <b>Needed from: the commercial lead, before submission.</b></span>
+</div>
+
+<div class="foot">Technology section &nbsp;·&nbsp; storyboard for narrative agreement<span class="r">02 / 15</span></div>
+</section>
+<!-- ============================ SLIDE 03 ============================ -->
+<section class="slide" id="s03">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"/></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"/></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"/><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"/></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"/><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"/></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"/></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"/></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"/></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" class="ln-h"/>
+
+  <!-- stage dividers -->
+  <line x1="318"  y1="248" x2="318"  y2="642" class="ln-h"/>
+  <line x1="1062" y1="248" x2="1062" y2="642" class="ln-h"/>
+  <line x1="1300" y1="248" x2="1300" y2="642" class="ln-h"/>
+
+  <!-- shared head : brief then triage -->
+  <rect x="64" y="292" width="216" height="62" class="n"/>
+  <line x1="172" y1="354" x2="172" y2="392" class="ln" marker-end="url(#ah)"/>
+  <path d="M64,400 L248,400 L280,446 L248,492 L64,492 Z" class="n-f"/>
+  <!-- fan from triage to the three routes -->
+  <path d="M282,446 C 312,446 306,335 334,335" class="ln" marker-end="url(#ah)"/>
+  <path d="M282,446 C 312,446 306,455 334,455" class="ln" marker-end="url(#ah)"/>
+  <path d="M282,446 C 312,446 306,575 334,575" class="ln" marker-end="url(#ah)"/>
+
+  <!-- lane 1 : assisted -->
+  <rect x="340" y="288" width="196" height="94" class="n"/>
+  <rect x="340" y="404" width="196" height="94" class="n"/>
+  <rect x="340" y="524" width="196" height="94" class="n"/>
+
+  <!-- production step slots : 6 per lane. filled = carried by an AI task -->
+  <g>
+    <rect x="574" y="308" width="54" height="54" class="n"/><rect x="638" y="308" width="54" height="54" class="n"/>
+    <rect x="702" y="308" width="54" height="54" class="n-k"/><rect x="766" y="308" width="54" height="54" class="n"/>
+    <rect x="830" y="308" width="54" height="54" class="n"/><rect x="894" y="308" width="54" height="54" class="n-k"/>
+    <use href="#person" x="601" y="335"/><use href="#person" x="665" y="335"/>
+    <use href="#person" x="793" y="335"/><use href="#person" x="857" y="335"/>
+  </g>
+  <g>
+    <rect x="574" y="424" width="54" height="54" class="n"/><rect x="638" y="424" width="54" height="54" class="n-k"/>
+    <rect x="702" y="424" width="54" height="54" class="n-k"/><rect x="766" y="424" width="54" height="54" class="n"/>
+    <rect x="830" y="424" width="54" height="54" class="n-k"/><rect x="894" y="424" width="54" height="54" class="n-k"/>
+    <use href="#person" x="601" y="451"/><use href="#person" x="793" y="451"/>
+  </g>
+  <g>
+    <rect x="574" y="544" width="54" height="54" class="n-k"/><rect x="638" y="544" width="54" height="54" class="n-k"/>
+    <rect x="702" y="544" width="54" height="54" class="n-k"/><rect x="766" y="544" width="54" height="54" class="n-k"/>
+    <rect x="830" y="544" width="54" height="54" class="n-k"/><rect x="894" y="544" width="54" height="54" class="n-k"/>
+  </g>
+  <!-- flow arrows between step slots -->
+  <line x1="540" y1="335" x2="570" y2="335" class="ln" marker-end="url(#ah2)"/>
+  <line x1="540" y1="451" x2="570" y2="451" class="ln" marker-end="url(#ah2)"/>
+  <line x1="540" y1="571" x2="570" y2="571" class="ln" marker-end="url(#ah2)"/>
+  <line x1="952" y1="335" x2="1088" y2="335" class="ln" marker-end="url(#ah)"/>
+  <line x1="952" y1="451" x2="1088" y2="451" class="ln" marker-end="url(#ah)"/>
+  <line x1="952" y1="571" x2="1088" y2="571" class="ln" marker-end="url(#ah)"/>
+
+  <!-- the same governance gate in every route -->
+  <rect x="1094" y="300" width="70" height="70" class="n-f"/>
+  <rect x="1094" y="416" width="70" height="70" class="n-f"/>
+  <rect x="1094" y="536" width="70" height="70" class="n-f"/>
+  <use href="#person" x="1129" y="326"/><use href="#person" x="1129" y="442"/><use href="#person" x="1129" y="562"/>
+  <line x1="1129" y1="286" x2="1129" y2="300" class="ln-h"/>
+  <line x1="1129" y1="370" x2="1129" y2="416" class="ln-h"/>
+  <line x1="1129" y1="486" x2="1129" y2="536" class="ln-h"/>
+  <line x1="1129" y1="606" x2="1129" y2="620" class="ln-h"/>
+  <line x1="1170" y1="335" x2="1326" y2="335" class="ln" marker-end="url(#ah)"/>
+  <line x1="1170" y1="451" x2="1326" y2="451" class="ln" marker-end="url(#ah)"/>
+  <line x1="1170" y1="571" x2="1326" y2="571" class="ln" marker-end="url(#ah)"/>
+
+  <!-- delivery -->
+  <rect x="1336" y="300" width="208" height="70" class="n-gh"/>
+  <rect x="1336" y="416" width="208" height="70" class="n-gh"/>
+  <rect x="1336" y="536" width="208" height="70" class="n"/>
+
+  <line x1="56" y1="664" x2="1544" y2="664" class="ln-h"/>
+</svg>
+
+<div class="kick"><em>02</em> &nbsp;·&nbsp; Routes</div>
+<div class="h1">Assisted, augmented and automated are three routes through one system,<br>chosen per deliverable at triage.</div>
+<div class="sub" style="top:162px;width:1320px">They are not three stages of production, and they are not a human versus machine split. What changes between them is how much of the sequence AI tasks carry. What never changes is the approval gate.</div>
+
+<!-- stage headers -->
+<div class="ab eyebrow ink" style="left:64px;top:256px;width:250px">Brief &amp; triage</div>
+<div class="ab eyebrow ink" style="left:340px;top:256px;width:700px">Route &nbsp;&rarr;&nbsp; production sequence</div>
+<div class="ab eyebrow ink" style="left:1094px;top:256px;width:200px">Review</div>
+<div class="ab xs ctr" style="left:1094px;top:344px;width:70px">approver</div>
+<div class="ab xs ctr" style="left:1094px;top:460px;width:70px">approver</div>
+<div class="ab xs ctr" style="left:1094px;top:580px;width:70px">approver</div>
+<div class="ab eyebrow ink" style="left:1336px;top:256px;width:208px">Delivery</div>
+
+<!-- brief + triage -->
+<div class="ab ctr" style="left:76px;top:306px;width:192px">
+  <div class="lbl b">One brief</div>
+  <div class="xs" style="margin-top:3px">many deliverables inside it</div>
+</div>
+<div class="ab ctr" style="left:76px;top:418px;width:176px">
+  <div class="lbl b">Triage</div>
+  <div class="xs" style="margin-top:4px">route chosen here, per deliverable, not per brief</div>
+</div>
+
+<!-- route names + missing definitions -->
+<div class="ab" style="left:354px;top:300px;width:170px">
+  <div class="lbl b" style="font-size:16px">Assisted</div>
+  <div class="xs" style="margin-top:5px">Our team leads. AI tasks take specific steps.</div>
+  <div style="margin-top:6px"><span class="tbc">DEFINITION TBC</span></div>
+</div>
+<div class="ab" style="left:354px;top:416px;width:170px">
+  <div class="lbl b" style="font-size:16px">Augmented</div>
+  <div class="xs" style="margin-top:5px">AI tasks carry most steps. Our team directs and intervenes.</div>
+  <div style="margin-top:6px"><span class="tbc">DEFINITION TBC</span></div>
+</div>
+<div class="ab" style="left:354px;top:536px;width:170px">
+  <div class="lbl b" style="font-size:16px">Automated</div>
+  <div class="xs" style="margin-top:5px">AI tasks run the sequence end to end. Our team sets it up.</div>
+  <div style="margin-top:6px"><span class="tbc">DEFINITION TBC</span></div>
+</div>
+
+<!-- step legend -->
+<div class="ab" style="left:574px;top:264px;width:500px">
+  <span class="xs"><span style="display:inline-block;width:11px;height:11px;background:#111;vertical-align:-1px;margin-right:5px"></span>step carried by an AI task
+  &nbsp;&nbsp;<span style="display:inline-block;width:11px;height:11px;border:1.4px solid #111;vertical-align:-1px;margin-right:5px"></span>step carried by our team</span>
+</div>
+<div class="ab xs" style="left:574px;top:620px;width:380px">Six steps shown as a placeholder for the production sequence. Real step names come from the module set on slide 06.</div>
+
+<!-- governance -->
+<div class="ab sm b ctr" style="left:1068px;top:618px;width:224px">The same gate in every route</div>
+<div class="ab xs ctr" style="left:1068px;top:638px;width:224px">Nothing releases unreviewed.</div>
+
+<!-- delivery -->
+<div class="ab ctr" style="left:1348px;top:318px;width:184px">
+  <div class="sm b mut">Typical output</div>
+  <div style="margin-top:6px"><span class="tbc">TBC</span></div>
+</div>
+<div class="ab ctr" style="left:1348px;top:434px;width:184px">
+  <div class="sm b mut">Typical output</div>
+  <div style="margin-top:6px"><span class="tbc">TBC</span></div>
+</div>
+<div class="ab ctr" style="left:1348px;top:548px;width:184px">
+  <div class="sm b">Versioning</div>
+  <div class="sm b">Translation</div>
+  <div class="xs" style="margin-top:4px">the two named in discussion</div>
+</div>
+
+<!-- bottom flags -->
+<div class="ab flag" style="left:56px;top:684px;width:730px">
+  <span class="tag">OPEN</span><b>The three definitions are missing from this conversation.</b> Each route needs one agreed sentence and a qualifying rule for when it is used. Without those, this slide is a shape without content, and the client cannot tell which route their work lands in.
+  <span style="display:block;margin-top:5px"><b>Needed from: whoever holds the brief response. Highest priority open item in this section.</b></span>
+</div>
+<div class="ab note" style="left:814px;top:684px;width:730px">
+  <span class="tag">WHY THIS REPLACES THE EARLIER VISUAL</span><br>
+  <span style="display:block;margin-top:8px">The earlier &ldquo;human plus tech / fully automated&rdquo; diagram described the <b>production step only</b>. It left out briefing and triage, so it read as a split between people and machines rather than three routes. Routes run brief to delivery. Versioning and translation sit inside the automated route, not outside the model.</span>
+</div>
+
+<div class="foot">Technology section &nbsp;·&nbsp; storyboard for narrative agreement<span class="r">03 / 15</span></div>
+</section>
+<!-- ============================ SLIDE 04 ============================ -->
+<section class="slide" id="s04">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"/></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"/></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"/><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"/></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"/><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"/></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"/></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"/></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"/></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" class="ln-h"/>
+
+  <!-- your systems (left, client-owned, connected by integration work) -->
+  <rect x="56" y="290" width="356" height="76" class="n-c"/>
+  <rect x="56" y="378" width="356" height="76" class="n-c"/>
+  <rect x="56" y="466" width="356" height="76" class="n-c"/>
+  <rect x="56" y="554" width="356" height="76" class="n-c"/>
+  <path d="M412,328 C 445,328 450,400 478,400" class="ln-bd" marker-end="url(#ahb)"/>
+  <path d="M412,416 C 445,416 450,430 478,430" class="ln-bd" marker-end="url(#ahb)"/>
+  <path d="M412,504 C 445,504 450,480 478,480" class="ln-bd" marker-end="url(#ahb)"/>
+  <path d="M412,592 C 445,592 450,510 478,510" class="ln-bd" marker-end="url(#ahb)"/>
+
+  <!-- MAKE -->
+  <rect x="484" y="268" width="632" height="374" class="n" stroke-width="2.4"/>
+  <line x1="484" y1="352" x2="1116" y2="352" class="ln-h"/>
+  <rect x="516" y="382" width="568" height="146" class="n-f"/>
+  <!-- open middleware strip with connector sockets -->
+  <rect x="516" y="552" width="568" height="66" class="n"/>
+  <circle cx="576" cy="552" r="9" fill="#fff" stroke="#111" stroke-width="1.6"/>
+  <circle cx="676" cy="552" r="9" fill="#fff" stroke="#111" stroke-width="1.6"/>
+  <circle cx="776" cy="552" r="9" fill="#fff" stroke="#111" stroke-width="1.6"/>
+  <circle cx="876" cy="552" r="9" fill="#fff" stroke="#111" stroke-width="1.6"/>
+  <circle cx="976" cy="552" r="9" fill="#fff" stroke="#111" stroke-width="1.6"/>
+  <circle cx="1040" cy="552" r="9" fill="#fff" stroke="#111" stroke-width="1.6"/>
+  <line x1="516" y1="552" x2="1084" y2="552" class="ln"/>
+
+  <!-- third-party tools (right, already connected) -->
+  <rect x="1188" y="290" width="356" height="76" class="n"/>
+  <rect x="1188" y="378" width="356" height="76" class="n"/>
+  <rect x="1188" y="466" width="356" height="76" class="n"/>
+  <rect x="1188" y="554" width="356" height="76" class="n-i"/>
+  <path d="M1120,400 C 1150,400 1152,328 1182,328" class="ln" marker-end="url(#ah)"/>
+  <path d="M1120,430 C 1150,430 1152,416 1182,416" class="ln" marker-end="url(#ah)"/>
+  <path d="M1120,480 C 1150,480 1152,504 1182,504" class="ln" marker-end="url(#ah)"/>
+  <path d="M1120,510 C 1150,510 1152,592 1182,592" class="ln-d" marker-end="url(#ah)"/>
+
+  <line x1="56" y1="672" x2="1544" y2="672" class="ln-h"/>
+</svg>
+
+<div class="kick"><em>03</em> &nbsp;·&nbsp; The technology</div>
+<div class="h1">MAKE is the orchestration layer our teams already use.<br>Proprietary core, open edges.</div>
+<div class="sub" style="top:162px;width:1160px">Read the outlines. Solid means built and running on our work today. Dashed means integration. Everything new in this proposal is on the left of this diagram, and it is connection work, not platform work.</div>
+
+<div class="ab legend" style="left:1180px;top:238px;width:364px;justify-content:flex-end">
+  <div class="li"><span class="sw sw-live"></span>Today</div>
+  <div class="li"><span class="sw sw-int"></span>Integration</div>
+  <div class="li"><span class="sw sw-cli"></span>Yours</div>
+</div>
+
+<!-- your systems -->
+<div class="ab eyebrow blu" style="left:56px;top:262px;width:356px">Yours &nbsp;·&nbsp; connected during integration</div>
+<div class="ab" style="left:72px;top:309px;width:324px"><div class="lbl b blu">Your DAM</div><div class="xs" style="color:#4a6d99;margin-top:2px">source of truth for assets and metadata</div></div>
+<div class="ab" style="left:72px;top:397px;width:324px"><div class="lbl b blu">Your brand, claims and legal rules</div><div class="xs" style="color:#4a6d99;margin-top:2px">what any output is allowed to say</div></div>
+<div class="ab" style="left:72px;top:485px;width:324px"><div class="lbl b blu">Your review and approval</div><div class="xs" style="color:#4a6d99;margin-top:2px">your approvers, in your process</div></div>
+<div class="ab" style="left:72px;top:573px;width:324px"><div class="lbl b blu">Your channels and e-commerce feeds</div><div class="xs" style="color:#4a6d99;margin-top:2px">where finished outputs have to land</div></div>
+
+<!-- MAKE core -->
+<div class="ab ctr" style="left:484px;top:288px;width:632px">
+  <div style="font-size:40px;font-weight:700;letter-spacing:-.02em;line-height:1">MAKE</div>
+  <div class="sm mut" style="margin-top:8px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;font-size:10.5px">Orchestration layer &nbsp;·&nbsp; exists today</div>
+</div>
+<div class="ab eyebrow ink" style="left:532px;top:400px;width:300px">Proprietary core</div>
+<div class="ab sm" style="left:532px;top:426px;width:536px">
+  <ul class="tight">
+    <li>Routes a brief through the production sequence</li>
+    <li>Holds versions, review and approval in one connected space</li>
+    <li>Runs AI tasks against briefs, assets and outputs</li>
+  </ul>
+</div>
+<div class="ab eyebrow ink ctr" style="left:516px;top:570px;width:568px">Open middleware</div>
+<div class="ab xs ctr" style="left:540px;top:590px;width:520px">Any third-party tool plugs in here. Tools change without the layer changing.</div>
+
+<!-- third-party tools -->
+<div class="ab eyebrow ink" style="left:1188px;top:262px;width:356px">Tools we orchestrate &nbsp;·&nbsp; already connected</div>
+<div class="ab" style="left:1204px;top:309px;width:324px"><div class="lbl b">Generation tools</div><div class="xs" style="margin-top:2px">named tools confirmed separately, see flag below</div></div>
+<div class="ab" style="left:1204px;top:397px;width:324px"><div class="lbl b">Editing and compositing tools</div><div class="xs" style="margin-top:2px">in use on our work today</div></div>
+<div class="ab" style="left:1204px;top:485px;width:324px"><div class="lbl b">Translation and localisation tools</div><div class="xs" style="margin-top:2px">in use on our work today</div></div>
+<div class="ab" style="left:1204px;top:573px;width:324px"><div class="lbl b mut">Anything you already use</div><div class="xs" style="margin-top:2px">connected as a plug-in, not replaced</div></div>
+
+<!-- bottom -->
+<div class="ab note" style="left:56px;top:694px;width:730px">
+  <span class="tag">THE POINT OF THIS SLIDE</span><br>
+  <span style="display:block;margin-top:8px"><b>The middleware is the answer to &ldquo;it needs building&rdquo;.</b> The orchestration layer is built. Tools plug into it and can be swapped without rebuilding anything. Nothing in this proposal asks you to replace a tool you already run, and nothing waits on a platform being finished.</span>
+</div>
+<div class="ab flag" style="left:814px;top:694px;width:730px">
+  <span class="tag">OPEN</span><b>Tool names are deliberately absent.</b> The split between the creation tool and the aggregating tool for the live demonstration has not been confirmed, and what was shown in preparation was not the tool intended for the pitch.
+  <span style="display:block;margin-top:5px">Until the demo lead confirms, naming tools here risks contradicting the live session. <b>Needed before: the live rehearsal.</b></span>
+</div>
+
+<div class="foot">Technology section &nbsp;·&nbsp; storyboard for narrative agreement<span class="r">04 / 15</span></div>
+</section>
+<!-- ============================ SLIDE 05 ============================ -->
+<section class="slide" id="s05">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"/></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"/></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"/><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"/></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"/><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"/></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"/></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"/></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"/></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" class="ln-h"/>
+  <line x1="800" y1="258" x2="800" y2="566" class="ln-h"/>
+
+  <!-- LEFT : scattered tools -->
+  <rect x="80"  y="300" width="150" height="46" class="n-gh"/>
+  <rect x="300" y="286" width="150" height="46" class="n-gh"/>
+  <rect x="560" y="316" width="150" height="46" class="n-gh"/>
+  <rect x="110" y="404" width="150" height="46" class="n-gh"/>
+  <rect x="350" y="430" width="150" height="46" class="n-gh"/>
+  <rect x="580" y="416" width="150" height="46" class="n-gh"/>
+  <path d="M230,320 L300,309" class="ln-g"/>
+  <path d="M450,309 L560,336" class="ln-g"/>
+  <path d="M635,362 L630,416" class="ln-g"/>
+  <path d="M580,442 L500,450" class="ln-g"/>
+  <path d="M350,452 L260,430" class="ln-g"/>
+  <path d="M155,404 L140,346" class="ln-g"/>
+  <path d="M375,332 L420,430" class="ln-g"/>
+  <path d="M185,300 L560,330" class="ln-g"/>
+  <path d="M260,414 L560,340" class="ln-g"/>
+  <!-- friction breaks -->
+  <g stroke="#B8690F" stroke-width="2.2">
+    <line x1="258" y1="308" x2="268" y2="322"/><line x1="266" y1="306" x2="276" y2="320"/>
+    <line x1="500" y1="314" x2="510" y2="328"/><line x1="508" y1="312" x2="518" y2="326"/>
+    <line x1="627" y1="382" x2="637" y2="396"/><line x1="635" y1="380" x2="645" y2="394"/>
+    <line x1="300" y1="434" x2="310" y2="448"/><line x1="308" y1="432" x2="318" y2="446"/>
+    <line x1="140" y1="366" x2="150" y2="380"/><line x1="148" y1="364" x2="158" y2="378"/>
+    <line x1="395" y1="374" x2="405" y2="388"/><line x1="403" y1="372" x2="413" y2="386"/>
+  </g>
+
+  <!-- RIGHT : one connected space -->
+  <line x1="880" y1="424" x2="1528" y2="424" class="ln-2"/>
+  <line x1="856" y1="424" x2="876" y2="424" class="ln" marker-end="url(#ah)"/>
+  <rect x="890"  y="360" width="96" height="44" class="n"/>
+  <rect x="1000" y="360" width="96" height="44" class="n"/>
+  <rect x="1110" y="360" width="96" height="44" class="n"/>
+  <rect x="1220" y="360" width="96" height="44" class="n"/>
+  <rect x="1330" y="360" width="96" height="44" class="n"/>
+  <rect x="1440" y="360" width="88" height="44" class="n"/>
+  <line x1="938"  y1="404" x2="938"  y2="424" class="ln"/>
+  <line x1="1048" y1="404" x2="1048" y2="424" class="ln"/>
+  <line x1="1158" y1="404" x2="1158" y2="424" class="ln"/>
+  <line x1="1268" y1="404" x2="1268" y2="424" class="ln"/>
+  <line x1="1388" y1="404" x2="1388" y2="424" class="ln"/>
+  <line x1="1484" y1="404" x2="1484" y2="424" class="ln"/>
+  <!-- the record held on the rail -->
+  <rect x="880" y="446" width="648" height="52" class="n-f"/>
+  <rect x="900" y="458" width="48" height="28" class="n"/>
+  <rect x="956" y="458" width="48" height="28" class="n"/>
+  <rect x="1012" y="458" width="48" height="28" class="n"/>
+  <circle cx="1100" cy="472" r="11" class="n"/>
+  <path d="M1094,472 l4,5 l8,-10" class="fx" stroke="#111" stroke-width="2"/>
+  <circle cx="1136" cy="472" r="11" class="n"/>
+  <path d="M1130,472 l4,5 l8,-10" class="fx" stroke="#111" stroke-width="2"/>
+  <circle cx="1172" cy="472" r="11" class="n-gh"/>
+
+  <!-- conversion band -->
+  <rect x="56"   y="620" width="472" height="56" class="n-f"/>
+  <rect x="564"  y="620" width="472" height="56" class="n-f"/>
+  <rect x="1072" y="620" width="472" height="56" class="n-f"/>
+  <line x1="292"  y1="676" x2="292"  y2="706" class="ln" marker-end="url(#ah)"/>
+  <line x1="800"  y1="676" x2="800"  y2="706" class="ln" marker-end="url(#ah)"/>
+  <line x1="1308" y1="676" x2="1308" y2="706" class="ln" marker-end="url(#ah)"/>
+  <rect x="56"   y="712" width="472" height="72" class="n"/>
+  <rect x="564"  y="712" width="472" height="72" class="n"/>
+  <rect x="1072" y="712" width="472" height="72" class="n"/>
+  <line x1="56" y1="590" x2="1544" y2="590" class="ln-h"/>
+</svg>
+
+<div class="kick"><em>03</em> &nbsp;·&nbsp; The technology</div>
+<div class="h1">One connected space is our efficiency.<br>This is how it turns into yours.</div>
+<div class="sub" style="top:162px;width:1300px">We orchestrate because production spread across disconnected tools is slow, and slow is expensive. The time we get back is the time you get back, and the visibility is a side effect you can use.</div>
+
+<div class="ab eyebrow" style="left:56px;top:266px;width:700px">Without an orchestration layer</div>
+<div class="ab eyebrow ink" style="left:880px;top:266px;width:660px">Through MAKE &nbsp;·&nbsp; one connected space</div>
+
+<!-- left labels -->
+<div class="ab sm mut ctr" style="left:86px;top:314px;width:138px">Brief document</div>
+<div class="ab sm mut ctr" style="left:306px;top:300px;width:138px">Creative tool</div>
+<div class="ab sm mut ctr" style="left:566px;top:330px;width:138px">Edit and composite</div>
+<div class="ab sm mut ctr" style="left:116px;top:418px;width:138px">Translation tool</div>
+<div class="ab sm mut ctr" style="left:356px;top:444px;width:138px">Review by email</div>
+<div class="ab sm mut ctr" style="left:586px;top:430px;width:138px">Shared drive</div>
+<div class="ab xs amb" style="left:80px;top:500px;width:660px"><b>Every crossing is a hand-off</b>, and every hand-off is a re-export, a re-brief, a version that drifts, an approval chased by email, or an asset nobody can find. None of that work appears on any invoice line, and all of it costs time.</div>
+
+<!-- right labels -->
+<div class="ab xs ctr" style="left:890px;top:374px;width:96px">brief<br>intake</div>
+<div class="ab xs ctr" style="left:1000px;top:374px;width:96px">creative<br>tool</div>
+<div class="ab xs ctr" style="left:1110px;top:374px;width:96px">edit and<br>composite</div>
+<div class="ab xs ctr" style="left:1220px;top:374px;width:96px">translation<br>tool</div>
+<div class="ab xs ctr" style="left:1330px;top:374px;width:96px">review and<br>approval</div>
+<div class="ab xs ctr" style="left:1440px;top:374px;width:88px">delivery<br>to channel</div>
+<div class="ab xs" style="left:830px;top:404px;width:60px">brief<br>in</div>
+<div class="ab sm b" style="left:1200px;top:456px;width:330px">Versions, review state and approvals<br>held once, visible to everyone</div>
+<div class="ab xs ctr" style="left:900px;top:465px;width:48px">v1</div>
+<div class="ab xs ctr" style="left:956px;top:465px;width:48px">v2</div>
+<div class="ab xs ctr" style="left:1012px;top:465px;width:48px">v3</div>
+<div class="ab note cli" style="left:880px;top:516px;width:648px;padding:7px 10px 8px">
+  <b>MAKE is not your system of record.</b> Your DAM is. This rail is where work is produced, not where it lives. See slide 09.
+</div>
+
+<!-- conversion band -->
+<div class="ab eyebrow ink" style="left:56px;top:602px;width:800px">Our internal efficiency &nbsp;&rarr;&nbsp; your benefit</div>
+<div class="ab" style="left:72px;top:632px;width:440px"><div class="eyebrow" style="font-size:9.5px">We get</div><div class="lbl b" style="margin-top:5px">Fewer hand-offs between tools</div></div>
+<div class="ab" style="left:580px;top:632px;width:440px"><div class="eyebrow" style="font-size:9.5px">We get</div><div class="lbl b" style="margin-top:5px">One record of versions, review and approval</div></div>
+<div class="ab" style="left:1088px;top:632px;width:440px"><div class="eyebrow" style="font-size:9.5px">We get</div><div class="lbl b" style="margin-top:5px">Open connectors instead of one closed suite</div></div>
+
+<div class="ab" style="left:72px;top:726px;width:440px"><div class="eyebrow ink" style="font-size:9.5px">You get</div><div class="lbl b" style="margin-top:5px">Shorter time from brief to first cut</div><div class="xs" style="margin-top:4px">fewer places for a deliverable to sit still</div></div>
+<div class="ab" style="left:580px;top:726px;width:440px"><div class="eyebrow ink" style="font-size:9.5px">You get</div><div class="lbl b" style="margin-top:5px">Status you can see without asking for it</div><div class="xs" style="margin-top:4px">no status calls to find out where something is</div></div>
+<div class="ab" style="left:1088px;top:726px;width:440px"><div class="eyebrow ink" style="font-size:9.5px">You get</div><div class="lbl b" style="margin-top:5px">Your tools and your DAM stay where they are</div><div class="xs" style="margin-top:4px">no migration, no replacement, no new licences for you</div></div>
+
+<div class="foot">Technology section &nbsp;·&nbsp; storyboard for narrative agreement<span class="r">05 / 15</span></div>
+</section>
+<!-- ============================ SLIDE 06 ============================ -->
+<section class="slide" id="s06">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"/></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"/></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"/><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"/></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"/><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"/></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"/></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"/></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"/></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" class="ln-h"/>
+
+  <!-- MAKE frame around the module rack -->
+  <rect x="388" y="272" width="1148" height="156" class="n" stroke-width="2.4"/>
+  <!-- eight module slots -->
+  <rect x="400"  y="286" width="130" height="128" class="n"/>
+  <rect x="542"  y="286" width="130" height="128" class="n-o"/>
+  <rect x="684"  y="286" width="130" height="128" class="n-o"/>
+  <rect x="826"  y="286" width="130" height="128" class="n-o"/>
+  <rect x="968"  y="286" width="130" height="128" class="n-o"/>
+  <rect x="1110" y="286" width="130" height="128" class="n"/>
+  <rect x="1252" y="286" width="130" height="128" class="n"/>
+  <rect x="1394" y="286" width="130" height="128" class="n"/>
+
+  <!-- brief rows : which slots a brief actually switches on -->
+  <line x1="56" y1="452" x2="1544" y2="452" class="ln-h"/>
+
+  <!-- row A -->
+  <rect x="400"  y="476" width="130" height="38" class="n-k"/>
+  <rect x="542"  y="476" width="130" height="38" class="n-gh"/>
+  <rect x="684"  y="476" width="130" height="38" class="n-gh"/>
+  <rect x="826"  y="476" width="130" height="38" class="n-gh"/>
+  <rect x="968"  y="476" width="130" height="38" class="n-gh"/>
+  <rect x="1110" y="476" width="130" height="38" class="n-k"/>
+  <rect x="1252" y="476" width="130" height="38" class="n-gh"/>
+  <rect x="1394" y="476" width="130" height="38" class="n-gh"/>
+  <line x1="465" y1="495" x2="1459" y2="495" class="ln-h"/>
+
+  <!-- row B -->
+  <rect x="400"  y="546" width="130" height="38" class="n-k"/>
+  <rect x="542"  y="546" width="130" height="38" fill="#B8690F" stroke="#B8690F" stroke-width="1.6"/>
+  <rect x="684"  y="546" width="130" height="38" fill="#B8690F" stroke="#B8690F" stroke-width="1.6"/>
+  <rect x="826"  y="546" width="130" height="38" fill="#B8690F" stroke="#B8690F" stroke-width="1.6"/>
+  <rect x="968"  y="546" width="130" height="38" fill="#B8690F" stroke="#B8690F" stroke-width="1.6"/>
+  <rect x="1110" y="546" width="130" height="38" class="n-k"/>
+  <rect x="1252" y="546" width="130" height="38" class="n-k"/>
+  <rect x="1394" y="546" width="130" height="38" class="n-k"/>
+  <line x1="465" y1="565" x2="1459" y2="565" class="ln-h"/>
+
+  <!-- row C -->
+  <rect x="400"  y="616" width="130" height="38" class="n-k"/>
+  <rect x="542"  y="616" width="130" height="38" class="n-gh"/>
+  <rect x="684"  y="616" width="130" height="38" class="n-gh"/>
+  <rect x="826"  y="616" width="130" height="38" class="n-gh"/>
+  <rect x="968"  y="616" width="130" height="38" class="n-gh"/>
+  <rect x="1110" y="616" width="130" height="38" class="n-k"/>
+  <rect x="1252" y="616" width="130" height="38" class="n-gh"/>
+  <rect x="1394" y="616" width="130" height="38" class="n-k"/>
+  <line x1="465" y1="635" x2="1459" y2="635" class="ln-h"/>
+  <rect x="1252" y="616" width="130" height="38" class="n-gh"/>
+
+  <line x1="56" y1="682" x2="1544" y2="682" class="ln-h"/>
+</svg>
+
+<div class="kick"><em>04</em> &nbsp;·&nbsp; Modularity</div>
+<div class="h1">A brief uses the modules it needs.<br>Not every brief uses every module.</div>
+<div class="sub" style="top:162px;width:1300px">MAKE is a set of modules, not one product you switch on whole. The same platform serves a single-asset request and a nine-market campaign, with nothing to re-implement in between.</div>
+
+<div class="ab eyebrow ink" style="left:388px;top:252px;width:600px">MAKE &nbsp;·&nbsp; the module set</div>
+<div class="ab eyebrow" style="left:56px;top:252px;width:320px">The platform</div>
+<div class="ab sm" style="left:56px;top:290px;width:300px">Each module serves a different part of the production funnel.
+<span style="display:block;margin-top:10px">A module is switched on for a brief or it is not. There is no partial state, no separate implementation, and no second platform underneath.</span>
+<span style="display:block;margin-top:10px">Four of the eight are named below. The rest are named in our existing deck and are carried here as placeholders.</span></div>
+
+<!-- module names -->
+<div class="ab sm b ctr" style="left:408px;top:320px;width:114px">One connected space</div>
+<div class="ab xs ctr" style="left:408px;top:368px;width:114px">named in discussion</div>
+<div class="ab ctr" style="left:550px;top:322px;width:114px"><div class="sm b amb">Module 2</div><div style="margin-top:8px"><span class="tbc">NAME TBC</span></div></div>
+<div class="ab ctr" style="left:692px;top:322px;width:114px"><div class="sm b amb">Module 3</div><div style="margin-top:8px"><span class="tbc">NAME TBC</span></div></div>
+<div class="ab ctr" style="left:834px;top:322px;width:114px"><div class="sm b amb">Module 4</div><div style="margin-top:8px"><span class="tbc">NAME TBC</span></div></div>
+<div class="ab ctr" style="left:976px;top:322px;width:114px"><div class="sm b amb">Module 5</div><div style="margin-top:8px"><span class="tbc">NAME TBC</span></div></div>
+<div class="ab sm b ctr" style="left:1118px;top:320px;width:114px">AI tasks</div>
+<div class="ab xs ctr" style="left:1118px;top:368px;width:114px">see slide 08</div>
+<div class="ab sm b ctr" style="left:1260px;top:320px;width:114px">Open integrations</div>
+<div class="ab xs ctr" style="left:1260px;top:368px;width:114px">see slide 04</div>
+<div class="ab sm b ctr" style="left:1402px;top:314px;width:114px">Global e&#8209;commerce</div>
+<div class="ab xs ctr" style="left:1402px;top:368px;width:114px">named in discussion</div>
+
+<!-- brief rows -->
+<div class="ab eyebrow ink" style="left:56px;top:460px;width:400px">Three briefs, three different subsets</div>
+<div class="ab" style="left:56px;top:478px;width:320px"><div class="lbl b">Brief A</div><div class="xs" style="margin-top:2px">One social cut-down, one market</div></div>
+<div class="ab" style="left:56px;top:548px;width:320px"><div class="lbl b">Brief B</div><div class="xs" style="margin-top:2px">Full campaign, nine markets, every format</div></div>
+<div class="ab" style="left:56px;top:618px;width:320px"><div class="lbl b">Brief C</div><div class="xs" style="margin-top:2px">E&#8209;commerce refresh across a product range</div></div>
+
+<div class="ab" style="left:1544px;top:476px;width:10px"></div>
+<div class="ab xs" style="left:56px;top:656px;width:320px"><span style="display:inline-block;width:11px;height:11px;background:#111;vertical-align:-1px;margin-right:5px"></span>switched on for this brief &nbsp;&nbsp;<span style="display:inline-block;width:11px;height:11px;border:1.3px dashed #d4d4d4;vertical-align:-1px;margin-right:5px"></span>not used</div>
+
+<!-- bottom -->
+<div class="ab note" style="left:56px;top:702px;width:730px">
+  <span class="tag">WHY THIS ANSWERS &ldquo;TOO COMPLEX&rdquo;</span><br>
+  <span style="display:block;margin-top:8px"><b>Complexity is only a problem if you have to absorb all of it.</b> Brief A touches two modules. Nobody on your side configures, licences or learns the other six. The system scales up to Brief B without a second implementation, and back down again without a decommission.</span>
+</div>
+<div class="ab flag" style="left:814px;top:702px;width:730px">
+  <span class="tag">OPEN</span><b>Modules 2 to 5 are unnamed here on purpose.</b> They are the five-step set that already exists in our current deck, and their names did not come up in the discussion. The current product playbook was reviewed and is out of date, so it is not a usable source.
+  <span style="display:block;margin-top:5px">These names are the client&rsquo;s mental model of the product. <b>This slide cannot go into the submission until they are confirmed.</b></span>
+</div>
+
+<div class="foot">Technology section &nbsp;·&nbsp; storyboard for narrative agreement<span class="r">06 / 15</span></div>
+</section>
+<!-- ============================ SLIDE 07 ============================ -->
+<section class="slide" id="s07">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"/></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"/></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"/><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"/></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"/><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"/></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"/></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"/></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"/></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" class="ln-h"/>
+
+  <!-- worked card -->
+  <rect x="56" y="284" width="716" height="416" class="n" stroke-width="2.4"/>
+  <line x1="56" y1="348" x2="772" y2="348" class="ln-h"/>
+  <line x1="56" y1="416" x2="772" y2="416" class="ln-h"/>
+  <line x1="56" y1="556" x2="772" y2="556" class="ln-h"/>
+  <line x1="56" y1="620" x2="772" y2="620" class="ln-h"/>
+
+  <!-- "what it does" : drawn mechanism, a version stack under one approval gate -->
+  <rect x="300" y="444" width="62" height="40" class="n"/>
+  <rect x="376" y="444" width="62" height="40" class="n"/>
+  <rect x="452" y="444" width="62" height="40" class="n"/>
+  <line x1="362" y1="464" x2="374" y2="464" class="ln" marker-end="url(#ah2)"/>
+  <line x1="438" y1="464" x2="450" y2="464" class="ln" marker-end="url(#ah2)"/>
+  <line x1="514" y1="464" x2="552" y2="464" class="ln" marker-end="url(#ah2)"/>
+  <rect x="556" y="440" width="52" height="48" class="n-f"/>
+  <use href="#person" x="582" y="466"/>
+  <line x1="608" y1="464" x2="646" y2="464" class="ln" marker-end="url(#ah)"/>
+  <rect x="650" y="444" width="96" height="40" class="n-k"/>
+  <path d="M300,514 L300,524 L746,524 L746,514" class="ln-h"/>
+
+  <!-- "connects to" : mini map -->
+  <rect x="300" y="638" width="118" height="44" class="n-c"/>
+  <rect x="462" y="638" width="118" height="44" class="n-f"/>
+  <rect x="624" y="638" width="122" height="44" class="n-c"/>
+  <line x1="418" y1="660" x2="458" y2="660" class="ln-b" marker-start="url(#ahb)" marker-end="url(#ahb)"/>
+  <line x1="580" y1="660" x2="620" y2="660" class="ln-b" marker-start="url(#ahb)" marker-end="url(#ahb)"/>
+
+  <!-- ghost template cards -->
+  <rect x="812" y="284" width="232" height="416" class="n-gh"/>
+  <rect x="1068" y="284" width="232" height="416" class="n-gh"/>
+  <rect x="1324" y="284" width="220" height="416" class="n-gh"/>
+  <g stroke="#d4d4d4" stroke-width="1.2" stroke-dasharray="5 4">
+    <line x1="812" y1="348" x2="1044" y2="348"/><line x1="812" y1="416" x2="1044" y2="416"/>
+    <line x1="812" y1="556" x2="1044" y2="556"/><line x1="812" y1="620" x2="1044" y2="620"/>
+    <line x1="1068" y1="348" x2="1300" y2="348"/><line x1="1068" y1="416" x2="1300" y2="416"/>
+    <line x1="1068" y1="556" x2="1300" y2="556"/><line x1="1068" y1="620" x2="1300" y2="620"/>
+    <line x1="1324" y1="348" x2="1544" y2="348"/><line x1="1324" y1="416" x2="1544" y2="416"/>
+    <line x1="1324" y1="556" x2="1544" y2="556"/><line x1="1324" y1="620" x2="1544" y2="620"/>
+  </g>
+  <line x1="56" y1="724" x2="1544" y2="724" class="ln-h"/>
+</svg>
+
+<div class="kick"><em>04</em> &nbsp;·&nbsp; Modularity</div>
+<div class="h1">Every module answers the same four questions.<br>This is the level of detail the written submission needs.</div>
+<div class="sub" style="top:162px;width:1300px">Last round this was simplified until the argument stopped landing. A written submission has no presenter in the room, so each module gets explained rather than named.</div>
+
+<div class="ab eyebrow ink" style="left:56px;top:262px;width:500px">Worked example &nbsp;·&nbsp; the one module the discussion names</div>
+<div class="ab eyebrow" style="left:812px;top:262px;width:700px">Same template, one per module &nbsp;·&nbsp; to be completed</div>
+
+<!-- worked card content -->
+<div class="ab" style="left:76px;top:300px;width:600px">
+  <div class="lbl b" style="font-size:19px">One connected space</div>
+</div>
+<div class="ab" style="left:640px;top:300px;width:116px;text-align:right"><span class="stamp ink">Exists today</span></div>
+
+<div class="ab eyebrow" style="left:76px;top:362px;width:200px">What it is</div>
+<div class="ab sm" style="left:300px;top:360px;width:452px">The single place a brief, its components, its versions and its approvals live while the work is being produced.</div>
+
+<div class="ab eyebrow" style="left:76px;top:430px;width:200px">What it does</div>
+<div class="ab sm" style="left:76px;top:454px;width:206px">Holds every version in sequence, carries review state with it, and releases only what an approver has signed.</div>
+<div class="ab xs ctr" style="left:300px;top:456px;width:62px">v1</div>
+<div class="ab xs ctr" style="left:376px;top:456px;width:62px">v2</div>
+<div class="ab xs ctr" style="left:452px;top:456px;width:62px">v3</div>
+<div class="ab xs ctr" style="left:548px;top:494px;width:68px">approver</div>
+<div class="ab sm b ctr" style="left:650px;top:456px;width:96px;color:#fff">Released</div>
+<div class="ab xs ctr" style="left:300px;top:528px;width:446px">one record, one place, for the life of the deliverable</div>
+
+<div class="ab eyebrow" style="left:76px;top:570px;width:200px">Why you care</div>
+<div class="ab sm" style="left:300px;top:568px;width:452px">You can see where anything is without asking, and nothing is rebuilt because a version went missing.</div>
+
+<div class="ab eyebrow" style="left:76px;top:634px;width:200px">Connects to</div>
+<div class="ab sm" style="left:76px;top:658px;width:206px">Your DAM on one side, your approvers on the other. It replaces neither.</div>
+<div class="ab sm b ctr blu" style="left:306px;top:652px;width:106px">Your DAM</div>
+<div class="ab sm b ctr" style="left:468px;top:652px;width:106px">This module</div>
+<div class="ab sm b ctr blu" style="left:630px;top:646px;width:110px">Your review<br>and approval</div>
+
+<!-- ghost cards -->
+<div class="ab" style="left:832px;top:300px;width:200px"><div class="lbl b mut" style="font-size:16px">Module 2</div><div style="margin-top:6px"><span class="tbc">NAME TBC</span></div></div>
+<div class="ab eyebrow" style="left:832px;top:362px;width:200px;color:#c0c0c0">What it is</div>
+<div class="ab eyebrow" style="left:832px;top:430px;width:200px;color:#c0c0c0">What it does</div>
+<div class="ab eyebrow" style="left:832px;top:570px;width:200px;color:#c0c0c0">Why you care</div>
+<div class="ab eyebrow" style="left:832px;top:634px;width:200px;color:#c0c0c0">Connects to</div>
+
+<div class="ab" style="left:1088px;top:300px;width:200px"><div class="lbl b mut" style="font-size:16px">Module 3</div><div style="margin-top:6px"><span class="tbc">NAME TBC</span></div></div>
+<div class="ab eyebrow" style="left:1088px;top:362px;width:200px;color:#c0c0c0">What it is</div>
+<div class="ab eyebrow" style="left:1088px;top:430px;width:200px;color:#c0c0c0">What it does</div>
+<div class="ab eyebrow" style="left:1088px;top:570px;width:200px;color:#c0c0c0">Why you care</div>
+<div class="ab eyebrow" style="left:1088px;top:634px;width:200px;color:#c0c0c0">Connects to</div>
+
+<div class="ab" style="left:1344px;top:300px;width:190px"><div class="lbl b mut" style="font-size:16px">Modules 4 to 8</div><div class="xs" style="margin-top:6px">same structure, one card each</div></div>
+<div class="ab eyebrow" style="left:1344px;top:362px;width:190px;color:#c0c0c0">What it is</div>
+<div class="ab eyebrow" style="left:1344px;top:430px;width:190px;color:#c0c0c0">What it does</div>
+<div class="ab eyebrow" style="left:1344px;top:570px;width:190px;color:#c0c0c0">Why you care</div>
+<div class="ab eyebrow" style="left:1344px;top:634px;width:190px;color:#c0c0c0">Connects to</div>
+
+<div class="ab flag" style="left:56px;top:744px;width:1488px">
+  <span class="tag">OPEN</span><b>The content of the remaining cards.</b> Each needs the four answers above plus a drawn mechanism, not a name in a box. Source material is the five-step module set in our current deck; the existing product playbook was checked in the discussion and is out of date, so it cannot be the source. <b>Owner and deadline needed: this is the single largest writing job in the technology section.</b>
+</div>
+
+<div class="foot">Technology section &nbsp;·&nbsp; storyboard for narrative agreement<span class="r">07 / 15</span></div>
+</section>
+<!-- ============================ SLIDE 08 ============================ -->
+<section class="slide" id="s08">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"/></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"/></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"/><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"/></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"/><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"/></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"/></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"/></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"/></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" class="ln-h"/>
+
+  <!-- the library shelf -->
+  <rect x="56" y="274" width="1488" height="86" class="n-f"/>
+  <g class="n">
+    <polygon points="84,296 140,296 152,318 140,340 84,340 72,318"/>
+    <polygon points="180,296 236,296 248,318 236,340 180,340 168,318"/>
+    <polygon points="276,296 332,296 344,318 332,340 276,340 264,318"/>
+    <polygon points="372,296 428,296 440,318 428,340 372,340 360,318"/>
+    <polygon points="468,296 524,296 536,318 524,340 468,340 456,318"/>
+    <polygon points="564,296 620,296 632,318 620,340 564,340 552,318"/>
+    <polygon points="660,296 716,296 728,318 716,340 660,340 648,318"/>
+  </g>
+  <g class="n-gh">
+    <polygon points="756,296 812,296 824,318 812,340 756,340 744,318"/>
+    <polygon points="852,296 908,296 920,318 908,340 852,340 840,318"/>
+    <polygon points="948,296 1004,296 1016,318 1004,340 948,340 936,318"/>
+    <polygon points="1044,296 1100,296 1112,318 1100,340 1044,340 1032,318"/>
+    <polygon points="1140,296 1196,296 1208,318 1196,340 1140,340 1128,318"/>
+    <polygon points="1236,296 1292,296 1304,318 1292,340 1236,340 1224,318"/>
+    <polygon points="1332,296 1388,296 1400,318 1388,340 1332,340 1320,318"/>
+    <polygon points="1428,296 1484,296 1496,318 1484,340 1428,340 1416,318"/>
+  </g>
+
+  <!-- tasks drop out of the library into named points in the workflow -->
+  <path d="M1162,344 C 1162,400 1170,400 1170,436" class="ln-ad" marker-end="url(#aha)"/>
+  <path d="M1258,344 C 1258,400 1338,400 1338,436" class="ln-ad" marker-end="url(#aha)"/>
+  <path d="M1354,344 C 1354,400 1466,400 1466,436" class="ln-ad" marker-end="url(#aha)"/>
+  <path d="M300,344 C 300,400 190,400 190,436" class="ln-ad" marker-end="url(#aha)"/>
+  <path d="M700,344 C 700,400 760,400 760,436" class="ln-ad" marker-end="url(#aha)"/>
+
+  <!-- zone panels -->
+  <rect x="56"   y="436" width="464" height="112" fill="none" stroke="#d4d4d4" stroke-width="1.2"/>
+  <rect x="540"  y="436" width="500" height="112" fill="none" stroke="#d4d4d4" stroke-width="1.2"/>
+  <rect x="1060" y="436" width="484" height="112" fill="none" stroke="#d4d4d4" stroke-width="1.2"/>
+  <!-- task slots : pre -->
+  <rect x="72"  y="452" width="136" height="80" class="n-o"/>
+  <rect x="222" y="452" width="136" height="80" class="n-o"/>
+  <rect x="372" y="452" width="132" height="80" class="n-o"/>
+  <!-- production -->
+  <rect x="556" y="452" width="148" height="80" class="n-o"/>
+  <rect x="718" y="452" width="148" height="80" class="n-o"/>
+  <rect x="880" y="452" width="144" height="80" class="n-o"/>
+  <!-- post -->
+  <rect x="1076" y="452" width="144" height="80" class="n"/>
+  <rect x="1234" y="452" width="144" height="80" class="n"/>
+  <rect x="1392" y="452" width="136" height="80" class="n-r"/>
+
+  <!-- the spine a brief travels along -->
+  <rect x="56"   y="612" width="464" height="46" class="n-f"/>
+  <rect x="540"  y="612" width="500" height="46" class="n-f"/>
+  <rect x="1060" y="612" width="484" height="46" class="n-f"/>
+  <line x1="288" y1="548" x2="288" y2="608" class="ln-h"/>
+  <line x1="790" y1="548" x2="790" y2="608" class="ln-h"/>
+  <line x1="1302" y1="548" x2="1302" y2="608" class="ln-h"/>
+  <line x1="522" y1="635" x2="536" y2="635" class="ln" marker-end="url(#ah2)"/>
+  <line x1="1042" y1="635" x2="1056" y2="635" class="ln" marker-end="url(#ah2)"/>
+  <!-- human checkpoints between zones -->
+  <circle cx="530" cy="578" r="17" class="n-f"/><use href="#person" x="530" y="583"/>
+  <circle cx="1050" cy="578" r="17" class="n-f"/><use href="#person" x="1050" y="583"/>
+  <circle cx="1560" cy="635" r="0" class="fx"/>
+
+  <line x1="56" y1="688" x2="1544" y2="688" class="ln-h"/>
+</svg>
+
+<div class="kick"><em>05</em> &nbsp;·&nbsp; AI tasks</div>
+<div class="h1">AI tasks are the working parts.<br>They sit at named points across pre-production, production and post.</div>
+<div class="sub" style="top:162px;width:1320px">This is the slide that answers what actually happens before, during and after production. One term throughout: <b>AI tasks</b>. &ldquo;Makers&rdquo; is internal shorthand and does not appear in anything the client sees.</div>
+
+<div class="ab eyebrow ink" style="left:56px;top:254px;width:700px">The AI task library &nbsp;·&nbsp; tasks are selected into a brief, not run as a fixed pipeline</div>
+<div class="ab" style="left:1180px;top:250px;width:364px;text-align:right"><span class="stamp amb">Inventory not supplied</span></div>
+
+
+<!-- zone headers -->
+<div class="ab eyebrow ink" style="left:56px;top:412px;width:464px">Pre-production</div>
+<div class="ab eyebrow ink" style="left:540px;top:412px;width:500px">Production</div>
+<div class="ab eyebrow ink" style="left:1060px;top:412px;width:484px">Post-production</div>
+
+<!-- task slots -->
+<div class="ab ctr" style="left:80px;top:478px;width:120px"><div class="sm b amb">AI task</div><div style="margin-top:7px"><span class="tbc">TBC</span></div></div>
+<div class="ab ctr" style="left:230px;top:478px;width:120px"><div class="sm b amb">AI task</div><div style="margin-top:7px"><span class="tbc">TBC</span></div></div>
+<div class="ab ctr" style="left:380px;top:478px;width:116px"><div class="sm b amb">AI task</div><div style="margin-top:7px"><span class="tbc">TBC</span></div></div>
+<div class="ab ctr" style="left:564px;top:478px;width:132px"><div class="sm b amb">AI task</div><div style="margin-top:7px"><span class="tbc">TBC</span></div></div>
+<div class="ab ctr" style="left:726px;top:478px;width:132px"><div class="sm b amb">AI task</div><div style="margin-top:7px"><span class="tbc">TBC</span></div></div>
+<div class="ab ctr" style="left:888px;top:478px;width:128px"><div class="sm b amb">AI task</div><div style="margin-top:7px"><span class="tbc">TBC</span></div></div>
+<div class="ab ctr" style="left:1084px;top:472px;width:128px"><div class="sm b">Versioning</div><div class="xs" style="margin-top:6px">named in discussion</div></div>
+<div class="ab ctr" style="left:1242px;top:472px;width:128px"><div class="sm b">Translation and localisation</div><div class="xs" style="margin-top:6px">named in discussion</div></div>
+<div class="ab ctr" style="left:1400px;top:472px;width:120px"><div class="sm b mut">Compositing</div><div class="xs" style="margin-top:6px">roadmap theme, not today</div></div>
+
+<!-- the spine -->
+<div class="ab xs ctr" style="left:56px;top:628px;width:464px">one brief moving through production, drawing on the tasks above it</div>
+<div class="ab xs ctr" style="left:540px;top:628px;width:500px">tasks run inside the route chosen at triage (slide 03)</div>
+<div class="ab xs ctr" style="left:1060px;top:628px;width:484px">outputs and components register back to the DAM (slide 09)</div>
+<div class="ab xs ctr" style="left:474px;top:596px;width:112px">human<br>checkpoint</div>
+<div class="ab xs ctr" style="left:994px;top:596px;width:112px">human<br>checkpoint</div>
+
+<div class="ab legend" style="left:56px;top:664px;width:1000px">
+  <div class="li"><span class="sw sw-live"></span>Placed from the discussion</div>
+  <div class="li"><span class="sw sw-open"></span>Slot exists, task not named</div>
+  <div class="li"><span class="sw sw-road"></span>Roadmap theme, not available today</div>
+</div>
+
+<!-- bottom -->
+<div class="ab note" style="left:56px;top:712px;width:730px">
+  <span class="tag">TWO DECISIONS ALREADY TAKEN</span><br>
+  <span style="display:block;margin-top:8px"><b>In the written submission:</b> one slide showing the whole AI task set, because that is what answers their question about pre, mid and post.<br>
+  <b>Not in the written submission:</b> a separate AI task diagram per scenario. That was considered and ruled out. It belongs in the live session only.</span>
+</div>
+<div class="ab flag" style="left:814px;top:712px;width:730px">
+  <span class="tag">OPEN</span><b>The task inventory itself.</b> A list of tasks exists with the demonstration lead and was referred to in the discussion, but it has not been supplied. Every amber slot on this slide is waiting on it.
+  <span style="display:block;margin-top:5px">Three named capabilities are placed above. <b>Needed: the full list, plus which zone each task belongs to, and which are live versus roadmap.</b></span>
+</div>
+
+<div class="foot">Technology section &nbsp;·&nbsp; storyboard for narrative agreement<span class="r">08 / 15</span></div>
+</section>
+<!-- ============================ SLIDE 09 ============================ -->
+<section class="slide" id="s09">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"/></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"/></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"/><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"/></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"/><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"/></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"/></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"/></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"/></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" class="ln-h"/>
+
+  <!-- your DAM, drawn as the store it is -->
+  <rect x="80" y="322" width="230" height="188" fill="#E9F0F9" stroke="none"/>
+  <line x1="80" y1="322" x2="80" y2="510" stroke="#245FA6" stroke-width="1.6"/>
+  <line x1="310" y1="322" x2="310" y2="510" stroke="#245FA6" stroke-width="1.6"/>
+  <path d="M80,510 a115,26 0 0 0 230,0" fill="#E9F0F9" stroke="#245FA6" stroke-width="1.6"/>
+  <ellipse cx="195" cy="322" rx="115" ry="26" class="n-c"/>
+
+  <!-- out : assets and intelligence -->
+  <line x1="320" y1="372" x2="452" y2="372" class="ln-b" marker-end="url(#ahb)"/>
+
+  <!-- MAKE production -->
+  <rect x="458" y="300" width="540" height="228" class="n" stroke-width="2.4"/>
+  <rect x="482" y="356" width="212" height="70" class="n-f"/>
+  <rect x="722" y="356" width="252" height="70" class="n-f"/>
+  <line x1="694" y1="391" x2="718" y2="391" class="ln" marker-end="url(#ah2)"/>
+  <g>
+    <rect x="496" y="462" width="26" height="26" class="n-k"/>
+    <rect x="530" y="462" width="26" height="26" class="n"/>
+    <rect x="564" y="462" width="26" height="26" class="n"/>
+    <rect x="598" y="462" width="26" height="26" class="n"/>
+    <rect x="632" y="462" width="26" height="26" class="n"/>
+    <rect x="666" y="462" width="26" height="26" class="n"/>
+  </g>
+
+  <!-- governance gate -->
+  <rect x="1036" y="336" width="104" height="104" class="n-f"/>
+  <use href="#person" x="1088" y="382"/>
+  <line x1="1002" y1="388" x2="1030" y2="388" class="ln" marker-end="url(#ah2)"/>
+  <line x1="1144" y1="388" x2="1176" y2="388" class="ln" marker-end="url(#ah2)"/>
+
+  <!-- approved outputs -->
+  <rect x="1182" y="300" width="362" height="52" class="n"/>
+  <rect x="1182" y="362" width="362" height="52" class="n"/>
+  <rect x="1182" y="424" width="362" height="52" class="n"/>
+  <rect x="1206" y="313" width="16" height="26" class="n-f"/>
+  <rect x="1200" y="379" width="30" height="18" class="n-f"/>
+  <rect x="1202" y="438" width="26" height="24" class="n-f"/>
+
+  <!-- the return loop : everything goes back -->
+  <path d="M1363,476 L1363,560 L195,560 L195,540" class="ln-b" marker-end="url(#ahb)"/>
+  <rect x="1046" y="586" width="300" height="86" class="n"/>
+  <rect x="706"  y="586" width="300" height="86" class="n"/>
+  <rect x="366"  y="586" width="300" height="86" class="n"/>
+  <line x1="1196" y1="560" x2="1196" y2="582" class="ln-b" marker-end="url(#ahb)"/>
+  <line x1="856"  y1="560" x2="856"  y2="582" class="ln-b" marker-end="url(#ahb)"/>
+  <line x1="516"  y1="560" x2="516"  y2="582" class="ln-b" marker-end="url(#ahb)"/>
+  <g>
+    <rect x="726" y="640" width="20" height="20" class="n-k"/>
+    <rect x="752" y="640" width="20" height="20" class="n"/>
+    <rect x="778" y="640" width="20" height="20" class="n"/>
+    <rect x="804" y="640" width="20" height="20" class="n"/>
+    <rect x="830" y="640" width="20" height="20" class="n"/>
+    <rect x="856" y="640" width="20" height="20" class="n"/>
+    <rect x="882" y="640" width="20" height="20" class="n"/>
+    <rect x="908" y="640" width="20" height="20" class="n"/>
+    <rect x="934" y="640" width="20" height="20" class="n"/>
+  </g>
+  <line x1="56" y1="700" x2="1544" y2="700" class="ln-h"/>
+</svg>
+
+<div class="kick"><em>06</em> &nbsp;·&nbsp; Your data</div>
+<div class="h1">Your DAM stays the source of truth.<br>MAKE produces around it and hands everything back.</div>
+<div class="sub" style="top:162px;width:1320px">This is the answer to integration, data and portability. Assets and intelligence come out of your DAM, production happens in MAKE, and what returns is richer than what left.</div>
+
+<div class="ab eyebrow blu ctr" style="left:80px;top:272px;width:230px">Yours</div>
+<div class="ab ctr" style="left:96px;top:352px;width:198px">
+  <div class="lbl b blu" style="font-size:17px">Your DAM</div>
+  <div class="xs" style="color:#4a6d99;margin-top:6px">source of truth</div>
+  <div class="xs" style="color:#4a6d99;margin-top:14px;line-height:1.5">assets<br>metadata<br>rights and usage<br>brand and claims rules</div>
+</div>
+<div class="ab xs blu ctr" style="left:318px;top:334px;width:136px">assets and<br>intelligence out</div>
+
+<div class="ab eyebrow ink" style="left:458px;top:272px;width:540px">Production in MAKE</div>
+<div class="ab ctr" style="left:490px;top:374px;width:196px"><div class="sm b">Modules</div><div class="xs" style="margin-top:3px">only the ones this brief needs</div></div>
+<div class="ab ctr" style="left:730px;top:374px;width:236px"><div class="sm b">AI tasks</div><div class="xs" style="margin-top:3px">across pre-production, production and post</div></div>
+<div class="ab sm b" style="left:496px;top:436px;width:400px">Components produced and kept</div>
+<div class="ab xs" style="left:706px;top:468px;width:280px">each one reusable, each one described</div>
+
+<div class="ab eyebrow ink ctr" style="left:1010px;top:272px;width:156px">Governance</div>
+<div class="ab xs ctr" style="left:1010px;top:448px;width:156px">named approver<br>brand and claims check<br>AI responsibility</div>
+
+<div class="ab eyebrow ink" style="left:1182px;top:272px;width:362px">Approved outputs</div>
+<div class="ab sm b" style="left:1240px;top:318px;width:290px">Social cut-down</div>
+<div class="ab sm b" style="left:1240px;top:380px;width:290px">Retail display banner</div>
+<div class="ab sm b" style="left:1240px;top:442px;width:290px">E-commerce PDP still</div>
+
+<!-- return payloads -->
+<div class="ab eyebrow blu" style="left:366px;top:534px;width:1000px">Registered back to your DAM</div>
+<div class="ab" style="left:1066px;top:600px;width:260px">
+  <div class="lbl b">1 &nbsp;The finished outputs</div>
+  <div class="xs" style="margin-top:5px">approved, versioned, with their approval history attached</div>
+</div>
+<div class="ab" style="left:726px;top:600px;width:260px">
+  <div class="lbl b">2 &nbsp;The reusable components</div>
+  <div class="xs" style="margin-top:5px">the parts, not just the finished asset</div>
+</div>
+<div class="ab" style="left:386px;top:600px;width:260px">
+  <div class="lbl b">3 &nbsp;The production record</div>
+  <div class="xs" style="margin-top:5px">which brief, which market, which route, which AI tasks, which components</div>
+</div>
+<div class="ab xs amb b" style="left:386px;top:678px;width:280px">&uarr; this one is what makes slide 10 possible</div>
+
+<!-- bottom -->
+<div class="ab note cli" style="left:56px;top:720px;width:730px">
+  <span class="tag">THE LINE WE DO NOT CROSS</span><br>
+  <span style="display:block;margin-top:8px"><b>MAKE never becomes your system of record.</b> It is where work is produced, not where it lives. Your DAM is complete at every point in this loop, and it is more complete after each brief than before it.</span>
+</div>
+<div class="ab flag" style="left:814px;top:720px;width:730px">
+  <span class="tag">OPEN</span><b>Portability is one of the three things this section has to answer,</b> alongside integration and data. This loop is the shape of the answer, but the actual commitment is not written: what you keep, in what formats, and what happens to the production record if the relationship ends.
+  <span style="display:block;margin-top:5px"><b>Needed: one paragraph, agreed with legal, before submission.</b></span>
+</div>
+
+<div class="foot">Technology section &nbsp;·&nbsp; storyboard for narrative agreement<span class="r">09 / 15</span></div>
+</section>
+<!-- ============================ SLIDE 10 ============================ -->
+<section class="slide" id="s10">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"/></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"/></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"/><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"/></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"/><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"/></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"/></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"/></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"/></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" class="ln-h"/>
+
+  <!-- the path we remove -->
+  <rect x="320" y="278" width="200" height="52" class="n-gh"/>
+  <rect x="546" y="278" width="200" height="52" class="n-gh"/>
+  <rect x="772" y="278" width="200" height="52" class="n-gh"/>
+  <rect x="998" y="278" width="200" height="52" class="n-gh"/>
+  <rect x="1224" y="278" width="200" height="52" class="n-gh"/>
+  <line x1="522" y1="304" x2="542" y2="304" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="748" y1="304" x2="768" y2="304" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="974" y1="304" x2="994" y2="304" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="1200" y1="304" x2="1220" y2="304" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="330" y1="330" x2="1416" y2="278" stroke="#B8690F" stroke-width="2"/>
+  <line x1="330" y1="278" x2="1416" y2="330" stroke="#B8690F" stroke-width="2"/>
+
+  <!-- the path that replaces it -->
+  <rect x="56"   y="440" width="228" height="180" class="n-c"/>
+  <rect x="308"  y="440" width="228" height="180" class="n"/>
+  <rect x="560"  y="440" width="228" height="180" class="n"/>
+  <rect x="812"  y="440" width="228" height="180" class="n" stroke-width="2.8"/>
+  <rect x="1064" y="440" width="228" height="180" class="n"/>
+  <rect x="1316" y="440" width="228" height="180" class="n"/>
+  <line x1="286"  y1="530" x2="304"  y2="530" class="ln" marker-end="url(#ah2)"/>
+  <line x1="538"  y1="530" x2="556"  y2="530" class="ln" marker-end="url(#ah2)"/>
+  <line x1="790"  y1="530" x2="808"  y2="530" class="ln" marker-end="url(#ah2)"/>
+  <line x1="1042" y1="530" x2="1060" y2="530" class="ln" marker-end="url(#ah2)"/>
+  <line x1="1294" y1="530" x2="1312" y2="530" class="ln" marker-end="url(#ah2)"/>
+
+  <!-- 1 search the DAM -->
+  <circle cx="150" cy="510" r="19" class="n-c"/>
+  <line x1="164" y1="524" x2="180" y2="540" stroke="#245FA6" stroke-width="2.6"/>
+
+  <!-- 2 the production record -->
+  <rect x="332" y="486" width="180" height="94" class="n-f"/>
+  <line x1="344" y1="506" x2="500" y2="506" class="ln-h"/>
+  <line x1="344" y1="526" x2="500" y2="526" class="ln-h"/>
+  <line x1="344" y1="546" x2="500" y2="546" class="ln-h"/>
+  <line x1="344" y1="566" x2="440" y2="566" class="ln-h"/>
+
+  <!-- 3 the components that already exist -->
+  <g>
+    <rect x="584" y="486" width="24" height="24" class="n-k"/>
+    <rect x="614" y="486" width="24" height="24" class="n-k"/>
+    <rect x="644" y="486" width="24" height="24" class="n-k"/>
+    <rect x="674" y="486" width="24" height="24" class="n-k"/>
+    <rect x="704" y="486" width="24" height="24" class="n-k"/>
+    <rect x="584" y="516" width="24" height="24" class="n-k"/>
+    <rect x="614" y="516" width="24" height="24" class="n-gh"/>
+    <rect x="644" y="516" width="24" height="24" class="n-gh"/>
+    <rect x="674" y="516" width="24" height="24" class="n-gh"/>
+  </g>
+
+  <!-- 4 the order form -->
+  <rect x="832" y="482" width="188" height="24" class="n"/>
+  <rect x="832" y="512" width="188" height="24" class="n"/>
+  <rect x="832" y="542" width="188" height="24" class="n"/>
+  <rect x="832" y="572" width="188" height="24" class="n"/>
+
+  <!-- 5 AI tasks re-version -->
+  <g class="n">
+    <polygon points="1096,486 1152,486 1164,508 1152,530 1096,530 1084,508"/>
+    <polygon points="1180,486 1236,486 1248,508 1236,530 1180,530 1168,508"/>
+  </g>
+  <line x1="1166" y1="540" x2="1166" y2="560" class="ln-h"/>
+
+  <!-- 6 review, deliver, register back -->
+  <circle cx="1378" cy="506" r="19" class="n-f"/>
+  <use href="#person" x="1378" y="511"/>
+  <rect x="1424" y="486" width="40" height="40" class="n"/>
+  <line x1="1404" y1="506" x2="1420" y2="506" class="ln" marker-end="url(#ah2)"/>
+  <path d="M1430,622 L1430,652 L170,652 L170,624" class="ln-b" marker-end="url(#ahb)"/>
+
+  <line x1="56" y1="686" x2="1544" y2="686" class="ln-h"/>
+</svg>
+
+<div class="kick"><em>06</em> &nbsp;·&nbsp; Your data</div>
+<div class="h1">A second market orders from what already exists.<br>It does not re-brief.</div>
+<div class="sub" style="top:162px;width:1320px">Same example, carried forward. Market one produced the seasonal launch film. Market two wants it in their language, in their formats, with their legal line and their promotion.</div>
+
+<!-- removed path -->
+<div class="ab eyebrow" style="left:56px;top:288px;width:250px">The path we remove</div>
+<div class="ab xs mut ctr" style="left:330px;top:296px;width:180px">New brief</div>
+<div class="ab xs mut ctr" style="left:556px;top:296px;width:180px">Concept</div>
+<div class="ab xs mut ctr" style="left:782px;top:296px;width:180px">Shoot and produce</div>
+<div class="ab xs mut ctr" style="left:1008px;top:296px;width:180px">Review</div>
+<div class="ab xs mut ctr" style="left:1234px;top:296px;width:180px">Deliver</div>
+<div class="ab sm amb" style="left:320px;top:346px;width:1100px"><b>A duplicate of work already done,</b> at close to full cost and close to full timeline, producing something that is a near neighbour of an asset already sitting in the DAM.</div>
+
+<!-- the replacement -->
+<div class="ab eyebrow ink" style="left:56px;top:412px;width:900px">The path that replaces it &nbsp;·&nbsp; ordering</div>
+
+<div class="ab" style="left:74px;top:452px;width:192px"><div class="tnum blu">STEP 1</div><div class="lbl b blu" style="margin-top:4px">Search your DAM</div></div>
+<div class="ab xs ctr" style="left:74px;top:552px;width:192px;color:#4a6d99">market two looks for what already exists, in the system they already use</div>
+
+<div class="ab" style="left:326px;top:452px;width:192px"><div class="tnum">STEP 2</div><div class="lbl b" style="margin-top:4px">Find the record</div></div>
+<div class="ab xs" style="left:344px;top:492px;width:160px">brief &nbsp;·&nbsp; market &nbsp;·&nbsp; route<br>AI tasks used<br>components made<br>rights and claims</div>
+<div class="ab xs ctr" style="left:326px;top:590px;width:192px">the production record from slide 09</div>
+
+<div class="ab" style="left:578px;top:452px;width:192px"><div class="tnum">STEP 3</div><div class="lbl b" style="margin-top:4px">See the components</div></div>
+<div class="ab xs" style="left:578px;top:554px;width:210px"><span style="display:inline-block;width:11px;height:11px;background:#111;vertical-align:-1px;margin-right:5px"></span>carries over &nbsp;&nbsp;<span style="display:inline-block;width:11px;height:11px;border:1.3px dashed #d4d4d4;vertical-align:-1px;margin-right:5px"></span>needs replacing</div>
+<div class="ab xs" style="left:578px;top:580px;width:200px">six of the nine components carry straight over. Three are market-specific.</div>
+
+<div class="ab" style="left:830px;top:452px;width:192px"><div class="tnum">STEP 4</div><div class="lbl b" style="margin-top:4px">Place an order</div></div>
+<div class="ab xs" style="left:840px;top:488px;width:174px">Language &nbsp;&nbsp;<b>local</b></div>
+<div class="ab xs" style="left:840px;top:518px;width:174px">Formats &nbsp;&nbsp;<b>9:16, banner</b></div>
+<div class="ab xs" style="left:840px;top:548px;width:174px">Legal line &nbsp;&nbsp;<b>local</b></div>
+<div class="ab xs" style="left:840px;top:578px;width:174px">Promotion &nbsp;&nbsp;<b>yes</b></div>
+
+<div class="ab" style="left:1082px;top:452px;width:192px"><div class="tnum">STEP 5</div><div class="lbl b" style="margin-top:4px">MAKE re-versions</div></div>
+<div class="ab xs ctr" style="left:1084px;top:498px;width:80px">translation</div>
+<div class="ab xs ctr" style="left:1168px;top:498px;width:80px">versioning</div>
+<div class="ab xs ctr" style="left:1082px;top:566px;width:192px">the two AI tasks named in the discussion, on the automated route</div>
+
+<div class="ab" style="left:1334px;top:452px;width:192px"><div class="tnum">STEP 6</div><div class="lbl b" style="margin-top:4px">Review and deliver</div></div>
+<div class="ab xs ctr" style="left:1334px;top:544px;width:192px">same approval gate as every other route</div>
+<div class="ab xs blu" style="left:1334px;top:590px;width:192px">and registered back, so market three orders from a larger set again</div>
+
+<!-- bottom -->
+<div class="ab note" style="left:56px;top:706px;width:730px">
+  <span class="tag">THE POINT</span><br>
+  <span style="display:block;margin-top:8px"><b>The order is a form, not a brief.</b> What can be ordered is exactly what the production record says already exists. Nobody writes a creative brief, nobody schedules a shoot, and nobody has to know the first market&rsquo;s production history to place the order.</span>
+</div>
+<div class="ab flag" style="left:814px;top:706px;width:730px">
+  <span class="tag">DEPENDENCY</span><b>This works from day one for everything produced in the system.</b> It does not work, on its own, for the assets already sitting in your DAM from before the engagement, because those have no production record and no component breakdown.
+  <span style="display:block;margin-top:5px"><b>That gap is the next slide, and it is the single largest open item in this section.</b></span>
+</div>
+
+<div class="foot">Technology section &nbsp;·&nbsp; storyboard for narrative agreement<span class="r">10 / 15</span></div>
+</section>
+<!-- ============================ SLIDE 11 ============================ -->
+<section class="slide" id="s11">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"/></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"/></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"/><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"/></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"/><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"/></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"/></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"/></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"/></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" class="ln-h"/>
+
+  <!-- the DAM, split -->
+  <rect x="56"  y="290" width="912" height="198" fill="url(#hx)" stroke="#B8690F" stroke-width="1.8"/>
+  <rect x="992" y="290" width="552" height="198" class="n" stroke-width="1.8"/>
+  <line x1="980" y1="276" x2="980" y2="502" class="ln-h"/>
+
+  <!-- historic : ghosted components, blank metadata -->
+  <g class="n-gh">
+    <rect x="80" y="352" width="26" height="26"/><rect x="112" y="352" width="26" height="26"/>
+    <rect x="144" y="352" width="26" height="26"/><rect x="176" y="352" width="26" height="26"/>
+    <rect x="208" y="352" width="26" height="26"/><rect x="240" y="352" width="26" height="26"/>
+  </g>
+  <line x1="300" y1="356" x2="500" y2="356" stroke="#A97E3F" stroke-width="2" stroke-dasharray="7 6"/>
+  <line x1="300" y1="386" x2="440" y2="386" stroke="#A97E3F" stroke-width="2" stroke-dasharray="7 6"/>
+  <line x1="300" y1="416" x2="500" y2="416" stroke="#A97E3F" stroke-width="2" stroke-dasharray="7 6"/>
+  <line x1="300" y1="446" x2="400" y2="446" stroke="#A97E3F" stroke-width="2" stroke-dasharray="7 6"/>
+
+  <!-- in-system : real components, full metadata -->
+  <g>
+    <rect x="1016" y="352" width="26" height="26" class="n-k"/><rect x="1048" y="352" width="26" height="26" class="n"/>
+    <rect x="1080" y="352" width="26" height="26" class="n"/><rect x="1112" y="352" width="26" height="26" class="n"/>
+    <rect x="1144" y="352" width="26" height="26" class="n"/><rect x="1176" y="352" width="26" height="26" class="n"/>
+  </g>
+  <line x1="1240" y1="356" x2="1420" y2="356" class="ln"/>
+  <line x1="1240" y1="386" x2="1460" y2="386" class="ln"/>
+  <line x1="1240" y1="416" x2="1400" y2="416" class="ln"/>
+  <line x1="1240" y1="446" x2="1440" y2="446" class="ln"/>
+  <!-- it grows -->
+  <line x1="1000" y1="512" x2="1300" y2="512" class="ln" marker-end="url(#ah)"/>
+
+  <!-- three candidate responses -->
+  <rect x="56"   y="572" width="472" height="164" class="n-o"/>
+  <rect x="564"  y="572" width="472" height="164" class="n-o"/>
+  <rect x="1072" y="572" width="472" height="164" class="n-o"/>
+  <line x1="76"   y1="654" x2="508"  y2="654" stroke="#D9A96A" stroke-width="1.2"/>
+  <line x1="584"  y1="654" x2="1016" y2="654" stroke="#D9A96A" stroke-width="1.2"/>
+  <line x1="1092" y1="654" x2="1524" y2="654" stroke="#D9A96A" stroke-width="1.2"/>
+</svg>
+
+<div class="kick amb"><em>06</em> &nbsp;·&nbsp; Your data &nbsp;·&nbsp; open item</div>
+<div class="h1">Your back catalogue is the real dependency,<br>and we do not yet have a technical answer for it.</div>
+<div class="sub" style="top:162px;width:1340px">You raised this directly last round: the effort of going back through historic assets that were never catalogued properly. It is a fair challenge, it cannot be handed to a discovery workshop, and this is the honest position today.</div>
+
+<div class="ab eyebrow amb" style="left:56px;top:262px;width:500px">Your DAM today &nbsp;·&nbsp; historic back catalogue</div>
+<div class="ab eyebrow ink" style="left:992px;top:262px;width:552px">Produced in&#8209;system from day one</div>
+
+<div class="ab sm" style="left:80px;top:312px;width:420px;color:#5a3406"><b>Not orderable as it stands.</b></div>
+<div class="ab xs" style="left:80px;top:392px;width:200px;color:#7a5520">no component breakdown<br>finished files only</div>
+<div class="ab xs" style="left:300px;top:466px;width:420px;color:#7a5520">metadata partial, inconsistent or absent</div>
+<div class="ab" style="left:560px;top:330px;width:390px">
+  <div class="sm b" style="color:#5a3406">What is missing</div>
+  <div class="xs" style="margin-top:8px;line-height:1.75;color:#7a5520">
+    component breakdown &nbsp;&nbsp;<b>absent</b><br>
+    usage rights recorded &nbsp;&nbsp;<b>inconsistent</b><br>
+    market and campaign tagged &nbsp;&nbsp;<b>inconsistent</b><br>
+    format variants linked &nbsp;&nbsp;<b>absent</b>
+  </div>
+</div>
+
+<div class="ab sm" style="left:1016px;top:312px;width:500px"><b>Orderable from the moment it is made.</b></div>
+<div class="ab xs" style="left:1016px;top:392px;width:200px">full component<br>breakdown</div>
+<div class="ab xs" style="left:1240px;top:466px;width:300px">production record complete, every field</div>
+<div class="ab xs" style="left:1000px;top:522px;width:400px">grows with every brief, from day one</div>
+
+<div class="ab flag" style="left:1000px;top:552px;width:0px;padding:0;border:0"></div>
+
+<!-- candidate responses -->
+<div class="ab eyebrow amb" style="left:56px;top:546px;width:900px">Three candidate responses &nbsp;·&nbsp; none of these is agreed, costed or committed</div>
+
+<div class="ab" style="left:76px;top:590px;width:432px">
+  <div class="sm b" style="color:#5a3406">A &nbsp; Automated enrichment at ingest</div>
+  <div class="xs" style="margin-top:6px;color:#7a5520">AI tasks read the existing files and write back component breakdowns, tags and usage records.</div>
+</div>
+<div class="ab xs" style="left:76px;top:664px;width:432px;color:#7a5520">
+  <b>Your effort:</b> low. <b>Our exposure:</b> high.<br>
+  <b style="color:#B8690F">Not established.</b> Nobody in the discussion could confirm this is technically possible at the quality needed. Do not present it as available.
+</div>
+
+<div class="ab" style="left:584px;top:590px;width:432px">
+  <div class="sm b" style="color:#5a3406">B &nbsp; A dedicated curation resource</div>
+  <div class="xs" style="margin-top:6px;color:#7a5520">A named person assigned to organise, describe and maintain the back catalogue.</div>
+</div>
+<div class="ab xs" style="left:584px;top:664px;width:432px;color:#7a5520">
+  <b>Your effort:</b> low. <b>Your cost:</b> a line item.<br>
+  <b style="color:#B8690F">Not included.</b> Offered on a previous pitch as a chargeable resource. If we propose it here, somebody has to cost it first.
+</div>
+
+<div class="ab" style="left:1092px;top:590px;width:432px">
+  <div class="sm b" style="color:#5a3406">C &nbsp; Enrich on demand</div>
+  <div class="xs" style="margin-top:6px;color:#7a5520">Nothing is touched until an asset is actually ordered. It is described at the point of reuse, once.</div>
+</div>
+<div class="ab xs" style="left:1092px;top:664px;width:432px;color:#7a5520">
+  <b>Your effort:</b> none up front. <b>Coverage:</b> slow.<br>
+  <b style="color:#B8690F">Not discussed.</b> Included here because it is the only option that needs neither a technical proof nor a new cost line.
+</div>
+
+<div class="ab flag" style="left:56px;top:760px;width:1488px;border-width:2px">
+  <span class="tag">DECISION NEEDED BEFORE SUBMISSION</span>
+  <b>We owe a technical response, and it has to be ours.</b> Whichever option we choose, saying &ldquo;we will work that out in discovery&rdquo; repeats the answer that already did not land. Pick one, say what it costs them, and say what we will prove before contract.
+</div>
+
+<div class="foot">Technology section &nbsp;·&nbsp; storyboard for narrative agreement<span class="r">11 / 15</span></div>
+</section>
+<!-- ============================ SLIDE 12 ============================ -->
+<section class="slide" id="s12">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"/></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"/></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"/><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"/></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"/><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"/></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"/></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"/></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"/></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" class="ln-h"/>
+
+  <!-- three bands -->
+  <rect x="56"   y="290" width="472" height="330" class="n" stroke-width="2.2"/>
+  <rect x="564"  y="290" width="472" height="330" class="n-i" stroke-width="2.2"/>
+  <rect x="1072" y="290" width="472" height="330" class="n-r" stroke-width="2"/>
+  <line x1="540" y1="440" x2="558" y2="440" class="ln" marker-end="url(#ah2)"/>
+  <line x1="1048" y1="440" x2="1066" y2="440" class="ln-g" marker-end="url(#ahg)"/>
+
+  <!-- band 1 items -->
+  <g class="n"><rect x="76" y="348" width="16" height="16"/><rect x="76" y="388" width="16" height="16"/>
+  <rect x="76" y="428" width="16" height="16"/><rect x="76" y="468" width="16" height="16"/>
+  <rect x="76" y="508" width="16" height="16"/><rect x="76" y="548" width="16" height="16"/></g>
+  <g stroke="#111" stroke-width="2" fill="none">
+    <path d="M79,356 l3,4 l7,-9"/><path d="M79,396 l3,4 l7,-9"/><path d="M79,436 l3,4 l7,-9"/>
+    <path d="M79,476 l3,4 l7,-9"/><path d="M79,516 l3,4 l7,-9"/><path d="M79,556 l3,4 l7,-9"/>
+  </g>
+  <!-- band 2 items -->
+  <g class="n-i"><rect x="584" y="348" width="16" height="16"/><rect x="584" y="396" width="16" height="16"/>
+  <rect x="584" y="444" width="16" height="16"/><rect x="584" y="492" width="16" height="16"/></g>
+  <rect x="584" y="548" width="16" height="16" class="n-o"/>
+  <!-- band 3 items -->
+  <g class="n-r"><rect x="1092" y="344" width="16" height="16"/><rect x="1092" y="396" width="16" height="16"/>
+  <rect x="1092" y="448" width="16" height="16"/><rect x="1092" y="500" width="16" height="16"/></g>
+
+  <!-- efficiency direction strip -->
+  <rect x="56" y="664" width="1488" height="76" class="n-f"/>
+  <path d="M300,728 C 620,728 800,696 1180,674" class="ln-2" marker-end="url(#ah)"/>
+  <line x1="300" y1="692" x2="300" y2="726" class="ln-h"/>
+  <line x1="1180" y1="670" x2="1180" y2="726" class="ln-h"/>
+</svg>
+
+<div class="kick"><em>07</em> &nbsp;·&nbsp; Today and next</div>
+<div class="h1">What is running, what we connect, and where it is heading.</div>
+<div class="sub" style="top:130px;width:1340px">Same legend as every other slide in this section. The roadmap is at theme level, not feature level: no dates, no percentages, and no list of things that do not exist yet.</div>
+
+<div class="ab" style="left:1180px;top:186px;width:364px;text-align:right"><span class="stamp">Themes, not features &nbsp;·&nbsp; no dates on this slide</span></div>
+
+<!-- band headers -->
+<div class="ab eyebrow ink" style="left:56px;top:262px;width:472px">Live today &nbsp;·&nbsp; running on our work now</div>
+<div class="ab eyebrow ink" style="left:564px;top:262px;width:472px">Integration &nbsp;·&nbsp; the new work in this proposal</div>
+<div class="ab eyebrow" style="left:1072px;top:262px;width:472px">Roadmap themes &nbsp;·&nbsp; direction only</div>
+
+<div class="ab" style="left:76px;top:312px;width:400px"><span class="stamp ink">Nothing here is a build</span></div>
+<div class="ab" style="left:584px;top:312px;width:400px"><span class="stamp ink">Scoped in discovery</span></div>
+<div class="ab" style="left:1092px;top:312px;width:400px"><span class="stamp">No commitment implied</span></div>
+
+<!-- band 1 -->
+<div class="ab lbl" style="left:104px;top:347px;width:404px">MAKE, the orchestration layer</div>
+<div class="ab lbl" style="left:104px;top:387px;width:404px">One connected space, with versioning and approval</div>
+<div class="ab lbl" style="left:104px;top:427px;width:404px">AI tasks, in use on our work</div>
+<div class="ab lbl" style="left:104px;top:467px;width:404px">Open middleware and third-party connectors</div>
+<div class="ab lbl" style="left:104px;top:507px;width:404px">Modular component production</div>
+<div class="ab lbl" style="left:104px;top:547px;width:404px">Assisted, augmented and automated as routes</div>
+<div class="ab xs" style="left:76px;top:586px;width:432px">Every item here is on a slide earlier in this section, drawn solid.</div>
+
+<!-- band 2 -->
+<div class="ab lbl" style="left:612px;top:347px;width:404px">Connect your DAM, in and out</div>
+<div class="ab lbl" style="left:612px;top:395px;width:404px">Map your metadata to the component registry</div>
+<div class="ab lbl" style="left:612px;top:443px;width:404px">Connect your review and approval process</div>
+<div class="ab lbl" style="left:612px;top:491px;width:404px">Connect your channel and e-commerce feeds</div>
+<div class="ab lbl amb b" style="left:612px;top:547px;width:404px">An answer on historic assets &nbsp;<span class="xs amb">(slide 11)</span></div>
+<div class="ab xs" style="left:584px;top:586px;width:432px">This column is the whole of the new work. It is connection, not construction.</div>
+
+<!-- band 3 -->
+<div class="ab lbl mut" style="left:1120px;top:343px;width:404px">Post-production compositing</div>
+<div class="ab xs" style="left:1120px;top:362px;width:404px">the one theme named in the discussion</div>
+<div class="ab lbl mut" style="left:1120px;top:395px;width:404px">Theme 2</div>
+<div class="ab" style="left:1120px;top:414px;width:404px"><span class="tbc">TBC</span></div>
+<div class="ab lbl mut" style="left:1120px;top:447px;width:404px">Theme 3</div>
+<div class="ab" style="left:1120px;top:466px;width:404px"><span class="tbc">TBC</span></div>
+<div class="ab lbl mut" style="left:1120px;top:499px;width:404px">Theme 4</div>
+<div class="ab" style="left:1120px;top:518px;width:404px"><span class="tbc">TBC</span></div>
+<div class="ab flag" style="left:1092px;top:540px;width:432px;padding:7px 9px 8px">
+  <span class="tag">OPEN</span>Only one theme came out of the discussion. <b>Needed from: the product roadmap owner.</b>
+</div>
+
+<!-- efficiency strip -->
+<div class="ab eyebrow ink" style="left:56px;top:642px;width:900px">And the direction the whole thing moves in</div>
+<div class="ab sm b" style="left:76px;top:684px;width:210px">More AI tasks in use</div>
+<div class="ab xs" style="left:76px;top:704px;width:210px">as the library fills and the roadmap lands</div>
+<div class="ab sm b rt" style="left:1200px;top:684px;width:328px">Efficiency curve rises</div>
+<div class="ab xs rt" style="left:1200px;top:704px;width:328px">directional only, and deliberately unnumbered. Slide 13 shows the shape.</div>
+
+<div class="foot">Technology section &nbsp;·&nbsp; storyboard for narrative agreement<span class="r">12 / 15</span></div>
+</section>
+<!-- ============================ SLIDE 13 ============================ -->
+<section class="slide" id="s13">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"/></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"/></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"/><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"/></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"/><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"/></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"/></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"/></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"/></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" class="ln-h"/>
+
+  <!-- axes, deliberately unnumbered -->
+  <line x1="320" y1="276" x2="320" y2="614" class="ln"/>
+  <line x1="320" y1="614" x2="1316" y2="614" class="ln"/>
+  <line x1="568" y1="286" x2="568" y2="614" class="ln-h"/>
+  <line x1="816" y1="286" x2="816" y2="614" class="ln-h"/>
+  <line x1="1064" y1="286" x2="1064" y2="614" class="ln-h"/>
+
+  <!-- your effort : front-loaded, then falls away -->
+  <path d="M320,312 C 430,312 480,458 600,512 C 760,578 1000,586 1300,590" class="ln-b" stroke-width="2.6"/>
+  <circle cx="320" cy="312" r="5" fill="#245FA6"/>
+  <!-- ours : rises as more AI tasks come online -->
+  <path d="M320,580 C 520,574 630,524 800,472 C 990,414 1150,372 1300,338" class="ln-2"/>
+  <circle cx="320" cy="580" r="5" fill="#111"/>
+
+  <!-- the bounded ask -->
+  <rect x="56" y="292" width="238" height="156" class="n-c"/>
+  <line x1="296" y1="312" x2="314" y2="312" class="ln-b" marker-end="url(#ahb)"/>
+
+  <line x1="56" y1="676" x2="1544" y2="676" class="ln-h"/>
+</svg>
+
+<div class="kick"><em>07</em> &nbsp;·&nbsp; Today and next</div>
+<div class="h1">Your effort is front-loaded and then falls away.<br>Ours rises as more AI tasks come online.</div>
+<div class="sub" style="top:162px;width:1300px">Directional only. Both axes are deliberately unnumbered. Nothing on this slide is quantified, and nothing will be until the efficiency target is defined.</div>
+
+<div class="ab" style="left:1180px;top:238px;width:364px;text-align:right"><span class="stamp">Shape of the relationship &nbsp;·&nbsp; no units</span></div>
+
+<!-- the bounded ask -->
+<div class="ab eyebrow blu" style="left:56px;top:268px;width:280px">What we need from you</div>
+<div class="ab" style="left:74px;top:306px;width:202px">
+  <div class="sm b blu">All of it, in one list</div>
+  <div class="xs" style="margin-top:9px;line-height:1.85;color:#4a6d99">
+    DAM access and your metadata schema<br>
+    Named approvers and approval rules<br>
+    Brand, claims and legal rules<br>
+    A decision on historic assets (slide 11)
+  </div>
+</div>
+<div class="ab xs" style="left:56px;top:462px;width:238px"><b>This is the effort you were worried about.</b> It is named, it is bounded, and it happens once.</div>
+
+<!-- curve labels -->
+
+<div class="ab sm b" style="left:1330px;top:322px;width:214px">Share of the sequence carried by AI tasks</div>
+<div class="ab xs" style="left:1330px;top:362px;width:214px">rises as the task library fills and roadmap themes land. Slide 12 lists them.</div>
+<div class="ab sm b blu" style="left:1330px;top:560px;width:214px">Your effort</div>
+<div class="ab xs" style="left:1330px;top:582px;width:214px;color:#4a6d99">settles below where it sits today, because second markets order rather than re-brief.</div>
+
+<!-- phases -->
+<div class="ab eyebrow ink ctr" style="left:320px;top:626px;width:248px">Integrate</div>
+<div class="ab eyebrow ink ctr" style="left:568px;top:626px;width:248px">First briefs</div>
+<div class="ab eyebrow ink ctr" style="left:816px;top:626px;width:248px">Steady state</div>
+<div class="ab eyebrow ink ctr" style="left:1064px;top:626px;width:252px">Scale</div>
+<div class="ab xs ctr" style="left:320px;top:646px;width:248px">the one-off ask, above</div>
+<div class="ab xs ctr" style="left:568px;top:646px;width:248px">first deliverables through MAKE</div>
+<div class="ab xs ctr" style="left:816px;top:646px;width:248px">second markets start ordering</div>
+<div class="ab xs ctr" style="left:1064px;top:646px;width:252px">more formats, more markets, same team</div>
+
+<!-- bottom -->
+<div class="ab note" style="left:56px;top:696px;width:730px">
+  <span class="tag">WHY THIS SLIDE IS UNNUMBERED</span><br>
+  <span style="display:block;margin-top:8px">A number on either axis would be the most quotable thing in the whole section, and the most damaging one if we cannot stand behind it. <b>The shape is defensible today. The numbers are not.</b></span>
+</div>
+<div class="ab flag" style="left:814px;top:696px;width:730px">
+  <span class="tag">OPEN</span><b>The 80% target belongs on this chart,</b> and it is the thing that would turn a shape into a commitment. It cannot go on until it is defined: 80% of what, by when, measured how, against which baseline.
+  <span style="display:block;margin-top:5px">Same open item as slide 02. <b>One answer unlocks both slides.</b></span>
+</div>
+
+<div class="foot">Technology section &nbsp;·&nbsp; storyboard for narrative agreement<span class="r">13 / 15</span></div>
+</section>
+<!-- ============================ SLIDE 14 ============================ -->
+<section class="slide" id="s14">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"/></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"/></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"/><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"/></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"/><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"/></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"/></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"/></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"/></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" class="ln-h"/>
+
+  <!-- track A : the thirteen slides that carry the written argument -->
+  <g class="n">
+    <rect x="56"   y="282" width="104" height="58"/><rect x="171"  y="282" width="104" height="58"/>
+    <rect x="286"  y="282" width="104" height="58"/><rect x="401"  y="282" width="104" height="58"/>
+    <rect x="516"  y="282" width="104" height="58"/><rect x="631"  y="282" width="104" height="58"/>
+    <rect x="746"  y="282" width="104" height="58"/><rect x="861"  y="282" width="104" height="58"/>
+    <rect x="976"  y="282" width="104" height="58"/><rect x="1091" y="282" width="104" height="58"/>
+    <rect x="1206" y="282" width="104" height="58"/><rect x="1321" y="282" width="104" height="58"/>
+    <rect x="1436" y="282" width="104" height="58"/>
+  </g>
+  <line x1="56" y1="360" x2="1540" y2="360" class="ln-h"/>
+
+  <!-- what the section must answer -->
+  <g class="n"><rect x="56" y="412" width="16" height="16"/><rect x="56" y="452" width="16" height="16"/><rect x="56" y="492" width="16" height="16"/></g>
+  <g stroke="#111" stroke-width="2" fill="none">
+    <path d="M59,420 l3,4 l7,-9"/><path d="M59,460 l3,4 l7,-9"/><path d="M59,500 l3,4 l7,-9"/>
+  </g>
+  <rect x="984" y="386" width="556" height="146" class="n-f"/>
+  <line x1="984" y1="462" x2="1540" y2="462" class="ln-h"/>
+
+  <!-- track B : the live day -->
+  <line x1="56" y1="556" x2="748" y2="556" class="ln-h"/>
+  <line x1="930" y1="556" x2="1544" y2="556" class="ln-h"/>
+  <rect x="56"   y="596" width="272" height="96" class="n"/>
+  <rect x="356"  y="596" width="240" height="96" class="n"/>
+  <rect x="624"  y="596" width="200" height="96" class="n"/>
+  <rect x="852"  y="596" width="280" height="96" class="n"/>
+  <rect x="1160" y="596" width="150" height="96" class="n"/>
+  <rect x="1338" y="596" width="206" height="96" class="n-o"/>
+  <line x1="330" y1="644" x2="352" y2="644" class="ln" marker-end="url(#ah2)"/>
+  <line x1="598" y1="644" x2="620" y2="644" class="ln" marker-end="url(#ah2)"/>
+  <line x1="826" y1="644" x2="848" y2="644" class="ln" marker-end="url(#ah2)"/>
+  <line x1="1134" y1="644" x2="1156" y2="644" class="ln" marker-end="url(#ah2)"/>
+  <line x1="1312" y1="644" x2="1334" y2="644" class="ln" marker-end="url(#ah2)"/>
+  <!-- the hand-over point -->
+  <path d="M838,580 L838,596" class="ln-a"/>
+  <circle cx="838" cy="574" r="6" fill="#B8690F"/>
+</svg>
+
+<div class="kick"><em>08</em> &nbsp;·&nbsp; Running order</div>
+<div class="h1">The written submission carries the whole argument.<br>The live session adds proof, not new story.</div>
+<div class="sub" style="top:162px;width:1320px">Two tracks. One is what they read with nobody in the room to explain it. The other is what happens on the day, where the demonstration lead runs the chosen scenarios in the live technology.</div>
+
+<div class="ab eyebrow ink" style="left:56px;top:260px;width:800px">Track A &nbsp;·&nbsp; written submission &nbsp;·&nbsp; slides 01 to 13 of this section</div>
+
+<div class="ab tnum ctr" style="left:56px;top:304px;width:104px">01</div>
+<div class="ab tnum ctr" style="left:171px;top:304px;width:104px">02</div>
+<div class="ab tnum ctr" style="left:286px;top:304px;width:104px">03</div>
+<div class="ab tnum ctr" style="left:401px;top:304px;width:104px">04</div>
+<div class="ab tnum ctr" style="left:516px;top:304px;width:104px">05</div>
+<div class="ab tnum ctr" style="left:631px;top:304px;width:104px">06</div>
+<div class="ab tnum ctr" style="left:746px;top:304px;width:104px">07</div>
+<div class="ab tnum ctr" style="left:861px;top:304px;width:104px">08</div>
+<div class="ab tnum ctr" style="left:976px;top:304px;width:104px">09</div>
+<div class="ab tnum ctr" style="left:1091px;top:304px;width:104px">10</div>
+<div class="ab tnum ctr" style="left:1206px;top:304px;width:104px">11</div>
+<div class="ab tnum ctr" style="left:1321px;top:304px;width:104px">12</div>
+<div class="ab tnum ctr" style="left:1436px;top:304px;width:104px">13</div>
+<div class="ab xs ctr" style="left:56px;top:322px;width:104px">objection</div>
+<div class="ab xs ctr" style="left:171px;top:322px;width:104px">modularity</div>
+<div class="ab xs ctr" style="left:286px;top:322px;width:104px">routes</div>
+<div class="ab xs ctr" style="left:401px;top:322px;width:104px">MAKE today</div>
+<div class="ab xs ctr" style="left:516px;top:322px;width:104px">orchestration</div>
+<div class="ab xs ctr" style="left:631px;top:322px;width:104px">modules</div>
+<div class="ab xs ctr" style="left:746px;top:322px;width:104px">module detail</div>
+<div class="ab xs ctr" style="left:861px;top:322px;width:104px">AI tasks</div>
+<div class="ab xs ctr" style="left:976px;top:322px;width:104px">your DAM</div>
+<div class="ab xs ctr" style="left:1091px;top:322px;width:104px">ordering</div>
+<div class="ab xs ctr" style="left:1206px;top:322px;width:104px">back catalogue</div>
+<div class="ab xs ctr" style="left:1321px;top:322px;width:104px">today / next</div>
+<div class="ab xs ctr" style="left:1436px;top:322px;width:104px">effort</div>
+
+<div class="ab eyebrow" style="left:56px;top:380px;width:900px">What the technology section has to answer, and where it is answered</div>
+<div class="ab lbl" style="left:88px;top:410px;width:700px">Integration, data and portability <span class="numchip" style="margin-left:8px">04</span><span class="numchip">09</span></div>
+<div class="ab lbl" style="left:88px;top:450px;width:700px">All the tools from brief through to delivery <span class="numchip" style="margin-left:8px">03</span><span class="numchip">04</span><span class="numchip">05</span><span class="numchip">08</span></div>
+<div class="ab lbl" style="left:88px;top:490px;width:700px">Tracking what has already been executed, so second-market demand is ordered, not re-briefed <span class="numchip" style="margin-left:8px">09</span><span class="numchip">10</span></div>
+
+<div class="ab" style="left:1004px;top:398px;width:516px">
+  <div class="eyebrow ink" style="font-size:9.5px">In the written submission</div>
+  <div class="lbl" style="margin-top:6px">One slide showing the whole AI task set, because that is what answers their question about pre, mid and post production.</div>
+</div>
+<div class="ab" style="left:1004px;top:474px;width:516px">
+  <div class="eyebrow" style="font-size:9.5px">Not in the written submission</div>
+  <div class="lbl mut" style="margin-top:6px">A separate AI task diagram per scenario. Considered and ruled out. Live session only.</div>
+</div>
+
+<!-- track B -->
+<div class="ab eyebrow ink" style="left:56px;top:526px;width:800px">Track B &nbsp;·&nbsp; the live session</div>
+<div class="ab" style="left:76px;top:612px;width:232px"><div class="lbl b">This technology section</div><div class="xs" style="margin-top:5px">presented live, the same story as the written submission</div></div>
+<div class="ab" style="left:376px;top:612px;width:200px"><div class="lbl b">Scenario board</div><div class="xs" style="margin-top:5px">all scenarios on one slide, slide 15</div></div>
+<div class="ab" style="left:644px;top:612px;width:160px"><div class="lbl b">They pick two</div><div class="xs" style="margin-top:5px">their choice, live, in the room</div></div>
+<div class="ab" style="left:872px;top:612px;width:240px"><div class="lbl b">Demonstration lead runs them</div><div class="xs" style="margin-top:5px">in the actual technology, not a recording</div></div>
+<div class="ab" style="left:1180px;top:618px;width:110px"><div class="lbl b">Section closes</div></div>
+<div class="ab" style="left:1358px;top:612px;width:166px"><div class="lbl b amb">Commercial, transition, commitment</div><div class="xs amb" style="margin-top:5px">order for the day not agreed</div></div>
+<div class="ab xs amb ctr" style="left:758px;top:550px;width:160px">hand-over point</div>
+
+<!-- bottom -->
+<div class="ab flag" style="left:56px;top:722px;width:1488px">
+  <span class="tag">OPEN</span><b>There is no agreed running order for the live day.</b> The written submission structure is settled: technology, then commercial, then the quality and assurance section. The live day is not. The technology section needs to know what it is handing to, and how long it has, before the scenario board on slide 15 can be finalised. <b>Needed from: whoever owns the day.</b>
+</div>
+
+<div class="foot">Technology section &nbsp;·&nbsp; storyboard for narrative agreement<span class="r">14 / 15</span></div>
+</section>
+<!-- ============================ SLIDE 15 ============================ -->
+<section class="slide" id="s15">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"/></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"/></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"/><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"/></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"/><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"/></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"/></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"/></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"/><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"/></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" class="ln-h"/>
+
+  <!-- six scenario cards, every one a labelled slot -->
+  <g class="n">
+    <rect x="56"   y="272" width="472" height="222"/><rect x="564"  y="272" width="472" height="222"/>
+    <rect x="1072" y="272" width="472" height="222"/><rect x="56"   y="510" width="472" height="222"/>
+    <rect x="564"  y="510" width="472" height="222"/><rect x="1072" y="510" width="472" height="222"/>
+  </g>
+  <g class="ln-h">
+    <line x1="56" y1="312" x2="528" y2="312"/><line x1="564" y1="312" x2="1036" y2="312"/><line x1="1072" y1="312" x2="1544" y2="312"/>
+    <line x1="56" y1="550" x2="528" y2="550"/><line x1="564" y1="550" x2="1036" y2="550"/><line x1="1072" y1="550" x2="1544" y2="550"/>
+  </g>
+  <!-- name slots -->
+  <g class="n-gh">
+    <rect x="76" y="324" width="330" height="30"/><rect x="584" y="324" width="330" height="30"/><rect x="1092" y="324" width="330" height="30"/>
+    <rect x="76" y="562" width="330" height="30"/><rect x="584" y="562" width="330" height="30"/><rect x="1092" y="562" width="330" height="30"/>
+  </g>
+  <!-- pick boxes -->
+  <g class="n">
+    <rect x="482" y="322" width="26" height="26"/><rect x="990" y="322" width="26" height="26"/><rect x="1498" y="322" width="26" height="26"/>
+    <rect x="482" y="560" width="26" height="26"/><rect x="990" y="560" width="26" height="26"/><rect x="1498" y="560" width="26" height="26"/>
+  </g>
+  <!-- thumbnail placeholders -->
+  <g class="n-gh">
+    <rect x="76" y="366" width="178" height="100"/><rect x="584" y="366" width="178" height="100"/><rect x="1092" y="366" width="178" height="100"/>
+    <rect x="76" y="604" width="178" height="100"/><rect x="584" y="604" width="178" height="100"/><rect x="1092" y="604" width="178" height="100"/>
+  </g>
+  <g stroke="#d4d4d4" stroke-width="1.2">
+    <line x1="76" y1="366" x2="254" y2="466"/><line x1="76" y1="466" x2="254" y2="366"/>
+    <line x1="584" y1="366" x2="762" y2="466"/><line x1="584" y1="466" x2="762" y2="366"/>
+    <line x1="1092" y1="366" x2="1270" y2="466"/><line x1="1092" y1="466" x2="1270" y2="366"/>
+    <line x1="76" y1="604" x2="254" y2="704"/><line x1="76" y1="704" x2="254" y2="604"/>
+    <line x1="584" y1="604" x2="762" y2="704"/><line x1="584" y1="704" x2="762" y2="604"/>
+    <line x1="1092" y1="604" x2="1270" y2="704"/><line x1="1092" y1="704" x2="1270" y2="604"/>
+  </g>
+  <!-- module glyph rows, carried from slide 06 -->
+  <g class="n-gh">
+    <rect x="270" y="458" width="18" height="18"/><rect x="292" y="458" width="18" height="18"/><rect x="314" y="458" width="18" height="18"/><rect x="336" y="458" width="18" height="18"/>
+    <rect x="358" y="458" width="18" height="18"/><rect x="380" y="458" width="18" height="18"/><rect x="402" y="458" width="18" height="18"/><rect x="424" y="458" width="18" height="18"/>
+    <rect x="778" y="458" width="18" height="18"/><rect x="800" y="458" width="18" height="18"/><rect x="822" y="458" width="18" height="18"/><rect x="844" y="458" width="18" height="18"/>
+    <rect x="866" y="458" width="18" height="18"/><rect x="888" y="458" width="18" height="18"/><rect x="910" y="458" width="18" height="18"/><rect x="932" y="458" width="18" height="18"/>
+    <rect x="1286" y="458" width="18" height="18"/><rect x="1308" y="458" width="18" height="18"/><rect x="1330" y="458" width="18" height="18"/><rect x="1352" y="458" width="18" height="18"/>
+    <rect x="1374" y="458" width="18" height="18"/><rect x="1396" y="458" width="18" height="18"/><rect x="1418" y="458" width="18" height="18"/><rect x="1440" y="458" width="18" height="18"/>
+    <rect x="270" y="696" width="18" height="18"/><rect x="292" y="696" width="18" height="18"/><rect x="314" y="696" width="18" height="18"/><rect x="336" y="696" width="18" height="18"/>
+    <rect x="358" y="696" width="18" height="18"/><rect x="380" y="696" width="18" height="18"/><rect x="402" y="696" width="18" height="18"/><rect x="424" y="696" width="18" height="18"/>
+    <rect x="778" y="696" width="18" height="18"/><rect x="800" y="696" width="18" height="18"/><rect x="822" y="696" width="18" height="18"/><rect x="844" y="696" width="18" height="18"/>
+    <rect x="866" y="696" width="18" height="18"/><rect x="888" y="696" width="18" height="18"/><rect x="910" y="696" width="18" height="18"/><rect x="932" y="696" width="18" height="18"/>
+    <rect x="1286" y="696" width="18" height="18"/><rect x="1308" y="696" width="18" height="18"/><rect x="1330" y="696" width="18" height="18"/><rect x="1352" y="696" width="18" height="18"/>
+    <rect x="1374" y="696" width="18" height="18"/><rect x="1396" y="696" width="18" height="18"/><rect x="1418" y="696" width="18" height="18"/><rect x="1440" y="696" width="18" height="18"/>
+  </g>
+</svg>
+
+<div class="kick amb"><em>09</em> &nbsp;·&nbsp; Live session only &nbsp;·&nbsp; not in the written submission</div>
+<div class="h1">Pick two. We will run them live, in the actual technology.</div>
+<div class="sub" style="top:130px;width:1360px">Scenario names, screenshots and clips have not been supplied, so every card below is a labelled storyboard slot. Nothing on this slide is invented, and the card count is a placeholder until the scenario list is confirmed.</div>
+
+<div class="ab" style="left:1180px;top:186px;width:364px;text-align:right"><span class="stamp amb">Storyboard slots &nbsp;·&nbsp; nothing fabricated</span></div>
+
+<!-- card 1 -->
+<div class="ab eyebrow ink" style="left:76px;top:286px;width:300px">Scenario 1</div>
+<div class="ab xs mut" style="left:440px;top:286px;width:68px;text-align:right">pick</div>
+<div class="ab xs mut ctr" style="left:76px;top:332px;width:330px">scenario name to be supplied</div>
+<div class="ab xs mut ctr" style="left:76px;top:400px;width:178px">screenshot or clip<br>to be supplied</div>
+<div class="ab xs" style="left:270px;top:372px;width:238px"><b>What it shows</b><br><span class="mut">to be supplied</span></div>
+<div class="ab xs" style="left:270px;top:412px;width:238px"><b>Route</b> &nbsp;<span class="mut">assisted / augmented / automated</span></div>
+<div class="ab xs" style="left:270px;top:438px;width:238px"><b>Modules used</b> <span class="mut">(slide 06)</span></div>
+
+<!-- card 2 -->
+<div class="ab eyebrow ink" style="left:584px;top:286px;width:300px">Scenario 2</div>
+<div class="ab xs mut" style="left:948px;top:286px;width:68px;text-align:right">pick</div>
+<div class="ab xs mut ctr" style="left:584px;top:332px;width:330px">scenario name to be supplied</div>
+<div class="ab xs mut ctr" style="left:584px;top:400px;width:178px">screenshot or clip<br>to be supplied</div>
+<div class="ab xs" style="left:778px;top:372px;width:238px"><b>What it shows</b><br><span class="mut">to be supplied</span></div>
+<div class="ab xs" style="left:778px;top:412px;width:238px"><b>Route</b> &nbsp;<span class="mut">assisted / augmented / automated</span></div>
+<div class="ab xs" style="left:778px;top:438px;width:238px"><b>Modules used</b> <span class="mut">(slide 06)</span></div>
+
+<!-- card 3 -->
+<div class="ab eyebrow ink" style="left:1092px;top:286px;width:300px">Scenario 3</div>
+<div class="ab xs mut" style="left:1456px;top:286px;width:68px;text-align:right">pick</div>
+<div class="ab xs mut ctr" style="left:1092px;top:332px;width:330px">scenario name to be supplied</div>
+<div class="ab xs mut ctr" style="left:1092px;top:400px;width:178px">screenshot or clip<br>to be supplied</div>
+<div class="ab xs" style="left:1286px;top:372px;width:238px"><b>What it shows</b><br><span class="mut">to be supplied</span></div>
+<div class="ab xs" style="left:1286px;top:412px;width:238px"><b>Route</b> &nbsp;<span class="mut">assisted / augmented / automated</span></div>
+<div class="ab xs" style="left:1286px;top:438px;width:238px"><b>Modules used</b> <span class="mut">(slide 06)</span></div>
+
+<!-- card 4 -->
+<div class="ab eyebrow ink" style="left:76px;top:524px;width:300px">Scenario 4</div>
+<div class="ab xs mut" style="left:440px;top:524px;width:68px;text-align:right">pick</div>
+<div class="ab xs mut ctr" style="left:76px;top:570px;width:330px">scenario name to be supplied</div>
+<div class="ab xs mut ctr" style="left:76px;top:638px;width:178px">screenshot or clip<br>to be supplied</div>
+<div class="ab xs" style="left:270px;top:610px;width:238px"><b>What it shows</b><br><span class="mut">to be supplied</span></div>
+<div class="ab xs" style="left:270px;top:650px;width:238px"><b>Route</b> &nbsp;<span class="mut">assisted / augmented / automated</span></div>
+<div class="ab xs" style="left:270px;top:676px;width:238px"><b>Modules used</b> <span class="mut">(slide 06)</span></div>
+
+<!-- card 5 -->
+<div class="ab eyebrow ink" style="left:584px;top:524px;width:300px">Scenario 5</div>
+<div class="ab xs mut" style="left:948px;top:524px;width:68px;text-align:right">pick</div>
+<div class="ab xs mut ctr" style="left:584px;top:570px;width:330px">scenario name to be supplied</div>
+<div class="ab xs mut ctr" style="left:584px;top:638px;width:178px">screenshot or clip<br>to be supplied</div>
+<div class="ab xs" style="left:778px;top:610px;width:238px"><b>What it shows</b><br><span class="mut">to be supplied</span></div>
+<div class="ab xs" style="left:778px;top:650px;width:238px"><b>Route</b> &nbsp;<span class="mut">assisted / augmented / automated</span></div>
+<div class="ab xs" style="left:778px;top:676px;width:238px"><b>Modules used</b> <span class="mut">(slide 06)</span></div>
+
+<!-- card 6 -->
+<div class="ab eyebrow" style="left:1092px;top:524px;width:300px">Scenario 6 &nbsp;<span class="xs">if there is one</span></div>
+<div class="ab xs mut" style="left:1456px;top:524px;width:68px;text-align:right">pick</div>
+<div class="ab xs mut ctr" style="left:1092px;top:570px;width:330px">scenario name to be supplied</div>
+<div class="ab xs mut ctr" style="left:1092px;top:638px;width:178px">screenshot or clip<br>to be supplied</div>
+<div class="ab xs" style="left:1286px;top:610px;width:238px"><b>What it shows</b><br><span class="mut">to be supplied</span></div>
+<div class="ab xs" style="left:1286px;top:650px;width:238px"><b>Route</b> &nbsp;<span class="mut">assisted / augmented / automated</span></div>
+<div class="ab xs" style="left:1286px;top:676px;width:238px"><b>Modules used</b> <span class="mut">(slide 06)</span></div>
+
+<!-- bottom -->
+<div class="ab flag" style="left:56px;top:752px;width:1488px">
+  <span class="tag">OPEN</span><b>Everything on this slide is waiting on the demonstration lead:</b> how many scenarios there are, what they are called, what each one proves, and the screenshots or clips that go on the cards. The card count of six is a placeholder. <b>This is the last slide of the technology section and the only one that cannot be finished without material we do not hold.</b>
+</div>
+
+<div class="foot">Technology section &nbsp;·&nbsp; storyboard for narrative agreement<span class="r">15 / 15</span></div>
+</section>
+</body>
+</html>

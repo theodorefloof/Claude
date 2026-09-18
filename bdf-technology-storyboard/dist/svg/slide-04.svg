@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="900" viewBox="0 0 1600 900">
+<rect x="0" y="0" width="1600" height="900" fill="#ffffff"/>
+<g id="geometry"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"></path></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"></path></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"></path></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"></path></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"></path></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"></path></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"></circle></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"></line></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"></line></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"></line></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"></circle><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"></path></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"></circle><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"></path></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- your systems (left, client-owned, connected by integration work) -->
+  <rect x="56" y="290" width="356" height="76" fill="rgb(233, 240, 249)" stroke="rgb(36, 95, 166)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="56" y="378" width="356" height="76" fill="rgb(233, 240, 249)" stroke="rgb(36, 95, 166)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="56" y="466" width="356" height="76" fill="rgb(233, 240, 249)" stroke="rgb(36, 95, 166)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="56" y="554" width="356" height="76" fill="rgb(233, 240, 249)" stroke="rgb(36, 95, 166)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <path d="M412,328 C 445,328 450,400 478,400" marker-end="url(#ahb)" fill="none" stroke="rgb(36, 95, 166)" stroke-width="1.6" stroke-dasharray="6, 4" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <path d="M412,416 C 445,416 450,430 478,430" marker-end="url(#ahb)" fill="none" stroke="rgb(36, 95, 166)" stroke-width="1.6" stroke-dasharray="6, 4" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <path d="M412,504 C 445,504 450,480 478,480" marker-end="url(#ahb)" fill="none" stroke="rgb(36, 95, 166)" stroke-width="1.6" stroke-dasharray="6, 4" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <path d="M412,592 C 445,592 450,510 478,510" marker-end="url(#ahb)" fill="none" stroke="rgb(36, 95, 166)" stroke-width="1.6" stroke-dasharray="6, 4" stroke-linecap="butt" stroke-linejoin="miter"></path>
+
+  <!-- MAKE -->
+  <rect x="484" y="268" width="632" height="374" stroke-width="1.6" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <line x1="484" y1="352" x2="1116" y2="352" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <rect x="516" y="382" width="568" height="146" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <!-- open middleware strip with connector sockets -->
+  <rect x="516" y="552" width="568" height="66" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <circle cx="576" cy="552" r="9" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></circle>
+  <circle cx="676" cy="552" r="9" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></circle>
+  <circle cx="776" cy="552" r="9" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></circle>
+  <circle cx="876" cy="552" r="9" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></circle>
+  <circle cx="976" cy="552" r="9" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></circle>
+  <circle cx="1040" cy="552" r="9" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></circle>
+  <line x1="516" y1="552" x2="1084" y2="552" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- third-party tools (right, already connected) -->
+  <rect x="1188" y="290" width="356" height="76" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1188" y="378" width="356" height="76" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1188" y="466" width="356" height="76" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1188" y="554" width="356" height="76" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-dasharray="7, 5" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <path d="M1120,400 C 1150,400 1152,328 1182,328" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <path d="M1120,430 C 1150,430 1152,416 1182,416" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <path d="M1120,480 C 1150,480 1152,504 1182,504" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <path d="M1120,510 C 1150,510 1152,592 1182,592" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-dasharray="7, 5" stroke-linecap="butt" stroke-linejoin="miter"></path>
+
+  <line x1="56" y1="672" x2="1544" y2="672" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+</g>
+<g id="boxes-and-text">
+<rect x="1254.48" y="238" width="24" height="13" rx="1.5" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1343.89" y="238" width="24" height="13" rx="1.5" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1" stroke-dasharray="4.0 3.0"/>
+<rect x="1472.94" y="238" width="24" height="13" rx="1.5" fill="rgb(233, 240, 249)" stroke="rgb(36, 95, 166)" stroke-width="1"/>
+<rect x="56" y="694" width="730" height="79.64" rx="2" fill="rgb(255, 255, 255)" stroke="rgb(212, 212, 212)" stroke-width="1"/>
+<rect x="68" y="704" width="161.81" height="17.98" rx="2" fill="rgb(17, 17, 17)" stroke="none"/>
+<rect x="814" y="694" width="730" height="76.64" rx="2" fill="rgb(251, 240, 223)" stroke="rgb(184, 105, 15)" stroke-width="1"/>
+<rect x="826" y="704" width="43.88" height="17.98" rx="2" fill="rgb(184, 105, 15)" stroke="none"/>
+<text x="56" y="55.16" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.92" xml:space="preserve">03</text>
+<text x="73.2" y="55.16" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.92" xml:space="preserve">  ·  THE TECHNOLOGY</text>
+<text x="56" y="100.24" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" letter-spacing="-0.37" xml:space="preserve">MAKE is the orchestration layer our teams already use.</text>
+<text x="56" y="137.12" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" letter-spacing="-0.37" xml:space="preserve">Proprietary core, open edges.</text>
+<text x="56" y="177.7" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="15" xml:space="preserve">Read the outlines. Solid means built and running on our work today. Dashed means integration. Everything new in this proposal is on the left of this diagram, and it is </text>
+<text x="56" y="199.45" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="15" xml:space="preserve">connection work, not platform work.</text>
+<text x="1285.48" y="247.97" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="0.9" xml:space="preserve">TODAY</text>
+<text x="1374.89" y="247.97" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="0.9" xml:space="preserve">INTEGRATION</text>
+<text x="1503.94" y="247.97" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="0.9" xml:space="preserve">YOURS</text>
+<text x="56" y="271.64" fill="rgb(36, 95, 166)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">YOURS  ·  CONNECTED DURING INTEGRATION</text>
+<text x="72" y="321" fill="rgb(36, 95, 166)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">Your DAM</text>
+<text x="72" y="337.26" fill="rgb(74, 109, 153)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">source of truth for assets and metadata</text>
+<text x="72" y="409" fill="rgb(36, 95, 166)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">Your brand, claims and legal rules</text>
+<text x="72" y="425.26" fill="rgb(74, 109, 153)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">what any output is allowed to say</text>
+<text x="72" y="497" fill="rgb(36, 95, 166)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">Your review and approval</text>
+<text x="72" y="513.26" fill="rgb(74, 109, 153)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">your approvers, in your process</text>
+<text x="72" y="585" fill="rgb(36, 95, 166)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">Your channels and e-commerce feeds</text>
+<text x="72" y="601.26" fill="rgb(74, 109, 153)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">where finished outputs have to land</text>
+<text x="799.99" y="321.86" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" letter-spacing="-0.8" text-anchor="middle" xml:space="preserve">MAKE</text>
+<text x="799.99" y="346.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.26" text-anchor="middle" xml:space="preserve">ORCHESTRATION LAYER  ·  EXISTS TODAY</text>
+<text x="532" y="409.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">PROPRIETARY CORE</text>
+<text x="547" y="436.98" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">Routes a brief through the production sequence</text>
+<text x="547" y="457.39" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">Holds versions, review and approval in one connected space</text>
+<text x="547" y="477.8" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">Runs AI tasks against briefs, assets and outputs</text>
+<text x="799.99" y="579.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" text-anchor="middle" xml:space="preserve">OPEN MIDDLEWARE</text>
+<text x="799.99" y="599.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">Any third-party tool plugs in here. Tools change without the layer changing.</text>
+<text x="1188" y="271.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">TOOLS WE ORCHESTRATE  ·  ALREADY CONNECTED</text>
+<text x="1204" y="321" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">Generation tools</text>
+<text x="1204" y="337.26" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">named tools confirmed separately, see flag below</text>
+<text x="1204" y="409" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">Editing and compositing tools</text>
+<text x="1204" y="425.26" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">in use on our work today</text>
+<text x="1204" y="497" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">Translation and localisation tools</text>
+<text x="1204" y="513.26" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">in use on our work today</text>
+<text x="1204" y="585" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">Anything you already use</text>
+<text x="1204" y="601.26" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">connected as a plug-in, not replaced</text>
+<text x="74" y="715.79" fill="rgb(255, 255, 255)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.24" xml:space="preserve">THE POINT OF THIS SLIDE</text>
+<text x="68" y="741.97" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">The middleware is the answer to “it needs building”.</text>
+<text x="354.28" y="741.97" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve"> The orchestration layer is built. Tools plug into it and can be swapped without </text>
+<text x="68" y="758.3" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">rebuilding anything. Nothing in this proposal asks you to replace a tool you already run, and nothing waits on a platform being finished.</text>
+<text x="832" y="715.79" fill="rgb(255, 255, 255)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.24" xml:space="preserve">OPEN</text>
+<text x="876.88" y="716.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">Tool names are deliberately absent.</text>
+<text x="1070.97" y="716.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve"> The split between the creation tool and the aggregating tool for the live demonstration has </text>
+<text x="826" y="733.97" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">not been confirmed, and what was shown in preparation was not the tool intended for the pitch.
+  </text>
+<text x="826" y="755.3" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">Until the demo lead confirms, naming tools here risks contradicting the live session. </text>
+<text x="1252.98" y="755.3" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">Needed before: the live rehearsal.</text>
+<text x="56" y="863.64" fill="rgb(154, 154, 154)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" letter-spacing="1.16" xml:space="preserve">TECHNOLOGY SECTION  ·  STORYBOARD FOR NARRATIVE AGREEMENT</text>
+<text x="1503.8" y="863.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" letter-spacing="1.16" xml:space="preserve">04 / 15</text>
+</g>
+</svg>

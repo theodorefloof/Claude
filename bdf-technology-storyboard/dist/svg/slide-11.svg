@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="900" viewBox="0 0 1600 900">
+<rect x="0" y="0" width="1600" height="900" fill="#ffffff"/>
+<g id="geometry"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"></path></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"></path></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"></path></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"></path></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"></path></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"></path></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"></circle></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"></line></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"></line></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"></line></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"></circle><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"></path></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"></circle><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"></path></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- the DAM, split -->
+  <rect x="56" y="290" width="912" height="198" fill="url(&quot;#hx&quot;)" stroke="rgb(184, 105, 15)" stroke-width="1.8" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="992" y="290" width="552" height="198" stroke-width="1.6" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <line x1="980" y1="276" x2="980" y2="502" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- historic : ghosted components, blank metadata -->
+  <g fill="rgb(255, 255, 255)" stroke="rgb(212, 212, 212)" stroke-width="1.4" stroke-dasharray="5, 4" stroke-linecap="butt" stroke-linejoin="miter">
+    <rect x="80" y="352" width="26" height="26" fill="rgb(255, 255, 255)" stroke="rgb(212, 212, 212)" stroke-width="1.4" stroke-dasharray="5, 4" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="112" y="352" width="26" height="26" fill="rgb(255, 255, 255)" stroke="rgb(212, 212, 212)" stroke-width="1.4" stroke-dasharray="5, 4" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="144" y="352" width="26" height="26" fill="rgb(255, 255, 255)" stroke="rgb(212, 212, 212)" stroke-width="1.4" stroke-dasharray="5, 4" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="176" y="352" width="26" height="26" fill="rgb(255, 255, 255)" stroke="rgb(212, 212, 212)" stroke-width="1.4" stroke-dasharray="5, 4" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="208" y="352" width="26" height="26" fill="rgb(255, 255, 255)" stroke="rgb(212, 212, 212)" stroke-width="1.4" stroke-dasharray="5, 4" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="240" y="352" width="26" height="26" fill="rgb(255, 255, 255)" stroke="rgb(212, 212, 212)" stroke-width="1.4" stroke-dasharray="5, 4" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  </g>
+  <line x1="300" y1="356" x2="500" y2="356" stroke="rgb(169, 126, 63)" stroke-width="2" stroke-dasharray="7, 6" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="300" y1="386" x2="440" y2="386" stroke="rgb(169, 126, 63)" stroke-width="2" stroke-dasharray="7, 6" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="300" y1="416" x2="500" y2="416" stroke="rgb(169, 126, 63)" stroke-width="2" stroke-dasharray="7, 6" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="300" y1="446" x2="400" y2="446" stroke="rgb(169, 126, 63)" stroke-width="2" stroke-dasharray="7, 6" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- in-system : real components, full metadata -->
+  <g fill="rgb(0, 0, 0)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter">
+    <rect x="1016" y="352" width="26" height="26" fill="rgb(17, 17, 17)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="1048" y="352" width="26" height="26" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="1080" y="352" width="26" height="26" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="1112" y="352" width="26" height="26" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="1144" y="352" width="26" height="26" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="1176" y="352" width="26" height="26" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  </g>
+  <line x1="1240" y1="356" x2="1420" y2="356" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1240" y1="386" x2="1460" y2="386" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1240" y1="416" x2="1400" y2="416" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1240" y1="446" x2="1440" y2="446" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <!-- it grows -->
+  <line x1="1000" y1="512" x2="1300" y2="512" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- three candidate responses -->
+  <rect x="56" y="572" width="472" height="164" fill="rgb(251, 240, 223)" stroke="rgb(184, 105, 15)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="564" y="572" width="472" height="164" fill="rgb(251, 240, 223)" stroke="rgb(184, 105, 15)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1072" y="572" width="472" height="164" fill="rgb(251, 240, 223)" stroke="rgb(184, 105, 15)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <line x1="76" y1="654" x2="508" y2="654" stroke="rgb(217, 169, 106)" stroke-width="1.2" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="584" y1="654" x2="1016" y2="654" stroke="rgb(217, 169, 106)" stroke-width="1.2" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1092" y1="654" x2="1524" y2="654" stroke="rgb(217, 169, 106)" stroke-width="1.2" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+</g>
+<g id="boxes-and-text">
+<rect x="56" y="760" width="1488" height="57.31" rx="2" fill="rgb(251, 240, 223)" stroke="rgb(184, 105, 15)" stroke-width="2"/>
+<rect x="69" y="771" width="245.95" height="17.98" rx="2" fill="rgb(184, 105, 15)" stroke="none"/>
+<text x="56" y="55.16" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.92" xml:space="preserve">06</text>
+<text x="73.2" y="55.16" fill="rgb(184, 105, 15)" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.92" xml:space="preserve">  ·  YOUR DATA  ·  OPEN ITEM</text>
+<text x="56" y="100.24" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" letter-spacing="-0.37" xml:space="preserve">Your back catalogue is the real dependency,</text>
+<text x="56" y="137.12" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" letter-spacing="-0.37" xml:space="preserve">and we do not yet have a technical answer for it.</text>
+<text x="56" y="177.7" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="15" xml:space="preserve">You raised this directly last round: the effort of going back through historic assets that were never catalogued properly. It is a fair challenge, it cannot be handed to a discovery workshop, and this is the </text>
+<text x="56" y="199.45" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="15" xml:space="preserve">honest position today.</text>
+<text x="56" y="271.64" fill="rgb(184, 105, 15)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">YOUR DAM TODAY  ·  HISTORIC BACK CATALOGUE</text>
+<text x="992" y="271.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">PRODUCED IN‑SYSTEM FROM DAY ONE</text>
+<text x="80" y="322.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">Not orderable as it stands.</text>
+<text x="80" y="401.64" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">no component breakdown</text>
+<text x="80" y="415.5" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">finished files only</text>
+<text x="300" y="475.64" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">metadata partial, inconsistent or absent</text>
+<text x="560" y="340.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">What is missing</text>
+<text x="560" y="366.04" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">component breakdown   </text>
+<text x="675" y="366.04" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">absent</text>
+<text x="560" y="384.42" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">usage rights recorded   </text>
+<text x="670.31" y="384.42" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">inconsistent</text>
+<text x="560" y="402.79" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">market and campaign tagged   </text>
+<text x="704.77" y="402.79" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">inconsistent</text>
+<text x="560" y="421.17" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">format variants linked   </text>
+<text x="668.55" y="421.17" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">absent</text>
+<text x="1016" y="322.98" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">Orderable from the moment it is made.</text>
+<text x="1016" y="401.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">full component</text>
+<text x="1016" y="415.5" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">breakdown</text>
+<text x="1240" y="475.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">production record complete, every field</text>
+<text x="1000" y="531.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">grows with every brief, from day one</text>
+<text x="56" y="555.64" fill="rgb(184, 105, 15)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">THREE CANDIDATE RESPONSES  ·  NONE OF THESE IS AGREED, COSTED OR COMMITTED</text>
+<text x="76" y="600.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">A   Automated enrichment at ingest</text>
+<text x="76" y="621.04" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">AI tasks read the existing files and write back component breakdowns, tags and usage </text>
+<text x="76" y="634.9" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">records.</text>
+<text x="76" y="673.64" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">Your effort:</text>
+<text x="132.39" y="673.64" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve"> low. </text>
+<text x="156.33" y="673.64" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">Our exposure:</text>
+<text x="228.11" y="673.64" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve"> high.</text>
+<text x="76" y="687.5" fill="rgb(184, 105, 15)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">Not established.</text>
+<text x="157.11" y="687.5" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve"> Nobody in the discussion could confirm this is technically possible at the </text>
+<text x="76" y="701.36" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">quality needed. Do not present it as available.
+</text>
+<text x="584" y="600.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">B   A dedicated curation resource</text>
+<text x="584" y="621.04" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">A named person assigned to organise, describe and maintain the back catalogue.</text>
+<text x="584" y="673.64" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">Your effort:</text>
+<text x="640.39" y="673.64" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve"> low. </text>
+<text x="664.33" y="673.64" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">Your cost:</text>
+<text x="715.48" y="673.64" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve"> a line item.</text>
+<text x="584" y="687.5" fill="rgb(184, 105, 15)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">Not included.</text>
+<text x="650.5" y="687.5" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve"> Offered on a previous pitch as a chargeable resource. If we propose it here, </text>
+<text x="584" y="701.36" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">somebody has to cost it first.
+</text>
+<text x="1092" y="600.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">C   Enrich on demand</text>
+<text x="1092" y="621.04" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">Nothing is touched until an asset is actually ordered. It is described at the point of reuse, </text>
+<text x="1092" y="634.9" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">once.</text>
+<text x="1092" y="673.64" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">Your effort:</text>
+<text x="1148.39" y="673.64" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve"> none up front. </text>
+<text x="1219.03" y="673.64" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">Coverage:</text>
+<text x="1270.39" y="673.64" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve"> slow.</text>
+<text x="1092" y="687.5" fill="rgb(184, 105, 15)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">Not discussed.</text>
+<text x="1166.69" y="687.5" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve"> Included here because it is the only option that needs neither a technical </text>
+<text x="1092" y="701.36" fill="rgb(122, 85, 32)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">proof nor a new cost line.
+</text>
+<text x="75" y="782.79" fill="rgb(255, 255, 255)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.24" xml:space="preserve">DECISION NEEDED BEFORE SUBMISSION</text>
+<text x="325.16" y="783.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">We owe a technical response, and it has to be ours.</text>
+<text x="606.78" y="783.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve"> Whichever option we choose, saying “we will work that out in discovery” repeats the answer that already did not land. Pick one, say what it costs them, and say what we will prove </text>
+<text x="69" y="800.97" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">before contract.
+</text>
+<text x="56" y="863.64" fill="rgb(154, 154, 154)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" letter-spacing="1.16" xml:space="preserve">TECHNOLOGY SECTION  ·  STORYBOARD FOR NARRATIVE AGREEMENT</text>
+<text x="1504.58" y="863.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" letter-spacing="1.16" xml:space="preserve">11 / 15</text>
+</g>
+</svg>
