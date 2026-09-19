@@ -1,12 +1,17 @@
 # Technology section storyboard
 
-A draft visual storyboard for the technology section of the pitch, built from the Blake x Pat
-discussion transcript. Fifteen pages, rough styling, developed thinking.
+Draft visual pages for the technology section of the pitch, built from the Blake x Pat discussion
+transcript. Two decks, one build pipeline.
 
-**Start here:** `dist/technology-storyboard.pdf`
-**Then read:** [`ASSUMPTIONS-AND-OPEN-ITEMS.md`](ASSUMPTIONS-AND-OPEN-ITEMS.md)
+| Deck | Pages | For | Start here |
+|---|---|---|---|
+| Internal storyboard | 15 | Working through the story. Every gap flagged in amber. | `dist/technology-storyboard.pdf` |
+| Client version | 12 | Submittable. No internal flags. | `dist/technology-client.pdf` |
 
-## The argument, page by page
+**Then read:** [`ASSUMPTIONS-AND-OPEN-ITEMS.md`](ASSUMPTIONS-AND-OPEN-ITEMS.md) for the internal
+deck, [`BEFORE-YOU-SEND.md`](BEFORE-YOU-SEND.md) for the client one.
+
+## Internal storyboard, page by page
 
 | | Page | The point it makes |
 |---|---|---|
@@ -28,9 +33,26 @@ discussion transcript. Fifteen pages, rough styling, developed thinking.
 
 Pages 01 to 13 are the written submission. Pages 14 and 15 cover the live session.
 
+## Client version, page by page
+
+| | Page | The point it makes |
+|---|---|---|
+| 01 | The platform is already built | What exists now, before anything is connected. |
+| 02 | Make the parts once | Nine components, six outputs, one routing traced in full. |
+| 03 | Three routes | Assisted, augmented and automated, sharing one approval gate. |
+| 04 | One layer connects it | Your systems, MAKE, our tools. Described by category, never by product name. |
+| 05 | Only the parts you need | The module rack. Four named from the call, four left as fields to complete. |
+| 06 | Before, during and after production | Where the AI tasks sit, and where people stay in the loop. |
+| 07 | Why the integration matters | The library at the end of the chain versus the library at the start of it. Nothing gets made twice. |
+| 08 | Your DAM stays the source of truth | Everything produced returns to it: the work, the components, the record. |
+| 09 | Ordering, not re-briefing | The second market orders what already exists. |
+| 10 | Your existing library | Getting started does not depend on tidying the archive first. |
+| 11 | Today, connect, next | Three states, theme level, no dates. |
+| 12 | The live session | You choose two scenarios, we run them live. |
+
 ## Visual language
 
-Carried across every diagram, introduced on page 01:
+**Internal deck**, carried across every diagram and introduced on page 01:
 
 - **solid black outline** exists today, in use on our work now
 - **dashed black outline** integration work, connecting MAKE to the client's stack
@@ -41,18 +63,38 @@ Carried across every diagram, introduced on page 01:
 Content components are lettered chips (A to I) and recur on pages 02, 09, 10 and 11, so the same
 nine parts can be followed from brief to second-market order.
 
+**Client deck** drops amber entirely, because nothing goes to a client marked unresolved. It keeps
+black for what happens, grey for what is being replaced, and one accent (`#1D5C8C`) that means
+either "yours" or "the one thing to look at on this page". Swapping that single value re-skins the
+deck. The seasonal launch film example from page 02 recurs on pages 07 and 09.
+
 ## Rebuilding
 
+The four scripts take `DECK_SRC`, `DECK_NAME`, `DECK_SVG`, `DECK_PNG` and `DECK_QA`, so both decks
+run through the same pipeline. Defaults build the internal deck.
+
 ```bash
-./build.sh        # src/ partials  ->  dist/technology-storyboard.html
-./render.sh       # each page -> qa/slideNN.png for visual checking
-./export-svg.sh   # each page -> dist/svg/slide-NN.svg (vector, real text)
-./build-pptx.sh   # svg + png   -> dist/technology-storyboard.pptx
+# internal storyboard
+./build.sh && ./render.sh && ./export-svg.sh && ./build-pptx.sh
+
+# client version
+DECK_SRC=client-src DECK_NAME=technology-client ./build.sh
+DECK_NAME=technology-client DECK_QA=qa-client ./render.sh
+DECK_NAME=technology-client DECK_SVG=client-svg ./export-svg.sh
+DECK_NAME=technology-client DECK_SVG=client-svg DECK_PNG=client-png ./build-pptx.sh
 ```
 
-The PDF comes from Chromium: `chrome --headless --print-to-pdf --no-pdf-header-footer`.
+`render.sh` writes one PNG per page for visual checking. The PDF comes from Chromium:
+
+```bash
+/opt/pw-browsers/chromium-1194/chrome-linux/chrome --headless --disable-gpu --no-sandbox \
+  --no-pdf-header-footer --virtual-time-budget=45000 \
+  --print-to-pdf=dist/technology-client.pdf dist/technology-client.html
+```
 
 Pages are authored as fixed 1600 x 900 px layouts, which maps exactly to PowerPoint widescreen at
 120 px per inch. Geometry is inline SVG; text is an absolutely positioned HTML layer over it.
 `export-svg.js` measures the rendered text and converts it to real SVG text, so the exported files
-are fully editable vectors rather than pictures.
+are fully editable vectors rather than pictures. `add-svg-blips.py` then hangs those vectors off the
+PowerPoint image parts, so PowerPoint shows vector artwork and Convert to Shape works, with the PNG
+as a fallback for anything that cannot read SVG.

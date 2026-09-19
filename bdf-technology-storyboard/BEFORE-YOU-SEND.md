@@ -1,6 +1,6 @@
 # Client deck: what to complete before it goes out
 
-Companion to `dist/technology-client.*` (11 pages). This is the submittable version. Every internal
+Companion to `dist/technology-client.*` (12 pages). This is the submittable version. Every internal
 flag has been removed, so nothing in it says "to be confirmed" to the client. The three items below
 marked **FIELD** are visible blanks for you to fill. The items marked **DECIDE** are positions the
 deck now takes that need your sign-off, because I took them on your behalf.
@@ -13,22 +13,28 @@ deck now takes that need your sign-off, because I took them on your behalf.
 |---|---|---|
 | **03** | "Examples to be completed", twice | One line each for what the **assisted** and **augmented** routes are typically used for. The automated row is filled already (versioning and translation at volume) because that came out of the call. |
 | **05** | Four dashed "Module" slots | The names of the remaining modules. Four are named from the call: one connected space, AI tasks, open integrations, global e-commerce. The rack is built for eight, so add or remove slots to match reality. |
-| **10** | "Further themes to be completed" | Two or three more roadmap themes, at theme level. Post-production compositing is already there. |
+| **11** | "Further themes to be completed" | Two or three more roadmap themes, at theme level. Post-production compositing is already there. |
 
 If any of these cannot be filled, the page still works with the field deleted. Do not leave a dashed
 box in a client submission.
 
 ---
 
-## 2. Four positions I took that need your sign-off
+## 2. Five positions I took that need your sign-off
 
-**DECIDE · Page 09, the back catalogue.** This is the one to read carefully. The client deck now
-states a position: material already in the DAM gets described at the point it is first reused, so
-there is no cataloguing project to complete before the benefit starts, and we prioritise part of the
-library ahead of demand only if it is worth it. That is the approach that needs no technical proof
-and adds no cost line. It is deliberately **not** the automated-enrichment story (nobody could
-confirm it is possible) and **not** a paid curation resource (that would need costing first). If you
-want either of those instead, this page has to change and something has to be costed.
+**DECIDE · Page 07, what their DAM does today.** The page asserts that nothing in their current
+production process queries the DAM before work starts, which is what makes the "made twice" argument
+land. That is true of most DAM setups and it is the premise of your own line, but it is a statement
+about *their* environment, so check it against anything discovery has already told us. If their DAM
+is already queried at brief stage, the top half of the page needs rewording, not the argument.
+
+**DECIDE · Page 10, the back catalogue.** This is the one to read carefully. The client deck states
+a position: material already in the DAM gets described at the point it is first reused, so there is
+no cataloguing project to complete before the benefit starts, and we prioritise part of the library
+ahead of demand only if it is worth it. That is the approach that needs no technical proof and adds
+no cost line. It is deliberately **not** the automated-enrichment story (nobody could confirm it is
+possible) and **not** a paid curation resource (that would need costing first). If you want either of
+those instead, this page has to change and something has to be costed.
 
 **DECIDE · Page 03, the route descriptions.** I wrote the three routes from how you described them
 in the call: assisted is our team leading with the system assisting, augmented is the system carrying
@@ -39,9 +45,9 @@ indicative rather than measured, on purpose.
 **DECIDE · Page 02, the worked example.** The seasonal launch film and its nine components are mine,
 labelled as an example. It is the clearest way to explain modularity, but a real cleared example from
 our own work would be stronger. The arithmetic on the page (nine components, six outputs) follows the
-example, so it changes if the example changes.
+example, so it changes if the example changes. Pages 07 and 09 both lean on it.
 
-**DECIDE · Page 07, portability.** The page shows the shape of the answer: your DAM stays the source
+**DECIDE · Page 08, portability.** The page shows the shape of the answer: your DAM stays the source
 of truth, everything registers back, nothing is held back. It does not contain a formal portability
 commitment (what you keep, in what format, what happens at exit). If the submission needs that
 stated, it belongs here or in the commercial section.
@@ -55,7 +61,9 @@ stated, it belongs here or in the commercial section.
 - **No tool names.** The split between the creation tool and the aggregating tool is unconfirmed, and
   what was shown in preparation was not the tool intended for the pitch. Naming tools in writing
   risks contradicting the live session. Page 04 describes them by category instead.
-- **No dates.** Page 10 says so explicitly, and frames timings as belonging in the plan.
+- **No dates.** Page 11 says so explicitly, and frames timings as belonging in the plan.
+- **No claim that the integration is already done.** Page 07 argues for it, page 11 scopes it. The
+  deck never implies the connection to their DAM exists today.
 - **"Maker Studio" does not appear.** Nor does "makers". The product is MAKE throughout.
 
 ---
@@ -79,7 +87,8 @@ keeps every open item in amber and is the thing to review against when the missi
 | Page 01, what the last round landed versus what is true | Only the true version, on page 01. The internal comparison is a working device, not an argument to put to a client. |
 | Pages 06 and 07, module rack plus the anatomy template | Merged into page 05. The template is a writing tool for us, not a page for them. |
 | Page 08, AI tasks with six empty slots | Page 06, rewritten as what happens before, during and after production. No blanks. |
-| Page 11, three back-catalogue options with none agreed | Page 09, one stated approach. See the DECIDE item above. |
+| Nothing equivalent | Page 07, why the integration matters. Added after the internal deck, and the only page that argues for the integration rather than describing what it enables. |
+| Page 11, three back-catalogue options with none agreed | Page 10, one stated approach. See the DECIDE item above. |
 | Page 13, the effort and efficiency curves | Dropped. Two unnumbered curves invite exactly the question we cannot answer yet. |
 | Page 14, written submission versus live running order | Dropped. Internal planning. |
-| Page 15, scenario board with empty cards | Page 11, a plain description of how the live session works, with nothing fabricated. |
+| Page 15, scenario board with empty cards | Page 12, a plain description of how the live session works, with nothing fabricated. |

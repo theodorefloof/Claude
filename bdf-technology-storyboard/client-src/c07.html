@@ -2,79 +2,132 @@
 <section class="slide" id="c07">
 <svg class="canvas" viewBox="0 0 1600 900"><!--DEFS-->
 
-  <!-- your DAM -->
-  <rect x="112" y="352" width="248" height="200" fill="#E9F1F7" stroke="none"/>
-  <line x1="112" y1="352" x2="112" y2="552" stroke="#1D5C8C" stroke-width="1.8"/>
-  <line x1="360" y1="352" x2="360" y2="552" stroke="#1D5C8C" stroke-width="1.8"/>
-  <path d="M112,552 a124,28 0 0 0 248,0" fill="#E9F1F7" stroke="#1D5C8C" stroke-width="1.8"/>
-  <ellipse cx="236" cy="352" rx="124" ry="28" fill="#E9F1F7" stroke="#1D5C8C" stroke-width="1.8"/>
+  <!-- ===== today: the library sits at the end of the chain ===== -->
+  <rect x="84"  y="316" width="162" height="46" class="n-gh"/>
+  <rect x="272" y="316" width="162" height="46" class="n-gh"/>
+  <rect x="460" y="316" width="162" height="46" class="n-gh"/>
+  <rect x="648" y="316" width="162" height="46" class="n-gh"/>
+  <rect x="836" y="316" width="162" height="46" class="n-gh"/>
+  <line x1="250" y1="339" x2="268" y2="339" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="438" y1="339" x2="456" y2="339" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="626" y1="339" x2="644" y2="339" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="814" y1="339" x2="832" y2="339" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="1002" y1="339" x2="1036" y2="339" class="ln-h" marker-end="url(#ahh)"/>
 
-  <line x1="372" y1="404" x2="448" y2="404" class="ln-a" marker-end="url(#aha)"/>
+  <!-- the DAM as it behaves today: receives, never answers -->
+  <rect x="1040" y="297" width="200" height="84" fill="#F4F6F9" stroke="none"/>
+  <line x1="1040" y1="297" x2="1040" y2="381" stroke="#A2A9B2" stroke-width="1.6"/>
+  <line x1="1240" y1="297" x2="1240" y2="381" stroke="#A2A9B2" stroke-width="1.6"/>
+  <path d="M1040,381 a100,18 0 0 0 200,0" fill="#F4F6F9" stroke="#A2A9B2" stroke-width="1.6"/>
+  <ellipse cx="1140" cy="297" rx="100" ry="18" fill="#F4F6F9" stroke="#A2A9B2" stroke-width="1.6"/>
+  <!-- two near-identical assets, sitting side by side -->
+  <rect x="1092" y="326" width="34" height="26" fill="#fff" stroke="#A2A9B2" stroke-width="1.4"/>
+  <rect x="1102" y="333" width="14" height="12" fill="#DDE1E7"/>
+  <rect x="1154" y="326" width="34" height="26" fill="#fff" stroke="#A2A9B2" stroke-width="1.4"/>
+  <rect x="1164" y="333" width="14" height="12" fill="#DDE1E7"/>
+  <line x1="1133" y1="336" x2="1147" y2="336" stroke="#A2A9B2" stroke-width="2"/>
+  <line x1="1133" y1="343" x2="1147" y2="343" stroke="#A2A9B2" stroke-width="2"/>
 
-  <!-- production -->
-  <rect x="456" y="336" width="420" height="232" class="n" stroke-width="2.2"/>
-  <rect x="488" y="416" width="356" height="52" class="n-f"/>
-  <rect x="488" y="484" width="356" height="52" class="n-f"/>
+  <!-- the link that does not exist today -->
+  <path d="M1140,401 L1140,428 L178,428 L178,368" class="ln-gd" marker-end="url(#ahg)"/>
+  <rect x="608" y="414" width="28" height="28" fill="#fff" stroke="none"/>
+  <line x1="614" y1="420" x2="630" y2="436" stroke="#A2A9B2" stroke-width="2.2"/>
+  <line x1="630" y1="420" x2="614" y2="436" stroke="#A2A9B2" stroke-width="2.2"/>
 
-  <!-- approval -->
-  <rect x="924" y="376" width="88" height="88" class="n-a"/>
-  <use href="#personA" x="968" y="422"/>
-  <line x1="884" y1="420" x2="918" y2="420" class="ln" marker-end="url(#ah2)"/>
-  <line x1="1018" y1="420" x2="1052" y2="420" class="ln" marker-end="url(#ah2)"/>
+  <line x1="84" y1="500" x2="1516" y2="500" class="ln-h"/>
 
-  <!-- approved work -->
-  <rect x="1060" y="336" width="456" height="64" class="n"/>
-  <rect x="1060" y="412" width="456" height="64" class="n"/>
-  <rect x="1060" y="488" width="456" height="64" class="n"/>
+  <!-- ===== integrated: the library sits at the start of the chain ===== -->
+  <rect x="84" y="572" width="212" height="90" fill="#E9F1F7" stroke="none"/>
+  <line x1="84"  y1="572" x2="84"  y2="662" stroke="#1D5C8C" stroke-width="1.8"/>
+  <line x1="296" y1="572" x2="296" y2="662" stroke="#1D5C8C" stroke-width="1.8"/>
+  <path d="M84,662 a106,20 0 0 0 212,0" fill="#E9F1F7" stroke="#1D5C8C" stroke-width="1.8"/>
+  <ellipse cx="190" cy="572" rx="106" ry="20" fill="#E9F1F7" stroke="#1D5C8C" stroke-width="1.8"/>
 
-  <!-- and it all comes back -->
-  <path d="M1288,564 L1288,614 L236,614 L236,584" class="ln-a" marker-end="url(#aha)"/>
-  <rect x="300"  y="646" width="360" height="94" class="n-a"/>
-  <rect x="700"  y="646" width="360" height="94" class="n-a"/>
-  <rect x="1100" y="646" width="360" height="94" class="n-a"/>
-  <line x1="480"  y1="614" x2="480"  y2="642" class="ln-a" marker-end="url(#aha)"/>
-  <line x1="880"  y1="614" x2="880"  y2="642" class="ln-a" marker-end="url(#aha)"/>
-  <line x1="1280" y1="614" x2="1280" y2="642" class="ln-a" marker-end="url(#aha)"/>
+  <!-- the three answers the integration makes available -->
+  <line x1="302" y1="581" x2="534" y2="581" class="ln-a" marker-end="url(#aha)"/>
+  <line x1="302" y1="617" x2="534" y2="617" class="ln-a" marker-end="url(#aha)"/>
+  <line x1="302" y1="653" x2="534" y2="653" class="ln-a" marker-end="url(#aha)"/>
+
+  <!-- the check -->
+  <rect x="540" y="552" width="260" height="130" class="n" stroke-width="2.4"/>
+
+  <!-- what the check splits into -->
+  <rect x="840" y="552" width="340" height="62" class="n-a"/>
+  <rect x="840" y="620" width="340" height="62" class="n"/>
+  <line x1="804" y1="600" x2="836" y2="583" class="ln" marker-end="url(#ah2)"/>
+  <line x1="804" y1="634" x2="836" y2="651" class="ln" marker-end="url(#ah2)"/>
+
+  <!-- one approval, then delivery -->
+  <rect x="1216" y="573" width="88" height="88" class="n-a"/>
+  <use href="#personA" x="1260" y="619"/>
+  <line x1="1184" y1="583" x2="1212" y2="604" class="ln" marker-end="url(#ah2)"/>
+  <line x1="1184" y1="651" x2="1212" y2="630" class="ln" marker-end="url(#ah2)"/>
+  <rect x="1340" y="573" width="176" height="88" class="n"/>
+  <line x1="1308" y1="617" x2="1336" y2="617" class="ln" marker-end="url(#ah2)"/>
+
+  <!-- and back into the library, which is what makes the next brief cheaper -->
+  <path d="M1428,665 L1428,706 L190,706 L190,688" class="ln-a" marker-end="url(#aha)"/>
 </svg>
 
-<div class="kick">Your data</div>
-<div class="h1">Your DAM stays the source of truth.<br>Everything we make comes back to it.</div>
-<div class="stand" style="top:220px;width:1300px">Assets and information come out of your DAM. Production happens in MAKE. What returns is the finished work, the reusable components behind it, and a record of what was made for which market. Your library is more complete after every brief than it was before.</div>
+<div class="kick">Why the integration matters</div>
+<div class="h1">Integrating your DAM is what stops the same<br>asset being made twice.</div>
+<div class="stand" style="top:206px;width:1340px">Your library already holds a great deal of what the next brief needs, but today nothing asks it before production starts. Integrating it turns your DAM from a store of finished files into your brand&rsquo;s intelligence layer: a live record of what exists, what each asset is made of and where it has been used.</div>
 
-<div class="ab eyebrow acc ctr" style="left:112px;top:288px;width:248px">Yours</div>
-<div class="ab ctr" style="left:132px;top:396px;width:208px">
-  <div class="lbl b acc" style="font-size:19px">Your DAM</div>
-  <div class="xs" style="color:#3A6B93;margin-top:8px">assets, metadata,<br>rights and rules</div>
+<div class="ab eyebrow ink" style="left:84px;top:284px;width:700px">Today: your library is where work ends up</div>
+
+<div class="ab xs ctr mut" style="left:84px;top:331px;width:162px">New brief</div>
+<div class="ab xs ctr mut" style="left:272px;top:331px;width:162px">Concept</div>
+<div class="ab xs ctr mut" style="left:460px;top:331px;width:162px">Shoot and produce</div>
+<div class="ab xs ctr mut" style="left:648px;top:331px;width:162px">Review and approve</div>
+<div class="ab xs ctr mut" style="left:836px;top:331px;width:162px">Deliver</div>
+
+<div class="ab xs ctr" style="left:1040px;top:362px;width:200px">the same thing, made twice</div>
+
+<div class="ab" style="left:1268px;top:296px;width:248px">
+  <div class="eyebrow">Your DAM today</div>
+  <div class="xs" style="margin-top:8px">It receives finished files. Nothing in production ever asks it a question, so the asset made for market two can be a near copy of the one made for market one.</div>
 </div>
 
-<div class="ab eyebrow ink" style="left:456px;top:316px;width:420px">Production in MAKE</div>
-<div class="ab ctr" style="left:488px;top:366px;width:356px"><div class="sm b">Only the modules this brief needs</div></div>
-<div class="ab ctr" style="left:508px;top:434px;width:316px"><div class="sm b">Components made and kept</div></div>
-<div class="ab ctr" style="left:508px;top:502px;width:316px"><div class="sm b">Outputs assembled from them</div></div>
+<div class="ab xs" style="left:84px;top:442px;width:560px">This link does not exist today. Nothing checks the library before production starts, so work gets commissioned that your DAM already holds.</div>
 
-<div class="ab eyebrow ink ctr" style="left:904px;top:316px;width:128px">Approval</div>
-<div class="ab xs ctr" style="left:904px;top:476px;width:128px">your approver</div>
+<div class="ab eyebrow acc" style="left:84px;top:518px;width:900px">Once it is integrated: your library is where work starts</div>
 
-<div class="ab eyebrow ink" style="left:1060px;top:316px;width:456px">Approved work</div>
-<div class="ab lbl b" style="left:1084px;top:360px;width:410px">Finished outputs, ready to use</div>
-<div class="ab lbl b" style="left:1084px;top:436px;width:410px">Delivered to your channels</div>
-<div class="ab lbl b" style="left:1084px;top:512px;width:410px">Nothing held back from you</div>
-
-<div class="ab eyebrow acc" style="left:300px;top:588px;width:600px">And all of it returns to your DAM</div>
-<div class="ab" style="left:322px;top:666px;width:316px">
-  <div class="lbl b acc">The finished work</div>
-  <div class="xs" style="color:#3A6B93;margin-top:5px">approved, versioned, with its approval history attached</div>
-</div>
-<div class="ab" style="left:722px;top:666px;width:316px">
-  <div class="lbl b acc">The components behind it</div>
-  <div class="xs" style="color:#3A6B93;margin-top:5px">the reusable parts, not only the finished file</div>
-</div>
-<div class="ab" style="left:1122px;top:666px;width:316px">
-  <div class="lbl b acc">The record of what was made</div>
-  <div class="xs" style="color:#3A6B93;margin-top:5px">which brief, which market, which components. This is what makes the next page possible.</div>
+<div class="ab ctr" style="left:100px;top:604px;width:180px">
+  <div class="lbl b acc">Your DAM</div>
+  <div class="xs" style="color:#3A6B93;margin-top:4px">integrated</div>
 </div>
 
-<div class="ab xs" style="left:84px;top:768px;width:1432px"><b style="color:var(--ink)">MAKE never becomes your system of record.</b> It is where work is produced, not where it lives. Your DAM is complete at every point in this loop.</div>
+<div class="ab xs acc" style="left:306px;top:561px;width:226px">what already exists</div>
+<div class="ab xs acc" style="left:306px;top:597px;width:226px">what each asset is made of</div>
+<div class="ab xs acc" style="left:306px;top:633px;width:226px">where it has been used</div>
+
+<div class="ab" style="left:566px;top:572px;width:208px">
+  <div class="eyebrow ink" style="font-size:10.5px">Automatic</div>
+  <div class="lbl b" style="margin-top:8px">The system checks what already exists</div>
+  <div class="xs" style="margin-top:8px">on every brief, before anything is produced</div>
+</div>
+
+<div class="ab" style="left:862px;top:564px;width:296px">
+  <div class="lbl b acc">What already exists is assembled</div>
+  <div class="xs" style="color:#3A6B93;margin-top:4px">listed by your library, not found by memory</div>
+</div>
+<div class="ab" style="left:862px;top:632px;width:296px">
+  <div class="lbl b">Only what is genuinely new is made</div>
+  <div class="xs" style="margin-top:4px">through the route that fits it, as on page 03</div>
+</div>
+
+<div class="ab xs ctr" style="left:1216px;top:668px;width:88px">your approval</div>
+<div class="ab" style="left:1362px;top:597px;width:132px">
+  <div class="lbl b">Delivered</div>
+  <div class="xs" style="margin-top:4px">to your channels</div>
+</div>
+
+<div class="ab xs acc" style="left:330px;top:714px;width:860px">Everything produced registers back, with its components and its record, so the next brief has more to draw on than this one did.</div>
+
+<div class="ab panel acc" style="left:84px;top:754px;width:1432px;padding:18px 24px">
+  <span class="lbl b acc">Without the integration, your DAM is a record of what you have already paid for.</span>
+  <span class="lbl" style="color:var(--ink2)">&nbsp; With it, it is the single source of truth that decides what you need to pay for next. That is the difference between a library you store in and one you produce from.</span>
+</div>
 
 <div class="pageno">07</div>
 </section>

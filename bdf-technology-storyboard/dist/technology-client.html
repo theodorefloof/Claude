@@ -646,6 +646,149 @@ svg text{font-family:Arial,"Liberation Sans",Helvetica,sans-serif}
 <pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F4F6F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#DDE1E7" stroke-width="2.4"/></pattern>
 </defs>
 
+  <!-- ===== today: the library sits at the end of the chain ===== -->
+  <rect x="84"  y="316" width="162" height="46" class="n-gh"/>
+  <rect x="272" y="316" width="162" height="46" class="n-gh"/>
+  <rect x="460" y="316" width="162" height="46" class="n-gh"/>
+  <rect x="648" y="316" width="162" height="46" class="n-gh"/>
+  <rect x="836" y="316" width="162" height="46" class="n-gh"/>
+  <line x1="250" y1="339" x2="268" y2="339" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="438" y1="339" x2="456" y2="339" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="626" y1="339" x2="644" y2="339" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="814" y1="339" x2="832" y2="339" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="1002" y1="339" x2="1036" y2="339" class="ln-h" marker-end="url(#ahh)"/>
+
+  <!-- the DAM as it behaves today: receives, never answers -->
+  <rect x="1040" y="297" width="200" height="84" fill="#F4F6F9" stroke="none"/>
+  <line x1="1040" y1="297" x2="1040" y2="381" stroke="#A2A9B2" stroke-width="1.6"/>
+  <line x1="1240" y1="297" x2="1240" y2="381" stroke="#A2A9B2" stroke-width="1.6"/>
+  <path d="M1040,381 a100,18 0 0 0 200,0" fill="#F4F6F9" stroke="#A2A9B2" stroke-width="1.6"/>
+  <ellipse cx="1140" cy="297" rx="100" ry="18" fill="#F4F6F9" stroke="#A2A9B2" stroke-width="1.6"/>
+  <!-- two near-identical assets, sitting side by side -->
+  <rect x="1092" y="326" width="34" height="26" fill="#fff" stroke="#A2A9B2" stroke-width="1.4"/>
+  <rect x="1102" y="333" width="14" height="12" fill="#DDE1E7"/>
+  <rect x="1154" y="326" width="34" height="26" fill="#fff" stroke="#A2A9B2" stroke-width="1.4"/>
+  <rect x="1164" y="333" width="14" height="12" fill="#DDE1E7"/>
+  <line x1="1133" y1="336" x2="1147" y2="336" stroke="#A2A9B2" stroke-width="2"/>
+  <line x1="1133" y1="343" x2="1147" y2="343" stroke="#A2A9B2" stroke-width="2"/>
+
+  <!-- the link that does not exist today -->
+  <path d="M1140,401 L1140,428 L178,428 L178,368" class="ln-gd" marker-end="url(#ahg)"/>
+  <rect x="608" y="414" width="28" height="28" fill="#fff" stroke="none"/>
+  <line x1="614" y1="420" x2="630" y2="436" stroke="#A2A9B2" stroke-width="2.2"/>
+  <line x1="630" y1="420" x2="614" y2="436" stroke="#A2A9B2" stroke-width="2.2"/>
+
+  <line x1="84" y1="500" x2="1516" y2="500" class="ln-h"/>
+
+  <!-- ===== integrated: the library sits at the start of the chain ===== -->
+  <rect x="84" y="572" width="212" height="90" fill="#E9F1F7" stroke="none"/>
+  <line x1="84"  y1="572" x2="84"  y2="662" stroke="#1D5C8C" stroke-width="1.8"/>
+  <line x1="296" y1="572" x2="296" y2="662" stroke="#1D5C8C" stroke-width="1.8"/>
+  <path d="M84,662 a106,20 0 0 0 212,0" fill="#E9F1F7" stroke="#1D5C8C" stroke-width="1.8"/>
+  <ellipse cx="190" cy="572" rx="106" ry="20" fill="#E9F1F7" stroke="#1D5C8C" stroke-width="1.8"/>
+
+  <!-- the three answers the integration makes available -->
+  <line x1="302" y1="581" x2="534" y2="581" class="ln-a" marker-end="url(#aha)"/>
+  <line x1="302" y1="617" x2="534" y2="617" class="ln-a" marker-end="url(#aha)"/>
+  <line x1="302" y1="653" x2="534" y2="653" class="ln-a" marker-end="url(#aha)"/>
+
+  <!-- the check -->
+  <rect x="540" y="552" width="260" height="130" class="n" stroke-width="2.4"/>
+
+  <!-- what the check splits into -->
+  <rect x="840" y="552" width="340" height="62" class="n-a"/>
+  <rect x="840" y="620" width="340" height="62" class="n"/>
+  <line x1="804" y1="600" x2="836" y2="583" class="ln" marker-end="url(#ah2)"/>
+  <line x1="804" y1="634" x2="836" y2="651" class="ln" marker-end="url(#ah2)"/>
+
+  <!-- one approval, then delivery -->
+  <rect x="1216" y="573" width="88" height="88" class="n-a"/>
+  <use href="#personA" x="1260" y="619"/>
+  <line x1="1184" y1="583" x2="1212" y2="604" class="ln" marker-end="url(#ah2)"/>
+  <line x1="1184" y1="651" x2="1212" y2="630" class="ln" marker-end="url(#ah2)"/>
+  <rect x="1340" y="573" width="176" height="88" class="n"/>
+  <line x1="1308" y1="617" x2="1336" y2="617" class="ln" marker-end="url(#ah2)"/>
+
+  <!-- and back into the library, which is what makes the next brief cheaper -->
+  <path d="M1428,665 L1428,706 L190,706 L190,688" class="ln-a" marker-end="url(#aha)"/>
+</svg>
+
+<div class="kick">Why the integration matters</div>
+<div class="h1">Integrating your DAM is what stops the same<br>asset being made twice.</div>
+<div class="stand" style="top:206px;width:1340px">Your library already holds a great deal of what the next brief needs, but today nothing asks it before production starts. Integrating it turns your DAM from a store of finished files into your brand&rsquo;s intelligence layer: a live record of what exists, what each asset is made of and where it has been used.</div>
+
+<div class="ab eyebrow ink" style="left:84px;top:284px;width:700px">Today: your library is where work ends up</div>
+
+<div class="ab xs ctr mut" style="left:84px;top:331px;width:162px">New brief</div>
+<div class="ab xs ctr mut" style="left:272px;top:331px;width:162px">Concept</div>
+<div class="ab xs ctr mut" style="left:460px;top:331px;width:162px">Shoot and produce</div>
+<div class="ab xs ctr mut" style="left:648px;top:331px;width:162px">Review and approve</div>
+<div class="ab xs ctr mut" style="left:836px;top:331px;width:162px">Deliver</div>
+
+<div class="ab xs ctr" style="left:1040px;top:362px;width:200px">the same thing, made twice</div>
+
+<div class="ab" style="left:1268px;top:296px;width:248px">
+  <div class="eyebrow">Your DAM today</div>
+  <div class="xs" style="margin-top:8px">It receives finished files. Nothing in production ever asks it a question, so the asset made for market two can be a near copy of the one made for market one.</div>
+</div>
+
+<div class="ab xs" style="left:84px;top:442px;width:560px">This link does not exist today. Nothing checks the library before production starts, so work gets commissioned that your DAM already holds.</div>
+
+<div class="ab eyebrow acc" style="left:84px;top:518px;width:900px">Once it is integrated: your library is where work starts</div>
+
+<div class="ab ctr" style="left:100px;top:604px;width:180px">
+  <div class="lbl b acc">Your DAM</div>
+  <div class="xs" style="color:#3A6B93;margin-top:4px">integrated</div>
+</div>
+
+<div class="ab xs acc" style="left:306px;top:561px;width:226px">what already exists</div>
+<div class="ab xs acc" style="left:306px;top:597px;width:226px">what each asset is made of</div>
+<div class="ab xs acc" style="left:306px;top:633px;width:226px">where it has been used</div>
+
+<div class="ab" style="left:566px;top:572px;width:208px">
+  <div class="eyebrow ink" style="font-size:10.5px">Automatic</div>
+  <div class="lbl b" style="margin-top:8px">The system checks what already exists</div>
+  <div class="xs" style="margin-top:8px">on every brief, before anything is produced</div>
+</div>
+
+<div class="ab" style="left:862px;top:564px;width:296px">
+  <div class="lbl b acc">What already exists is assembled</div>
+  <div class="xs" style="color:#3A6B93;margin-top:4px">listed by your library, not found by memory</div>
+</div>
+<div class="ab" style="left:862px;top:632px;width:296px">
+  <div class="lbl b">Only what is genuinely new is made</div>
+  <div class="xs" style="margin-top:4px">through the route that fits it, as on page 03</div>
+</div>
+
+<div class="ab xs ctr" style="left:1216px;top:668px;width:88px">your approval</div>
+<div class="ab" style="left:1362px;top:597px;width:132px">
+  <div class="lbl b">Delivered</div>
+  <div class="xs" style="margin-top:4px">to your channels</div>
+</div>
+
+<div class="ab xs acc" style="left:330px;top:714px;width:860px">Everything produced registers back, with its components and its record, so the next brief has more to draw on than this one did.</div>
+
+<div class="ab panel acc" style="left:84px;top:754px;width:1432px;padding:18px 24px">
+  <span class="lbl b acc">Without the integration, your DAM is a record of what you have already paid for.</span>
+  <span class="lbl" style="color:var(--ink2)">&nbsp; With it, it is the single source of truth that decides what you need to pay for next. That is the difference between a library you store in and one you produce from.</span>
+</div>
+
+<div class="pageno">07</div>
+</section>
+<!-- ============================ CLIENT 08 ============================ -->
+<section class="slide" id="c08">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#1D5C8C"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#A2A9B2"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#DDE1E7"/></marker>
+<g id="person"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#14171C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#14171C" stroke-width="1.7"/></g>
+<g id="personA"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#1D5C8C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#1D5C8C" stroke-width="1.7"/></g>
+<g id="tick"><path d="M-5,0 l3.6,4 l7,-9" fill="none" stroke="#1D5C8C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F4F6F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#DDE1E7" stroke-width="2.4"/></pattern>
+</defs>
+
   <!-- your DAM -->
   <rect x="112" y="352" width="248" height="200" fill="#E9F1F7" stroke="none"/>
   <line x1="112" y1="352" x2="112" y2="552" stroke="#1D5C8C" stroke-width="1.8"/>
@@ -720,10 +863,10 @@ svg text{font-family:Arial,"Liberation Sans",Helvetica,sans-serif}
 
 <div class="ab xs" style="left:84px;top:768px;width:1432px"><b style="color:var(--ink)">MAKE never becomes your system of record.</b> It is where work is produced, not where it lives. Your DAM is complete at every point in this loop.</div>
 
-<div class="pageno">07</div>
+<div class="pageno">08</div>
 </section>
-<!-- ============================ CLIENT 08 ============================ -->
-<section class="slide" id="c08">
+<!-- ============================ CLIENT 09 ============================ -->
+<section class="slide" id="c09">
 <svg class="canvas" viewBox="0 0 1600 900"><defs>
 <marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
 <marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
@@ -736,18 +879,8 @@ svg text{font-family:Arial,"Liberation Sans",Helvetica,sans-serif}
 <pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F4F6F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#DDE1E7" stroke-width="2.4"/></pattern>
 </defs>
 
-  <!-- the old way -->
-  <rect x="396" y="318" width="204" height="48" class="n-gh"/>
-  <rect x="624" y="318" width="204" height="48" class="n-gh"/>
-  <rect x="852" y="318" width="204" height="48" class="n-gh"/>
-  <rect x="1080" y="318" width="204" height="48" class="n-gh"/>
-  <rect x="1308" y="318" width="204" height="48" class="n-gh"/>
-  <line x1="602" y1="342" x2="620" y2="342" class="ln-h" marker-end="url(#ahh)"/>
-  <line x1="830" y1="342" x2="848" y2="342" class="ln-h" marker-end="url(#ahh)"/>
-  <line x1="1058" y1="342" x2="1076" y2="342" class="ln-h" marker-end="url(#ahh)"/>
-  <line x1="1286" y1="342" x2="1304" y2="342" class="ln-h" marker-end="url(#ahh)"/>
-  <line x1="404" y1="366" x2="1504" y2="318" stroke="#A2A9B2" stroke-width="1.6"/>
-  <line x1="404" y1="318" x2="1504" y2="366" stroke="#A2A9B2" stroke-width="1.6"/>
+  <!-- the old way, stated rather than redrawn: page 07 already draws this chain -->
+  <line x1="84" y1="412" x2="1516" y2="412" class="ln-h"/>
 
   <!-- the new way -->
   <rect x="84"   y="470" width="330" height="190" class="n-a"/>
@@ -786,13 +919,11 @@ svg text{font-family:Arial,"Liberation Sans",Helvetica,sans-serif}
 <div class="h1">Your second market orders what already exists.<br>It does not brief again.</div>
 <div class="stand" style="top:220px;width:1320px">Because every brief leaves its components and a record behind, the next market can search, find and order. Language, format and local claims become choices on a form rather than a new brief, a new schedule and a new cost.</div>
 
-<div class="ab eyebrow" style="left:84px;top:332px;width:300px">Instead of this</div>
-<div class="ab xs ctr mut" style="left:406px;top:335px;width:184px">New brief</div>
-<div class="ab xs ctr mut" style="left:634px;top:335px;width:184px">Concept</div>
-<div class="ab xs ctr mut" style="left:862px;top:335px;width:184px">Shoot and produce</div>
-<div class="ab xs ctr mut" style="left:1090px;top:335px;width:184px">Review</div>
-<div class="ab xs ctr mut" style="left:1318px;top:335px;width:184px">Deliver</div>
-<div class="ab sm mut" style="left:396px;top:382px;width:1120px">Close to full cost and full timeline, to produce something that is a near neighbour of an asset already sitting in your DAM.</div>
+<div class="ab eyebrow" style="left:84px;top:326px;width:300px">Instead of this</div>
+<div class="ab" style="left:396px;top:316px;width:1120px">
+  <div class="lbl b mut" style="font-size:17px">A second brief, a second concept, a second shoot, a second review.</div>
+  <div class="sm mut" style="margin-top:9px">The whole chain on page 07 run again, at close to full cost and full timeline, to produce something that is a near neighbour of an asset already sitting in your DAM.</div>
+</div>
 
 <div class="ab eyebrow ink" style="left:84px;top:440px;width:600px">This happens instead</div>
 
@@ -828,10 +959,10 @@ svg text{font-family:Arial,"Liberation Sans",Helvetica,sans-serif}
   <span class="lbl" style="color:var(--ink2)">&nbsp; And nobody in the second market needs to know the first market&rsquo;s production history to place the order. What can be ordered is exactly what the record says already exists.</span>
 </div>
 
-<div class="pageno">08</div>
+<div class="pageno">09</div>
 </section>
-<!-- ============================ CLIENT 09 ============================ -->
-<section class="slide" id="c09">
+<!-- ============================ CLIENT 10 ============================ -->
+<section class="slide" id="c10">
 <svg class="canvas" viewBox="0 0 1600 900"><defs>
 <marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
 <marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
@@ -904,10 +1035,10 @@ svg text{font-family:Arial,"Liberation Sans",Helvetica,sans-serif}
   <span class="lbl" style="color:var(--ink2)">&nbsp; The answer is that the value does not sit behind a back-catalogue project. It starts with your first brief and the archive catches up behind it.</span>
 </div>
 
-<div class="pageno">09</div>
+<div class="pageno">10</div>
 </section>
-<!-- ============================ CLIENT 10 ============================ -->
-<section class="slide" id="c10">
+<!-- ============================ CLIENT 11 ============================ -->
+<section class="slide" id="c11">
 <svg class="canvas" viewBox="0 0 1600 900"><defs>
 <marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
 <marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
@@ -954,11 +1085,12 @@ svg text{font-family:Arial,"Liberation Sans",Helvetica,sans-serif}
 <div class="ab eyebrow acc" style="left:614px;top:348px;width:410px">What we connect with you</div>
 <div class="ab xs" style="left:614px;top:370px;width:410px;color:#3A6B93">Scoped together at the start. This is the whole of the new work.</div>
 <div class="ab lbl b acc" style="left:646px;top:403px;width:380px">Your DAM, in and out</div>
+<div class="ab xs" style="left:646px;top:425px;width:380px;color:#3A6B93">see page 07</div>
 <div class="ab lbl b acc" style="left:646px;top:451px;width:380px">Your metadata, mapped to components</div>
 <div class="ab lbl b acc" style="left:646px;top:499px;width:380px">Your review and approval process</div>
 <div class="ab lbl b acc" style="left:646px;top:547px;width:380px">Your channels and e-commerce feeds</div>
 <div class="ab lbl b acc" style="left:646px;top:595px;width:380px">Your approach to the existing library</div>
-<div class="ab xs" style="left:646px;top:617px;width:380px;color:#3A6B93">see page 09</div>
+<div class="ab xs" style="left:646px;top:617px;width:380px;color:#3A6B93">see page 10</div>
 <div class="ab xs" style="left:614px;top:686px;width:410px;color:#3A6B93">Connection work, not construction work.</div>
 
 <div class="ab eyebrow" style="left:1112px;top:348px;width:390px">Where it goes next</div>
@@ -976,10 +1108,10 @@ svg text{font-family:Arial,"Liberation Sans",Helvetica,sans-serif}
   <span class="lbl" style="color:var(--ink2)">&nbsp; The left column exists already. The right column is direction, not a promise.</span>
 </div>
 
-<div class="pageno">10</div>
+<div class="pageno">11</div>
 </section>
-<!-- ============================ CLIENT 11 ============================ -->
-<section class="slide" id="c11">
+<!-- ============================ CLIENT 12 ============================ -->
+<section class="slide" id="c12">
 <svg class="canvas" viewBox="0 0 1600 900"><defs>
 <marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
 <marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
@@ -1059,11 +1191,11 @@ svg text{font-family:Arial,"Liberation Sans",Helvetica,sans-serif}
 <div class="ab xs ctr" style="left:1220px;top:552px;width:264px">The outputs, and the route and components behind each one</div>
 
 <div class="ab panel acc" style="left:84px;top:646px;width:1432px;padding:26px 30px">
-  <div class="lbl b acc" style="font-size:19px">The point of the live session is that nothing on the previous ten pages needs taking on trust.</div>
-  <div class="lbl" style="color:var(--ink2);margin-top:10px">Everything described in this section exists today, so we can show it to you working rather than describe it. If there is a scenario you would rather see than the ones we bring, tell us beforehand and we will prepare it.</div>
+  <div class="lbl b acc" style="font-size:19px">The point of the live session is that nothing on the previous eleven pages needs taking on trust.</div>
+  <div class="lbl" style="color:var(--ink2);margin-top:10px">What we show you on the day is the platform running now, not a build of it. The one thing this section describes as new work is the connection to your systems, and that is scoped on page 11. If there is a scenario you would rather see than the ones we bring, tell us beforehand and we will prepare it.</div>
 </div>
 
-<div class="pageno">11</div>
+<div class="pageno">12</div>
 </section>
 </body>
 </html>
