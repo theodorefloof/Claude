@@ -1,0 +1,11 @@
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#1D5C8C"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#A2A9B2"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#DDE1E7"/></marker>
+<g id="person"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#14171C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#14171C" stroke-width="1.7"/></g>
+<g id="personA"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#1D5C8C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#1D5C8C" stroke-width="1.7"/></g>
+<g id="tick"><path d="M-5,0 l3.6,4 l7,-9" fill="none" stroke="#1D5C8C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F4F6F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#DDE1E7" stroke-width="2.4"/></pattern>
+</defs>

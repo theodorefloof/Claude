@@ -1,0 +1,150 @@
+<!-- ============================ SLIDE 03 ============================ -->
+<section class="slide" id="s03">
+<svg class="canvas" viewBox="0 0 1600 900"><!--DEFS-->
+  <line x1="56" y1="228" x2="1544" y2="228" class="ln-h"/>
+
+  <!-- stage dividers -->
+  <line x1="318"  y1="248" x2="318"  y2="642" class="ln-h"/>
+  <line x1="1062" y1="248" x2="1062" y2="642" class="ln-h"/>
+  <line x1="1300" y1="248" x2="1300" y2="642" class="ln-h"/>
+
+  <!-- shared head : brief then triage -->
+  <rect x="64" y="292" width="216" height="62" class="n"/>
+  <line x1="172" y1="354" x2="172" y2="392" class="ln" marker-end="url(#ah)"/>
+  <path d="M64,400 L248,400 L280,446 L248,492 L64,492 Z" class="n-f"/>
+  <!-- fan from triage to the three routes -->
+  <path d="M282,446 C 312,446 306,335 334,335" class="ln" marker-end="url(#ah)"/>
+  <path d="M282,446 C 312,446 306,455 334,455" class="ln" marker-end="url(#ah)"/>
+  <path d="M282,446 C 312,446 306,575 334,575" class="ln" marker-end="url(#ah)"/>
+
+  <!-- lane 1 : assisted -->
+  <rect x="340" y="288" width="196" height="94" class="n"/>
+  <rect x="340" y="404" width="196" height="94" class="n"/>
+  <rect x="340" y="524" width="196" height="94" class="n"/>
+
+  <!-- production step slots : 6 per lane. filled = carried by an AI task -->
+  <g>
+    <rect x="574" y="308" width="54" height="54" class="n"/><rect x="638" y="308" width="54" height="54" class="n"/>
+    <rect x="702" y="308" width="54" height="54" class="n-k"/><rect x="766" y="308" width="54" height="54" class="n"/>
+    <rect x="830" y="308" width="54" height="54" class="n"/><rect x="894" y="308" width="54" height="54" class="n-k"/>
+    <use href="#person" x="601" y="335"/><use href="#person" x="665" y="335"/>
+    <use href="#person" x="793" y="335"/><use href="#person" x="857" y="335"/>
+  </g>
+  <g>
+    <rect x="574" y="424" width="54" height="54" class="n"/><rect x="638" y="424" width="54" height="54" class="n-k"/>
+    <rect x="702" y="424" width="54" height="54" class="n-k"/><rect x="766" y="424" width="54" height="54" class="n"/>
+    <rect x="830" y="424" width="54" height="54" class="n-k"/><rect x="894" y="424" width="54" height="54" class="n-k"/>
+    <use href="#person" x="601" y="451"/><use href="#person" x="793" y="451"/>
+  </g>
+  <g>
+    <rect x="574" y="544" width="54" height="54" class="n-k"/><rect x="638" y="544" width="54" height="54" class="n-k"/>
+    <rect x="702" y="544" width="54" height="54" class="n-k"/><rect x="766" y="544" width="54" height="54" class="n-k"/>
+    <rect x="830" y="544" width="54" height="54" class="n-k"/><rect x="894" y="544" width="54" height="54" class="n-k"/>
+  </g>
+  <!-- flow arrows between step slots -->
+  <line x1="540" y1="335" x2="570" y2="335" class="ln" marker-end="url(#ah2)"/>
+  <line x1="540" y1="451" x2="570" y2="451" class="ln" marker-end="url(#ah2)"/>
+  <line x1="540" y1="571" x2="570" y2="571" class="ln" marker-end="url(#ah2)"/>
+  <line x1="952" y1="335" x2="1088" y2="335" class="ln" marker-end="url(#ah)"/>
+  <line x1="952" y1="451" x2="1088" y2="451" class="ln" marker-end="url(#ah)"/>
+  <line x1="952" y1="571" x2="1088" y2="571" class="ln" marker-end="url(#ah)"/>
+
+  <!-- the same governance gate in every route -->
+  <rect x="1094" y="300" width="70" height="70" class="n-f"/>
+  <rect x="1094" y="416" width="70" height="70" class="n-f"/>
+  <rect x="1094" y="536" width="70" height="70" class="n-f"/>
+  <use href="#person" x="1129" y="326"/><use href="#person" x="1129" y="442"/><use href="#person" x="1129" y="562"/>
+  <line x1="1129" y1="286" x2="1129" y2="300" class="ln-h"/>
+  <line x1="1129" y1="370" x2="1129" y2="416" class="ln-h"/>
+  <line x1="1129" y1="486" x2="1129" y2="536" class="ln-h"/>
+  <line x1="1129" y1="606" x2="1129" y2="620" class="ln-h"/>
+  <line x1="1170" y1="335" x2="1326" y2="335" class="ln" marker-end="url(#ah)"/>
+  <line x1="1170" y1="451" x2="1326" y2="451" class="ln" marker-end="url(#ah)"/>
+  <line x1="1170" y1="571" x2="1326" y2="571" class="ln" marker-end="url(#ah)"/>
+
+  <!-- delivery -->
+  <rect x="1336" y="300" width="208" height="70" class="n-gh"/>
+  <rect x="1336" y="416" width="208" height="70" class="n-gh"/>
+  <rect x="1336" y="536" width="208" height="70" class="n"/>
+
+  <line x1="56" y1="664" x2="1544" y2="664" class="ln-h"/>
+</svg>
+
+<div class="kick"><em>02</em> &nbsp;·&nbsp; Routes</div>
+<div class="h1">Assisted, augmented and automated are three routes through one system,<br>chosen per deliverable at triage.</div>
+<div class="sub" style="top:162px;width:1320px">They are not three stages of production, and they are not a human versus machine split. What changes between them is how much of the sequence AI tasks carry. What never changes is the approval gate.</div>
+
+<!-- stage headers -->
+<div class="ab eyebrow ink" style="left:64px;top:256px;width:250px">Brief &amp; triage</div>
+<div class="ab eyebrow ink" style="left:340px;top:256px;width:700px">Route &nbsp;&rarr;&nbsp; production sequence</div>
+<div class="ab eyebrow ink" style="left:1094px;top:256px;width:200px">Review</div>
+<div class="ab xs ctr" style="left:1094px;top:344px;width:70px">approver</div>
+<div class="ab xs ctr" style="left:1094px;top:460px;width:70px">approver</div>
+<div class="ab xs ctr" style="left:1094px;top:580px;width:70px">approver</div>
+<div class="ab eyebrow ink" style="left:1336px;top:256px;width:208px">Delivery</div>
+
+<!-- brief + triage -->
+<div class="ab ctr" style="left:76px;top:306px;width:192px">
+  <div class="lbl b">One brief</div>
+  <div class="xs" style="margin-top:3px">many deliverables inside it</div>
+</div>
+<div class="ab ctr" style="left:76px;top:418px;width:176px">
+  <div class="lbl b">Triage</div>
+  <div class="xs" style="margin-top:4px">route chosen here, per deliverable, not per brief</div>
+</div>
+
+<!-- route names + missing definitions -->
+<div class="ab" style="left:354px;top:300px;width:170px">
+  <div class="lbl b" style="font-size:16px">Assisted</div>
+  <div class="xs" style="margin-top:5px">Our team leads. AI tasks take specific steps.</div>
+  <div style="margin-top:6px"><span class="tbc">DEFINITION TBC</span></div>
+</div>
+<div class="ab" style="left:354px;top:416px;width:170px">
+  <div class="lbl b" style="font-size:16px">Augmented</div>
+  <div class="xs" style="margin-top:5px">AI tasks carry most steps. Our team directs and intervenes.</div>
+  <div style="margin-top:6px"><span class="tbc">DEFINITION TBC</span></div>
+</div>
+<div class="ab" style="left:354px;top:536px;width:170px">
+  <div class="lbl b" style="font-size:16px">Automated</div>
+  <div class="xs" style="margin-top:5px">AI tasks run the sequence end to end. Our team sets it up.</div>
+  <div style="margin-top:6px"><span class="tbc">DEFINITION TBC</span></div>
+</div>
+
+<!-- step legend -->
+<div class="ab" style="left:574px;top:264px;width:500px">
+  <span class="xs"><span style="display:inline-block;width:11px;height:11px;background:#111;vertical-align:-1px;margin-right:5px"></span>step carried by an AI task
+  &nbsp;&nbsp;<span style="display:inline-block;width:11px;height:11px;border:1.4px solid #111;vertical-align:-1px;margin-right:5px"></span>step carried by our team</span>
+</div>
+<div class="ab xs" style="left:574px;top:620px;width:380px">Six steps shown as a placeholder for the production sequence. Real step names come from the module set on slide 06.</div>
+
+<!-- governance -->
+<div class="ab sm b ctr" style="left:1068px;top:618px;width:224px">The same gate in every route</div>
+<div class="ab xs ctr" style="left:1068px;top:638px;width:224px">Nothing releases unreviewed.</div>
+
+<!-- delivery -->
+<div class="ab ctr" style="left:1348px;top:318px;width:184px">
+  <div class="sm b mut">Typical output</div>
+  <div style="margin-top:6px"><span class="tbc">TBC</span></div>
+</div>
+<div class="ab ctr" style="left:1348px;top:434px;width:184px">
+  <div class="sm b mut">Typical output</div>
+  <div style="margin-top:6px"><span class="tbc">TBC</span></div>
+</div>
+<div class="ab ctr" style="left:1348px;top:548px;width:184px">
+  <div class="sm b">Versioning</div>
+  <div class="sm b">Translation</div>
+  <div class="xs" style="margin-top:4px">the two named in discussion</div>
+</div>
+
+<!-- bottom flags -->
+<div class="ab flag" style="left:56px;top:684px;width:730px">
+  <span class="tag">OPEN</span><b>The three definitions are missing from this conversation.</b> Each route needs one agreed sentence and a qualifying rule for when it is used. Without those, this slide is a shape without content, and the client cannot tell which route their work lands in.
+  <span style="display:block;margin-top:5px"><b>Needed from: whoever holds the brief response. Highest priority open item in this section.</b></span>
+</div>
+<div class="ab note" style="left:814px;top:684px;width:730px">
+  <span class="tag">WHY THIS REPLACES THE EARLIER VISUAL</span><br>
+  <span style="display:block;margin-top:8px">The earlier &ldquo;human plus tech / fully automated&rdquo; diagram described the <b>production step only</b>. It left out briefing and triage, so it read as a split between people and machines rather than three routes. Routes run brief to delivery. Versioning and translation sit inside the automated route, not outside the model.</span>
+</div>
+
+<div class="foot">Technology section &nbsp;·&nbsp; storyboard for narrative agreement<span class="r">03 / 15</span></div>
+</section>

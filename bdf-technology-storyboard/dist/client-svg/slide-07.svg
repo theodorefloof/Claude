@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="900" viewBox="0 0 1600 900">
+<rect x="0" y="0" width="1600" height="900" fill="#ffffff"/>
+<g id="geometry"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"></path></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"></path></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#1D5C8C"></path></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#A2A9B2"></path></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#DDE1E7"></path></marker>
+<g id="person"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#14171C" stroke-width="1.7"></circle><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#14171C" stroke-width="1.7"></path></g>
+<g id="personA"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#1D5C8C" stroke-width="1.7"></circle><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#1D5C8C" stroke-width="1.7"></path></g>
+<g id="tick"><path d="M-5,0 l3.6,4 l7,-9" fill="none" stroke="#1D5C8C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></g>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F4F6F9"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#DDE1E7" stroke-width="2.4"></line></pattern>
+</defs>
+
+  <!-- ===== today: the library sits at the end of the chain ===== -->
+  <rect x="84" y="316" width="162" height="46" fill="rgb(255, 255, 255)" stroke="rgb(221, 225, 231)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="272" y="316" width="162" height="46" fill="rgb(255, 255, 255)" stroke="rgb(221, 225, 231)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="460" y="316" width="162" height="46" fill="rgb(255, 255, 255)" stroke="rgb(221, 225, 231)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="648" y="316" width="162" height="46" fill="rgb(255, 255, 255)" stroke="rgb(221, 225, 231)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="836" y="316" width="162" height="46" fill="rgb(255, 255, 255)" stroke="rgb(221, 225, 231)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <line x1="250" y1="339" x2="268" y2="339" marker-end="url(#ahh)" fill="none" stroke="rgb(221, 225, 231)" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="438" y1="339" x2="456" y2="339" marker-end="url(#ahh)" fill="none" stroke="rgb(221, 225, 231)" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="626" y1="339" x2="644" y2="339" marker-end="url(#ahh)" fill="none" stroke="rgb(221, 225, 231)" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="814" y1="339" x2="832" y2="339" marker-end="url(#ahh)" fill="none" stroke="rgb(221, 225, 231)" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1002" y1="339" x2="1036" y2="339" marker-end="url(#ahh)" fill="none" stroke="rgb(221, 225, 231)" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- the DAM as it behaves today: receives, never answers -->
+  <rect x="1040" y="297" width="200" height="84" fill="rgb(244, 246, 249)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <line x1="1040" y1="297" x2="1040" y2="381" stroke="rgb(162, 169, 178)" stroke-width="1.6" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1240" y1="297" x2="1240" y2="381" stroke="rgb(162, 169, 178)" stroke-width="1.6" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <path d="M1040,381 a100,18 0 0 0 200,0" fill="rgb(244, 246, 249)" stroke="rgb(162, 169, 178)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <ellipse cx="1140" cy="297" rx="100" ry="18" fill="rgb(244, 246, 249)" stroke="rgb(162, 169, 178)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></ellipse>
+  <!-- two near-identical assets, sitting side by side -->
+  <rect x="1092" y="326" width="34" height="26" fill="rgb(255, 255, 255)" stroke="rgb(162, 169, 178)" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1102" y="333" width="14" height="12" fill="rgb(221, 225, 231)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1154" y="326" width="34" height="26" fill="rgb(255, 255, 255)" stroke="rgb(162, 169, 178)" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1164" y="333" width="14" height="12" fill="rgb(221, 225, 231)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <line x1="1133" y1="336" x2="1147" y2="336" stroke="rgb(162, 169, 178)" stroke-width="2" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1133" y1="343" x2="1147" y2="343" stroke="rgb(162, 169, 178)" stroke-width="2" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- the link that does not exist today -->
+  <path d="M1140,401 L1140,428 L178,428 L178,368" marker-end="url(#ahg)" fill="none" stroke="rgb(162, 169, 178)" stroke-width="1.4" stroke-dasharray="6, 5" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <rect x="608" y="414" width="28" height="28" fill="rgb(255, 255, 255)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <line x1="614" y1="420" x2="630" y2="436" stroke="rgb(162, 169, 178)" stroke-width="2.2" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="630" y1="420" x2="614" y2="436" stroke="rgb(162, 169, 178)" stroke-width="2.2" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <line x1="84" y1="500" x2="1516" y2="500" fill="none" stroke="rgb(221, 225, 231)" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- ===== integrated: the library sits at the start of the chain ===== -->
+  <rect x="84" y="572" width="212" height="90" fill="rgb(233, 241, 247)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <line x1="84" y1="572" x2="84" y2="662" stroke="rgb(29, 92, 140)" stroke-width="1.8" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="296" y1="572" x2="296" y2="662" stroke="rgb(29, 92, 140)" stroke-width="1.8" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <path d="M84,662 a106,20 0 0 0 212,0" fill="rgb(233, 241, 247)" stroke="rgb(29, 92, 140)" stroke-width="1.8" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <ellipse cx="190" cy="572" rx="106" ry="20" fill="rgb(233, 241, 247)" stroke="rgb(29, 92, 140)" stroke-width="1.8" stroke-linecap="butt" stroke-linejoin="miter"></ellipse>
+
+  <!-- the three answers the integration makes available -->
+  <line x1="302" y1="581" x2="534" y2="581" marker-end="url(#aha)" fill="none" stroke="rgb(29, 92, 140)" stroke-width="1.9" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="302" y1="617" x2="534" y2="617" marker-end="url(#aha)" fill="none" stroke="rgb(29, 92, 140)" stroke-width="1.9" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="302" y1="653" x2="534" y2="653" marker-end="url(#aha)" fill="none" stroke="rgb(29, 92, 140)" stroke-width="1.9" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- the check -->
+  <rect x="540" y="552" width="260" height="130" stroke-width="1.7" fill="rgb(255, 255, 255)" stroke="rgb(20, 23, 28)" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+
+  <!-- what the check splits into -->
+  <rect x="840" y="552" width="340" height="62" fill="rgb(233, 241, 247)" stroke="rgb(29, 92, 140)" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="840" y="620" width="340" height="62" fill="rgb(255, 255, 255)" stroke="rgb(20, 23, 28)" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <line x1="804" y1="600" x2="836" y2="583" marker-end="url(#ah2)" fill="none" stroke="rgb(20, 23, 28)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="804" y1="634" x2="836" y2="651" marker-end="url(#ah2)" fill="none" stroke="rgb(20, 23, 28)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- one approval, then delivery -->
+  <rect x="1216" y="573" width="88" height="88" fill="rgb(233, 241, 247)" stroke="rgb(29, 92, 140)" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <use href="#personA" x="1260" y="619" fill="rgb(0, 0, 0)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></use>
+  <line x1="1184" y1="583" x2="1212" y2="604" marker-end="url(#ah2)" fill="none" stroke="rgb(20, 23, 28)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1184" y1="651" x2="1212" y2="630" marker-end="url(#ah2)" fill="none" stroke="rgb(20, 23, 28)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <rect x="1340" y="573" width="176" height="88" fill="rgb(255, 255, 255)" stroke="rgb(20, 23, 28)" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <line x1="1308" y1="617" x2="1336" y2="617" marker-end="url(#ah2)" fill="none" stroke="rgb(20, 23, 28)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- and back into the library, which is what makes the next brief cheaper -->
+  <path d="M1428,665 L1428,706 L190,706 L190,688" marker-end="url(#aha)" fill="none" stroke="rgb(29, 92, 140)" stroke-width="1.9" stroke-linecap="butt" stroke-linejoin="miter"></path>
+</g>
+<g id="boxes-and-text">
+<rect x="84" y="754" width="1432" height="76.5" rx="4" fill="rgb(233, 241, 247)" stroke="none"/>
+<text x="84" y="79.81" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="2.2" xml:space="preserve">WHY THE INTEGRATION MATTERS</text>
+<text x="84" y="136.05" fill="rgb(20, 23, 28)" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" letter-spacing="-0.8" xml:space="preserve">Integrating your DAM is what stops the same</text>
+<text x="84" y="184.77" fill="rgb(20, 23, 28)" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" letter-spacing="-0.8" xml:space="preserve">asset being made twice.</text>
+<text x="84" y="224.39" fill="rgb(62, 69, 79)" font-family="Arial, Helvetica, sans-serif" font-size="17" xml:space="preserve">Your library already holds a great deal of what the next brief needs, but today nothing asks it before production starts. Integrating it turns your DAM from a store of finished files </text>
+<text x="84" y="250.91" fill="rgb(62, 69, 79)" font-family="Arial, Helvetica, sans-serif" font-size="17" xml:space="preserve">into your brand’s intelligence layer: a live record of what exists, what each asset is made of and where it has been used.</text>
+<text x="84" y="293.81" fill="rgb(20, 23, 28)" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="1.87" xml:space="preserve">TODAY: YOUR LIBRARY IS WHERE WORK ENDS UP</text>
+<text x="164.99" y="342.98" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" xml:space="preserve">New brief</text>
+<text x="353" y="342.98" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" xml:space="preserve">Concept</text>
+<text x="540.99" y="342.98" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" xml:space="preserve">Shoot and produce</text>
+<text x="729" y="342.98" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" xml:space="preserve">Review and approve</text>
+<text x="916.99" y="342.98" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" xml:space="preserve">Deliver</text>
+<text x="1140" y="373.98" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" xml:space="preserve">the same thing, made twice</text>
+<text x="1268" y="305.81" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="1.87" xml:space="preserve">YOUR DAM TODAY</text>
+<text x="1268" y="327.98" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">It receives finished files. Nothing in production </text>
+<text x="1268" y="344.08" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">ever asks it a question, so the asset made for </text>
+<text x="1268" y="360.17" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">market two can be a near copy of the one made </text>
+<text x="1268" y="376.27" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">for market one.</text>
+<text x="84" y="453.98" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">This link does not exist today. Nothing checks the library before production starts, so work gets commissioned </text>
+<text x="84" y="470.08" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">that your DAM already holds.</text>
+<text x="84" y="527.81" fill="rgb(29, 92, 140)" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="1.87" xml:space="preserve">ONCE IT IS INTEGRATED: YOUR LIBRARY IS WHERE WORK STARTS</text>
+<text x="189.99" y="618.7" fill="rgb(29, 92, 140)" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="middle" xml:space="preserve">Your DAM</text>
+<text x="190" y="640.23" fill="rgb(58, 107, 147)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" xml:space="preserve">integrated</text>
+<text x="306" y="572.98" fill="rgb(29, 92, 140)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">what already exists</text>
+<text x="306" y="608.98" fill="rgb(29, 92, 140)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">what each asset is made of</text>
+<text x="306" y="644.98" fill="rgb(29, 92, 140)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">where it has been used</text>
+<text x="566" y="581.64" fill="rgb(20, 23, 28)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.79" xml:space="preserve">AUTOMATIC</text>
+<text x="566" y="606.7" fill="rgb(20, 23, 28)" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" xml:space="preserve">The system checks what </text>
+<text x="566" y="626.95" fill="rgb(20, 23, 28)" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" xml:space="preserve">already exists</text>
+<text x="566" y="652.48" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">on every brief, before anything is </text>
+<text x="566" y="668.58" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">produced</text>
+<text x="862" y="578.7" fill="rgb(29, 92, 140)" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" xml:space="preserve">What already exists is assembled</text>
+<text x="862" y="600.23" fill="rgb(58, 107, 147)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">listed by your library, not found by memory</text>
+<text x="862" y="646.7" fill="rgb(20, 23, 28)" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" xml:space="preserve">Only what is genuinely new is made</text>
+<text x="862" y="668.23" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">through the route that fits it, as on page 03</text>
+<text x="1260" y="679.98" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" xml:space="preserve">your approval</text>
+<text x="1362" y="611.7" fill="rgb(20, 23, 28)" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" xml:space="preserve">Delivered</text>
+<text x="1362" y="633.23" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">to your channels</text>
+<text x="330" y="725.98" fill="rgb(29, 92, 140)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">Everything produced registers back, with its components and its record, so the next brief has more to draw on than this one did.</text>
+<text x="108" y="786.7" fill="rgb(29, 92, 140)" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" xml:space="preserve">Without the integration, your DAM is a record of what you have already paid for.</text>
+<text x="680.73" y="786.7" fill="rgb(62, 69, 79)" font-family="Arial, Helvetica, sans-serif" font-size="15" xml:space="preserve">  With it, it is the single source of truth that decides what you need to pay for next. That is the difference between a library </text>
+<text x="108" y="806.95" fill="rgb(62, 69, 79)" font-family="Arial, Helvetica, sans-serif" font-size="15" xml:space="preserve">you store in and one you produce from.</text>
+<text x="1500.23" y="845.81" fill="rgb(162, 169, 178)" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="1.76" xml:space="preserve">07</text>
+</g>
+</svg>

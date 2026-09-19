@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>Technology Section Storyboard</title>
+<style>
+:root{
+  --ink:#111111;
+  --ink2:#3d3d3d;
+  --grey:#6f6f6f;
+  --grey2:#9a9a9a;
+  --hair:#d4d4d4;
+  --fill:#f4f4f4;
+  --fill2:#ebebeb;
+  --amber:#B8690F;
+  --amberL:#FBF0DF;
+  --amberT:#5a3406;
+  --blue:#245FA6;
+  --blueL:#E9F0F9;
+  --blueT:#173f70;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#8c8c8c;}
+body{font-family:Arial,"Liberation Sans",Helvetica,sans-serif;-webkit-font-smoothing:antialiased;}
+
+/* ---------- page ---------- */
+.slide{
+  position:relative;
+  width:1600px;height:900px;
+  background:#fff;color:var(--ink);
+  overflow:hidden;
+  margin:0 auto 28px;
+  page-break-after:always;break-after:page;
+}
+.slide:last-child{margin-bottom:0;page-break-after:auto;break-after:auto}
+
+@media print{
+  @page{size:1600px 900px;margin:0}
+  html,body{background:#fff}
+  .slide{margin:0;box-shadow:none}
+}
+
+/* ---------- absolute layer helpers ---------- */
+.ab{position:absolute}
+svg.canvas{position:absolute;left:0;top:0;width:1600px;height:900px;overflow:visible}
+
+/* ---------- slide furniture ---------- */
+.kick{position:absolute;left:56px;top:44px;font-size:12px;letter-spacing:.16em;
+      text-transform:uppercase;color:var(--grey);font-weight:700}
+.kick em{font-style:normal;color:var(--ink)}
+.h1{position:absolute;left:56px;top:72px;width:1300px;font-size:31px;line-height:1.19;
+    font-weight:700;letter-spacing:-.012em;color:var(--ink)}
+.h1.two{width:1180px}
+.sub{position:absolute;left:56px;width:1230px;font-size:15px;line-height:1.45;color:var(--ink2)}
+.foot{position:absolute;left:56px;right:56px;bottom:30px;height:16px;
+      font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--grey2)}
+.foot .r{float:right;color:var(--grey)}
+.rule{position:absolute;left:56px;right:56px;height:1px;background:var(--hair)}
+
+/* ---------- text atoms (absolutely positioned) ---------- */
+.lbl{font-size:13px;line-height:1.28;color:var(--ink)}
+.lbl.b{font-weight:700}
+.sm{font-size:11.5px;line-height:1.34;color:var(--ink2)}
+.sm.b{font-weight:700;color:var(--ink)}
+.xs{font-size:10.5px;line-height:1.32;color:var(--grey)}
+.eyebrow{font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;font-weight:700;color:var(--grey)}
+.eyebrow.ink{color:var(--ink)}
+.eyebrow.amb{color:var(--amber)}
+.eyebrow.blu{color:var(--blue)}
+.ctr{text-align:center}
+.rt{text-align:right}
+.amb{color:var(--amber)}
+.blu{color:var(--blue)}
+.mut{color:var(--grey)}
+.tnum{font-size:11px;font-weight:700;letter-spacing:.06em}
+
+/* ---------- flags / callouts ---------- */
+.flag{border:1.4px solid var(--amber);background:var(--amberL);border-radius:2px;
+      padding:9px 11px 10px;font-size:11.5px;line-height:1.42;color:var(--amberT)}
+.flag .tag{display:inline-block;background:var(--amber);color:#fff;font-size:9.5px;
+      letter-spacing:.13em;font-weight:700;padding:2px 6px 2.5px;border-radius:2px;
+      margin-right:7px;vertical-align:1px}
+.flag b{color:var(--amberT)}
+.note{border:1.2px solid var(--hair);background:#fff;border-radius:2px;padding:9px 11px 10px;
+      font-size:11.5px;line-height:1.42;color:var(--ink2)}
+.note .tag{display:inline-block;background:var(--ink);color:#fff;font-size:9.5px;
+      letter-spacing:.13em;font-weight:700;padding:2px 6px 2.5px;border-radius:2px;
+      margin-right:7px;vertical-align:1px}
+.note.cli{border-color:var(--blue);background:var(--blueL);color:var(--blueT)}
+.note.cli .tag{background:var(--blue)}
+.note.pl{border-style:dashed}
+
+/* ---------- legend ---------- */
+.legend{display:flex;gap:20px;align-items:center}
+.legend .li{display:flex;gap:7px;align-items:center;font-size:10px;letter-spacing:.09em;
+            text-transform:uppercase;font-weight:700;color:var(--grey)}
+.legend .sw{width:24px;height:13px;border-radius:1.5px;flex:none}
+.sw-live{border:1.6px solid var(--ink);background:#fff}
+.sw-int{border:1.6px dashed var(--ink);background:#fff}
+.sw-road{border:1.5px dotted var(--grey2);background:#fff}
+.sw-open{border:1.6px solid var(--amber);background:var(--amberL)}
+.sw-cli{border:1.6px solid var(--blue);background:var(--blueL)}
+
+/* ---------- boxed HTML nodes (used where text must wrap inside a shape) ---------- */
+.bx{border:1.6px solid var(--ink);background:#fff;border-radius:2px;padding:9px 11px}
+.bx.int{border-style:dashed}
+.bx.road{border:1.5px dotted var(--grey2);color:var(--grey)}
+.bx.open{border-color:var(--amber);background:var(--amberL);color:var(--amberT)}
+.bx.cli{border-color:var(--blue);background:var(--blueL);color:var(--blueT)}
+.bx.fil{background:var(--fill)}
+.bx.gh{border:1.4px dashed var(--hair);color:var(--grey2)}
+.bx .t{font-size:12.5px;font-weight:700;line-height:1.25}
+.bx .d{font-size:10.8px;line-height:1.35;color:var(--grey);margin-top:4px;font-weight:400}
+.bx.cli .d{color:#4a6d99}
+.bx.open .d{color:#7a5520}
+
+/* ---------- component chip (the carried visual language) ---------- */
+.chip{border:1.5px solid var(--ink);background:#fff;border-radius:2px;
+      display:flex;align-items:center;justify-content:center;
+      font-size:11px;font-weight:700;letter-spacing:.02em}
+.chip.gh{border:1.4px dashed var(--hair);color:var(--grey2);background:#fff}
+.chip.hi{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip.cli{border-color:var(--blue);background:var(--blueL);color:var(--blueT)}
+
+/* ---------- misc ---------- */
+.hr{height:1px;background:var(--hair)}
+.vr{width:1px;background:var(--hair)}
+.tick{font-size:12px;font-weight:700}
+.stamp{border:1.3px solid var(--grey2);color:var(--grey);border-radius:2px;
+       font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;
+       padding:3px 7px;display:inline-block}
+.stamp.amb{border-color:var(--amber);color:var(--amber)}
+.stamp.ink{border-color:var(--ink);color:var(--ink)}
+.stamp.blu{border-color:var(--blue);color:var(--blue)}
+
+/* ---------- SVG classes ---------- */
+svg text{font-family:Arial,"Liberation Sans",Helvetica,sans-serif}
+.n{fill:#fff;stroke:#111;stroke-width:1.6}
+.n-f{fill:#f4f4f4;stroke:#111;stroke-width:1.6}
+.n-i{fill:#fff;stroke:#111;stroke-width:1.6;stroke-dasharray:7 5}
+.n-r{fill:#fff;stroke:#9a9a9a;stroke-width:1.5;stroke-dasharray:1.5 4;stroke-linecap:round}
+.n-o{fill:#FBF0DF;stroke:#B8690F;stroke-width:1.6}
+.n-c{fill:#E9F0F9;stroke:#245FA6;stroke-width:1.6}
+.n-gh{fill:#fff;stroke:#d4d4d4;stroke-width:1.4;stroke-dasharray:5 4}
+.n-k{fill:#111;stroke:#111;stroke-width:1.6}
+.ln{stroke:#111;stroke-width:1.5;fill:none}
+.ln-2{stroke:#111;stroke-width:2.6;fill:none}
+.ln-d{stroke:#111;stroke-width:1.5;fill:none;stroke-dasharray:7 5}
+.ln-g{stroke:#9a9a9a;stroke-width:1.3;fill:none;stroke-dasharray:1.5 4;stroke-linecap:round}
+.ln-h{stroke:#d4d4d4;stroke-width:1.2;fill:none}
+.ln-hd{stroke:#d4d4d4;stroke-width:1.2;fill:none;stroke-dasharray:5 4}
+.ln-a{stroke:#B8690F;stroke-width:1.7;fill:none}
+.ln-ad{stroke:#B8690F;stroke-width:1.6;fill:none;stroke-dasharray:6 4}
+.ln-b{stroke:#245FA6;stroke-width:1.7;fill:none}
+.ln-bd{stroke:#245FA6;stroke-width:1.6;fill:none;stroke-dasharray:6 4}
+.fx{fill:none}
+
+/* ---------- small numerals / pills ---------- */
+.numchip{display:inline-block;border:1.3px solid var(--ink);border-radius:2px;font-size:10.5px;
+         font-weight:700;padding:2.5px 5px;margin-right:4px;line-height:1;color:var(--ink)}
+.pill{display:inline-block;border-radius:9px;font-size:9.5px;font-weight:700;letter-spacing:.11em;
+      text-transform:uppercase;padding:3px 9px 3.5px;line-height:1}
+.pill.k{background:var(--ink);color:#fff}
+.pill.a{background:var(--amber);color:#fff}
+.pill.b{background:var(--blue);color:#fff}
+.pill.o{border:1.3px solid var(--grey2);color:var(--grey)}
+.tbc{display:inline-block;border:1.3px dashed var(--amber);color:var(--amber);border-radius:2px;
+     font-size:9.5px;font-weight:700;letter-spacing:.1em;padding:2.5px 6px;line-height:1}
+
+/* component code chips: the carried visual language for content components */
+.code{display:inline-block;width:18px;height:18px;line-height:16px;text-align:center;
+      border:1.3px solid var(--ink);font-size:10.5px;font-weight:700;margin-right:4px;
+      border-radius:2px;color:var(--ink);vertical-align:middle}
+.code.hi{background:var(--ink);color:#fff}
+.code.gh{border-style:dashed;border-color:var(--hair);color:var(--grey2)}
+.codebox{display:inline-block;width:24px;height:24px;line-height:22px;text-align:center;
+      border:1.5px solid var(--ink);font-size:13px;font-weight:700;border-radius:2px}
+.codebox.hi{background:var(--ink);color:#fff}
+ul.tight{margin:0;padding-left:15px}
+ul.tight li{margin:0 0 5px 0}
+</style>
+</head>
+<body>

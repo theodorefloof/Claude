@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="900" viewBox="0 0 1600 900">
+<rect x="0" y="0" width="1600" height="900" fill="#ffffff"/>
+<g id="geometry"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"></path></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"></path></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"></path></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"></path></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"></path></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"></path></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"></circle></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"></line></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"></line></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"></line></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"></circle><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"></path></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"></circle><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"></path></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- your DAM, drawn as the store it is -->
+  <rect x="80" y="322" width="230" height="188" fill="rgb(233, 240, 249)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <line x1="80" y1="322" x2="80" y2="510" stroke="rgb(36, 95, 166)" stroke-width="1.6" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="310" y1="322" x2="310" y2="510" stroke="rgb(36, 95, 166)" stroke-width="1.6" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <path d="M80,510 a115,26 0 0 0 230,0" fill="rgb(233, 240, 249)" stroke="rgb(36, 95, 166)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <ellipse cx="195" cy="322" rx="115" ry="26" fill="rgb(233, 240, 249)" stroke="rgb(36, 95, 166)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></ellipse>
+
+  <!-- out : assets and intelligence -->
+  <line x1="320" y1="372" x2="452" y2="372" marker-end="url(#ahb)" fill="none" stroke="rgb(36, 95, 166)" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- MAKE production -->
+  <rect x="458" y="300" width="540" height="228" stroke-width="1.6" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="482" y="356" width="212" height="70" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="722" y="356" width="252" height="70" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <line x1="694" y1="391" x2="718" y2="391" marker-end="url(#ah2)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <g fill="rgb(0, 0, 0)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter">
+    <rect x="496" y="462" width="26" height="26" fill="rgb(17, 17, 17)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="530" y="462" width="26" height="26" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="564" y="462" width="26" height="26" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="598" y="462" width="26" height="26" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="632" y="462" width="26" height="26" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="666" y="462" width="26" height="26" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  </g>
+
+  <!-- governance gate -->
+  <rect x="1036" y="336" width="104" height="104" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <use href="#person" x="1088" y="382" fill="rgb(0, 0, 0)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></use>
+  <line x1="1002" y1="388" x2="1030" y2="388" marker-end="url(#ah2)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1144" y1="388" x2="1176" y2="388" marker-end="url(#ah2)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- approved outputs -->
+  <rect x="1182" y="300" width="362" height="52" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1182" y="362" width="362" height="52" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1182" y="424" width="362" height="52" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1206" y="313" width="16" height="26" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1200" y="379" width="30" height="18" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1202" y="438" width="26" height="24" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+
+  <!-- the return loop : everything goes back -->
+  <path d="M1363,476 L1363,560 L195,560 L195,540" marker-end="url(#ahb)" fill="none" stroke="rgb(36, 95, 166)" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <rect x="1046" y="586" width="300" height="86" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="706" y="586" width="300" height="86" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="366" y="586" width="300" height="86" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <line x1="1196" y1="560" x2="1196" y2="582" marker-end="url(#ahb)" fill="none" stroke="rgb(36, 95, 166)" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="856" y1="560" x2="856" y2="582" marker-end="url(#ahb)" fill="none" stroke="rgb(36, 95, 166)" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="516" y1="560" x2="516" y2="582" marker-end="url(#ahb)" fill="none" stroke="rgb(36, 95, 166)" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <g fill="rgb(0, 0, 0)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter">
+    <rect x="726" y="640" width="20" height="20" fill="rgb(17, 17, 17)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="752" y="640" width="20" height="20" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="778" y="640" width="20" height="20" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="804" y="640" width="20" height="20" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="830" y="640" width="20" height="20" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="856" y="640" width="20" height="20" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="882" y="640" width="20" height="20" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="908" y="640" width="20" height="20" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="934" y="640" width="20" height="20" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  </g>
+  <line x1="56" y1="700" x2="1544" y2="700" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+</g>
+<g id="boxes-and-text">
+<rect x="56" y="720" width="730" height="79.64" rx="2" fill="rgb(233, 240, 249)" stroke="rgb(36, 95, 166)" stroke-width="1"/>
+<rect x="68" y="730" width="178.88" height="17.98" rx="2" fill="rgb(36, 95, 166)" stroke="none"/>
+<rect x="814" y="720" width="730" height="92.97" rx="2" fill="rgb(251, 240, 223)" stroke="rgb(184, 105, 15)" stroke-width="1"/>
+<rect x="826" y="730" width="43.88" height="17.98" rx="2" fill="rgb(184, 105, 15)" stroke="none"/>
+<text x="56" y="55.16" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.92" xml:space="preserve">06</text>
+<text x="73.2" y="55.16" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.92" xml:space="preserve">  ·  YOUR DATA</text>
+<text x="56" y="100.24" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" letter-spacing="-0.37" xml:space="preserve">Your DAM stays the source of truth.</text>
+<text x="56" y="137.12" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" letter-spacing="-0.37" xml:space="preserve">MAKE produces around it and hands everything back.</text>
+<text x="56" y="177.7" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="15" xml:space="preserve">This is the answer to integration, data and portability. Assets and intelligence come out of your DAM, production happens in MAKE, and what returns is richer than what left.</text>
+<text x="195" y="281.64" fill="rgb(36, 95, 166)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" text-anchor="middle" xml:space="preserve">YOURS</text>
+<text x="195" y="368.39" fill="rgb(36, 95, 166)" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle" xml:space="preserve">Your DAM</text>
+<text x="195" y="389.39" fill="rgb(74, 109, 153)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">source of truth</text>
+<text x="194.99" y="418.25" fill="rgb(74, 109, 153)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">assets</text>
+<text x="195" y="434" fill="rgb(74, 109, 153)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">metadata</text>
+<text x="194.99" y="449.75" fill="rgb(74, 109, 153)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">rights and usage</text>
+<text x="194.99" y="465.5" fill="rgb(74, 109, 153)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">brand and claims rules</text>
+<text x="385.99" y="343.64" fill="rgb(36, 95, 166)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">assets and</text>
+<text x="386" y="357.5" fill="rgb(36, 95, 166)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">intelligence out</text>
+<text x="458" y="281.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">PRODUCTION IN MAKE</text>
+<text x="587.99" y="384.98" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" xml:space="preserve">Modules</text>
+<text x="588" y="402.04" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">only the ones this brief needs</text>
+<text x="847.99" y="384.98" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" xml:space="preserve">AI tasks</text>
+<text x="848" y="402.04" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">across pre-production, production and post</text>
+<text x="496" y="446.98" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">Components produced and kept</text>
+<text x="706" y="477.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">each one reusable, each one described</text>
+<text x="1087.99" y="281.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" text-anchor="middle" xml:space="preserve">GOVERNANCE</text>
+<text x="1088" y="457.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">named approver</text>
+<text x="1088" y="471.5" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">brand and claims check</text>
+<text x="1088" y="485.36" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">AI responsibility</text>
+<text x="1182" y="281.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">APPROVED OUTPUTS</text>
+<text x="1240" y="328.98" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">Social cut-down</text>
+<text x="1240" y="390.98" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">Retail display banner</text>
+<text x="1240" y="452.98" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">E-commerce PDP still</text>
+<text x="366" y="543.64" fill="rgb(36, 95, 166)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">REGISTERED BACK TO YOUR DAM</text>
+<text x="1066" y="612" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">1  The finished outputs</text>
+<text x="1066" y="631.26" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">approved, versioned, with their approval history </text>
+<text x="1066" y="645.12" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">attached</text>
+<text x="726" y="612" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">2  The reusable components</text>
+<text x="726" y="631.26" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">the parts, not just the finished asset</text>
+<text x="386" y="612" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">3  The production record</text>
+<text x="386" y="631.26" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">which brief, which market, which route, which AI tasks, </text>
+<text x="386" y="645.12" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">which components</text>
+<text x="386" y="687.64" fill="rgb(184, 105, 15)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">↑ this one is what makes slide 10 possible</text>
+<text x="74" y="741.79" fill="rgb(255, 255, 255)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.24" xml:space="preserve">THE LINE WE DO NOT CROSS</text>
+<text x="68" y="767.97" fill="rgb(23, 63, 112)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">MAKE never becomes your system of record.</text>
+<text x="315.98" y="767.97" fill="rgb(23, 63, 112)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve"> It is where work is produced, not where it lives. Your DAM is complete at every point in </text>
+<text x="68" y="784.3" fill="rgb(23, 63, 112)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">this loop, and it is more complete after each brief than before it.</text>
+<text x="832" y="741.79" fill="rgb(255, 255, 255)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.24" xml:space="preserve">OPEN</text>
+<text x="876.88" y="742.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">Portability is one of the three things this section has to answer,</text>
+<text x="1222.58" y="742.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve"> alongside integration and data. This loop is the shape of the </text>
+<text x="826" y="759.97" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">answer, but the actual commitment is not written: what you keep, in what formats, and what happens to the production record if the </text>
+<text x="826" y="776.3" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">relationship ends.
+  </text>
+<text x="826" y="797.63" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">Needed: one paragraph, agreed with legal, before submission.</text>
+<text x="56" y="863.64" fill="rgb(154, 154, 154)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" letter-spacing="1.16" xml:space="preserve">TECHNOLOGY SECTION  ·  STORYBOARD FOR NARRATIVE AGREEMENT</text>
+<text x="1503.8" y="863.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" letter-spacing="1.16" xml:space="preserve">09 / 15</text>
+</g>
+</svg>

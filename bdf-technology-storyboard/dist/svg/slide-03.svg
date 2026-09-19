@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="900" viewBox="0 0 1600 900">
+<rect x="0" y="0" width="1600" height="900" fill="#ffffff"/>
+<g id="geometry"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"></path></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"></path></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"></path></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"></path></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"></path></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"></path></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"></circle></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"></line></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"></line></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"></line></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"></circle><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"></path></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"></circle><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"></path></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- stage dividers -->
+  <line x1="318" y1="248" x2="318" y2="642" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1062" y1="248" x2="1062" y2="642" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1300" y1="248" x2="1300" y2="642" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- shared head : brief then triage -->
+  <rect x="64" y="292" width="216" height="62" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <line x1="172" y1="354" x2="172" y2="392" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <path d="M64,400 L248,400 L280,446 L248,492 L64,492 Z" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <!-- fan from triage to the three routes -->
+  <path d="M282,446 C 312,446 306,335 334,335" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <path d="M282,446 C 312,446 306,455 334,455" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <path d="M282,446 C 312,446 306,575 334,575" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></path>
+
+  <!-- lane 1 : assisted -->
+  <rect x="340" y="288" width="196" height="94" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="340" y="404" width="196" height="94" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="340" y="524" width="196" height="94" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+
+  <!-- production step slots : 6 per lane. filled = carried by an AI task -->
+  <g fill="rgb(0, 0, 0)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter">
+    <rect x="574" y="308" width="54" height="54" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="638" y="308" width="54" height="54" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="702" y="308" width="54" height="54" fill="rgb(17, 17, 17)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="766" y="308" width="54" height="54" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="830" y="308" width="54" height="54" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="894" y="308" width="54" height="54" fill="rgb(17, 17, 17)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <use href="#person" x="601" y="335" fill="rgb(0, 0, 0)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></use><use href="#person" x="665" y="335" fill="rgb(0, 0, 0)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></use>
+    <use href="#person" x="793" y="335" fill="rgb(0, 0, 0)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></use><use href="#person" x="857" y="335" fill="rgb(0, 0, 0)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></use>
+  </g>
+  <g fill="rgb(0, 0, 0)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter">
+    <rect x="574" y="424" width="54" height="54" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="638" y="424" width="54" height="54" fill="rgb(17, 17, 17)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="702" y="424" width="54" height="54" fill="rgb(17, 17, 17)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="766" y="424" width="54" height="54" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="830" y="424" width="54" height="54" fill="rgb(17, 17, 17)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="894" y="424" width="54" height="54" fill="rgb(17, 17, 17)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <use href="#person" x="601" y="451" fill="rgb(0, 0, 0)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></use><use href="#person" x="793" y="451" fill="rgb(0, 0, 0)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></use>
+  </g>
+  <g fill="rgb(0, 0, 0)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter">
+    <rect x="574" y="544" width="54" height="54" fill="rgb(17, 17, 17)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="638" y="544" width="54" height="54" fill="rgb(17, 17, 17)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="702" y="544" width="54" height="54" fill="rgb(17, 17, 17)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="766" y="544" width="54" height="54" fill="rgb(17, 17, 17)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+    <rect x="830" y="544" width="54" height="54" fill="rgb(17, 17, 17)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect><rect x="894" y="544" width="54" height="54" fill="rgb(17, 17, 17)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  </g>
+  <!-- flow arrows between step slots -->
+  <line x1="540" y1="335" x2="570" y2="335" marker-end="url(#ah2)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="540" y1="451" x2="570" y2="451" marker-end="url(#ah2)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="540" y1="571" x2="570" y2="571" marker-end="url(#ah2)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="952" y1="335" x2="1088" y2="335" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="952" y1="451" x2="1088" y2="451" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="952" y1="571" x2="1088" y2="571" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- the same governance gate in every route -->
+  <rect x="1094" y="300" width="70" height="70" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1094" y="416" width="70" height="70" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1094" y="536" width="70" height="70" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <use href="#person" x="1129" y="326" fill="rgb(0, 0, 0)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></use><use href="#person" x="1129" y="442" fill="rgb(0, 0, 0)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></use><use href="#person" x="1129" y="562" fill="rgb(0, 0, 0)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></use>
+  <line x1="1129" y1="286" x2="1129" y2="300" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1129" y1="370" x2="1129" y2="416" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1129" y1="486" x2="1129" y2="536" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1129" y1="606" x2="1129" y2="620" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1170" y1="335" x2="1326" y2="335" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1170" y1="451" x2="1326" y2="451" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1170" y1="571" x2="1326" y2="571" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- delivery -->
+  <rect x="1336" y="300" width="208" height="70" fill="rgb(255, 255, 255)" stroke="rgb(212, 212, 212)" stroke-width="1.4" stroke-dasharray="5, 4" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1336" y="416" width="208" height="70" fill="rgb(255, 255, 255)" stroke="rgb(212, 212, 212)" stroke-width="1.4" stroke-dasharray="5, 4" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1336" y="536" width="208" height="70" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+
+  <line x1="56" y1="664" x2="1544" y2="664" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+</g>
+<g id="boxes-and-text">
+<rect x="354" y="361.69" width="103.3" height="16.5" rx="2" fill="none" stroke="rgb(184, 105, 15)" stroke-width="1" stroke-dasharray="4.0 3.0"/>
+<rect x="354" y="477.69" width="103.3" height="16.5" rx="2" fill="none" stroke="rgb(184, 105, 15)" stroke-width="1" stroke-dasharray="4.0 3.0"/>
+<rect x="354" y="597.69" width="103.3" height="16.5" rx="2" fill="none" stroke="rgb(184, 105, 15)" stroke-width="1" stroke-dasharray="4.0 3.0"/>
+<rect x="574" y="268" width="11" height="11" fill="rgb(17, 17, 17)" stroke="none"/>
+<rect x="716.66" y="268" width="11" height="11" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1421.81" y="341.91" width="36.38" height="16.5" rx="2" fill="none" stroke="rgb(184, 105, 15)" stroke-width="1" stroke-dasharray="4.0 3.0"/>
+<rect x="1421.81" y="457.91" width="36.38" height="16.5" rx="2" fill="none" stroke="rgb(184, 105, 15)" stroke-width="1" stroke-dasharray="4.0 3.0"/>
+<rect x="56" y="684" width="730" height="76.64" rx="2" fill="rgb(251, 240, 223)" stroke="rgb(184, 105, 15)" stroke-width="1"/>
+<rect x="68" y="694" width="43.88" height="17.98" rx="2" fill="rgb(184, 105, 15)" stroke="none"/>
+<rect x="814" y="684" width="730" height="95.97" rx="2" fill="rgb(255, 255, 255)" stroke="rgb(212, 212, 212)" stroke-width="1"/>
+<rect x="826" y="694" width="260.56" height="17.98" rx="2" fill="rgb(17, 17, 17)" stroke="none"/>
+<text x="56" y="55.16" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.92" xml:space="preserve">02</text>
+<text x="73.2" y="55.16" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.92" xml:space="preserve">  ·  ROUTES</text>
+<text x="56" y="100.24" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" letter-spacing="-0.37" xml:space="preserve">Assisted, augmented and automated are three routes through one system,</text>
+<text x="56" y="137.12" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" letter-spacing="-0.37" xml:space="preserve">chosen per deliverable at triage.</text>
+<text x="56" y="177.7" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="15" xml:space="preserve">They are not three stages of production, and they are not a human versus machine split. What changes between them is how much of the sequence AI tasks carry. What never changes is the </text>
+<text x="56" y="199.45" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="15" xml:space="preserve">approval gate.</text>
+<text x="64" y="265.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">BRIEF &amp; TRIAGE</text>
+<text x="340" y="265.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">ROUTE  →  PRODUCTION SEQUENCE</text>
+<text x="1094" y="265.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">REVIEW</text>
+<text x="1128.99" y="353.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">approver</text>
+<text x="1128.99" y="469.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">approver</text>
+<text x="1128.99" y="589.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">approver</text>
+<text x="1336" y="265.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">DELIVERY</text>
+<text x="171.99" y="318" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="middle" xml:space="preserve">One brief</text>
+<text x="172" y="335.26" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">many deliverables inside it</text>
+<text x="163.99" y="430" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="middle" xml:space="preserve">Triage</text>
+<text x="164" y="448.26" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">route chosen here, per deliverable, </text>
+<text x="163.99" y="462.12" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">not per brief</text>
+<text x="354" y="315.04" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" xml:space="preserve">Assisted</text>
+<text x="354" y="335.11" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">Our team leads. AI tasks take </text>
+<text x="354" y="348.97" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">specific steps.</text>
+<text x="361" y="372.98" fill="rgb(184, 105, 15)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.95" xml:space="preserve">DEFINITION TBC</text>
+<text x="354" y="431.04" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" xml:space="preserve">Augmented</text>
+<text x="354" y="451.11" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">AI tasks carry most steps. Our team </text>
+<text x="354" y="464.97" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">directs and intervenes.</text>
+<text x="361" y="488.98" fill="rgb(184, 105, 15)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.95" xml:space="preserve">DEFINITION TBC</text>
+<text x="354" y="551.04" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" xml:space="preserve">Automated</text>
+<text x="354" y="571.11" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">AI tasks run the sequence end to </text>
+<text x="354" y="584.97" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">end. Our team sets it up.</text>
+<text x="361" y="608.98" fill="rgb(184, 105, 15)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.95" xml:space="preserve">DEFINITION TBC</text>
+<text x="590" y="277.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">step carried by an AI task
+    </text>
+<text x="732.66" y="277.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">step carried by our team</text>
+<text x="574" y="629.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">Six steps shown as a placeholder for the production sequence. Real step names </text>
+<text x="574" y="643.5" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">come from the module set on slide 06.</text>
+<text x="1179.99" y="628.98" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" xml:space="preserve">The same gate in every route</text>
+<text x="1180" y="647.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">Nothing releases unreviewed.</text>
+<text x="1439.99" y="328.98" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" xml:space="preserve">Typical output</text>
+<text x="1440" y="353.2" fill="rgb(184, 105, 15)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.95" text-anchor="middle" xml:space="preserve">TBC</text>
+<text x="1439.99" y="444.98" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" xml:space="preserve">Typical output</text>
+<text x="1440" y="469.2" fill="rgb(184, 105, 15)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.95" text-anchor="middle" xml:space="preserve">TBC</text>
+<text x="1439.99" y="558.98" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" xml:space="preserve">Versioning</text>
+<text x="1439.99" y="574.39" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" xml:space="preserve">Translation</text>
+<text x="1440" y="592.45" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">the two named in discussion</text>
+<text x="74" y="705.79" fill="rgb(255, 255, 255)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.24" xml:space="preserve">OPEN</text>
+<text x="118.88" y="706.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">The three definitions are missing from this conversation.</text>
+<text x="429.44" y="706.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve"> Each route needs one agreed sentence and a qualifying rule for </text>
+<text x="68" y="723.97" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">when it is used. Without those, this slide is a shape without content, and the client cannot tell which route their work lands in.
+  </text>
+<text x="68" y="745.3" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">Needed from: whoever holds the brief response. Highest priority open item in this section.</text>
+<text x="832" y="705.79" fill="rgb(255, 255, 255)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.24" xml:space="preserve">WHY THIS REPLACES THE EARLIER VISUAL</text>
+<text x="826" y="731.97" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">The earlier “human plus tech / fully automated” diagram described the </text>
+<text x="1183.97" y="731.97" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">production step only</text>
+<text x="1297.7" y="731.97" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">. It left out briefing and triage, so it read as a </text>
+<text x="826" y="748.3" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">split between people and machines rather than three routes. Routes run brief to delivery. Versioning and translation sit inside the </text>
+<text x="826" y="764.63" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">automated route, not outside the model.</text>
+<text x="56" y="863.64" fill="rgb(154, 154, 154)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" letter-spacing="1.16" xml:space="preserve">TECHNOLOGY SECTION  ·  STORYBOARD FOR NARRATIVE AGREEMENT</text>
+<text x="1503.8" y="863.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" letter-spacing="1.16" xml:space="preserve">03 / 15</text>
+</g>
+</svg>

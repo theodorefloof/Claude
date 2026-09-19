@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>Technology</title>
+<style>
+:root{
+  --ink:#14171C;
+  --ink2:#3E454F;
+  --grey:#78808B;
+  --grey2:#A2A9B2;
+  --hair:#DDE1E7;
+  --tint:#F4F6F9;
+  --tint2:#EBEFF4;
+  --acc:#1D5C8C;
+  --accL:#E9F1F7;
+  --accM:#B9D0E2;
+  --accD:#12415F;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#8e9299}
+body{font-family:Arial,"Liberation Sans",Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+
+.slide{position:relative;width:1600px;height:900px;background:#fff;color:var(--ink);
+  overflow:hidden;margin:0 auto 26px;page-break-after:always;break-after:page}
+.slide:last-child{margin-bottom:0;page-break-after:auto;break-after:auto}
+@media print{ @page{size:1600px 900px;margin:0} html,body{background:#fff} .slide{margin:0} }
+
+.ab{position:absolute}
+svg.canvas{position:absolute;left:0;top:0;width:1600px;height:900px;overflow:visible}
+
+/* ---------- page furniture ---------- */
+.kick{position:absolute;left:84px;top:70px;font-size:11px;letter-spacing:.2em;
+      text-transform:uppercase;color:var(--grey);font-weight:700}
+.h1{position:absolute;left:84px;top:98px;width:1300px;font-size:42px;line-height:1.16;
+    font-weight:700;letter-spacing:-.019em;color:var(--ink)}
+.h1.sm{font-size:37px}
+.stand{position:absolute;left:84px;font-size:17px;line-height:1.56;color:var(--ink2)}
+.pageno{position:absolute;right:84px;bottom:52px;font-size:11px;letter-spacing:.16em;
+        color:var(--grey2);font-weight:700}
+.sect{position:absolute;left:84px;bottom:52px;font-size:11px;letter-spacing:.16em;
+      text-transform:uppercase;color:var(--grey2);font-weight:700}
+
+/* ---------- text atoms ---------- */
+.lbl{font-size:15px;line-height:1.35;color:var(--ink)}
+.lbl.b{font-weight:700}
+.sm{font-size:13.5px;line-height:1.42;color:var(--ink2)}
+.sm.b{font-weight:700;color:var(--ink)}
+.xs{font-size:11.5px;line-height:1.4;color:var(--grey)}
+.eyebrow{font-size:11px;letter-spacing:.17em;text-transform:uppercase;font-weight:700;color:var(--grey)}
+.eyebrow.ink{color:var(--ink)}
+.eyebrow.acc{color:var(--acc)}
+.ctr{text-align:center}.rt{text-align:right}
+.acc{color:var(--acc)}.mut{color:var(--grey)}
+.big{font-size:19px;line-height:1.3;font-weight:700}
+.num{font-size:34px;font-weight:700;line-height:1;letter-spacing:-.02em}
+
+/* ---------- three-point row, used to make a page readable on its own ---------- */
+.pt .t{font-size:16px;font-weight:700;line-height:1.3;margin-bottom:7px}
+.pt .d{font-size:13.5px;line-height:1.5;color:var(--ink2)}
+
+/* ---------- a field the pitch team completes before sending ---------- */
+.fill{display:inline-block;border:1.3px dashed var(--grey2);border-radius:3px;color:var(--grey2);
+      font-size:11.5px;letter-spacing:.04em;padding:4px 9px;line-height:1;background:#fff}
+.fill.w{display:block;text-align:center;padding:7px 9px}
+
+/* ---------- pill / tag ---------- */
+.tag{display:inline-block;background:var(--acc);color:#fff;font-size:10.5px;letter-spacing:.12em;
+     text-transform:uppercase;font-weight:700;padding:4px 10px 4.5px;border-radius:2px}
+.tag.o{background:none;border:1.3px solid var(--grey2);color:var(--grey)}
+.tag.k{background:var(--ink)}
+
+/* ---------- component code chip, carried across pages ---------- */
+.code{display:inline-block;width:20px;height:20px;line-height:18px;text-align:center;
+      border:1.4px solid var(--ink);font-size:11px;font-weight:700;margin-right:5px;
+      border-radius:3px;color:var(--ink);vertical-align:middle}
+.code.hi{background:var(--ink);color:#fff}
+.code.a{background:var(--acc);border-color:var(--acc);color:#fff}
+.code.gh{border-style:dashed;border-color:var(--hair);color:var(--grey2)}
+
+/* ---------- callout ---------- */
+.call{border-left:3px solid var(--acc);padding:2px 0 2px 18px}
+.call .t{font-size:16px;font-weight:700;line-height:1.35}
+.call .d{font-size:13.5px;line-height:1.5;color:var(--ink2);margin-top:6px}
+.panel{background:var(--tint);border-radius:4px;padding:22px 26px}
+.panel.acc{background:var(--accL)}
+
+/* ---------- SVG classes ---------- */
+svg text{font-family:Arial,"Liberation Sans",Helvetica,sans-serif}
+.n{fill:#fff;stroke:#14171C;stroke-width:1.7}
+.n-f{fill:#F4F6F9;stroke:#14171C;stroke-width:1.7}
+.n-t{fill:#F4F6F9;stroke:#C4CBD4;stroke-width:1.3}
+.n-k{fill:#14171C;stroke:#14171C;stroke-width:1.7}
+.n-a{fill:#E9F1F7;stroke:#1D5C8C;stroke-width:1.7}
+.n-ak{fill:#1D5C8C;stroke:#1D5C8C;stroke-width:1.7}
+.n-o{fill:#fff;stroke:#14171C;stroke-width:1.7;stroke-dasharray:7 5}
+.n-gh{fill:#fff;stroke:#DDE1E7;stroke-width:1.5}
+.n-gd{fill:#fff;stroke:#A2A9B2;stroke-width:1.4;stroke-dasharray:6 5}
+.ln{stroke:#14171C;stroke-width:1.6;fill:none}
+.ln-2{stroke:#14171C;stroke-width:2.8;fill:none}
+.ln-h{stroke:#DDE1E7;stroke-width:1.4;fill:none}
+.ln-hd{stroke:#DDE1E7;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.ln-g{stroke:#A2A9B2;stroke-width:1.4;fill:none}
+.ln-gd{stroke:#A2A9B2;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.ln-a{stroke:#1D5C8C;stroke-width:1.9;fill:none}
+.ln-ad{stroke:#1D5C8C;stroke-width:1.7;fill:none;stroke-dasharray:7 5}
+.ln-d{stroke:#14171C;stroke-width:1.6;fill:none;stroke-dasharray:7 5}
+.fx{fill:none}
+</style>
+</head>
+<body>
+<!-- ============================ CLIENT 01 ============================ -->
+<section class="slide" id="c01">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#1D5C8C"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#A2A9B2"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#DDE1E7"/></marker>
+<g id="person"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#14171C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#14171C" stroke-width="1.7"/></g>
+<g id="personA"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#1D5C8C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#1D5C8C" stroke-width="1.7"/></g>
+<g id="tick"><path d="M-5,0 l3.6,4 l7,-9" fill="none" stroke="#1D5C8C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F4F6F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#DDE1E7" stroke-width="2.4"/></pattern>
+</defs>
+
+  <!-- the one band : what exists, what we connect, what runs -->
+  <path d="M560,400 L152,400 L142,380 L152,388 L142,396 L152,404 L142,412 L152,420 L142,428 L152,434 L560,434 Z"
+        fill="#14171C" stroke="none"/>
+  <rect x="560" y="400" width="288" height="62" class="n-o"/>
+  <rect x="848" y="400" width="668" height="62" class="n-f"/>
+
+  <!-- we start together -->
+  <line x1="560" y1="358" x2="560" y2="490" class="ln-a" stroke-dasharray="6 5"/>
+  <circle cx="560" cy="358" r="5" fill="#1D5C8C"/>
+
+  <!-- three points -->
+  <line x1="84"   y1="596" x2="140"  y2="596" stroke="#1D5C8C" stroke-width="3"/>
+  <line x1="588"  y1="596" x2="644"  y2="596" stroke="#1D5C8C" stroke-width="3"/>
+  <line x1="1092" y1="596" x2="1148" y2="596" stroke="#1D5C8C" stroke-width="3"/>
+</svg>
+
+<div class="kick">Technology</div>
+<div class="h1">The platform is already built and already running.<br>What we do with you is connect it.</div>
+<div class="stand" style="top:220px;width:1240px">MAKE is the production system our teams use today, on live work. Nothing in this proposal waits for a platform to be finished. The work we do together is connecting it to your DAM, your approvals and your channels.</div>
+
+<div class="ab eyebrow acc" style="left:404px;top:334px;width:320px;text-align:center">We start together</div>
+<div class="ab lbl b" style="left:176px;top:422px;width:360px;color:#fff">MAKE, in use on our work today</div>
+<div class="ab" style="left:580px;top:414px;width:252px">
+  <div class="sm b">We connect to your systems</div>
+  <div class="xs" style="margin-top:3px">Your DAM, approvals and channels</div>
+</div>
+<div class="ab" style="left:872px;top:414px;width:620px">
+  <div class="sm b">Your briefs run through MAKE</div>
+  <div class="xs" style="margin-top:3px">The same system, the same way, from your first brief onwards</div>
+</div>
+<div class="ab xs" style="left:142px;top:478px;width:400px">Already in daily use before this engagement begins</div>
+<div class="ab xs rt" style="left:1116px;top:478px;width:400px">Sequence only. Timings are agreed in planning.</div>
+
+<div class="ab pt" style="left:84px;top:622px;width:424px">
+  <div class="t">Built</div>
+  <div class="d">The platform, its modules and the tasks that run inside it are in daily use on our work. None of it is being written for this pitch.</div>
+</div>
+<div class="ab pt" style="left:588px;top:622px;width:424px">
+  <div class="t">Connected to you</div>
+  <div class="d">We integrate with the systems you already run. Your DAM stays your DAM, your approvers stay your approvers, and your channels stay where they are.</div>
+</div>
+<div class="ab pt" style="left:1092px;top:622px;width:424px">
+  <div class="t">Working from your first brief</div>
+  <div class="d">There is no pilot platform and no parallel build. Your work goes through the same system as the rest of our production.</div>
+</div>
+
+<div class="pageno">01</div>
+</section>
+<!-- ============================ CLIENT 02 ============================ -->
+<section class="slide" id="c02">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#1D5C8C"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#A2A9B2"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#DDE1E7"/></marker>
+<g id="person"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#14171C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#14171C" stroke-width="1.7"/></g>
+<g id="personA"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#1D5C8C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#1D5C8C" stroke-width="1.7"/></g>
+<g id="tick"><path d="M-5,0 l3.6,4 l7,-9" fill="none" stroke="#1D5C8C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F4F6F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#DDE1E7" stroke-width="2.4"/></pattern>
+</defs>
+
+  <!-- the brief -->
+  <rect x="84" y="414" width="216" height="100" class="n-f"/>
+  <line x1="308" y1="464" x2="348" y2="464" class="ln" marker-end="url(#ah)"/>
+
+  <!-- components, made once -->
+  <rect x="360" y="364" width="330" height="34" class="n-a"/>
+  <rect x="360" y="403" width="330" height="34" class="n"/>
+  <rect x="360" y="442" width="330" height="34" class="n"/>
+  <rect x="360" y="481" width="330" height="34" class="n"/>
+  <rect x="360" y="520" width="330" height="34" class="n"/>
+  <rect x="360" y="559" width="330" height="34" class="n"/>
+  <rect x="360" y="598" width="330" height="34" class="n"/>
+  <rect x="360" y="637" width="330" height="34" class="n"/>
+  <rect x="360" y="676" width="330" height="34" class="n"/>
+  <rect x="372" y="372" width="18" height="18" fill="#1D5C8C"/>
+  <rect x="372" y="411" width="18" height="18" class="n"/>
+  <rect x="372" y="450" width="18" height="18" class="n"/>
+  <rect x="372" y="489" width="18" height="18" class="n"/>
+  <rect x="372" y="528" width="18" height="18" class="n"/>
+  <rect x="372" y="567" width="18" height="18" class="n"/>
+  <rect x="372" y="606" width="18" height="18" class="n"/>
+  <rect x="372" y="645" width="18" height="18" class="n"/>
+  <rect x="372" y="684" width="18" height="18" class="n"/>
+
+  <!-- one component traced to the three outputs that use it -->
+  <path d="M694,381 C 800,381 850,389 932,389" class="ln-a" marker-end="url(#aha)"/>
+  <path d="M694,381 C 800,381 850,448 932,448" class="ln-a" marker-end="url(#aha)"/>
+  <path d="M694,381 C 800,381 850,507 932,507" class="ln-a" marker-end="url(#aha)"/>
+  <!-- every other component fans out the same way -->
+  <path d="M694,420 C 790,420 840,566 900,566" class="ln-h"/>
+  <path d="M694,459 C 790,459 840,625 900,625" class="ln-h"/>
+  <path d="M694,498 C 790,498 840,684 900,684" class="ln-h"/>
+  <path d="M694,537 C 790,537 840,566 900,566" class="ln-h"/>
+  <path d="M694,576 C 790,576 840,625 900,625" class="ln-h"/>
+  <path d="M694,615 C 790,615 840,684 900,684" class="ln-h"/>
+  <line x1="900" y1="566" x2="932" y2="566" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="900" y1="625" x2="932" y2="625" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="900" y1="684" x2="932" y2="684" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="900" y1="625" x2="932" y2="625" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="900" y1="684" x2="932" y2="684" class="ln-h" marker-end="url(#ahh)"/>
+
+  <!-- outputs -->
+  <rect x="940" y="364" width="576" height="50" class="n"/>
+  <rect x="940" y="423" width="576" height="50" class="n"/>
+  <rect x="940" y="482" width="576" height="50" class="n"/>
+  <rect x="940" y="541" width="576" height="50" class="n"/>
+  <rect x="940" y="600" width="576" height="50" class="n"/>
+  <rect x="940" y="659" width="576" height="50" class="n"/>
+  <rect x="968" y="377" width="16" height="24" class="n-t"/>
+  <rect x="958" y="439" width="36" height="20" class="n-t"/>
+  <rect x="958" y="498" width="36" height="20" class="n-t"/>
+  <rect x="954" y="561" width="44" height="12" class="n-t"/>
+  <rect x="964" y="612" width="24" height="28" class="n-t"/>
+  <rect x="962" y="672" width="26" height="26" class="n-t"/>
+</svg>
+
+<div class="kick">How the efficiency works</div>
+<div class="h1">We make the parts once, then assemble them into everything.</div>
+<div class="stand" style="top:172px;width:1300px">Traditional production builds each asset from scratch. Modular production builds the components once, then recombines them into every format, channel and market that needs them. The saving compounds every time something new is asked for.</div>
+
+<div class="ab eyebrow ink" style="left:84px;top:296px;width:300px">One brief</div>
+<div class="ab eyebrow ink" style="left:360px;top:296px;width:400px">Components, made once</div>
+<div class="ab eyebrow ink" style="left:940px;top:296px;width:576px">Finished outputs, assembled from them</div>
+
+<div class="ab" style="left:104px;top:430px;width:180px">
+  <div class="xs" style="text-transform:uppercase;letter-spacing:.14em;font-weight:700">Example</div>
+  <div class="lbl b" style="margin-top:7px;font-size:17px">Seasonal launch film</div>
+  <div class="xs" style="margin-top:7px">One shoot. One edit. One approval round.</div>
+</div>
+
+<div class="ab lbl b acc" style="left:400px;top:374px;width:280px">Hero film master</div>
+<div class="ab lbl"   style="left:400px;top:413px;width:280px">Product macro</div>
+<div class="ab lbl"   style="left:400px;top:452px;width:280px">Voice over</div>
+<div class="ab lbl"   style="left:400px;top:491px;width:280px">Music bed</div>
+<div class="ab lbl"   style="left:400px;top:530px;width:280px">Subtitle track</div>
+<div class="ab lbl"   style="left:400px;top:569px;width:280px">Copy block</div>
+<div class="ab lbl"   style="left:400px;top:608px;width:280px">Logo lockup</div>
+<div class="ab lbl"   style="left:400px;top:647px;width:280px">Legal and claims line</div>
+<div class="ab lbl"   style="left:400px;top:686px;width:280px">Price and promotion layer</div>
+
+<div class="ab lbl b" style="left:1012px;top:374px;width:480px">Social cut-down <span class="xs">9:16</span></div>
+<div class="ab lbl b" style="left:1012px;top:433px;width:480px">Hero film <span class="xs">16:9</span></div>
+<div class="ab lbl b" style="left:1012px;top:492px;width:480px">Six-second bumper <span class="xs">16:9</span></div>
+<div class="ab lbl b" style="left:1012px;top:551px;width:480px">Retail display banner</div>
+<div class="ab lbl b" style="left:1012px;top:610px;width:480px">CRM header <span class="xs">4:5</span></div>
+<div class="ab lbl b" style="left:1012px;top:669px;width:480px">E-commerce product still <span class="xs">1:1</span></div>
+
+<div class="ab xs acc" style="left:1300px;top:376px;width:200px;text-align:right">uses the hero master</div>
+<div class="ab xs acc" style="left:1300px;top:435px;width:200px;text-align:right">uses the hero master</div>
+<div class="ab xs acc" style="left:1300px;top:494px;width:200px;text-align:right">uses the hero master</div>
+
+<div class="ab call" style="left:84px;top:554px;width:250px">
+  <div class="t">Nine components.<br>Six finished outputs.</div>
+  <div class="d">Add a seventh output, a new market or a new format and it draws mostly on components that already exist.</div>
+</div>
+<div class="ab xs" style="left:84px;top:702px;width:250px">One component&rsquo;s route is drawn in full so the diagram stays readable. Every component works the same way.</div>
+
+<div class="pageno">02</div>
+</section>
+<!-- ============================ CLIENT 03 ============================ -->
+<section class="slide" id="c03">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#1D5C8C"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#A2A9B2"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#DDE1E7"/></marker>
+<g id="person"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#14171C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#14171C" stroke-width="1.7"/></g>
+<g id="personA"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#1D5C8C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#1D5C8C" stroke-width="1.7"/></g>
+<g id="tick"><path d="M-5,0 l3.6,4 l7,-9" fill="none" stroke="#1D5C8C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F4F6F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#DDE1E7" stroke-width="2.4"/></pattern>
+</defs>
+  <line x1="84" y1="356" x2="1516" y2="356" class="ln-h"/>
+
+  <!-- lane separators -->
+  <line x1="84" y1="486" x2="1516" y2="486" class="ln-h"/>
+  <line x1="84" y1="606" x2="1516" y2="606" class="ln-h"/>
+
+  <!-- balance bars : our team vs the system -->
+  <rect x="440" y="404" width="378" height="26" class="n-k"/>
+  <rect x="818" y="404" width="162" height="26" class="n-a"/>
+  <rect x="440" y="524" width="243" height="26" class="n-k"/>
+  <rect x="683" y="524" width="297" height="26" class="n-a"/>
+  <rect x="440" y="644" width="97"  height="26" class="n-k"/>
+  <rect x="537" y="644" width="443" height="26" class="n-a"/>
+
+  <!-- the same approval in every route -->
+  <rect x="1040" y="386" width="62" height="62" class="n-a"/>
+  <rect x="1040" y="506" width="62" height="62" class="n-a"/>
+  <rect x="1040" y="626" width="62" height="62" class="n-a"/>
+  <use href="#personA" x="1071" y="422"/>
+  <use href="#personA" x="1071" y="542"/>
+  <use href="#personA" x="1071" y="662"/>
+  <line x1="1000" y1="417" x2="1034" y2="417" class="ln" marker-end="url(#ah2)"/>
+  <line x1="1000" y1="537" x2="1034" y2="537" class="ln" marker-end="url(#ah2)"/>
+  <line x1="1000" y1="657" x2="1034" y2="657" class="ln" marker-end="url(#ah2)"/>
+  <line x1="1108" y1="417" x2="1150" y2="417" class="ln" marker-end="url(#ah2)"/>
+  <line x1="1108" y1="537" x2="1150" y2="537" class="ln" marker-end="url(#ah2)"/>
+  <line x1="1108" y1="657" x2="1150" y2="657" class="ln" marker-end="url(#ah2)"/>
+
+  <line x1="1071" y1="360" x2="1071" y2="386" class="ln-h"/>
+  <line x1="1071" y1="448" x2="1071" y2="506" class="ln-h"/>
+  <line x1="1071" y1="568" x2="1071" y2="626" class="ln-h"/>
+  <line x1="1071" y1="688" x2="1071" y2="706" class="ln-h"/>
+  <!-- legend swatches -->
+  <rect x="440" y="326" width="14" height="14" class="n-k"/>
+  <rect x="560" y="326" width="14" height="14" class="n-a"/>
+</svg>
+
+<div class="kick">How work is routed</div>
+<div class="h1">Every piece of work takes one of three routes.<br>You always know which one.</div>
+<div class="stand" style="top:220px;width:1280px">At briefing we choose a route for each deliverable. The route decides how much of the production sequence our people run and how much the system runs. It never changes who approves the work.</div>
+
+<div class="ab eyebrow ink" style="left:84px;top:324px;width:300px">Route</div>
+<div class="ab xs" style="left:462px;top:327px;width:120px">our team</div>
+<div class="ab xs" style="left:582px;top:327px;width:160px">the system</div>
+<div class="ab eyebrow ink ctr" style="left:1000px;top:324px;width:142px">Approval</div>
+<div class="ab xs ctr" style="left:990px;top:712px;width:162px">the same gate,<br>every route</div>
+<div class="ab eyebrow ink" style="left:1160px;top:324px;width:356px">What it is used for</div>
+
+<!-- assisted -->
+<div class="ab" style="left:84px;top:386px;width:330px">
+  <div class="big">Assisted</div>
+  <div class="sm" style="margin-top:7px">Our team leads the work. The system takes specific steps within it.</div>
+</div>
+<div class="ab xs" style="left:440px;top:440px;width:540px">Most of the sequence is run by our people</div>
+<div class="ab" style="left:1160px;top:396px;width:356px"><span class="fill">Examples to be completed</span></div>
+
+<!-- augmented -->
+<div class="ab" style="left:84px;top:506px;width:330px">
+  <div class="big">Augmented</div>
+  <div class="sm" style="margin-top:7px">The system carries most of the sequence. Our team directs it and steps in where craft decides the outcome.</div>
+</div>
+<div class="ab xs" style="left:440px;top:560px;width:540px">Shared, and the balance shifts by deliverable</div>
+<div class="ab" style="left:1160px;top:516px;width:356px"><span class="fill">Examples to be completed</span></div>
+
+<!-- automated -->
+<div class="ab" style="left:84px;top:626px;width:330px">
+  <div class="big">Automated</div>
+  <div class="sm" style="margin-top:7px">The system runs the sequence end to end. Our team sets it up and checks what comes out.</div>
+</div>
+<div class="ab xs" style="left:440px;top:680px;width:540px">Our people set the rules, then review the output</div>
+<div class="ab" style="left:1160px;top:636px;width:356px">
+  <div class="lbl b">Versioning and translation at volume</div>
+</div>
+
+
+<div class="ab panel" style="left:84px;top:736px;width:1432px;padding:18px 24px">
+  <span class="lbl b">One approval gate, whichever route the work takes.</span>
+  <span class="lbl" style="color:var(--ink2)">&nbsp; Nothing is released without your named approver signing it off, including on the automated route. The balance shown above is indicative of the difference between the routes rather than a fixed split.</span>
+</div>
+
+<div class="pageno">03</div>
+</section>
+<!-- ============================ CLIENT 04 ============================ -->
+<section class="slide" id="c04">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#1D5C8C"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#A2A9B2"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#DDE1E7"/></marker>
+<g id="person"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#14171C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#14171C" stroke-width="1.7"/></g>
+<g id="personA"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#1D5C8C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#1D5C8C" stroke-width="1.7"/></g>
+<g id="tick"><path d="M-5,0 l3.6,4 l7,-9" fill="none" stroke="#1D5C8C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F4F6F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#DDE1E7" stroke-width="2.4"/></pattern>
+</defs>
+
+  <!-- yours -->
+  <rect x="84" y="336" width="386" height="76" class="n-a"/>
+  <rect x="84" y="426" width="386" height="76" class="n-a"/>
+  <rect x="84" y="516" width="386" height="76" class="n-a"/>
+  <rect x="84" y="606" width="386" height="76" class="n-a"/>
+  <path d="M474,374 C 508,374 512,430 540,430" class="ln-a" marker-end="url(#aha)"/>
+  <path d="M474,464 C 508,464 512,470 540,470" class="ln-a" marker-end="url(#aha)"/>
+  <path d="M474,554 C 508,554 512,510 540,510" class="ln-a" marker-end="url(#aha)"/>
+  <path d="M474,644 C 508,644 512,550 540,550" class="ln-a" marker-end="url(#aha)"/>
+
+  <!-- MAKE -->
+  <rect x="546" y="316" width="508" height="400" class="n" stroke-width="2.4"/>
+  <line x1="546" y1="410" x2="1054" y2="410" class="ln-h"/>
+  <rect x="578" y="442" width="444" height="146" class="n-f"/>
+  <rect x="578" y="614" width="444" height="70" class="n"/>
+  <circle cx="640" cy="614" r="8" fill="#fff" stroke="#14171C" stroke-width="1.7"/>
+  <circle cx="724" cy="614" r="8" fill="#fff" stroke="#14171C" stroke-width="1.7"/>
+  <circle cx="808" cy="614" r="8" fill="#fff" stroke="#14171C" stroke-width="1.7"/>
+  <circle cx="892" cy="614" r="8" fill="#fff" stroke="#14171C" stroke-width="1.7"/>
+  <circle cx="976" cy="614" r="8" fill="#fff" stroke="#14171C" stroke-width="1.7"/>
+  <line x1="578" y1="614" x2="1022" y2="614" class="ln"/>
+
+  <!-- tools -->
+  <rect x="1130" y="336" width="386" height="76" class="n"/>
+  <rect x="1130" y="426" width="386" height="76" class="n"/>
+  <rect x="1130" y="516" width="386" height="76" class="n"/>
+  <rect x="1130" y="606" width="386" height="76" class="n-gd"/>
+  <path d="M1060,430 C 1090,430 1094,374 1124,374" class="ln" marker-end="url(#ah)"/>
+  <path d="M1060,470 C 1090,470 1094,464 1124,464" class="ln" marker-end="url(#ah)"/>
+  <path d="M1060,510 C 1090,510 1094,554 1124,554" class="ln" marker-end="url(#ah)"/>
+  <path d="M1060,550 C 1090,550 1094,644 1124,644" class="ln-gd" marker-end="url(#ahg)"/>
+</svg>
+
+<div class="kick">The platform</div>
+<div class="h1">One layer connects your systems to our production tools.</div>
+<div class="stand" style="top:172px;width:1300px">MAKE sits between the two. Your DAM, your approvals and your channels connect on one side. The tools our teams produce with connect on the other. Tools can be added or swapped without anything else changing, and nothing you already run is replaced.</div>
+
+<div class="ab eyebrow acc" style="left:84px;top:302px;width:386px">Your systems</div>
+<div class="ab" style="left:104px;top:352px;width:346px"><div class="lbl b acc">Your DAM</div><div class="xs" style="margin-top:4px">where your assets live, before and after</div></div>
+<div class="ab" style="left:104px;top:442px;width:346px"><div class="lbl b acc">Your brand, claims and legal rules</div><div class="xs" style="margin-top:4px">what any output is allowed to say</div></div>
+<div class="ab" style="left:104px;top:532px;width:346px"><div class="lbl b acc">Your review and approval</div><div class="xs" style="margin-top:4px">your approvers, in your process</div></div>
+<div class="ab" style="left:104px;top:622px;width:346px"><div class="lbl b acc">Your channels and e-commerce</div><div class="xs" style="margin-top:4px">where finished work has to land</div></div>
+
+<div class="ab ctr" style="left:546px;top:340px;width:508px">
+  <div style="font-size:44px;font-weight:700;letter-spacing:-.02em;line-height:1">MAKE</div>
+  <div class="eyebrow" style="margin-top:12px">The layer in the middle</div>
+</div>
+<div class="ab" style="left:606px;top:466px;width:390px">
+  <div class="sm b">It routes a brief through production</div>
+  <div class="sm b" style="margin-top:12px">It holds every version, review and approval in one place</div>
+  <div class="sm b" style="margin-top:12px">It runs the tasks that do the work</div>
+</div>
+<div class="ab eyebrow ink ctr" style="left:578px;top:634px;width:444px">Open connections</div>
+<div class="ab xs ctr" style="left:598px;top:656px;width:404px">Any tool can plug in here. Tools change without the layer changing.</div>
+
+<div class="ab eyebrow ink" style="left:1130px;top:302px;width:386px">Our production tools</div>
+<div class="ab" style="left:1150px;top:352px;width:346px"><div class="lbl b">Generation</div><div class="xs" style="margin-top:4px">in use on our work today</div></div>
+<div class="ab" style="left:1150px;top:442px;width:346px"><div class="lbl b">Editing and compositing</div><div class="xs" style="margin-top:4px">in use on our work today</div></div>
+<div class="ab" style="left:1150px;top:532px;width:346px"><div class="lbl b">Translation and localisation</div><div class="xs" style="margin-top:4px">in use on our work today</div></div>
+<div class="ab" style="left:1150px;top:622px;width:346px"><div class="lbl b mut">Whatever comes next</div><div class="xs" style="margin-top:4px">added as a connection, not a rebuild</div></div>
+
+<div class="ab panel acc" style="left:84px;top:744px;width:1432px;padding:18px 24px">
+  <span class="lbl b acc">The connections on the left are the work we do together at the start.</span>
+  <span class="lbl" style="color:var(--ink2)">&nbsp; The ones on the right are already in place. That is the whole of the difference between what exists and what we build.</span>
+</div>
+
+<div class="pageno">04</div>
+</section>
+<!-- ============================ CLIENT 05 ============================ -->
+<section class="slide" id="c05">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#1D5C8C"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#A2A9B2"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#DDE1E7"/></marker>
+<g id="person"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#14171C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#14171C" stroke-width="1.7"/></g>
+<g id="personA"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#1D5C8C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#1D5C8C" stroke-width="1.7"/></g>
+<g id="tick"><path d="M-5,0 l3.6,4 l7,-9" fill="none" stroke="#1D5C8C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F4F6F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#DDE1E7" stroke-width="2.4"/></pattern>
+</defs>
+
+  <!-- the module set -->
+  <rect x="458" y="316" width="1058" height="128" class="n" stroke-width="2.2"/>
+  <rect x="470"  y="330" width="118" height="100" class="n-a"/>
+  <rect x="600"  y="330" width="118" height="100" class="n-a"/>
+  <rect x="730"  y="330" width="118" height="100" class="n-a"/>
+  <rect x="860"  y="330" width="118" height="100" class="n-a"/>
+  <rect x="990"  y="330" width="118" height="100" class="n-gd"/>
+  <rect x="1120" y="330" width="118" height="100" class="n-gd"/>
+  <rect x="1250" y="330" width="118" height="100" class="n-gd"/>
+  <rect x="1380" y="330" width="118" height="100" class="n-gd"/>
+
+  <line x1="84" y1="486" x2="1516" y2="486" class="ln-h"/>
+
+  <!-- brief A : two modules -->
+  <rect x="470"  y="512" width="118" height="40" class="n-ak"/>
+  <rect x="600"  y="512" width="118" height="40" class="n-gh"/>
+  <rect x="730"  y="512" width="118" height="40" class="n-gh"/>
+  <rect x="860"  y="512" width="118" height="40" class="n-gh"/>
+  <rect x="990"  y="512" width="118" height="40" class="n-gh"/>
+  <rect x="1120" y="512" width="118" height="40" class="n-gh"/>
+  <rect x="1250" y="512" width="118" height="40" class="n-gh"/>
+  <rect x="1380" y="512" width="118" height="40" class="n-gh"/>
+  <rect x="600"  y="512" width="118" height="40" class="n-ak"/>
+
+  <!-- brief B : all of them -->
+  <rect x="470"  y="582" width="118" height="40" class="n-ak"/>
+  <rect x="600"  y="582" width="118" height="40" class="n-ak"/>
+  <rect x="730"  y="582" width="118" height="40" class="n-ak"/>
+  <rect x="860"  y="582" width="118" height="40" class="n-ak"/>
+  <rect x="990"  y="582" width="118" height="40" class="n-ak"/>
+  <rect x="1120" y="582" width="118" height="40" class="n-ak"/>
+  <rect x="1250" y="582" width="118" height="40" class="n-ak"/>
+  <rect x="1380" y="582" width="118" height="40" class="n-ak"/>
+
+  <!-- brief C : three modules -->
+  <rect x="470"  y="652" width="118" height="40" class="n-ak"/>
+  <rect x="600"  y="652" width="118" height="40" class="n-ak"/>
+  <rect x="730"  y="652" width="118" height="40" class="n-gh"/>
+  <rect x="860"  y="652" width="118" height="40" class="n-ak"/>
+  <rect x="990"  y="652" width="118" height="40" class="n-gh"/>
+  <rect x="1120" y="652" width="118" height="40" class="n-gh"/>
+  <rect x="1250" y="652" width="118" height="40" class="n-gh"/>
+  <rect x="1380" y="652" width="118" height="40" class="n-gh"/>
+
+  <!-- legend -->
+  <rect x="84" y="726" width="14" height="14" class="n-ak"/>
+  <rect x="220" y="726" width="14" height="14" class="n-gh"/>
+</svg>
+
+<div class="kick">Modularity</div>
+<div class="h1">A brief only uses the parts of the system it needs.</div>
+<div class="stand" style="top:172px;width:1300px">MAKE is a set of modules, not one product you switch on whole. A single social cut-down touches two of them. A nine-market campaign touches all of them. There is nothing to implement twice, and nothing for your team to learn about the parts a brief never uses.</div>
+
+<div class="ab eyebrow ink" style="left:458px;top:292px;width:600px">The module set</div>
+
+<div class="ab sm b ctr acc" style="left:478px;top:352px;width:102px">One connected space</div>
+<div class="ab sm b ctr acc" style="left:608px;top:352px;width:102px">AI tasks</div>
+<div class="ab sm b ctr acc" style="left:738px;top:352px;width:102px">Open integrations</div>
+<div class="ab sm b ctr acc" style="left:868px;top:352px;width:102px">Global e&#8209;commerce</div>
+<div class="ab" style="left:998px;top:368px;width:102px"><span class="fill w">Module</span></div>
+<div class="ab" style="left:1128px;top:368px;width:102px"><span class="fill w">Module</span></div>
+<div class="ab" style="left:1258px;top:368px;width:102px"><span class="fill w">Module</span></div>
+<div class="ab" style="left:1388px;top:368px;width:102px"><span class="fill w">Module</span></div>
+
+<div class="ab" style="left:84px;top:316px;width:330px">
+  <div class="sm">Each module handles a different part of production. A module is switched on for a brief or it is not. There is no partial state and no second implementation underneath.</div>
+</div>
+
+<div class="ab eyebrow ink" style="left:84px;top:462px;width:400px">Three briefs, three different sets</div>
+<div class="ab" style="left:84px;top:512px;width:350px"><div class="lbl b">One social cut-down</div><div class="xs" style="margin-top:3px">single market</div></div>
+<div class="ab" style="left:84px;top:582px;width:350px"><div class="lbl b">Full campaign</div><div class="xs" style="margin-top:3px">nine markets, every format</div></div>
+<div class="ab" style="left:84px;top:652px;width:350px"><div class="lbl b">E-commerce refresh</div><div class="xs" style="margin-top:3px">across a product range</div></div>
+
+<div class="ab xs" style="left:108px;top:727px;width:120px">switched on</div>
+<div class="ab xs" style="left:244px;top:727px;width:160px">not used for this brief</div>
+
+<div class="ab panel acc" style="left:458px;top:712px;width:1058px;padding:16px 22px">
+  <span class="lbl b acc">Complexity is only a problem if you have to absorb all of it.</span>
+  <span class="lbl" style="color:var(--ink2)">&nbsp; Nobody on your side configures, licenses or learns the modules a brief does not touch.</span>
+</div>
+
+<div class="pageno">05</div>
+</section>
+<!-- ============================ CLIENT 06 ============================ -->
+<section class="slide" id="c06">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#1D5C8C"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#A2A9B2"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#DDE1E7"/></marker>
+<g id="person"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#14171C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#14171C" stroke-width="1.7"/></g>
+<g id="personA"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#1D5C8C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#1D5C8C" stroke-width="1.7"/></g>
+<g id="tick"><path d="M-5,0 l3.6,4 l7,-9" fill="none" stroke="#1D5C8C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F4F6F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#DDE1E7" stroke-width="2.4"/></pattern>
+</defs>
+
+  <!-- three zones of production -->
+  <rect x="84"   y="316" width="448" height="330" class="n-f"/>
+  <rect x="576"  y="316" width="448" height="330" class="n-f"/>
+  <rect x="1068" y="316" width="448" height="330" class="n-f"/>
+
+  <!-- what happens in each -->
+  <rect x="116"  y="424" width="384" height="56" class="n"/>
+  <rect x="116"  y="494" width="384" height="56" class="n"/>
+  <rect x="116"  y="564" width="384" height="56" class="n"/>
+  <rect x="608"  y="424" width="384" height="56" class="n"/>
+  <rect x="608"  y="494" width="384" height="56" class="n"/>
+  <rect x="608"  y="564" width="384" height="56" class="n"/>
+  <rect x="1100" y="424" width="384" height="56" class="n"/>
+  <rect x="1100" y="494" width="384" height="56" class="n"/>
+  <rect x="1100" y="564" width="384" height="56" class="n"/>
+
+  <!-- the work moves left to right, with a person at each boundary -->
+  <line x1="532" y1="481" x2="570" y2="481" class="ln" marker-end="url(#ah)"/>
+  <line x1="1024" y1="481" x2="1062" y2="481" class="ln" marker-end="url(#ah)"/>
+  <circle cx="554" cy="700" r="21" class="n-a"/>
+  <circle cx="1046" cy="700" r="21" class="n-a"/>
+  <use href="#personA" x="554" y="706"/>
+  <use href="#personA" x="1046" y="706"/>
+  <line x1="554" y1="654" x2="554" y2="678" class="ln-h"/>
+  <line x1="1046" y1="654" x2="1046" y2="678" class="ln-h"/>
+</svg>
+
+<div class="kick">Across the whole of production</div>
+<div class="h1">The system works across the whole of production,<br>not only the making.</div>
+<div class="stand" style="top:220px;width:1300px">Work runs through three stages, and specific tasks are switched on at each one. This is what answers what happens before production, during it, and after it.</div>
+
+<div class="ab eyebrow ink" style="left:116px;top:344px;width:384px">Before production</div>
+<div class="ab sm" style="left:116px;top:368px;width:384px">Reading the brief and working out what is actually needed</div>
+<div class="ab eyebrow ink" style="left:608px;top:344px;width:384px">During production</div>
+<div class="ab sm" style="left:608px;top:368px;width:384px">Making what does not already exist, and assembling the rest</div>
+<div class="ab eyebrow ink" style="left:1100px;top:344px;width:384px">After production</div>
+<div class="ab sm" style="left:1100px;top:368px;width:384px">Turning one approved output into all the versions that are needed</div>
+
+<div class="ab lbl b" style="left:136px;top:442px;width:344px">Search your DAM for what exists</div>
+<div class="ab lbl b" style="left:136px;top:512px;width:344px">Break the brief into components</div>
+<div class="ab lbl b" style="left:136px;top:582px;width:344px">Check brand, claims and rights rules</div>
+
+<div class="ab lbl b" style="left:628px;top:442px;width:344px">Produce the components that are new</div>
+<div class="ab lbl b" style="left:628px;top:512px;width:344px">Assemble them into each output</div>
+<div class="ab lbl b" style="left:628px;top:582px;width:344px">Hold every version in one place</div>
+
+<div class="ab lbl b" style="left:1120px;top:442px;width:344px">Versioning across formats</div>
+<div class="ab lbl b" style="left:1120px;top:512px;width:344px">Translation and localisation</div>
+<div class="ab lbl b" style="left:1120px;top:582px;width:344px">Delivery to your channels</div>
+
+<div class="ab xs ctr" style="left:474px;top:728px;width:160px">your review</div>
+<div class="ab xs ctr" style="left:966px;top:728px;width:160px">your approval</div>
+
+<div class="ab panel acc" style="left:84px;top:772px;width:1432px;padding:16px 22px">
+  <span class="lbl b acc">People are in the loop at the points that matter.</span>
+  <span class="lbl" style="color:var(--ink2)">&nbsp; Your team reviews before production begins and approves before anything is released. Everything between those two points is ours to run.</span>
+</div>
+
+<div class="pageno">06</div>
+</section>
+<!-- ============================ CLIENT 07 ============================ -->
+<section class="slide" id="c07">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#1D5C8C"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#A2A9B2"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#DDE1E7"/></marker>
+<g id="person"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#14171C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#14171C" stroke-width="1.7"/></g>
+<g id="personA"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#1D5C8C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#1D5C8C" stroke-width="1.7"/></g>
+<g id="tick"><path d="M-5,0 l3.6,4 l7,-9" fill="none" stroke="#1D5C8C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F4F6F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#DDE1E7" stroke-width="2.4"/></pattern>
+</defs>
+
+  <!-- ===== today: the library sits at the end of the chain ===== -->
+  <rect x="84"  y="316" width="162" height="46" class="n-gh"/>
+  <rect x="272" y="316" width="162" height="46" class="n-gh"/>
+  <rect x="460" y="316" width="162" height="46" class="n-gh"/>
+  <rect x="648" y="316" width="162" height="46" class="n-gh"/>
+  <rect x="836" y="316" width="162" height="46" class="n-gh"/>
+  <line x1="250" y1="339" x2="268" y2="339" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="438" y1="339" x2="456" y2="339" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="626" y1="339" x2="644" y2="339" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="814" y1="339" x2="832" y2="339" class="ln-h" marker-end="url(#ahh)"/>
+  <line x1="1002" y1="339" x2="1036" y2="339" class="ln-h" marker-end="url(#ahh)"/>
+
+  <!-- the DAM as it behaves today: receives, never answers -->
+  <rect x="1040" y="297" width="200" height="84" fill="#F4F6F9" stroke="none"/>
+  <line x1="1040" y1="297" x2="1040" y2="381" stroke="#A2A9B2" stroke-width="1.6"/>
+  <line x1="1240" y1="297" x2="1240" y2="381" stroke="#A2A9B2" stroke-width="1.6"/>
+  <path d="M1040,381 a100,18 0 0 0 200,0" fill="#F4F6F9" stroke="#A2A9B2" stroke-width="1.6"/>
+  <ellipse cx="1140" cy="297" rx="100" ry="18" fill="#F4F6F9" stroke="#A2A9B2" stroke-width="1.6"/>
+  <!-- two near-identical assets, sitting side by side -->
+  <rect x="1092" y="326" width="34" height="26" fill="#fff" stroke="#A2A9B2" stroke-width="1.4"/>
+  <rect x="1102" y="333" width="14" height="12" fill="#DDE1E7"/>
+  <rect x="1154" y="326" width="34" height="26" fill="#fff" stroke="#A2A9B2" stroke-width="1.4"/>
+  <rect x="1164" y="333" width="14" height="12" fill="#DDE1E7"/>
+  <line x1="1133" y1="336" x2="1147" y2="336" stroke="#A2A9B2" stroke-width="2"/>
+  <line x1="1133" y1="343" x2="1147" y2="343" stroke="#A2A9B2" stroke-width="2"/>
+
+  <!-- the link that does not exist today -->
+  <path d="M1140,401 L1140,428 L178,428 L178,368" class="ln-gd" marker-end="url(#ahg)"/>
+  <rect x="608" y="414" width="28" height="28" fill="#fff" stroke="none"/>
+  <line x1="614" y1="420" x2="630" y2="436" stroke="#A2A9B2" stroke-width="2.2"/>
+  <line x1="630" y1="420" x2="614" y2="436" stroke="#A2A9B2" stroke-width="2.2"/>
+
+  <line x1="84" y1="500" x2="1516" y2="500" class="ln-h"/>
+
+  <!-- ===== integrated: the library sits at the start of the chain ===== -->
+  <rect x="84" y="572" width="212" height="90" fill="#E9F1F7" stroke="none"/>
+  <line x1="84"  y1="572" x2="84"  y2="662" stroke="#1D5C8C" stroke-width="1.8"/>
+  <line x1="296" y1="572" x2="296" y2="662" stroke="#1D5C8C" stroke-width="1.8"/>
+  <path d="M84,662 a106,20 0 0 0 212,0" fill="#E9F1F7" stroke="#1D5C8C" stroke-width="1.8"/>
+  <ellipse cx="190" cy="572" rx="106" ry="20" fill="#E9F1F7" stroke="#1D5C8C" stroke-width="1.8"/>
+
+  <!-- the three answers the integration makes available -->
+  <line x1="302" y1="581" x2="534" y2="581" class="ln-a" marker-end="url(#aha)"/>
+  <line x1="302" y1="617" x2="534" y2="617" class="ln-a" marker-end="url(#aha)"/>
+  <line x1="302" y1="653" x2="534" y2="653" class="ln-a" marker-end="url(#aha)"/>
+
+  <!-- the check -->
+  <rect x="540" y="552" width="260" height="130" class="n" stroke-width="2.4"/>
+
+  <!-- what the check splits into -->
+  <rect x="840" y="552" width="340" height="62" class="n-a"/>
+  <rect x="840" y="620" width="340" height="62" class="n"/>
+  <line x1="804" y1="600" x2="836" y2="583" class="ln" marker-end="url(#ah2)"/>
+  <line x1="804" y1="634" x2="836" y2="651" class="ln" marker-end="url(#ah2)"/>
+
+  <!-- one approval, then delivery -->
+  <rect x="1216" y="573" width="88" height="88" class="n-a"/>
+  <use href="#personA" x="1260" y="619"/>
+  <line x1="1184" y1="583" x2="1212" y2="604" class="ln" marker-end="url(#ah2)"/>
+  <line x1="1184" y1="651" x2="1212" y2="630" class="ln" marker-end="url(#ah2)"/>
+  <rect x="1340" y="573" width="176" height="88" class="n"/>
+  <line x1="1308" y1="617" x2="1336" y2="617" class="ln" marker-end="url(#ah2)"/>
+
+  <!-- and back into the library, which is what makes the next brief cheaper -->
+  <path d="M1428,665 L1428,706 L190,706 L190,688" class="ln-a" marker-end="url(#aha)"/>
+</svg>
+
+<div class="kick">Why the integration matters</div>
+<div class="h1">Integrating your DAM is what stops the same<br>asset being made twice.</div>
+<div class="stand" style="top:206px;width:1340px">Your library already holds a great deal of what the next brief needs, but today nothing asks it before production starts. Integrating it turns your DAM from a store of finished files into your brand&rsquo;s intelligence layer: a live record of what exists, what each asset is made of and where it has been used.</div>
+
+<div class="ab eyebrow ink" style="left:84px;top:284px;width:700px">Today: your library is where work ends up</div>
+
+<div class="ab xs ctr mut" style="left:84px;top:331px;width:162px">New brief</div>
+<div class="ab xs ctr mut" style="left:272px;top:331px;width:162px">Concept</div>
+<div class="ab xs ctr mut" style="left:460px;top:331px;width:162px">Shoot and produce</div>
+<div class="ab xs ctr mut" style="left:648px;top:331px;width:162px">Review and approve</div>
+<div class="ab xs ctr mut" style="left:836px;top:331px;width:162px">Deliver</div>
+
+<div class="ab xs ctr" style="left:1040px;top:362px;width:200px">the same thing, made twice</div>
+
+<div class="ab" style="left:1268px;top:296px;width:248px">
+  <div class="eyebrow">Your DAM today</div>
+  <div class="xs" style="margin-top:8px">It receives finished files. Nothing in production ever asks it a question, so the asset made for market two can be a near copy of the one made for market one.</div>
+</div>
+
+<div class="ab xs" style="left:84px;top:442px;width:560px">This link does not exist today. Nothing checks the library before production starts, so work gets commissioned that your DAM already holds.</div>
+
+<div class="ab eyebrow acc" style="left:84px;top:518px;width:900px">Once it is integrated: your library is where work starts</div>
+
+<div class="ab ctr" style="left:100px;top:604px;width:180px">
+  <div class="lbl b acc">Your DAM</div>
+  <div class="xs" style="color:#3A6B93;margin-top:4px">integrated</div>
+</div>
+
+<div class="ab xs acc" style="left:306px;top:561px;width:226px">what already exists</div>
+<div class="ab xs acc" style="left:306px;top:597px;width:226px">what each asset is made of</div>
+<div class="ab xs acc" style="left:306px;top:633px;width:226px">where it has been used</div>
+
+<div class="ab" style="left:566px;top:572px;width:208px">
+  <div class="eyebrow ink" style="font-size:10.5px">Automatic</div>
+  <div class="lbl b" style="margin-top:8px">The system checks what already exists</div>
+  <div class="xs" style="margin-top:8px">on every brief, before anything is produced</div>
+</div>
+
+<div class="ab" style="left:862px;top:564px;width:296px">
+  <div class="lbl b acc">What already exists is assembled</div>
+  <div class="xs" style="color:#3A6B93;margin-top:4px">listed by your library, not found by memory</div>
+</div>
+<div class="ab" style="left:862px;top:632px;width:296px">
+  <div class="lbl b">Only what is genuinely new is made</div>
+  <div class="xs" style="margin-top:4px">through the route that fits it, as on page 03</div>
+</div>
+
+<div class="ab xs ctr" style="left:1216px;top:668px;width:88px">your approval</div>
+<div class="ab" style="left:1362px;top:597px;width:132px">
+  <div class="lbl b">Delivered</div>
+  <div class="xs" style="margin-top:4px">to your channels</div>
+</div>
+
+<div class="ab xs acc" style="left:330px;top:714px;width:860px">Everything produced registers back, with its components and its record, so the next brief has more to draw on than this one did.</div>
+
+<div class="ab panel acc" style="left:84px;top:754px;width:1432px;padding:18px 24px">
+  <span class="lbl b acc">Without the integration, your DAM is a record of what you have already paid for.</span>
+  <span class="lbl" style="color:var(--ink2)">&nbsp; With it, it is the single source of truth that decides what you need to pay for next. That is the difference between a library you store in and one you produce from.</span>
+</div>
+
+<div class="pageno">07</div>
+</section>
+<!-- ============================ CLIENT 08 ============================ -->
+<section class="slide" id="c08">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#1D5C8C"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#A2A9B2"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#DDE1E7"/></marker>
+<g id="person"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#14171C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#14171C" stroke-width="1.7"/></g>
+<g id="personA"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#1D5C8C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#1D5C8C" stroke-width="1.7"/></g>
+<g id="tick"><path d="M-5,0 l3.6,4 l7,-9" fill="none" stroke="#1D5C8C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F4F6F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#DDE1E7" stroke-width="2.4"/></pattern>
+</defs>
+
+  <!-- your DAM -->
+  <rect x="112" y="352" width="248" height="200" fill="#E9F1F7" stroke="none"/>
+  <line x1="112" y1="352" x2="112" y2="552" stroke="#1D5C8C" stroke-width="1.8"/>
+  <line x1="360" y1="352" x2="360" y2="552" stroke="#1D5C8C" stroke-width="1.8"/>
+  <path d="M112,552 a124,28 0 0 0 248,0" fill="#E9F1F7" stroke="#1D5C8C" stroke-width="1.8"/>
+  <ellipse cx="236" cy="352" rx="124" ry="28" fill="#E9F1F7" stroke="#1D5C8C" stroke-width="1.8"/>
+
+  <line x1="372" y1="404" x2="448" y2="404" class="ln-a" marker-end="url(#aha)"/>
+
+  <!-- production -->
+  <rect x="456" y="336" width="420" height="232" class="n" stroke-width="2.2"/>
+  <rect x="488" y="416" width="356" height="52" class="n-f"/>
+  <rect x="488" y="484" width="356" height="52" class="n-f"/>
+
+  <!-- approval -->
+  <rect x="924" y="376" width="88" height="88" class="n-a"/>
+  <use href="#personA" x="968" y="422"/>
+  <line x1="884" y1="420" x2="918" y2="420" class="ln" marker-end="url(#ah2)"/>
+  <line x1="1018" y1="420" x2="1052" y2="420" class="ln" marker-end="url(#ah2)"/>
+
+  <!-- approved work -->
+  <rect x="1060" y="336" width="456" height="64" class="n"/>
+  <rect x="1060" y="412" width="456" height="64" class="n"/>
+  <rect x="1060" y="488" width="456" height="64" class="n"/>
+
+  <!-- and it all comes back -->
+  <path d="M1288,564 L1288,614 L236,614 L236,584" class="ln-a" marker-end="url(#aha)"/>
+  <rect x="300"  y="646" width="360" height="94" class="n-a"/>
+  <rect x="700"  y="646" width="360" height="94" class="n-a"/>
+  <rect x="1100" y="646" width="360" height="94" class="n-a"/>
+  <line x1="480"  y1="614" x2="480"  y2="642" class="ln-a" marker-end="url(#aha)"/>
+  <line x1="880"  y1="614" x2="880"  y2="642" class="ln-a" marker-end="url(#aha)"/>
+  <line x1="1280" y1="614" x2="1280" y2="642" class="ln-a" marker-end="url(#aha)"/>
+</svg>
+
+<div class="kick">Your data</div>
+<div class="h1">Your DAM stays the source of truth.<br>Everything we make comes back to it.</div>
+<div class="stand" style="top:220px;width:1300px">Assets and information come out of your DAM. Production happens in MAKE. What returns is the finished work, the reusable components behind it, and a record of what was made for which market. Your library is more complete after every brief than it was before.</div>
+
+<div class="ab eyebrow acc ctr" style="left:112px;top:288px;width:248px">Yours</div>
+<div class="ab ctr" style="left:132px;top:396px;width:208px">
+  <div class="lbl b acc" style="font-size:19px">Your DAM</div>
+  <div class="xs" style="color:#3A6B93;margin-top:8px">assets, metadata,<br>rights and rules</div>
+</div>
+
+<div class="ab eyebrow ink" style="left:456px;top:316px;width:420px">Production in MAKE</div>
+<div class="ab ctr" style="left:488px;top:366px;width:356px"><div class="sm b">Only the modules this brief needs</div></div>
+<div class="ab ctr" style="left:508px;top:434px;width:316px"><div class="sm b">Components made and kept</div></div>
+<div class="ab ctr" style="left:508px;top:502px;width:316px"><div class="sm b">Outputs assembled from them</div></div>
+
+<div class="ab eyebrow ink ctr" style="left:904px;top:316px;width:128px">Approval</div>
+<div class="ab xs ctr" style="left:904px;top:476px;width:128px">your approver</div>
+
+<div class="ab eyebrow ink" style="left:1060px;top:316px;width:456px">Approved work</div>
+<div class="ab lbl b" style="left:1084px;top:360px;width:410px">Finished outputs, ready to use</div>
+<div class="ab lbl b" style="left:1084px;top:436px;width:410px">Delivered to your channels</div>
+<div class="ab lbl b" style="left:1084px;top:512px;width:410px">Nothing held back from you</div>
+
+<div class="ab eyebrow acc" style="left:300px;top:588px;width:600px">And all of it returns to your DAM</div>
+<div class="ab" style="left:322px;top:666px;width:316px">
+  <div class="lbl b acc">The finished work</div>
+  <div class="xs" style="color:#3A6B93;margin-top:5px">approved, versioned, with its approval history attached</div>
+</div>
+<div class="ab" style="left:722px;top:666px;width:316px">
+  <div class="lbl b acc">The components behind it</div>
+  <div class="xs" style="color:#3A6B93;margin-top:5px">the reusable parts, not only the finished file</div>
+</div>
+<div class="ab" style="left:1122px;top:666px;width:316px">
+  <div class="lbl b acc">The record of what was made</div>
+  <div class="xs" style="color:#3A6B93;margin-top:5px">which brief, which market, which components. This is what makes the next page possible.</div>
+</div>
+
+<div class="ab xs" style="left:84px;top:768px;width:1432px"><b style="color:var(--ink)">MAKE never becomes your system of record.</b> It is where work is produced, not where it lives. Your DAM is complete at every point in this loop.</div>
+
+<div class="pageno">08</div>
+</section>
+<!-- ============================ CLIENT 09 ============================ -->
+<section class="slide" id="c09">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#1D5C8C"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#A2A9B2"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#DDE1E7"/></marker>
+<g id="person"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#14171C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#14171C" stroke-width="1.7"/></g>
+<g id="personA"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#1D5C8C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#1D5C8C" stroke-width="1.7"/></g>
+<g id="tick"><path d="M-5,0 l3.6,4 l7,-9" fill="none" stroke="#1D5C8C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F4F6F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#DDE1E7" stroke-width="2.4"/></pattern>
+</defs>
+
+  <!-- the old way, stated rather than redrawn: page 07 already draws this chain -->
+  <line x1="84" y1="412" x2="1516" y2="412" class="ln-h"/>
+
+  <!-- the new way -->
+  <rect x="84"   y="470" width="330" height="190" class="n-a"/>
+  <rect x="446"  y="470" width="330" height="190" class="n"/>
+  <rect x="808"  y="470" width="330" height="190" class="n"/>
+  <rect x="1170" y="470" width="346" height="190" class="n"/>
+  <line x1="418" y1="565" x2="442" y2="565" class="ln" marker-end="url(#ah2)"/>
+  <line x1="780" y1="565" x2="804" y2="565" class="ln" marker-end="url(#ah2)"/>
+  <line x1="1142" y1="565" x2="1166" y2="565" class="ln" marker-end="url(#ah2)"/>
+
+  <!-- 1 search -->
+  <circle cx="140" cy="556" r="17" class="n-a"/>
+  <line x1="152" y1="568" x2="166" y2="582" stroke="#1D5C8C" stroke-width="2.6"/>
+  <!-- 2 what already exists -->
+  <rect x="478" y="546" width="22" height="22" class="n-ak"/>
+  <rect x="506" y="546" width="22" height="22" class="n-ak"/>
+  <rect x="534" y="546" width="22" height="22" class="n-ak"/>
+  <rect x="562" y="546" width="22" height="22" class="n-ak"/>
+  <rect x="590" y="546" width="22" height="22" class="n-ak"/>
+  <rect x="618" y="546" width="22" height="22" class="n-ak"/>
+  <rect x="478" y="574" width="22" height="22" class="n-gh"/>
+  <rect x="506" y="574" width="22" height="22" class="n-gh"/>
+  <rect x="534" y="574" width="22" height="22" class="n-gh"/>
+  <!-- 3 the order form -->
+  <rect x="834" y="544" width="278" height="26" class="n"/>
+  <rect x="834" y="576" width="278" height="26" class="n"/>
+  <rect x="834" y="608" width="278" height="26" class="n"/>
+  <!-- 4 delivered -->
+  <circle cx="1224" cy="556" r="19" class="n-a"/>
+  <use href="#personA" x="1224" y="562"/>
+  <rect x="1274" y="536" width="42" height="42" class="n"/>
+  <line x1="1250" y1="556" x2="1268" y2="556" class="ln" marker-end="url(#ah2)"/>
+</svg>
+
+<div class="kick">What it means in practice</div>
+<div class="h1">Your second market orders what already exists.<br>It does not brief again.</div>
+<div class="stand" style="top:220px;width:1320px">Because every brief leaves its components and a record behind, the next market can search, find and order. Language, format and local claims become choices on a form rather than a new brief, a new schedule and a new cost.</div>
+
+<div class="ab eyebrow" style="left:84px;top:326px;width:300px">Instead of this</div>
+<div class="ab" style="left:396px;top:316px;width:1120px">
+  <div class="lbl b mut" style="font-size:17px">A second brief, a second concept, a second shoot, a second review.</div>
+  <div class="sm mut" style="margin-top:9px">The whole chain on page 07 run again, at close to full cost and full timeline, to produce something that is a near neighbour of an asset already sitting in your DAM.</div>
+</div>
+
+<div class="ab eyebrow ink" style="left:84px;top:440px;width:600px">This happens instead</div>
+
+<div class="ab" style="left:104px;top:490px;width:290px">
+  <div class="eyebrow acc" style="font-size:10.5px">Step 1</div>
+  <div class="lbl b acc" style="margin-top:6px;font-size:17px">Search your DAM</div>
+</div>
+<div class="ab xs" style="left:104px;top:600px;width:290px;color:#3A6B93">Your second market looks in the system they already use, for work that already exists.</div>
+
+<div class="ab" style="left:466px;top:490px;width:290px">
+  <div class="eyebrow" style="font-size:10.5px">Step 2</div>
+  <div class="lbl b" style="margin-top:6px;font-size:17px">See what carries over</div>
+</div>
+<div class="ab xs" style="left:466px;top:608px;width:290px">Six of the nine components from the first market carry straight across. Three are market-specific and get replaced.</div>
+
+<div class="ab" style="left:828px;top:490px;width:290px">
+  <div class="eyebrow" style="font-size:10.5px">Step 3</div>
+  <div class="lbl b" style="margin-top:6px;font-size:17px">Place an order</div>
+</div>
+<div class="ab xs" style="left:844px;top:551px;width:260px">Language &nbsp;&nbsp;<b style="color:var(--ink)">local</b></div>
+<div class="ab xs" style="left:844px;top:583px;width:260px">Formats &nbsp;&nbsp;<b style="color:var(--ink)">9:16, banner</b></div>
+<div class="ab xs" style="left:844px;top:615px;width:260px">Local claims &nbsp;&nbsp;<b style="color:var(--ink)">applied</b></div>
+<div class="ab xs" style="left:828px;top:642px;width:290px">A form, not a brief.</div>
+
+<div class="ab" style="left:1190px;top:490px;width:306px">
+  <div class="eyebrow" style="font-size:10.5px">Step 4</div>
+  <div class="lbl b" style="margin-top:6px;font-size:17px">Approved and delivered</div>
+</div>
+<div class="ab xs" style="left:1190px;top:600px;width:306px">Same approval gate as any other route, then delivered and registered back, so the third market starts from a larger set again.</div>
+
+<div class="ab panel acc" style="left:84px;top:700px;width:1432px;padding:18px 24px">
+  <span class="lbl b acc">Nobody writes a creative brief. Nobody schedules a shoot.</span>
+  <span class="lbl" style="color:var(--ink2)">&nbsp; And nobody in the second market needs to know the first market&rsquo;s production history to place the order. What can be ordered is exactly what the record says already exists.</span>
+</div>
+
+<div class="pageno">09</div>
+</section>
+<!-- ============================ CLIENT 10 ============================ -->
+<section class="slide" id="c10">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#1D5C8C"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#A2A9B2"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#DDE1E7"/></marker>
+<g id="person"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#14171C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#14171C" stroke-width="1.7"/></g>
+<g id="personA"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#1D5C8C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#1D5C8C" stroke-width="1.7"/></g>
+<g id="tick"><path d="M-5,0 l3.6,4 l7,-9" fill="none" stroke="#1D5C8C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F4F6F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#DDE1E7" stroke-width="2.4"/></pattern>
+</defs>
+
+  <!-- your library, as one bar -->
+  <rect x="84" y="330" width="1076" height="86" fill="url(#hg)" stroke="#A2A9B2" stroke-width="1.6"/>
+  <rect x="1160" y="330" width="356" height="86" class="n-ak"/>
+
+  <!-- ghosted components on the left, complete ones on the right -->
+  <g class="n-gh">
+    <rect x="112" y="360" width="24" height="24"/><rect x="144" y="360" width="24" height="24"/>
+    <rect x="176" y="360" width="24" height="24"/><rect x="208" y="360" width="24" height="24"/>
+  </g>
+  <line x1="256" y1="364" x2="420" y2="364" class="ln-gd"/>
+  <line x1="256" y1="382" x2="360" y2="382" class="ln-gd"/>
+  <g fill="#fff" stroke="#fff" stroke-width="1.6">
+    <rect x="1184" y="360" width="24" height="24"/><rect x="1216" y="360" width="24" height="24"/>
+    <rect x="1248" y="360" width="24" height="24"/><rect x="1280" y="360" width="24" height="24"/>
+  </g>
+
+  <!-- the boundary moves as material gets reused -->
+  <line x1="1160" y1="310" x2="1160" y2="452" class="ln-a"/>
+  <line x1="1150" y1="452" x2="1000" y2="452" class="ln-a" marker-end="url(#aha)"/>
+
+  <!-- three points -->
+  <line x1="84"   y1="540" x2="140"  y2="540" stroke="#1D5C8C" stroke-width="3"/>
+  <line x1="588"  y1="540" x2="644"  y2="540" stroke="#1D5C8C" stroke-width="3"/>
+  <line x1="1092" y1="540" x2="1148" y2="540" stroke="#1D5C8C" stroke-width="3"/>
+</svg>
+
+<div class="kick">Your existing library</div>
+<div class="h1">Getting started does not depend on tidying your archive first.</div>
+<div class="stand" style="top:172px;width:1320px">Everything produced from day one is fully described and ready to reorder immediately. For material already in your DAM, we describe it at the point it is first reused, so there is no cataloguing project to finish before the benefit starts.</div>
+
+<div class="ab eyebrow ink" style="left:84px;top:300px;width:700px">Everything in your DAM</div>
+
+<div class="ab" style="left:440px;top:352px;width:460px">
+  <div class="sm b">Already there, described inconsistently</div>
+  <div class="xs" style="margin-top:4px">usable, but not yet orderable as components</div>
+</div>
+<div class="ab rt" style="left:1300px;top:346px;width:196px">
+  <div class="sm b" style="color:#fff">Produced from day one</div>
+  <div class="xs" style="margin-top:4px;color:#CFE0EC">complete record,<br>orderable immediately</div>
+</div>
+<div class="ab xs acc rt" style="left:600px;top:444px;width:380px">this boundary moves every time something is reused</div>
+
+<div class="ab pt" style="left:84px;top:566px;width:424px">
+  <div class="t">Nothing to do before we start</div>
+  <div class="d">Your first briefs run from day one. They do not wait on the state of the archive, and they do not depend on it.</div>
+</div>
+<div class="ab pt" style="left:588px;top:566px;width:424px">
+  <div class="t">Described when it is used</div>
+  <div class="d">The first time a piece of existing material is reused, we describe it properly, once. From that point it behaves like anything else in the system.</div>
+</div>
+<div class="ab pt" style="left:1092px;top:566px;width:424px">
+  <div class="t">Prioritised only where it pays</div>
+  <div class="d">If part of your library has obvious demand, we can prepare it ahead of time. We will agree that with you in discovery rather than assume it.</div>
+</div>
+
+<div class="ab panel" style="left:84px;top:724px;width:1432px;padding:16px 22px">
+  <span class="lbl b">You raised this in the last round, and it is a fair challenge.</span>
+  <span class="lbl" style="color:var(--ink2)">&nbsp; The answer is that the value does not sit behind a back-catalogue project. It starts with your first brief and the archive catches up behind it.</span>
+</div>
+
+<div class="pageno">10</div>
+</section>
+<!-- ============================ CLIENT 11 ============================ -->
+<section class="slide" id="c11">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#1D5C8C"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#A2A9B2"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#DDE1E7"/></marker>
+<g id="person"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#14171C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#14171C" stroke-width="1.7"/></g>
+<g id="personA"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#1D5C8C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#1D5C8C" stroke-width="1.7"/></g>
+<g id="tick"><path d="M-5,0 l3.6,4 l7,-9" fill="none" stroke="#1D5C8C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F4F6F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#DDE1E7" stroke-width="2.4"/></pattern>
+</defs>
+
+  <rect x="84"   y="316" width="466" height="418" class="n" stroke-width="2.2"/>
+  <rect x="582"  y="316" width="466" height="418" class="n-a"/>
+  <rect x="1080" y="316" width="436" height="418" class="n-gd"/>
+
+  <!-- ticks : running today -->
+  <g class="n"><rect x="116" y="404" width="18" height="18"/><rect x="116" y="452" width="18" height="18"/>
+  <rect x="116" y="500" width="18" height="18"/><rect x="116" y="548" width="18" height="18"/>
+  <rect x="116" y="596" width="18" height="18"/><rect x="116" y="644" width="18" height="18"/></g>
+  <use href="#tick" x="125" y="411"/><use href="#tick" x="125" y="459"/><use href="#tick" x="125" y="507"/>
+  <use href="#tick" x="125" y="555"/><use href="#tick" x="125" y="603"/><use href="#tick" x="125" y="651"/>
+
+  <!-- what we connect -->
+  <g class="n-o"><rect x="614" y="404" width="18" height="18"/><rect x="614" y="452" width="18" height="18"/>
+  <rect x="614" y="500" width="18" height="18"/><rect x="614" y="548" width="18" height="18"/>
+  <rect x="614" y="596" width="18" height="18"/></g>
+</svg>
+
+<div class="kick">Today and next</div>
+<div class="h1">What runs from day one, what we connect, and where it goes next.</div>
+<div class="stand" style="top:172px;width:1320px">Three states, and nothing listed that does not exist. There are no dates on this page: timings belong in the plan rather than in a technology section.</div>
+
+<div class="ab eyebrow ink" style="left:116px;top:348px;width:410px">Running today</div>
+<div class="ab xs" style="left:116px;top:370px;width:410px">In daily use on our work, before this engagement</div>
+<div class="ab lbl" style="left:148px;top:403px;width:380px">MAKE, the layer in the middle</div>
+<div class="ab lbl" style="left:148px;top:451px;width:380px">Versions, review and approval in one place</div>
+<div class="ab lbl" style="left:148px;top:499px;width:380px">The tasks that do the work</div>
+<div class="ab lbl" style="left:148px;top:547px;width:380px">Open connections to production tools</div>
+<div class="ab lbl" style="left:148px;top:595px;width:380px">Modular component production</div>
+<div class="ab lbl" style="left:148px;top:643px;width:380px">Assisted, augmented and automated routes</div>
+<div class="ab xs" style="left:116px;top:686px;width:410px">Every item here is on an earlier page in this section.</div>
+
+<div class="ab eyebrow acc" style="left:614px;top:348px;width:410px">What we connect with you</div>
+<div class="ab xs" style="left:614px;top:370px;width:410px;color:#3A6B93">Scoped together at the start. This is the whole of the new work.</div>
+<div class="ab lbl b acc" style="left:646px;top:403px;width:380px">Your DAM, in and out</div>
+<div class="ab xs" style="left:646px;top:425px;width:380px;color:#3A6B93">see page 07</div>
+<div class="ab lbl b acc" style="left:646px;top:451px;width:380px">Your metadata, mapped to components</div>
+<div class="ab lbl b acc" style="left:646px;top:499px;width:380px">Your review and approval process</div>
+<div class="ab lbl b acc" style="left:646px;top:547px;width:380px">Your channels and e-commerce feeds</div>
+<div class="ab lbl b acc" style="left:646px;top:595px;width:380px">Your approach to the existing library</div>
+<div class="ab xs" style="left:646px;top:617px;width:380px;color:#3A6B93">see page 10</div>
+<div class="ab xs" style="left:614px;top:686px;width:410px;color:#3A6B93">Connection work, not construction work.</div>
+
+<div class="ab eyebrow" style="left:1112px;top:348px;width:390px">Where it goes next</div>
+<div class="ab xs" style="left:1112px;top:370px;width:390px">Direction of travel, at theme level</div>
+<div class="ab sm" style="left:1112px;top:404px;width:390px">The platform keeps developing, and you get the benefit of that without a migration or a new agreement. We share the roadmap at theme level rather than committing to features in a pitch.</div>
+<div class="ab" style="left:1112px;top:504px;width:390px">
+  <div class="eyebrow ink" style="font-size:10.5px">Themes in view</div>
+  <div class="lbl b" style="margin-top:10px">Post-production compositing</div>
+  <div style="margin-top:12px"><span class="fill w">Further themes to be completed</span></div>
+</div>
+<div class="ab xs" style="left:1112px;top:686px;width:390px">No dates and no feature commitments on this page.</div>
+
+<div class="ab panel" style="left:84px;top:766px;width:1432px;padding:16px 22px">
+  <span class="lbl b">The middle column is the only new work in this proposal.</span>
+  <span class="lbl" style="color:var(--ink2)">&nbsp; The left column exists already. The right column is direction, not a promise.</span>
+</div>
+
+<div class="pageno">11</div>
+</section>
+<!-- ============================ CLIENT 12 ============================ -->
+<section class="slide" id="c12">
+<svg class="canvas" viewBox="0 0 1600 900"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"/></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#1D5C8C"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#A2A9B2"/></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#DDE1E7"/></marker>
+<g id="person"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#14171C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#14171C" stroke-width="1.7"/></g>
+<g id="personA"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#1D5C8C" stroke-width="1.7"/><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#1D5C8C" stroke-width="1.7"/></g>
+<g id="tick"><path d="M-5,0 l3.6,4 l7,-9" fill="none" stroke="#1D5C8C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F4F6F9"/><line x1="0" y1="0" x2="0" y2="7" stroke="#DDE1E7" stroke-width="2.4"/></pattern>
+</defs>
+
+  <rect x="84"   y="360" width="330" height="232" class="n"/>
+  <rect x="452"  y="360" width="330" height="232" class="n-a"/>
+  <rect x="820"  y="360" width="330" height="232" class="n"/>
+  <rect x="1188" y="360" width="328" height="232" class="n"/>
+  <line x1="418" y1="476" x2="446" y2="476" class="ln" marker-end="url(#ah)"/>
+  <line x1="786" y1="476" x2="814" y2="476" class="ln" marker-end="url(#ah)"/>
+  <line x1="1154" y1="476" x2="1182" y2="476" class="ln" marker-end="url(#ah)"/>
+
+  <!-- 1 : the scenarios we bring -->
+  <rect x="116" y="404" width="76" height="52" class="n-gh"/>
+  <rect x="200" y="404" width="76" height="52" class="n-gh"/>
+  <rect x="284" y="404" width="76" height="52" class="n-gh"/>
+  <rect x="116" y="464" width="76" height="52" class="n-gh"/>
+  <rect x="200" y="464" width="76" height="52" class="n-gh"/>
+  <rect x="284" y="464" width="76" height="52" class="n-gh"/>
+
+  <!-- 2 : you pick two -->
+  <rect x="520" y="404" width="90" height="62" class="n-ak"/>
+  <rect x="624" y="404" width="90" height="62" class="n-ak"/>
+  <use href="#personA" x="567" y="506"/>
+
+  <!-- 3 : run in the actual system -->
+  <rect x="860" y="400" width="250" height="150" class="n-f"/>
+  <rect x="860" y="400" width="250" height="24" class="n-k"/>
+  <line x1="884" y1="452" x2="1086" y2="452" class="ln-h"/>
+  <line x1="884" y1="478" x2="1040" y2="478" class="ln-h"/>
+  <line x1="884" y1="504" x2="1086" y2="504" class="ln-h"/>
+
+  <!-- 4 : the outputs -->
+  <rect x="1224" y="408" width="34" height="58" class="n"/>
+  <rect x="1272" y="420" width="74" height="42" class="n"/>
+  <rect x="1360" y="416" width="50" height="50" class="n"/>
+  <rect x="1424" y="424" width="62" height="34" class="n"/>
+  <rect x="1224" y="486" width="74" height="42" class="n"/>
+  <rect x="1312" y="486" width="42" height="42" class="n"/>
+  <rect x="1368" y="490" width="66" height="34" class="n"/>
+</svg>
+
+<div class="kick">In the session</div>
+<div class="h1">You choose two scenarios, and we run them live.</div>
+<div class="stand" style="top:172px;width:1320px">Not a recording and not a mock-up. On the day you pick two from the scenarios we bring, and we run them in the actual system, from brief through to finished output.</div>
+
+<div class="ab" style="left:116px;top:302px;width:290px">
+  <div class="eyebrow" style="font-size:10.5px">Step 1</div>
+  <div class="lbl b" style="margin-top:6px;font-size:18px">We bring the scenarios</div>
+</div>
+<div class="ab xs ctr" style="left:116px;top:532px;width:266px">Real production situations, chosen because they look like your work</div>
+
+<div class="ab" style="left:484px;top:302px;width:290px">
+  <div class="eyebrow acc" style="font-size:10.5px">Step 2</div>
+  <div class="lbl b acc" style="margin-top:6px;font-size:18px">You choose two</div>
+</div>
+<div class="ab xs ctr" style="left:484px;top:532px;width:266px;color:#3A6B93">Your choice, in the room, on the day. We do not pick for you.</div>
+
+<div class="ab" style="left:852px;top:302px;width:290px">
+  <div class="eyebrow" style="font-size:10.5px">Step 3</div>
+  <div class="lbl b" style="margin-top:6px;font-size:18px">We run them live</div>
+</div>
+<div class="ab xs ctr" style="left:852px;top:566px;width:266px">In the working system, not a slide of it</div>
+
+<div class="ab" style="left:1220px;top:302px;width:290px">
+  <div class="eyebrow" style="font-size:10.5px">Step 4</div>
+  <div class="lbl b" style="margin-top:6px;font-size:18px">You see what comes out</div>
+</div>
+<div class="ab xs ctr" style="left:1220px;top:552px;width:264px">The outputs, and the route and components behind each one</div>
+
+<div class="ab panel acc" style="left:84px;top:646px;width:1432px;padding:26px 30px">
+  <div class="lbl b acc" style="font-size:19px">The point of the live session is that nothing on the previous eleven pages needs taking on trust.</div>
+  <div class="lbl" style="color:var(--ink2);margin-top:10px">What we show you on the day is the platform running now, not a build of it. The one thing this section describes as new work is the connection to your systems, and that is scoped on page 11. If there is a scenario you would rather see than the ones we bring, tell us beforehand and we will prepare it.</div>
+</div>
+
+<div class="pageno">12</div>
+</section>
+</body>
+</html>

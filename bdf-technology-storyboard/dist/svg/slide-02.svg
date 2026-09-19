@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="900" viewBox="0 0 1600 900">
+<rect x="0" y="0" width="1600" height="900" fill="#ffffff"/>
+<g id="geometry"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"></path></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#111"></path></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#9a9a9a"></path></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#B8690F"></path></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#245FA6"></path></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 z" fill="#d4d4d4"></path></marker>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"><circle cx="5" cy="5" r="4" fill="#111"></circle></marker>
+<pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FBF0DF"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#E0B47A" stroke-width="2.2"></line></pattern>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fafafa"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#e2e2e2" stroke-width="2.2"></line></pattern>
+<pattern id="hb" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E9F0F9"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#B9CEE8" stroke-width="2.2"></line></pattern>
+<g id="person"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#111" stroke-width="1.6"></circle><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#111" stroke-width="1.6"></path></g>
+<g id="personB"><circle cx="0" cy="-4.6" r="3.5" fill="none" stroke="#245FA6" stroke-width="1.6"></circle><path d="M-6.4,6 a6.4,6.6 0 0 1 12.8,0" fill="none" stroke="#245FA6" stroke-width="1.6"></path></g>
+</defs>
+  <line x1="56" y1="228" x2="1544" y2="228" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- A : the brief -->
+  <rect x="56" y="412" width="228" height="112" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <line x1="296" y1="468" x2="386" y2="468" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- B : components, produced once (single column so every routing stays clean) -->
+  <rect x="392" y="268" width="332" height="40" stroke-width="1.6" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="392" y="313" width="332" height="40" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="392" y="358" width="332" height="40" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="392" y="403" width="332" height="40" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="392" y="448" width="332" height="40" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="392" y="493" width="332" height="40" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="392" y="538" width="332" height="40" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="392" y="583" width="332" height="40" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="392" y="628" width="332" height="40" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="404" y="277" width="22" height="22" fill="rgb(17, 17, 17)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="404" y="322" width="22" height="22" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="404" y="367" width="22" height="22" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="404" y="412" width="22" height="22" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="404" y="457" width="22" height="22" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="404" y="502" width="22" height="22" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="404" y="547" width="22" height="22" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="404" y="592" width="22" height="22" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="404" y="637" width="22" height="22" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+
+  <!-- one component's routing drawn in full : A appears in three outputs -->
+  <path d="M728,288 C 840,288 860,298 966,298" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="2.6" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <path d="M728,288 C 840,288 860,366 966,366" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="2.6" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <path d="M728,288 C 840,288 860,434 966,434" marker-end="url(#ah)" fill="none" stroke="rgb(17, 17, 17)" stroke-width="2.6" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <!-- every other component routes the same way : shown as a faint bundle -->
+  <path d="M728,333 C 800,333 820,502 900,502" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <path d="M728,378 C 800,378 820,570 900,570" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <path d="M728,423 C 800,423 820,638 900,638" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <path d="M728,468 C 800,468 820,502 900,502" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <path d="M728,513 C 800,513 820,570 900,570" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <path d="M728,558 C 800,558 820,638 900,638" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <line x1="900" y1="502" x2="966" y2="502" marker-end="url(#ahh)" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="900" y1="570" x2="966" y2="570" marker-end="url(#ahh)" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="900" y1="638" x2="966" y2="638" marker-end="url(#ahh)" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+
+  <!-- C : outputs -->
+  <rect x="980" y="268" width="564" height="60" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="980" y="336" width="564" height="60" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="980" y="404" width="564" height="60" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="980" y="472" width="564" height="60" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="980" y="540" width="564" height="60" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="980" y="608" width="564" height="60" fill="rgb(255, 255, 255)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1008" y="282" width="18" height="32" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="995" y="353" width="44" height="25" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="995" y="421" width="44" height="25" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="990" y="494" width="54" height="16" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1004" y="554" width="26" height="32" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="1002" y="623" width="30" height="30" fill="rgb(244, 244, 244)" stroke="rgb(17, 17, 17)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+
+  <line x1="56" y1="696" x2="1544" y2="696" fill="none" stroke="rgb(212, 212, 212)" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter"></line>
+</g>
+<g id="boxes-and-text">
+<rect x="1064" y="302.77" width="18" height="18" rx="2" fill="rgb(17, 17, 17)" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1086" y="302.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1108" y="302.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1130" y="302.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1064" y="370.77" width="18" height="18" rx="2" fill="rgb(17, 17, 17)" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1086" y="370.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1108" y="370.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1130" y="370.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1152" y="370.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1174" y="370.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1196" y="370.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1218" y="370.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1064" y="438.77" width="18" height="18" rx="2" fill="rgb(17, 17, 17)" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1086" y="438.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1108" y="438.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1064" y="506.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1086" y="506.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1108" y="506.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1130" y="506.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1152" y="506.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1064" y="574.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1086" y="574.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1108" y="574.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1064" y="642.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1086" y="642.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="1108" y="642.77" width="18" height="18" rx="2" fill="none" stroke="rgb(17, 17, 17)" stroke-width="1"/>
+<rect x="56" y="714" width="640" height="98.09" rx="2" fill="rgb(255, 255, 255)" stroke="rgb(212, 212, 212)" stroke-width="1"/>
+<rect x="68" y="724" width="109.16" height="17.98" rx="2" fill="rgb(17, 17, 17)" stroke="none"/>
+<rect x="724" y="714" width="820" height="76.64" rx="2" fill="rgb(251, 240, 223)" stroke="rgb(184, 105, 15)" stroke-width="1"/>
+<rect x="736" y="724" width="43.88" height="17.98" rx="2" fill="rgb(184, 105, 15)" stroke="none"/>
+<text x="56" y="55.16" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.92" xml:space="preserve">01</text>
+<text x="73.2" y="55.16" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.92" xml:space="preserve">  ·  THE MODEL</text>
+<text x="56" y="100.24" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" letter-spacing="-0.37" xml:space="preserve">Efficiency does not come from making each asset faster.</text>
+<text x="56" y="137.12" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" letter-spacing="-0.37" xml:space="preserve">It comes from making components once and recombining them.</text>
+<text x="56" y="177.7" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="15" xml:space="preserve">One illustrative example runs through this deck: a seasonal skincare launch film, briefed once. It is an example chosen to explain the mechanism, not a description of your brief.</text>
+<text x="56" y="253.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">A  ·  ONE BRIEF</text>
+<text x="392" y="253.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">B  ·  COMPONENTS, PRODUCED ONCE</text>
+<text x="980" y="253.64" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.58" xml:space="preserve">C  ·  OUTPUTS, ASSEMBLED FROM THOSE COMPONENTS</text>
+<text x="74" y="434.79" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.43" xml:space="preserve">ILLUSTRATIVE BRIEF</text>
+<text x="74" y="458.04" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" xml:space="preserve">Seasonal launch film</text>
+<text x="74" y="478.83" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">One shoot. One edit. One set of </text>
+<text x="74" y="492.69" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">approvals.</text>
+<text x="340.99" y="445.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">broken</text>
+<text x="340.99" y="459.5" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" text-anchor="middle" xml:space="preserve">into parts</text>
+<text x="409" y="293" fill="rgb(255, 255, 255)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">A</text>
+<text x="438" y="293" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">Hero film master</text>
+<text x="409" y="338" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">B</text>
+<text x="438" y="338" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Product macro</text>
+<text x="409" y="383" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">C</text>
+<text x="438" y="383" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Voice over</text>
+<text x="409" y="428" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">D</text>
+<text x="438" y="428" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Music bed</text>
+<text x="409" y="473" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">E</text>
+<text x="438" y="473" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Subtitle track</text>
+<text x="409" y="518" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">F</text>
+<text x="438" y="518" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Copy block</text>
+<text x="409" y="563" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">G</text>
+<text x="438" y="563" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Logo lockup</text>
+<text x="409" y="608" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">H</text>
+<text x="438" y="608" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Legal and claims line</text>
+<text x="409" y="653" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">I</text>
+<text x="438" y="653" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" xml:space="preserve">Price and promo layer</text>
+<text x="56" y="581.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">Only component </text>
+<text x="135.39" y="581.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">A</text>
+<text x="142.98" y="581.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">’s routing is drawn in full, so the diagram </text>
+<text x="56" y="595.5" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">stays readable. Every other component fans out the same way, </text>
+<text x="56" y="609.36" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" xml:space="preserve">shown faintly. The letters inside each output are the full recipe.</text>
+<text x="1064" y="292" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">Social cut-down  </text>
+<text x="1170.91" y="291.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">9:16</text>
+<text x="1073" y="315.4" fill="rgb(255, 255, 255)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">A</text>
+<text x="1095" y="315.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">C</text>
+<text x="1116.99" y="315.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">E</text>
+<text x="1138.99" y="315.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">G</text>
+<text x="1064" y="360" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">Hero film  </text>
+<text x="1127.58" y="359.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">16:9</text>
+<text x="1073" y="383.4" fill="rgb(255, 255, 255)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">A</text>
+<text x="1095" y="383.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">B</text>
+<text x="1117" y="383.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">C</text>
+<text x="1139" y="383.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">D</text>
+<text x="1160.99" y="383.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">E</text>
+<text x="1182.99" y="383.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">F</text>
+<text x="1204.99" y="383.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">G</text>
+<text x="1227" y="383.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">H</text>
+<text x="1064" y="428" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">Six-second bumper  </text>
+<text x="1191.88" y="427.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">16:9</text>
+<text x="1073" y="451.4" fill="rgb(255, 255, 255)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">A</text>
+<text x="1095" y="451.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">D</text>
+<text x="1116.99" y="451.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">G</text>
+<text x="1064" y="496" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">Retail display banner</text>
+<text x="1073" y="519.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">B</text>
+<text x="1094.99" y="519.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">F</text>
+<text x="1116.99" y="519.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">G</text>
+<text x="1139" y="519.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">H</text>
+<text x="1160.99" y="519.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">I</text>
+<text x="1064" y="564" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">CRM header  </text>
+<text x="1147.08" y="563.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">4:5</text>
+<text x="1073" y="587.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">B</text>
+<text x="1094.99" y="587.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">F</text>
+<text x="1116.99" y="587.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">G</text>
+<text x="1064" y="632" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">E-commerce PDP still  </text>
+<text x="1205.38" y="631.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" xml:space="preserve">1:1</text>
+<text x="1073" y="655.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">B</text>
+<text x="1094.99" y="655.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">F</text>
+<text x="1117" y="655.4" fill="rgb(17, 17, 17)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" xml:space="preserve">H</text>
+<text x="74" y="735.79" fill="rgb(255, 255, 255)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.24" xml:space="preserve">THE ARITHMETIC</text>
+<text x="68" y="762.99" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" xml:space="preserve">26 component slots filled across 6 outputs. 9 components actually produced.</text>
+<text x="68" y="780.42" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">The distance between those two numbers is where the efficiency lives, and it widens every time an output, a market or a </text>
+<text x="68" y="796.75" fill="rgb(61, 61, 61)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">format is added.</text>
+<text x="742" y="735.79" fill="rgb(255, 255, 255)" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.24" xml:space="preserve">OPEN</text>
+<text x="786.88" y="736.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">The 80% figure.</text>
+<text x="871.88" y="736.98" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve"> It was referenced as the goal but never defined. 80% of what, measured how, against which baseline: share of assets produced </text>
+<text x="736" y="753.97" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">modularly, hours saved, or cost saved?
+  </text>
+<text x="736" y="775.3" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">Until that is agreed we show the mechanism here and put no number on it. </text>
+<text x="1118.28" y="775.3" fill="rgb(90, 52, 6)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" xml:space="preserve">Needed from: the commercial lead, before submission.</text>
+<text x="56" y="863.64" fill="rgb(154, 154, 154)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" letter-spacing="1.16" xml:space="preserve">TECHNOLOGY SECTION  ·  STORYBOARD FOR NARRATIVE AGREEMENT</text>
+<text x="1503.8" y="863.64" fill="rgb(111, 111, 111)" font-family="Arial, Helvetica, sans-serif" font-size="10.5" letter-spacing="1.16" xml:space="preserve">02 / 15</text>
+</g>
+</svg>

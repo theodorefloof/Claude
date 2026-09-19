@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="900" viewBox="0 0 1600 900">
+<rect x="0" y="0" width="1600" height="900" fill="#ffffff"/>
+<g id="geometry"><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"></path></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#14171C"></path></marker>
+<marker id="aha" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#1D5C8C"></path></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#A2A9B2"></path></marker>
+<marker id="ahh" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#DDE1E7"></path></marker>
+<g id="person"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#14171C" stroke-width="1.7"></circle><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#14171C" stroke-width="1.7"></path></g>
+<g id="personA"><circle cx="0" cy="-4.8" r="3.6" fill="none" stroke="#1D5C8C" stroke-width="1.7"></circle><path d="M-6.6,6.2 a6.6,6.8 0 0 1 13.2,0" fill="none" stroke="#1D5C8C" stroke-width="1.7"></path></g>
+<g id="tick"><path d="M-5,0 l3.6,4 l7,-9" fill="none" stroke="#1D5C8C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></g>
+<pattern id="hg" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F4F6F9"></rect><line x1="0" y1="0" x2="0" y2="7" stroke="#DDE1E7" stroke-width="2.4"></line></pattern>
+</defs>
+
+  <!-- the one band : what exists, what we connect, what runs -->
+  <path d="M560,400 L152,400 L142,380 L152,388 L142,396 L152,404 L142,412 L152,420 L142,428 L152,434 L560,434 Z" fill="rgb(20, 23, 28)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></path>
+  <rect x="560" y="400" width="288" height="62" fill="rgb(255, 255, 255)" stroke="rgb(20, 23, 28)" stroke-width="1.7" stroke-dasharray="7, 5" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+  <rect x="848" y="400" width="668" height="62" fill="rgb(244, 246, 249)" stroke="rgb(20, 23, 28)" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="miter"></rect>
+
+  <!-- we start together -->
+  <line x1="560" y1="358" x2="560" y2="490" stroke-dasharray="6, 5" fill="none" stroke="rgb(29, 92, 140)" stroke-width="1.9" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <circle cx="560" cy="358" r="5" fill="rgb(29, 92, 140)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></circle>
+
+  <!-- three points -->
+  <line x1="84" y1="596" x2="140" y2="596" stroke="rgb(29, 92, 140)" stroke-width="3" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="588" y1="596" x2="644" y2="596" stroke="rgb(29, 92, 140)" stroke-width="3" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+  <line x1="1092" y1="596" x2="1148" y2="596" stroke="rgb(29, 92, 140)" stroke-width="3" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter"></line>
+</g>
+<g id="boxes-and-text">
+<text x="84" y="79.81" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="2.2" xml:space="preserve">TECHNOLOGY</text>
+<text x="84" y="136.05" fill="rgb(20, 23, 28)" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" letter-spacing="-0.8" xml:space="preserve">The platform is already built and already running.</text>
+<text x="84" y="184.77" fill="rgb(20, 23, 28)" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" letter-spacing="-0.8" xml:space="preserve">What we do with you is connect it.</text>
+<text x="84" y="238.39" fill="rgb(62, 69, 79)" font-family="Arial, Helvetica, sans-serif" font-size="17" xml:space="preserve">MAKE is the production system our teams use today, on live work. Nothing in this proposal waits for a platform to be finished. The work we do together is connecting </text>
+<text x="84" y="264.91" fill="rgb(62, 69, 79)" font-family="Arial, Helvetica, sans-serif" font-size="17" xml:space="preserve">it to your DAM, your approvals and your channels.</text>
+<text x="563.99" y="343.81" fill="rgb(29, 92, 140)" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="1.87" text-anchor="middle" xml:space="preserve">WE START TOGETHER</text>
+<text x="176" y="436.7" fill="rgb(255, 255, 255)" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" xml:space="preserve">MAKE, in use on our work today</text>
+<text x="580" y="428.18" fill="rgb(20, 23, 28)" font-family="Arial, Helvetica, sans-serif" font-size="13.5" font-weight="700" xml:space="preserve">We connect to your systems</text>
+<text x="580" y="448.14" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">Your DAM, approvals and channels</text>
+<text x="872" y="428.18" fill="rgb(20, 23, 28)" font-family="Arial, Helvetica, sans-serif" font-size="13.5" font-weight="700" xml:space="preserve">Your briefs run through MAKE</text>
+<text x="872" y="448.14" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">The same system, the same way, from your first brief onwards</text>
+<text x="142" y="489.98" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" xml:space="preserve">Already in daily use before this engagement begins</text>
+<text x="1516" y="489.98" fill="rgb(120, 128, 139)" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="end" xml:space="preserve">Sequence only. Timings are agreed in planning.</text>
+<text x="84" y="637.04" fill="rgb(20, 23, 28)" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" xml:space="preserve">Built</text>
+<text x="84" y="663.97" fill="rgb(62, 69, 79)" font-family="Arial, Helvetica, sans-serif" font-size="13.5" xml:space="preserve">The platform, its modules and the tasks that run inside it are in daily </text>
+<text x="84" y="684.22" fill="rgb(62, 69, 79)" font-family="Arial, Helvetica, sans-serif" font-size="13.5" xml:space="preserve">use on our work. None of it is being written for this pitch.</text>
+<text x="588" y="637.04" fill="rgb(20, 23, 28)" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" xml:space="preserve">Connected to you</text>
+<text x="588" y="663.97" fill="rgb(62, 69, 79)" font-family="Arial, Helvetica, sans-serif" font-size="13.5" xml:space="preserve">We integrate with the systems you already run. Your DAM stays your </text>
+<text x="588" y="684.22" fill="rgb(62, 69, 79)" font-family="Arial, Helvetica, sans-serif" font-size="13.5" xml:space="preserve">DAM, your approvers stay your approvers, and your channels stay </text>
+<text x="588" y="704.47" fill="rgb(62, 69, 79)" font-family="Arial, Helvetica, sans-serif" font-size="13.5" xml:space="preserve">where they are.</text>
+<text x="1092" y="637.04" fill="rgb(20, 23, 28)" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" xml:space="preserve">Working from your first brief</text>
+<text x="1092" y="663.97" fill="rgb(62, 69, 79)" font-family="Arial, Helvetica, sans-serif" font-size="13.5" xml:space="preserve">There is no pilot platform and no parallel build. Your work goes through </text>
+<text x="1092" y="684.22" fill="rgb(62, 69, 79)" font-family="Arial, Helvetica, sans-serif" font-size="13.5" xml:space="preserve">the same system as the rest of our production.</text>
+<text x="1500.23" y="845.81" fill="rgb(162, 169, 178)" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="1.76" xml:space="preserve">01</text>
+</g>
+</svg>
