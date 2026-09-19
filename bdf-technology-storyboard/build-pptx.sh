@@ -4,10 +4,11 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 CHR=/opt/pw-browsers/chromium-1194/chrome-linux/chrome
-PNG="$ROOT/dist/png"; mkdir -p "$PNG"
+PNG="$ROOT/dist/${DECK_PNG:-png}"; SVGDIR="$ROOT/dist/${DECK_SVG:-svg}"
+mkdir -p "$PNG"
 
 # 1. rasterise each exported SVG at 2x for the fallback image
-for f in "$ROOT"/dist/svg/slide-*.svg; do
+for f in "$SVGDIR"/slide-*.svg; do
   n=$(basename "$f" .svg)
   printf '<html><body style="margin:0"><img src="file://%s" width="1600" height="900"></body></html>' "$f" > "$PNG/$n.html"
   "$CHR" --headless --no-sandbox --disable-gpu --hide-scrollbars --force-device-scale-factor=2 \

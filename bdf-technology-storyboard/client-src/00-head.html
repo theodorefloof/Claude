@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>Technology</title>
+<style>
+:root{
+  --ink:#14171C;
+  --ink2:#3E454F;
+  --grey:#78808B;
+  --grey2:#A2A9B2;
+  --hair:#DDE1E7;
+  --tint:#F4F6F9;
+  --tint2:#EBEFF4;
+  --acc:#1D5C8C;
+  --accL:#E9F1F7;
+  --accM:#B9D0E2;
+  --accD:#12415F;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#8e9299}
+body{font-family:Arial,"Liberation Sans",Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+
+.slide{position:relative;width:1600px;height:900px;background:#fff;color:var(--ink);
+  overflow:hidden;margin:0 auto 26px;page-break-after:always;break-after:page}
+.slide:last-child{margin-bottom:0;page-break-after:auto;break-after:auto}
+@media print{ @page{size:1600px 900px;margin:0} html,body{background:#fff} .slide{margin:0} }
+
+.ab{position:absolute}
+svg.canvas{position:absolute;left:0;top:0;width:1600px;height:900px;overflow:visible}
+
+/* ---------- page furniture ---------- */
+.kick{position:absolute;left:84px;top:70px;font-size:11px;letter-spacing:.2em;
+      text-transform:uppercase;color:var(--grey);font-weight:700}
+.h1{position:absolute;left:84px;top:98px;width:1300px;font-size:42px;line-height:1.16;
+    font-weight:700;letter-spacing:-.019em;color:var(--ink)}
+.h1.sm{font-size:37px}
+.stand{position:absolute;left:84px;font-size:17px;line-height:1.56;color:var(--ink2)}
+.pageno{position:absolute;right:84px;bottom:52px;font-size:11px;letter-spacing:.16em;
+        color:var(--grey2);font-weight:700}
+.sect{position:absolute;left:84px;bottom:52px;font-size:11px;letter-spacing:.16em;
+      text-transform:uppercase;color:var(--grey2);font-weight:700}
+
+/* ---------- text atoms ---------- */
+.lbl{font-size:15px;line-height:1.35;color:var(--ink)}
+.lbl.b{font-weight:700}
+.sm{font-size:13.5px;line-height:1.42;color:var(--ink2)}
+.sm.b{font-weight:700;color:var(--ink)}
+.xs{font-size:11.5px;line-height:1.4;color:var(--grey)}
+.eyebrow{font-size:11px;letter-spacing:.17em;text-transform:uppercase;font-weight:700;color:var(--grey)}
+.eyebrow.ink{color:var(--ink)}
+.eyebrow.acc{color:var(--acc)}
+.ctr{text-align:center}.rt{text-align:right}
+.acc{color:var(--acc)}.mut{color:var(--grey)}
+.big{font-size:19px;line-height:1.3;font-weight:700}
+.num{font-size:34px;font-weight:700;line-height:1;letter-spacing:-.02em}
+
+/* ---------- three-point row, used to make a page readable on its own ---------- */
+.pt .t{font-size:16px;font-weight:700;line-height:1.3;margin-bottom:7px}
+.pt .d{font-size:13.5px;line-height:1.5;color:var(--ink2)}
+
+/* ---------- a field the pitch team completes before sending ---------- */
+.fill{display:inline-block;border:1.3px dashed var(--grey2);border-radius:3px;color:var(--grey2);
+      font-size:11.5px;letter-spacing:.04em;padding:4px 9px;line-height:1;background:#fff}
+.fill.w{display:block;text-align:center;padding:7px 9px}
+
+/* ---------- pill / tag ---------- */
+.tag{display:inline-block;background:var(--acc);color:#fff;font-size:10.5px;letter-spacing:.12em;
+     text-transform:uppercase;font-weight:700;padding:4px 10px 4.5px;border-radius:2px}
+.tag.o{background:none;border:1.3px solid var(--grey2);color:var(--grey)}
+.tag.k{background:var(--ink)}
+
+/* ---------- component code chip, carried across pages ---------- */
+.code{display:inline-block;width:20px;height:20px;line-height:18px;text-align:center;
+      border:1.4px solid var(--ink);font-size:11px;font-weight:700;margin-right:5px;
+      border-radius:3px;color:var(--ink);vertical-align:middle}
+.code.hi{background:var(--ink);color:#fff}
+.code.a{background:var(--acc);border-color:var(--acc);color:#fff}
+.code.gh{border-style:dashed;border-color:var(--hair);color:var(--grey2)}
+
+/* ---------- callout ---------- */
+.call{border-left:3px solid var(--acc);padding:2px 0 2px 18px}
+.call .t{font-size:16px;font-weight:700;line-height:1.35}
+.call .d{font-size:13.5px;line-height:1.5;color:var(--ink2);margin-top:6px}
+.panel{background:var(--tint);border-radius:4px;padding:22px 26px}
+.panel.acc{background:var(--accL)}
+
+/* ---------- SVG classes ---------- */
+svg text{font-family:Arial,"Liberation Sans",Helvetica,sans-serif}
+.n{fill:#fff;stroke:#14171C;stroke-width:1.7}
+.n-f{fill:#F4F6F9;stroke:#14171C;stroke-width:1.7}
+.n-t{fill:#F4F6F9;stroke:#C4CBD4;stroke-width:1.3}
+.n-k{fill:#14171C;stroke:#14171C;stroke-width:1.7}
+.n-a{fill:#E9F1F7;stroke:#1D5C8C;stroke-width:1.7}
+.n-ak{fill:#1D5C8C;stroke:#1D5C8C;stroke-width:1.7}
+.n-o{fill:#fff;stroke:#14171C;stroke-width:1.7;stroke-dasharray:7 5}
+.n-gh{fill:#fff;stroke:#DDE1E7;stroke-width:1.5}
+.n-gd{fill:#fff;stroke:#A2A9B2;stroke-width:1.4;stroke-dasharray:6 5}
+.ln{stroke:#14171C;stroke-width:1.6;fill:none}
+.ln-2{stroke:#14171C;stroke-width:2.8;fill:none}
+.ln-h{stroke:#DDE1E7;stroke-width:1.4;fill:none}
+.ln-hd{stroke:#DDE1E7;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.ln-g{stroke:#A2A9B2;stroke-width:1.4;fill:none}
+.ln-gd{stroke:#A2A9B2;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.ln-a{stroke:#1D5C8C;stroke-width:1.9;fill:none}
+.ln-ad{stroke:#1D5C8C;stroke-width:1.7;fill:none;stroke-dasharray:7 5}
+.ln-d{stroke:#14171C;stroke-width:1.6;fill:none;stroke-dasharray:7 5}
+.fx{fill:none}
+</style>
+</head>
+<body>

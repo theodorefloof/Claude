@@ -14,8 +14,8 @@ import sys
 import zipfile
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-PPTX = os.path.join(ROOT, 'dist', 'technology-storyboard.pptx')
-SVGDIR = os.path.join(ROOT, 'dist', 'svg')
+PPTX = os.path.join(ROOT, 'dist', os.environ.get('DECK_NAME', 'technology-storyboard') + '.pptx')
+SVGDIR = os.path.join(ROOT, 'dist', os.environ.get('DECK_SVG', 'svg'))
 
 SVG_NS = 'http://schemas.microsoft.com/office/drawing/2016/SVG/main'
 SVG_EXT_URI = '{96DAC541-7B7A-43D3-8B79-37D633B846F1}'
@@ -40,7 +40,7 @@ def main():
 
     slides = sorted([n for n in names if re.match(r'ppt/slides/slide\d+\.xml$', n)],
                     key=slide_index)
-    if len(slides) != 15:
+    if len(slides) < 1:
         print('warning: expected 15 slides, found %d' % len(slides))
 
     added = 0

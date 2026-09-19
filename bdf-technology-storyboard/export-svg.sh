@@ -3,15 +3,16 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 CHR=/opt/pw-browsers/chromium-1194/chrome-linux/chrome
-WORK="$ROOT/.svgwork"; rm -rf "$WORK"; mkdir -p "$WORK" "$ROOT/dist/svg"
-python3 - "$ROOT/dist/technology-storyboard.html" "$ROOT/export-svg.js" "$WORK/export.html" <<'PY'
+NAME="${DECK_NAME:-technology-storyboard}"; SVGDIR="$ROOT/dist/${DECK_SVG:-svg}"
+WORK="$ROOT/.svgwork"; rm -rf "$WORK"; mkdir -p "$WORK" "$SVGDIR"
+python3 - "$ROOT/dist/$NAME.html" "$ROOT/export-svg.js" "$WORK/export.html" <<'PY'
 import sys
 html=open(sys.argv[1]).read(); js=open(sys.argv[2]).read()
 open(sys.argv[3],'w').write(html.replace('</body>','<script>\n'+js+'\n</script>\n</body>'))
 PY
 "$CHR" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=1600,990 \
   --virtual-time-budget=20000 --dump-dom "file://$WORK/export.html" > "$WORK/dom.html" 2>/dev/null
-python3 - "$WORK/dom.html" "$ROOT/dist/svg" <<'PY'
+python3 - "$WORK/dom.html" "$SVGDIR" <<'PY'
 import re,sys,html,os
 dom=open(sys.argv[1]).read(); out=sys.argv[2]
 ms=re.findall(r'<textarea id="svgpayload">(.*?)</textarea>', dom, re.S)

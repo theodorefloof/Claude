@@ -5,8 +5,8 @@ const path = require('path');
 const Pptx = require('pptxgenjs');
 
 const ROOT = __dirname;
-const PNG = path.join(ROOT, 'dist', 'png');
-const OUT = path.join(ROOT, 'dist', 'technology-storyboard.pptx');
+const PNG = path.join(ROOT, 'dist', process.env.DECK_PNG || 'png');
+const OUT = path.join(ROOT, 'dist', (process.env.DECK_NAME || 'technology-storyboard') + '.pptx');
 
 const TITLES = [
   'MAKE is running now',

@@ -3,8 +3,8 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 CHR=/opt/pw-browsers/chromium-1194/chrome-linux/chrome
-QA="$ROOT/qa"; mkdir -p "$QA"; rm -f "$QA"/slide*.png "$QA"/slide*.html
-HTML="$ROOT/dist/technology-storyboard.html"
+QA="$ROOT/${DECK_QA:-qa}"; mkdir -p "$QA"; rm -f "$QA"/slide*.png "$QA"/slide*.html
+HTML="$ROOT/dist/${DECK_NAME:-technology-storyboard}.html"
 FIRST=${1:-1}; LAST=${2:-99}
 python3 - "$HTML" "$QA" "$FIRST" "$LAST" <<'PY'
 import re,sys,os
